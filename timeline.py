@@ -9,7 +9,9 @@ import pathlib
 
 import pandas as pd
 
+
 import long_time
+import yaml
 
 
 def timeline():
@@ -43,11 +45,19 @@ def load_data():
 
     dir_dates = pathlib.Path(__file__).parent.joinpath('dates')
     dates = {}
+    # Unless specified, all columns are strings
+    column_types = {'Alive': bool}
+
     for file in os.listdir(dir_dates):
         file = pathlib.Path(file)
-        if file.suffix != '.jsonl':
+        if file.suffix != '.yaml':
             continue
-        dates[file.stem] = pd.read_json(dir_dates.joinpath(file), lines=True)
+        with open(dir_dates.joinpath(file), 'r') as f:
+            df = pd.DataFrame(yaml.safe_load(f), dtype=str)
+            for column, dtype in column_types.items():
+                if column in df.columns:
+                    df[column] = df[column].astype(dtype)
+            dates[file.stem] = df
     return dates
 
 

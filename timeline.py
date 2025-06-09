@@ -61,9 +61,13 @@ def load_data():
     return dates
 
 
-def make_svgs(sheets, boxes, debug=False):
+def make_svgs(sheets, boxes, debug=False, left_to_right=True):
     """
     Make SVG files from dates.
+
+    24 pixels per year = 0.25 inches per year
+    42 years per sheet = 10.5 inches per sheet
+    768 pixels tall = 8 inches tall
     """
 
     dir_sheets = pathlib.Path(__file__).parent.joinpath('sheets')
@@ -112,7 +116,8 @@ def make_svgs(sheets, boxes, debug=False):
 
         # Years
         contents += '<g>\n'
-        for i, year in enumerate(reversed(years)):
+        ordered_years = years if left_to_right else reversed(years)
+        for i, year in enumerate(ordered_years):
             if i % 2 == 0:
                 color = '#eeeeee'
             else:

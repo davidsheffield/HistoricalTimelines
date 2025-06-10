@@ -8,10 +8,9 @@ import os
 import pathlib
 
 import pandas as pd
-
+import yaml
 
 import long_time
-import yaml
 
 
 def timeline():
@@ -77,7 +76,7 @@ def make_svgs(sheets, boxes, debug=False, left_to_right=True):
         start_year = era_year(years[0], space=False)
         end_year = era_year(years[-1], space=False)
 
-        sheet_boxes = extract_sheet_boxes(boxes, years[0], years[-1])
+        sheet_boxes = extract_sheet_boxes(boxes, years[0], years[-1], left_to_right)
 
         contents = '<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n'
         contents += '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n'
@@ -139,9 +138,17 @@ def make_svgs(sheets, boxes, debug=False, left_to_right=True):
                 # contents += f'<line x1="{(years[-1] - year + 1) * 24 + 24}" y1="0" x2="{(years[-1] - year + 1) * 24 + 24}" y2="900" stroke="#0000ff" stroke-width="1" />\n'
 
         contents += '<g>\n'
+        # Draw boxes
         for idx, row in sheet_boxes.iterrows():
             color = row['Color']
-            contents += f'<rect fill="{color}" stroke="none" x="96" y="96" width="390" height="390"/>\n'
+            if left_to_right:
+                x = row['start_x']
+                width = row['end_x'] - row['start_x']
+            else:
+                x = row['end_x']
+                width = row['start_x'] - row['end_x']
+            y = row['y'] * 24 + 24
+            contents += f'<rect fill="{color}" stroke="none" x="{x}" y="{y}" width="{width}" height="24"/>\n'
         contents += '</g>\n'
 
         contents += '</svg>\n'
@@ -212,26 +219,30 @@ def extract_dates(dates):
     return boxes
 
 
-def extract_sheet_boxes(boxes, start_year, end_year):
+def extract_sheet_boxes(boxes, start_year, end_year, left_to_right):
     """
     Filter boxes to only those that will appear in the sheet and calculate the positions.
     """
 
     sheet_boxes = boxes.loc[(boxes['Start'] <= long_time.date.fromisoformat(f'{end_year}-12-31'))
-                            & (boxes['End'] >= long_time.date.fromisoformat(f'{start_year}-01-01'))]
+                            & (boxes['End'] >= long_time.date.fromisoformat(f'{start_year}-01-01'))].copy()
 
-    sheet_boxes['Start'].apply(calculate_start_x, args=(start_year, end_year))
+    sheet_boxes['start_x'] = sheet_boxes['Start'].apply(calculate_x, args=(start_year, end_year, left_to_right))
+    sheet_boxes['end_x'] = sheet_boxes['End'].apply(calculate_x, args=(start_year, end_year, left_to_right))
     
     return sheet_boxes
 
 
-def calculate_start_x(date, start_year, end_year):
+def calculate_x(date, start_year, end_year, left_to_right):
     """
-    Calculate the x positions of the start of a box
+    Calculate the x positions of a date
     """
 
-    position_year = max(date, long_time.date.fromisoformat(f'{start_year}-01-01')).year
-    breakpoint()
+    years_since_start = date.year - start_year + (date.ordinal_day() - 1) / (date.days_in_year() - 1)
+    if left_to_right:
+        return 24 + years_since_start * 24
+    else:
+        return 1032 - years_since_start * 24
 
 
 if __name__ == '__main__':

@@ -88,6 +88,12 @@ class date:
     __str__ = isoformat
 
 
+    def days_in_year(self):
+        """Return the number of days in the year of this date."""
+
+        return 366 if _is_leap(self._year) else 365
+
+
     # Read-only field accessors
     @property
     def year(self):

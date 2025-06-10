@@ -65,6 +65,17 @@ def test_isoformat(era, expected):
     assert date.isoformat() == expected
 
 
+@pytest.mark.parametrize('year,era,expected',
+                         [(2001, True, 365),
+                          (2004, True, 366),
+                          (2000, True, 366),
+                          (1900, True, 365),
+                          (1, False, 365),
+                          (4, False, 366)])
+def test_days_in_year(year, era, expected):
+    assert long_time.date(year, 1, 1, era).days_in_year() == expected
+
+
 @pytest.mark.parametrize('date1,date2,expected',
                          [(long_time.date(2000, 6, 15, True), long_time.date(2000, 6, 15, True), 0),
                           (long_time.date(2000, 6, 15, True), long_time.date(2000, 6, 14, True), 1),

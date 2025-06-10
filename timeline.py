@@ -44,18 +44,13 @@ def load_data():
 
     dir_dates = pathlib.Path(__file__).parent.joinpath('dates')
     dates = {}
-    # Unless specified, all columns are strings
-    column_types = {'Alive': bool}
 
     for file in os.listdir(dir_dates):
         file = pathlib.Path(file)
         if file.suffix != '.yaml':
             continue
         with open(dir_dates.joinpath(file), 'r') as f:
-            df = pd.DataFrame(yaml.safe_load(f), dtype=str)
-            for column, dtype in column_types.items():
-                if column in df.columns:
-                    df[column] = df[column].astype(dtype)
+            df = pd.DataFrame(yaml.safe_load(f))
             dates[file.stem] = df
     return dates
 
@@ -81,6 +76,28 @@ def make_svgs(sheets, boxes, debug=False, left_to_right=True):
         contents = '<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n'
         contents += '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n'
         contents += '<svg width="1056" height="816" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n'
+        contents += """<style>
+rect { stroke: none; }
+
+rect.Party_Unaffiliated_Federalist { fill : #e8bfb1; }
+rect.Party_Federalist { fill: #ea9978; }
+rect.Party_Democratic-Republican { fill: #0044c9; }
+rect.Party_National_Republican { fill: #0044c9; }
+rect.Party_Democratic { fill: #0044c9; }
+rect.Party_Whig { fill: #f0c862; }
+rect.Party_Republican { fill: #e81b23; }
+
+text.President {
+    text-anchor: middle;
+    dominant-baseline: middle;
+    }
+text.President {
+    font-family: Palatino;
+    font-size: 16px;
+    fill: #ffffff;
+    }
+</style>
+        """
 
         # Crop marks
         contents += '<g>\n'
@@ -140,7 +157,6 @@ def make_svgs(sheets, boxes, debug=False, left_to_right=True):
         contents += '<g>\n'
         # Draw boxes
         for idx, row in sheet_boxes.iterrows():
-            color = row['Color']
             if left_to_right:
                 x = row['start_x']
                 width = row['end_x'] - row['start_x']
@@ -148,10 +164,11 @@ def make_svgs(sheets, boxes, debug=False, left_to_right=True):
                 x = row['end_x']
                 width = row['start_x'] - row['end_x']
             y = row['y'] * 24 + 24
-            contents += f'<rect fill="{color}" stroke="none" x="{x}" y="{y}" width="{width}" height="24"/>\n'
+            classes = ' '.join(row['Keywords'])
+            contents += f'<rect x="{x}" y="{y}" width="{width}" height="24" class="{classes}"/>\n'
             middle_x = (row['start_x'] + row['end_x']) / 2
             label = row['Label']
-            contents += f'<text x="{middle_x}" y="{y + 12}" text-anchor="middle" dominant-baseline="middle">{label}</text>\n'
+            contents += f'<text x="{middle_x}" y="{y + 12}" class="{classes}">{label}</text>\n'
         contents += '</g>\n'
 
         contents += '</svg>\n'
@@ -197,25 +214,19 @@ def extract_dates(dates):
     boxes = []
 
     for idx, row in dates['presidents'].iterrows():
-        if 'Party_Unaffiliated_Federalist' in row['Keywords']:
-            color = '#e8bfb1'
-        elif 'Party_Federalist' in row['Keywords']:
-            color = '#ea9978'
-        elif 'Party_Democratic-Republican' in row['Keywords']:
-            color = '#0044c9'
-        elif 'Party_National_Republican' in row['Keywords']:
-            color = '#0044c9'
-        elif 'Party_Democratic' in row['Keywords']:
-            color = '#0044c9'
-        elif 'Party_Whig' in row['Keywords']:
-            color = '#f0c862'
-        elif 'Party_Republican' in row['Keywords']:
-            color = '#e81b23'
+        try:
+            start_date = long_time.date.fromisoformat(row['Start'])
+        except TypeError:
+            start_date = long_time.date.fromdatetime(row['Start'])
+        try:
+            end_date = long_time.date.fromisoformat(row['End'])
+        except TypeError:
+            end_date = long_time.date.fromdatetime(row['End'])
         boxes.append({'Label': row['Label'],
-                      'Start': long_time.date.fromisoformat(row['Start']),
-                      'End': long_time.date.fromisoformat(row['End']),
+                      'Keywords': row['Keywords'],
+                      'Start': start_date,
+                      'End': end_date,
                       'y': 0.5,
-                      'Color': color,
                       'Gradient': 0})
 
     boxes = pd.DataFrame(boxes)

@@ -149,6 +149,9 @@ def make_svgs(sheets, boxes, debug=False, left_to_right=True):
                 width = row['start_x'] - row['end_x']
             y = row['y'] * 24 + 24
             contents += f'<rect fill="{color}" stroke="none" x="{x}" y="{y}" width="{width}" height="24"/>\n'
+            middle_x = (row['start_x'] + row['end_x']) / 2
+            label = row['Label']
+            contents += f'<text x="{middle_x}" y="{y + 12}" text-anchor="middle" dominant-baseline="middle">{label}</text>\n'
         contents += '</g>\n'
 
         contents += '</svg>\n'

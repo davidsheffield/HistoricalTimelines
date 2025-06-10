@@ -94,6 +94,15 @@ class date:
         return 366 if _is_leap(self._year) else 365
 
 
+    def ordinal_day(self):
+        """Return the ordinal day of the year for this date.
+
+        The first day of the year is 1, the last day is 365 or 366.
+        """
+
+        return _DAYS_BEFORE_MONTH[self._month] + self._day + (self._month > 2 and _is_leap(self._year))
+
+
     # Read-only field accessors
     @property
     def year(self):
@@ -198,6 +207,8 @@ def _check_date_fields(year, month, day, era):
 
 # -1 is a placeholder for indexing purposes.
 _DAYS_IN_MONTH = [-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+# -1 is a placeholder for indexing purposes.
+_DAYS_BEFORE_MONTH = [-1, 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334]
 
 def _days_in_month(year, month):
     "year, month -> number of days in that month in that year."

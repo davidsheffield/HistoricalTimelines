@@ -76,6 +76,21 @@ def test_days_in_year(year, era, expected):
     assert long_time.date(year, 1, 1, era).days_in_year() == expected
 
 
+@pytest.mark.parametrize('year,month,day,expected',
+                         [(2001, 1, 1, 1),
+                          (2001, 1, 31, 31),
+                          (2001, 2, 1, 32),
+                          (2001, 2, 28, 59),
+                          (2001, 3, 1, 60),
+                          (2001, 12, 31, 365),
+                          (2004, 2, 28, 59),
+                          (2004, 2, 29, 60),
+                          (2004, 3, 1, 61),
+                          (2004, 12, 31, 366)])
+def test_ordinal_day(year, month, day, expected):
+    assert long_time.date(year, month, day).ordinal_day() == expected
+
+
 @pytest.mark.parametrize('date1,date2,expected',
                          [(long_time.date(2000, 6, 15, True), long_time.date(2000, 6, 15, True), 0),
                           (long_time.date(2000, 6, 15, True), long_time.date(2000, 6, 14, True), 1),

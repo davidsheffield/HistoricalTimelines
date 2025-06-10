@@ -2,6 +2,8 @@
 Test long_time.py
 """
 
+import datetime
+
 import pytest
 
 import long_time
@@ -35,6 +37,11 @@ def test_init__no_era():
 def test_fromisoformat(input_date, expected_year, expected_month, expected_day, expected_era):
     assert long_time.date.fromisoformat(input_date) \
         == long_time.date(expected_year, expected_month, expected_day, expected_era)
+
+
+def test_fromdatetime():
+    assert long_time.date.fromdatetime(datetime.date(1, 2, 3)) \
+        == long_time.date(1, 2, 3, True)
 
 
 def test_repr():

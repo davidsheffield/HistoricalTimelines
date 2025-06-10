@@ -1,3 +1,4 @@
+import datetime
 from operator import index as _index
 
 
@@ -56,6 +57,18 @@ class date:
             month = int(dtstr[6:8])
             day = int(dtstr[9:])
         return [year, month, day, era]
+
+
+    @classmethod
+    def fromdatetime(cls, input_date):
+        """Construct a date from a datetime.date"""
+        if not isinstance(input_date, datetime.date):
+            raise TypeError('fromdatetime: argument must be datetime.date')
+
+        try:
+            return cls(input_date.year, input_date.month, input_date.day, True)
+        except Exception:
+            raise ValueError(f'Invalid date: {input_date!r}')
 
 
     def __repr__(self):

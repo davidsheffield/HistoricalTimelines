@@ -1,8 +1,11 @@
 Historical Timelines
 ====================
 
-Code for generating a historical timeline with 0.25 in per year from 2100 back
-for 80 ft (i.e., 1740 BCE to 2100 CE).
+Code for generating a historical timeline that can be printed out and wrapped
+around a room. The room has 80 ft of walls and with 0.25 in per year it will
+cover 1740 BCE to 2100 CE. The goal is to help me see the times between
+historical events and how events and lives overlapped. The dates are provided
+with YAML files in the [dates/](./dates/) directory.
 
 Files
 -----

@@ -1,11 +1,33 @@
 """
-Tool to generate historical timeline SVGs. The timeline has 0.25 in per year with a printed area
-of 10.5 in by 8 in on an 11 in by 8.5 in letter page.
+Historical Timeline SVG Generator
+
+Generates printable historical timeline sheets spanning from 1740 BCE
+to 2100 CE. Each sheet covers 42 years with a scale of 0.25 inches per year
+(24 pixels per year), designed for a 10.5 in by 8 in printable area on
+11 in by 8.5 in letter paper.
+
+The timeline uses a reverse chronological sheet numbering system:
+- Sheet 1: 2058-2100 CE (most recent)
+- Sheet 92: 1782-1740 BCE (oldest)
+
+Features:
+- Processes YAML data files containing historical events
+- Generates SVG files with color-coded periods and labels
+- Embedded CSS styling for different historical categories
+
+Usage:
+    python timeline.py -s 50               # Generate specific sheet
+    python timeline.py --all               # Generate all sheets
+    python timeline.py --sheet 50 --debug  # Debug mode with guides
+
+Output:
+    SVG files in sheets/ directory named: Sheet_{number}_{start_year}_{end_year}.svg
 """
 
 import argparse
 import os
 import pathlib
+from typing import Union
 
 import pandas as pd
 import yaml
@@ -13,9 +35,28 @@ import yaml
 import long_time
 
 
-def timeline():
+def timeline() -> None:
     """
-    Main function to run the code to generate the historical timelines
+    Main entry point for generating historical timeline SVGs.
+
+    Parses command line arguments and orchestrates the timeline generation
+    process. Supports generating individual sheets or all sheets at once,
+    with optional debug mode.
+
+    Command line arguments:
+        --sheet, -s: Generate specific sheet number (1-91)
+        --all, -a: Generate all timeline sheets
+        --debug, -d: Enable debug mode with visual guides
+
+    Examples:
+        >>> # Generate sheet 50 (around 1 CE)
+        >>> python timeline.py --sheet 50
+        >>> 
+        >>> # Generate all sheets
+        >>> python timeline.py --all
+        >>> 
+        >>> # Generate with debug guides
+        >>> python timeline.py --sheet 1 --debug
     """
 
     parser = argparse.ArgumentParser(prog='timeline')
@@ -37,9 +78,14 @@ def timeline():
     make_svgs(sheets, boxes, args.debug)
 
 
-def load_data():
+def load_data() -> dict[str, pd.DataFrame]:
     """
-    Load date data from files
+    Load historical event data from YAML files in the dates/ directory.
+
+    Scans the dates/ directory for .yaml files and loads them into pandas DataFrames.
+
+    Returns:
+        dict[str, pd.DataFrame]: Dictionary mapping file stems to DataFrames
     """
 
     dir_dates = pathlib.Path(__file__).parent.joinpath('dates')
@@ -55,13 +101,32 @@ def load_data():
     return dates
 
 
-def make_svgs(sheets, boxes, debug=False, left_to_right=True):
+def make_svgs(sheets: list[int],
+              boxes: pd.DataFrame,
+              debug: bool = False,
+              left_to_right: bool = True) -> None:
     """
-    Make SVG files from dates.
+    Generate SVG timeline files from processed historical data.
 
-    24 pixels per year = 0.25 inches per year
-    42 years per sheet = 10.5 inches per sheet
-    768 pixels tall = 8 inches tall
+    Creates SVG files with embedded styling, crop marks, year labels,
+    and historical event boxes. The coordinate system uses 24 pixels per year
+    to achieve 0.25 inches per year when printed.
+
+    Args:
+        sheets: List of sheet numbers to generate (1-91)
+        boxes: DataFrame containing processed historical events with columns:
+               ['Label', 'Keywords', 'Start', 'End', 'y', 'Gradient']
+        debug: If True, adds visual guides and corner markers
+        left_to_right: If True, timeline flows left to right; if False, right to left
+
+    Technical specs:
+        - 24 pixels per year = 0.25 inches per year at 96 DPI
+        - 42 years per sheet = 1008 pixels = 10.5 inches width
+        - 768 pixels height = 8 inches tall
+        - Total canvas: 1056x816 pixels (11"x8.5")
+
+    Output files:
+        Generated in sheets/ directory as: Sheet_{number}_{start_year}_{end_year}.svg
     """
 
     dir_sheets = pathlib.Path(__file__).parent.joinpath('sheets')
@@ -177,9 +242,20 @@ text.President {
             file.write(contents)
 
 
-def get_years(sheet):
+def get_years(sheet: int) -> list[int]:
     """
-    Get the list of years for a sheet.
+    Calculate the range of years covered by a specific timeline sheet.
+
+    Uses reverse chronological numbering where sheet 1 covers the most recent
+    years. Sheet numbering accounts for the transition from BCE to CE between
+    sheets 50 and 51.
+
+    Args:
+        sheet: Sheet number (1-91)
+
+    Returns:
+        list[int]: List of years in chronological order
+                  Negative years represent BCE dates
     """
 
     start_year = 2100 - sheet * 42
@@ -190,9 +266,20 @@ def get_years(sheet):
     return years
 
 
-def era_year(year, space=True):
+def era_year(year: int, space: bool = True) -> str:
     """
-    Add the era to a year based on positive or negative
+    Format a year with its historical era designation (BCE/CE).
+
+    Converts numeric years to human-readable format with era labels.
+    Positive years become CE, negative years become BCE.
+
+    Args:
+        year: Year as integer (negative for BCE, positive for CE)
+        space: If True, adds space between year and era ("1 CE")
+               If False, no space ("1CE")
+
+    Returns:
+        str: Formatted year string with era designation
     """
 
     if space:
@@ -206,9 +293,25 @@ def era_year(year, space=True):
         return f'{abs(year)}{spacer}BCE'
 
 
-def extract_dates(dates):
+def extract_dates(dates: dict[str, pd.DataFrame]) -> pd.DataFrame:
     """
-    Extract dates and create data frames with boxes and lables
+    Process raw historical data into timeline boxes for visualization.
+
+    Converts date strings to long_time.date objects and adds positioning
+    information.
+
+    Args:
+        dates: Dictionary of DataFrames loaded from YAML files
+               Each DataFrame should have columns: ['Label', 'Start', 'End', 'Keywords']
+
+    Returns:
+        pd.DataFrame: Processed timeline data with columns:
+                     - Label: Event description
+                     - Keywords: List of CSS classes for styling
+                     - Start: long_time.date object for start date
+                     - End: long_time.date object for end date
+                     - y: Vertical position (0.5 for center)
+                     - Gradient: Styling gradient value (0)
     """
 
     boxes = []
@@ -233,9 +336,30 @@ def extract_dates(dates):
     return boxes
 
 
-def extract_sheet_boxes(boxes, start_year, end_year, left_to_right):
+def extract_sheet_boxes(boxes: pd.DataFrame,
+                        start_year: int,
+                        end_year: int,
+                        left_to_right: bool) -> pd.DataFrame:
     """
-    Filter boxes to only those that will appear in the sheet and calculate the positions.
+    Filter and position historical events for a specific timeline sheet.
+
+    Selects events that overlap with the sheet's time range and calculates their
+    horizontal positions in the SVG coordinate system.
+
+    Args:
+        boxes: DataFrame of all historical events
+        start_year: First year covered by this sheet
+        end_year: Last year covered by this sheet
+        left_to_right: Direction of timeline flow
+
+    Returns:
+        pd.DataFrame: Filtered events with added columns:
+                     - start_x: X coordinate of event start (pixels)
+                     - end_x: X coordinate of event end (pixels)
+
+    Note:
+        Events are included if they overlap the sheet period, even partially.
+        X coordinates use 24 pixels per year scale with 24-pixel left margin.
     """
 
     sheet_boxes = boxes.loc[(boxes['Start'] <= long_time.date.fromisoformat(f'{end_year}-12-31'))
@@ -247,9 +371,29 @@ def extract_sheet_boxes(boxes, start_year, end_year, left_to_right):
     return sheet_boxes
 
 
-def calculate_x(date, start_year, end_year, left_to_right):
+def calculate_x(date: 'long_time.date', start_year: int, end_year: int, left_to_right: bool) -> float:
     """
-    Calculate the x positions of a date
+    Calculate the horizontal pixel position of a date within a timeline sheet.
+
+    Converts a date to its x coordinate in the SVG coordinate system, accounting
+    for the sheet's time range and layout direction.
+
+    Args:
+        date: The date to position
+        start_year: First year of the sheet's time range
+        end_year: Last year of the sheet's time range (exclusive)
+        left_to_right: If True, earlier dates appear on the left
+                       If False, earlier dates appear on the right
+
+    Returns:
+        float: x coordinate in pixels from the left edge of the SVG
+               Range: 24 to 1032 pixels (accounting for margins)
+
+    Calculation:
+        - Determines fractional years since start using ordinal day within year
+        - Applies 24 pixels per year scale
+        - Adds 24-pixel left margin
+        - Reverses for right-to-left layout
     """
 
     years_since_start = date.year - start_year + (date.ordinal_day() - 1) / (date.days_in_year() - 1)

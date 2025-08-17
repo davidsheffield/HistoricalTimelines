@@ -1,0 +1,781 @@
+- Label: Augustus
+  Start: -0027-01-16
+  End: 0014-08-19
+  DOB: -0063-09-23
+  DOD: 0014-08-19
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Julio_Claudian_Dynasty
+- Label: Tiberius
+  Start: 0014-09-17
+  End: 0037-03-16
+  DOB: -0042-11-16
+  DOD: 0037-03-16
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Julio_Claudian_Dynasty
+- Label: Caligula
+  Start: 0037-03-18
+  End: 0041-01-24
+  DOB: 0012-08-31
+  DOD: 0041-01-24
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Julio_Claudian_Dynasty
+- Label: Claudius
+  Start: 0041-01-24
+  End: 0054-10-13
+  DOB: -0010-08-01
+  DOD: 0054-10-13
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Julio_Claudian_Dynasty
+- Label: Nero
+  Start: 0054-10-13
+  End: 0068-06-09
+  DOB: 0037-12-15
+  DOD: 0068-06-09
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Julio_Claudian_Dynasty
+- Label: Galba
+  Start: 0068-06-08
+  End: 0069-01-15
+  DOB: -0003-12-03
+  DOD: 0069-01-15
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Year_of_the_Four_Emperors
+- Label: Otho
+  Start: 0069-01-15
+  End: 0069-04-16
+  DOB: 0032-04-28
+  DOD: 0069-04-16
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Year_of_the_Four_Emperors
+- Label: Vitellius
+  Start: 0069-04-19
+  End: 0069-12-20
+  DOB: 0015-09-24
+  DOD: 0069-12-20
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Year_of_the_Four_Emperors
+- Label: Vespasian
+  Start: 0069-07-01
+  End: 0079-06-23
+  DOB: 0009-11-17
+  DOD: 0079-06-23
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Flavian_Dynasty
+- Label: Titus
+  Start: 0079-06-24
+  End: 0081-09-13
+  DOB: 0039-12-30
+  DOD: 0081-09-13
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Flavian_Dynasty
+- Label: Domitian
+  Start: 0081-09-14
+  End: 0096-09-18
+  DOB: 0051-10-24
+  DOD: 0096-09-18
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Flavian_Dynasty
+- Label: Nerva
+  Start: 0096-09-18
+  End: 0098-01-27
+  DOB: 0030-11-08
+  DOD: 0098-01-27
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Nerva_Antonine_Dynasty
+- Label: Trajan
+  Start: 0098-01-28
+  End: 0117-08-09
+  DOB: -0053-09-18
+  DOD: 0117-08-09
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Nerva_Antonine_Dynasty
+- Label: Hadrian
+  Start: 0117-08-11
+  End: 0138-07-10
+  DOB: 0076-01-24
+  DOD: 0138-07-10
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Nerva_Antonine_Dynasty
+- Label: Antoninus Pius
+  Start: 0138-07-10
+  End: 0161-03-07
+  DOB: 0086-09-19
+  DOD: 0161-03-07
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Nerva_Antonine_Dynasty
+- Label: Marcus Aurelius
+  Start: 0161-03-07
+  End: 0180-03-17
+  DOB: 0121-04-26
+  DOD: 0180-03-17
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Nerva_Antonine_Dynasty
+- Label: Lucius Verus
+  Start: 0161-03-07
+  End: 0169-01-23
+  DOB: 0130-12-15
+  DOD: 0169-01-23
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Nerva_Antonine_Dynasty
+- Label: Commodus
+  Start: 0180-03-17
+  End: 0192-12-31
+  DOB: 0161-08-31
+  DOD: 0192-12-31
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Nerva_Antonine_Dynasty
+- Label: Pertinax
+  Start: 0193-01-01
+  End: 193-03-28
+  DOB: 126-08-01
+  DOD: 193-03-28
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Year_of_the_Five_Emperors
+- Label: Didius Julianus
+  Start: 0193-03-28
+  End: 0193-06-01
+  DOB: 0133-01-30
+  DOD: 0193-06-01
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Year_of_the_Five_Emperors
+- Label: Septimius Severus
+  Start: 0193-04-09
+  End: 0211-02-04
+  DOB: 0145-04-11
+  DOD: 0211-02-04
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Severan_Dynasty
+- Label: Caracalla
+  Start: 0211-02-04
+  End: 0217-04-08
+  DOB: 0188-04-04
+  DOD: 0217-04-08
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Severan_Dynasty
+- Label: Geta
+  Start: 0211-02-04
+  End: 0211-12-26
+  DOB: 0189-03-07
+  DOD: 0211-12-26
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Severan_Dynasty
+- Label: Macrinus
+  Start: 0217-04-11
+  End: 0218-06-08
+  DOB: c. 0165
+  DOD: 0218-06-08
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Severan_Dynasty
+- Label: Elagabalus
+  Start: 0218-05-16
+  End: 0222-03-13
+  DOB: c. 204
+  DOD: 0222-03-12
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Severan_Dynasty
+- Label: Severus Alexander
+  Start: 0222-03-14
+  End: 0235-03
+  DOB: 0208-10-01
+  DOD: 0235-03
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Severan_Dynasty
+- Label: Maximinus Thrax
+  Start: 0235-03
+  End: 0238-06
+  DOB: c. 0173
+  DOD: 0238-06
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Gordian I
+  Start: 0238-04
+  End: 0238-05
+  DOB: c. 0159
+  DOD: 238-05
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Gordian II
+  Start: 0238-04
+  End: 0238-05
+  DOB: c. 0192
+  DOD: 0238-05
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Pupienus
+  Start: 0238-05
+  End: 0238-08
+  DOB: c. 0164
+  DOD: 0238-08
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Balbinus
+  Start: 0238-05
+  End: 0238-08
+  DOB: c. 0178
+  DOD: 0238-08
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Gordian III
+  Start: 0238-08
+  End: 0244-02
+  DOB: 0225-01-20
+  DOD: 0244-02
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Philip the Arab
+  Start: 0244-02
+  End: 0249-09-30
+  DOB: c. 0204
+  DOD: 0249-09-30
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Decius
+  Start: 0249-09-30
+  End: 0251-06
+  DOB: c. 0200
+  DOD: 0251-06
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Trebonianus Gallus
+  Start: 0251-06
+  End: 0253-08
+  DOB: c. 0206
+  DOD: 0253-08
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Aemilianus
+  Start: 0253-07
+  End: 0253-09
+  DOB: c. 0207
+  DOD: 0253-09
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Valerian
+  Start: 0253-09
+  End: 0260-06
+  DOB: c. 0200
+  DOD: c. 0262
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Gallienus
+  Start: 0253-09
+  End: 0268-09
+  DOB: 0218
+  DOD: 0268-09
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Claudius Gothicus
+  Start: 0268-09
+  End: 0270-08
+  DOB: 0214-05-10
+  DOD: 0270-08
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Quintillus
+  Start: 0270-08
+  End: 0270-09 # only emperor for c. 27 days
+  # DOB: is unknown
+  DOD: 0270-08-01
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Aurelian
+  Start: 0270-08
+  End: 0275-11
+  DOB: 0214-09-09
+  DOD: 0275-11
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Tacitus
+  Start: 0275-12
+  End: 0276-06
+  DOB: c. 0200
+  DOD: 0276-06
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Florianus
+  Start: 0276-06
+  End: 0276-09 # 88 days
+  #DOB: is unknown
+  DOD: 0276-09
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Probus
+  Start: 0276-06
+  End: 0282-09
+  DOB: 0232-08-19
+  DOD: 0282-09
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Carus
+  Start: 0282-09
+  End: 0283-07 # c. 10 months
+  DOB: c. 0224
+  DOD: 0285-07
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Carinus
+  Start: 0283-04
+  End: 0285-08
+  DOB: c. 0250
+  DOD: 0285-08
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Numerian
+  Start: 0283-07
+  End: 0284-11
+  DOB: c. 0253
+  DOD: 0284-11
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Crisis_of_the_Third_Century
+- Label: Diocletian
+  Start: 0284-11-20
+  End: 0305-05-01
+  DOB: 0243-12-22 # or 242
+  DOD: 311-12-03 # or 312
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Tetrarchy
+- Label: Maximian
+  Start: 0286-04-01
+  End: 0305-05-01
+  DOB: c. 0250
+  DOD: c. 0310-07
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Tetrarchy
+- Label: Galerius
+  Start: 0305-05-01
+  End: 0311-05
+  DOB: c. 0258
+  DOD: 0311-05
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Tetrarchy
+- Label: Constantius I
+  Start: 0305-05-01
+  End: 0306-07-25
+  DOB: 0250-03-31
+  DOD: 0306-07-25
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Tetrarchy
+- Label: Severus II
+  Start: 0306-08
+  End: 0307-03
+  #DOB: is unknown
+  DOD: 0307-09
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Tetrarchy
+- Label: Maxentius
+  Start: 0306-10-28
+  End: 0312-10-28
+  DOB: c. 283
+  DOD: 0312-10-28
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Tetrarchy
+- Label: Licinius
+  Start: 0308-11-11
+  End: 0324-09-19
+  DOB: c. 0265
+  DOD: 0325
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Tetrarchy
+- Label: Constantine the Great
+  Start: 0306-07-25
+  End: 0337-05-22
+  DOB: 0272-02-27 # or 273
+  DOD: 0337-05-22
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Tetrarchy
+    - Constantinian_Dynasty
+- Label: Constantine II
+  Start: 0337-09-09
+  End: 0340-04
+  DOB: 0316-02
+  DOD: 0340-04
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Constantinian_Dynasty
+- Label: Constans I
+  Start: 0337-09-09
+  End: 0350-01
+  DOB: 0322 # or 323
+  DOD: 0350-01
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Constantinian_Dynasty
+- Label: Constantius II
+  Start: 0337-09-09
+  End: 0361-11-03
+  DOB: 0317-08-07
+  DOD: 0361-11-03
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Constantinian_Dynasty
+- Label: Julian the Apostate
+  Start: 0361-11-03
+  End: 0363-06-26
+  DOB: 0331
+  DOD: 0363-06-26
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Constantinian_Dynasty
+- Label: Jovian
+  Start: 0363-06-27
+  End: 0364-02-17
+  DOB: 0330 # or 0331
+  DOD: 0364-02-17
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Constantinian_Dynasty
+- Label: Valentinian I
+  Start: 364-02-17
+  End: 375-11-17
+  DOB: 321-01-01
+  DOD: 375-11-17
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Valentinian_Dynasty
+- Label: Valens
+  Start: 364-02-17
+  End: 378-08-09
+  DOB: 328-01-01
+  DOD: 378-08-09
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Valentinian_Dynasty
+- Label: Gratian
+  Start: 367-08-24
+  End: 383-08-25
+  DOB: 359-04-18
+  DOD: 383-08-25
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Valentinian_Dynasty
+- Label: Valentinian II
+  Start: 375-11-17
+  End: 392-05-15
+  DOB: 371-04-02
+  DOD: 392-05-15
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Valentinian_Dynasty
+- Label: Theodosius I
+  Start: 379-01-19
+  End: 395-01-17
+  DOB: 347-01-11
+  DOD: 395-01-17
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Theodosian_Dynasty
+- Label: Arcadius
+  Start: 395-01-17
+  End: 408-05-01
+  DOB: 377-01-01
+  DOD: 408-05-01
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Theodosian_Dynasty
+- Label: Honorius
+  Start: 393-01-23
+  End: 423-08-15
+  DOB: 384-09-09
+  DOD: 423-08-15
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Theodosian_Dynasty
+- Label: Theodosius II
+  Start: 408-05-01
+  End: 450-07-28
+  DOB: 401-04-10
+  DOD: 450-07-28
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Theodosian_Dynasty
+- Label: Marcian
+  Start: 450-07-28
+  End: 457-01-27
+  DOB: 392-01-01
+  DOD: 457-01-27
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Theodosian_Dynasty
+- Label: Petronius Maximinus
+  Start: 455-03-17
+  End: 455-04-22
+  DOB: 400-01-01
+  DOD: 455-04-22
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Last_Western_Emperors
+- Label: Avitus
+  Start: 455-04-22
+  End: 456-10-17
+  DOB: 385-01-01
+  DOD: 456-10-17
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Last_Western_Emperors
+- Label: Majorian
+  Start: 457-01-27
+  End: 461-08-02
+  DOB: 420-01-01
+  DOD: 461-08-02
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Last_Western_Emperors
+- Label: Libius Severus
+  Start: 461-08-02
+  End: 465-11-15
+  DOB: 420-01-01
+  DOD: 465-11-15
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Last_Western_Emperors
+- Label: Anthemius
+  Start: 467-04-12
+  End: 472-07-11
+  DOB: 420-01-01
+  DOD: 472-07-11
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Last_Western_Emperors
+- Label: Olybrius
+  Start: 472-07-11
+  End: 472-10-23
+  DOB: 420-01-01
+  DOD: 472-10-23
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Last_Western_Emperors
+- Label: Glycerius
+  Start: 473-03-03
+  End: 474-06-24
+  DOB: 420-01-01
+  DOD: 474-06-24
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Last_Western_Emperors
+- Label: Julius Nepos 
+  Start: 474-06-24
+  End: 475-05-28
+  DOB: 430-01-01
+  DOD: 480-01-01
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Last_Western_Emperors
+- Label: Romulus Augustulus
+  Start: 475-05-28
+  End: 476-09-04
+  DOB: 460-01-01
+  DOD: 507-01-01
+  Keywords:
+    - Roman
+    - Emperor
+    - Reign
+    - Last_Western_Emperors

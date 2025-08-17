@@ -2,9 +2,10 @@ __pycache__/
 
 .DS_Store
 
-dates/
 sheets/
 old_dates/
+dates/family.yaml
+dates/*.jsonl
 
 Sheets.xlsx
 ~$Sheets.xlsx

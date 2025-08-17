@@ -1,0 +1,518 @@
+- Label: Æthelstan
+  Start: 927
+  End: 939-10-27
+  DOB: 894
+  DOD: 939-10-27
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Wessex
+- Label: Edmund I
+  Start: 939-10-27
+  End: 946-05-26
+  DOB: c. 921
+  DOD: 946-05-326
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Wessex
+- Label: Eadred
+  Start: 946-05-26
+  End: 955-11-23
+  DOB: c. 923
+  DOD: 955-11-23
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Wessex
+- Label: Eadwig
+  Start: 955-11-23
+  End: 959-10-01
+  DOB: c. 941
+  DOD: 959-10-01
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Wessex
+- Label: Edgar the Peaceful
+  Start: 959-10-01
+  End: 975-07-08
+  DOB: c. 943
+  DOD: 975-07-08
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Wessex
+- Label: Edward the Martyr
+  Start: 975-07-08
+  End: 978-03-18
+  DOB: c. 962
+  DOD: 978-03-18
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Wessex
+- Label: Æthelred the Unready
+  Start: 978-03-18
+  End: 1013
+  DOB: c. 966
+  DOD: 1016-04-23
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Wessex
+- Label: Sweyn Forkbeard
+  Start: 1013
+  End: 1014-02-03
+  DOB: 963-04-17
+  DOD: 1014-02-03
+  Keywords:
+    - Denmark
+    - Monarch
+    - Reign
+    - House_of_Denmark
+- Label: Æthelred the Unready
+  Start: 1014-02-03
+  End: 1016-04-23
+  DOB: c. 966
+  DOD: 1016-04-23
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Wessex
+- Label: Edmund Ironside
+  Start: 1016-04-23 # Sometime after 1016-04-23
+  End: 1016-11-30
+  DOB: c. 990
+  DOD: 1016-11-30
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Wessex
+- Label: Cnut the Great
+  Start: 1016-11-30 # Sometime after 1016-04-23
+  End: 1035-11-12
+  DOB: c. 995
+  DOD: 1035-11-12
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Denmark
+- Label: Harold Harefoot
+  Start: 1035-11-12
+  End: 1040-03-17
+  DOB: c. 1016
+  DOD: 1040-03-17
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Denmark
+- Label: Harthacnut
+  Start: 1040-03-17
+  End: 1042-06-08
+  DOB: c. 1018
+  DOD: 1042-06-08
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Denmark
+- Label: Edward the Confessor
+  Start: 1042-06-08
+  End: 1066-01-05
+  DOB: c. 1003
+  DOD: 1066-01-05
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Wessex
+- Label: Harold Godwinson
+  Start: 1066-01-06
+  End: 1066-10-14
+  DOB: c. 1022
+  DOD: 1066-10-14
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Godwin
+- Label: William I
+  Start: 1066-10-14
+  End: 1087-09-09
+  DOB: c. 1028
+  DOD: 1087-09-09
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Normandy
+- Label: William II
+  Start: 1087-09-09
+  End: 1100-08-02
+  DOB: c. 1056
+  DOD: 1100-08-02
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Normandy
+- Label: Henry I
+  Start: 1100-08-02
+  End: 1135-12-01
+  DOB: 1068-09
+  DOD: 1135-12-01
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Normandy
+- Label: Stephen
+  Start: 1135-12-22
+  End: 1154-10-25
+  DOB: c. 1092
+  DOD: 1154-10-25
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Blois
+- Label: Matilda
+  Start: 1135-12-01
+  End: 1148-11-25
+  DOB: c. 1102
+  DOD: 1167-9-10
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Normandy
+- Label: Henry II
+  Start: 1154-10-25
+  End: 1189-07-06
+  DOB: 1133-03-05
+  DOD: 1189-07-06
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Plantagenet
+- Label: Richard I
+  Start: 1189-07-06
+  End: 1199-04-06
+  DOB: 1157-09-08
+  DOD: 1199-04-06
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Plantagenet
+- Label: John
+  Start: 1199-04-06
+  End: 1216-10-19
+  DOB: 1166-12-24
+  DOD: 1216-10-19
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Plantagenet
+- Label: Henry III
+  Start: 1216-10-19
+  End: 1272-11-16
+  DOB: 1207-10-01
+  DOD: 1272-11-16
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Plantagenet
+- Label: Edward I
+  Start: 1272-11-16
+  End: 1307-07-07
+  DOB: 1239-06-17
+  DOD: 1307-07-07
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Plantagenet
+- Label: Edward II
+  Start: 1307-07-08
+  End: 1327-01-20
+  DOB: 1284-04-25
+  DOD: 1327-09-21
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Plantagenet
+- Label: Edward III
+  Start: 1327-01-25
+  End: 1377-06-21
+  DOB: 1312-11-13
+  DOD: 1377-06-21
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Plantagenet
+- Label: Richard II
+  Start: 1377-06-22
+  End: 1399-09-29
+  DOB: 1367-01-06
+  DOD: 1400-02-14
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Plantagenet
+- Label: Henry IV
+  Start: 1399-09-30
+  End: 1413-03-20
+  DOB: c. 1367-04
+  DOD: 1413-03-20
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Lancaster
+- Label: Henry V
+  Start: 1413-03-21
+  End: 1422-08-31
+  DOB: 1386-09-16
+  DOD: 1422-08-31
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Lancaster
+- Label: Henry VI
+  Start: 1422-09-01
+  End: 1461-03-04
+  DOB: 1421-12-06
+  DOD: 1471-05-21
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Lancaster
+- Label: Edward IV
+  Start: 1461-03-04
+  End: 1470-10-03
+  DOB: 1442-04-28
+  DOD: 1483-04-09
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_York
+- Label: Henry VI
+  Start: 1470-10-03
+  End: 1471-04-11
+  DOB: 1421-12-06
+  DOD: 1471-05-21
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Lancaster
+- Label: Edward IV
+  Start: 1471-04-11
+  End: 1483-04-09
+  DOB: 1442-04-28
+  DOD: 1483-04-09
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_York
+- Label: Edward V
+  Start: 1483-04-09
+  End: 1483-06-25
+  DOB: 1470-11-02
+  DOD: 1483-06-26
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_York
+- Label: Richard III
+  Start: 1483-06-26
+  End: 1485-08-22
+  DOB: 1452-10-02
+  DOD: 1485-08-22
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_York
+- Label: Henry VII
+  Start: 1485-08-22
+  End: 1509-04-21
+  DOB: 1457-01-28
+  DOD: 1509-04-21
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Tudor
+- Label: Henry VIII
+  Start: 1509-04-22
+  End: 1547-01-28
+  DOB: 1491-06-28
+  DOD: 1547-01-28
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Tudor
+- Label: Edward VI
+  Start: 1547-01-28
+  End: 1553-07-06
+  DOB: 1537-10-12
+  DOD: 1553-07-06
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Tudor
+- Label: Mary I
+  Start: 1553-07-19
+  End: 1558-11-17
+  DOB: 1516-02-18
+  DOD: 1558-11-17
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Tudor
+- Label: Philip
+  Start: 1554-07-25
+  End: 1558-11-17
+  DOB: 1527-05-21
+  DOD: 1598-09-13
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Tudor
+- Label: Elizabeth I
+  Start: 1558-11-17
+  End: 1603-03-24
+  DOB: 1533-09-07
+  DOD: 1603-03-24
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Tudor
+- Label: James I
+  Start: 1603-03-24
+  End: 1625-03-27
+  DOB: 1566-06-19
+  DOD: 1625-03-27
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Stuart
+- Label: Charles I
+  Start: 1625-03-27
+  End: 1649-01-30
+  DOB: 1600-11-19
+  DOD: 1649-01-30
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Stuart
+- Label: Commonwealth
+  Start: 1649-01-30
+  End: 1653-12-16
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - English_Interregnum
+- Label: Oliver Cromwell
+  Start: 1653-12-16
+  End: 1658-09-03
+  DOB: 1599-04-25
+  DOD: 1658-09-03
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - English_Interregnum
+- Label: Richard Cromwell
+  Start: 1658-09-03
+  End: 1659-05-07
+  DOB: 1626-10-04
+  DOD: 1712-07-12
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - English_Interregnum
+- Label: Charles II
+  Start: 1660-05-29
+  End: 1685-02-06
+  DOB: 1630-05-29
+  DOD: 1685-02-06
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Stuart
+- Label: James II
+  Start: 1685-02-06
+  End: 1688-12-23
+  DOB: 1633-10-14
+  DOD: 1701-09-16
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Stuart
+- Label: Mary II
+  Start: 1689-02-13
+  End: 1694-12-28
+  DOB: 1662-04-30
+  DOD: 1694-12-28
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Stuart
+- Label: William III
+  Start: 1689-02-13
+  End: 1702-03-08
+  DOB: 1650-11-04
+  DOD: 1702-03-08
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Stuart
+- Label: Anne
+  Start: 1702-03-08
+  End: 1714-08-01
+  DOB: 1665-02-06
+  DOD: 1714-08-01
+  Keywords:
+    - England
+    - Monarch
+    - Reign
+    - House_of_Stuart

@@ -1,0 +1,119 @@
+- Label: George I
+  Start: 1714-08-01
+  End: 1727-06-11
+  DOB: 1660-05-28
+  DOD: 1727-06-11
+  Keywords:
+    - UK
+    - Monarch
+    - Reign
+    - House_of_Hanover
+- Label: George II
+  Start: 1727-06-11
+  End: 1760-10-25
+  DOB: 1683-10-30
+  DOD: 1760-10-25
+  Keywords:
+    - UK
+    - Monarch
+    - Reign
+    - House_of_Hanover
+- Label: George III
+  Start: 1760-10-25
+  End: 1820-01-29
+  DOB: 1738-06-04
+  DOD: 1820-01-29
+  Keywords:
+    - UK
+    - Monarch
+    - Reign
+    - House_of_Hanover
+- Label: George IV
+  Start: 1820-01-29
+  End: 1830-06-26
+  DOB: 1762-08-12
+  DOD: 1830-06-26
+  Keywords:
+    - UK
+    - Monarch
+    - Reign
+    - House_of_Hanover
+- Label: William IV
+  Start: 1830-06-26
+  End: 1837-06-20
+  DOB: 1765-08-21
+  DOD: 1837-06-20
+  Keywords:
+    - UK
+    - Monarch
+    - Reign
+    - House_of_Hanover
+- Label: Victoria
+  Start: 1837-06-20
+  End: 1901-01-22
+  DOB: 1819-05-24
+  DOD: 1901-01-22
+  Keywords:
+    - UK
+    - Monarch
+    - Reign
+    - House_of_Hanover
+- Label: Edward VII
+  Start: 1901-01-22
+  End: 1910-05-06
+  DOB: 1841-11-09
+  DOD: 1910-05-06
+  Keywords:
+    - UK
+    - Monarch
+    - Reign
+    - House_of_Saxe-Coburg_and_Gotha
+- Label: George V
+  Start: 1910-05-06
+  End: 1936-01-20
+  DOB: 1865-06-03
+  DOD: 1936-01-20
+  Keywords:
+    - UK
+    - Monarch
+    - Reign
+    - House_of_Windsor
+- Label: Edward VIII
+  Start: 1936-01-20
+  End: 1936-12-11
+  DOB: 1894-06-23
+  DOD: 1972-05-28
+  Keywords:
+    - UK
+    - Monarch
+    - Reign
+    - House_of_Windsor
+- Label: George VI
+  Start: 1936-12-11
+  End: 1952-02-06
+  DOB: 1895-12-14
+  DOD: 1952-02-06
+  Keywords:
+    - UK
+    - Monarch
+    - Reign
+    - House_of_Windsor
+- Label: Elizabeth II
+  Start: 1952-02-06
+  End: 2022-09-08
+  DOB: 1926-04-21
+  DOD: 2022-09-08
+  Keywords:
+    - UK
+    - Monarch
+    - Reign
+    - House_of_Windsor
+- Label: Charles III
+  Start: 2022-09-08
+  DOB: 1948-11-14
+  Alive: true
+  Keywords:
+    - UK
+    - Monarch
+    - Reign
+    - House_of_Windsor

@@ -299,7 +299,7 @@ def extract_dates(dates: dict[str, pd.DataFrame]) -> pd.DataFrame:
 
     boxes = []
 
-    for idx, row in dates['presidents'].iterrows():
+    for idx, row in dates['US_presidents'].iterrows():
         try:
             start_date = long_time.date.fromisoformat(row['Start'])
         except TypeError:

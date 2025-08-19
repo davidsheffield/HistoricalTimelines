@@ -27,6 +27,7 @@ Output:
 import argparse
 import os
 import pathlib
+from string import Template
 from typing import Union
 
 import pandas as pd
@@ -129,6 +130,12 @@ def make_svgs(sheets: list[int],
         Generated in sheets/ directory as: Sheet_{number}_{start_year}_{end_year}.svg
     """
 
+    # Load the SVG template
+    template_path = pathlib.Path(__file__).parent.joinpath('template.svg')
+    with open(template_path, 'r') as f:
+        template_content = f.read()
+
+    template = Template(template_content)
     dir_sheets = pathlib.Path(__file__).parent.joinpath('sheets')
 
     for sheet in sheets:
@@ -138,108 +145,84 @@ def make_svgs(sheets: list[int],
 
         sheet_boxes = extract_sheet_boxes(boxes, years[0], years[-1], left_to_right)
 
-        contents = '<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n'
-        contents += '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n'
-        contents += '<svg width="1056" height="816" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n'
-        contents += """<style>
-rect { stroke: none; }
+        # Generate template substitutions
+        debug_corners = _generate_debug_corners() if debug else ''
+        year_labels = _generate_year_labels(years, left_to_right, debug)
+        year_markers = _generate_year_markers(years)
+        timeline_boxes = _generate_timeline_boxes(sheet_boxes, left_to_right)
 
-rect.Party_Unaffiliated_Federalist { fill : #e8bfb1; }
-rect.Party_Federalist { fill: #ea9978; }
-rect.Party_Democratic-Republican { fill: #0044c9; }
-rect.Party_National_Republican { fill: #0044c9; }
-rect.Party_Democratic { fill: #0044c9; }
-rect.Party_Whig { fill: #f0c862; }
-rect.Party_Republican { fill: #e81b23; }
-
-text.President {
-    text-anchor: middle;
-    dominant-baseline: middle;
-    }
-text.President {
-    font-family: Palatino;
-    font-size: 16px;
-    fill: #ffffff;
-    }
-</style>
-        """
-
-        # Crop marks
-        contents += '<g>\n'
-        if debug:
-            contents += '<g>\n'
-            contents += f'<rect fill="#666666" stroke="none" x="20" y="20" width="4" height="4"/>\n'
-            contents += f'<rect fill="#666666" stroke="none" x="1032" y="20" width="4" height="4"/>\n'
-            contents += f'<rect fill="#666666" stroke="none" x="20" y="792" width="4" height="4"/>\n'
-            contents += f'<rect fill="#666666" stroke="none" x="1032" y="792" width="4" height="4"/>\n'
-            contents += '</g>\n'
-        # Top left crop marks
-        contents += '<g>\n'
-        contents += '<rect fill="#000000" stroke="none" x="23" y="8" width="1" height="12"/>\n'
-        contents += '<rect fill="#000000" stroke="none" x="8" y="23" width="12" height="1"/>\n'
-        contents += '</g>\n'
-        # Top right crop marks
-        contents += '<g>\n'
-        contents += '<rect fill="#000000" stroke="none" x="1032" y="8" width="1" height="12"/>\n'
-        contents += '<rect fill="#000000" stroke="none" x="1036" y="23" width="12" height="1"/>\n'
-        contents += '</g>\n'
-        # Bottom left crop marks
-        contents += '<g>\n'
-        contents += '<rect fill="#000000" stroke="none" x="23" y="796" width="1" height="12"/>\n'
-        contents += '<rect fill="#000000" stroke="none" x="8" y="792" width="12" height="1"/>\n'
-        contents += '</g>\n'
-        # Bottom right crop marks
-        contents += '<g>\n'
-        contents += '<rect fill="#000000" stroke="none" x="1032" y="796" width="1" height="12"/>\n'
-        contents += '<rect fill="#000000" stroke="none" x="1036" y="792" width="12" height="1"/>\n'
-        contents += '</g>\n'
-        contents += '</g>\n'
-
-        # Years
-        contents += '<g>\n'
-        ordered_years = years if left_to_right else reversed(years)
-        for i, year in enumerate(ordered_years):
-            if i % 2 == 0:
-                color = '#eeeeee'
-            else:
-                color = '#dddddd'
-            x = i * 24 + 24
-            contents += f'<rect fill="{color}" stroke="none" x="{x}" y="6" width="24" height="12"/>\n'
-            contents += f'<text x="{x + 3}" y="14" style="font-family:Optima; font-size:8px">{year}</text>\n'
-            if debug:
-                contents += f'<rect fill="{color}" stroke="none" x="{x}" y="24" width="24" height="768"/>\n'
-        contents += '</g>\n'
-
-        for year in years:
-            abs_year = abs(year)
-            if abs_year % 50 == 0:
-                x = (years[-1] - year) * 24 + 24 + 12
-                contents += f'<text x="{x}" y="790" text-anchor="middle" style="font-family:Optima; font-size:12px">{abs_year}</text>\n'
-                # contents += f'<line x1="{x}" y1="0" x2="{x}" y2="900" stroke="#0000ff" stroke-width="1" />\n'
-                # contents += f'<line x1="{(years[-1] - year) * 24 + 24}" y1="0" x2="{(years[-1] - year) * 24 + 24}" y2="900" stroke="#0000ff" stroke-width="1" />\n'
-                # contents += f'<line x1="{(years[-1] - year + 1) * 24 + 24}" y1="0" x2="{(years[-1] - year + 1) * 24 + 24}" y2="900" stroke="#0000ff" stroke-width="1" />\n'
-
-        contents += '<g>\n'
-        # Draw boxes
-        for idx, row in sheet_boxes.iterrows():
-            if left_to_right:
-                x = row['start_x']
-                width = row['end_x'] - row['start_x']
-            else:
-                x = row['end_x']
-                width = row['start_x'] - row['end_x']
-            y = row['y'] * 24 + 24
-            classes = ' '.join(row['Keywords'])
-            contents += f'<rect x="{x}" y="{y}" width="{width}" height="24" class="{classes}"/>\n'
-            middle_x = (row['start_x'] + row['end_x']) / 2
-            label = row['Label']
-            contents += f'<text x="{middle_x}" y="{y + 12}" class="{classes}">{label}</text>\n'
-        contents += '</g>\n'
-
-        contents += '</svg>\n'
+        # Substitute template variables
+        svg_content = template.substitute(
+            debug_corners=debug_corners,
+            year_labels=year_labels,
+            year_markers=year_markers,
+            timeline_boxes=timeline_boxes
+        )
 
         with open(dir_sheets.joinpath(f'Sheet_{sheet}_{start_year}_{end_year}.svg'), 'w') as file:
-            file.write(contents)
+            file.write(svg_content)
+
+
+def _generate_debug_corners() -> str:
+    """Generate debug corner markers for template substitution."""
+    return '''<g>
+<rect fill="#666666" stroke="none" x="20" y="20" width="4" height="4"/>
+<rect fill="#666666" stroke="none" x="1032" y="20" width="4" height="4"/>
+<rect fill="#666666" stroke="none" x="20" y="792" width="4" height="4"/>
+<rect fill="#666666" stroke="none" x="1032" y="792" width="4" height="4"/>
+</g>'''
+
+
+def _generate_year_labels(years: list[int], left_to_right: bool, debug: bool) -> str:
+    """Generate year label elements for template substitution."""
+    content = []
+    ordered_years = years if left_to_right else reversed(years)
+
+    for i, year in enumerate(ordered_years):
+        color = '#eeeeee' if i % 2 == 0 else '#dddddd'
+        x = i * 24 + 24
+        content.append(f'<rect fill="{color}" stroke="none" x="{x}" y="6" width="24" height="12"/>')
+        content.append(f'<text x="{x + 3}" y="14" style="font-family:Optima; font-size:8px">{year}</text>')
+        if debug:
+            content.append(f'<rect fill="{color}" stroke="none" x="{x}" y="24" width="24" height="768"/>')
+
+    return '\n'.join(content)
+
+
+def _generate_year_markers(years: list[int]) -> str:
+    """Generate 50-year interval markers for template substitution."""
+    content = []
+
+    for year in years:
+        abs_year = abs(year)
+        if abs_year % 50 == 0:
+            x = (years[-1] - year) * 24 + 24 + 12
+            content.append(f'<text x="{x}" y="790" text-anchor="middle" style="font-family:Optima; font-size:12px">{abs_year}</text>')
+
+    return '\n'.join(content)
+
+
+def _generate_timeline_boxes(sheet_boxes: pd.DataFrame, left_to_right: bool) -> str:
+    """Generate timeline box elements for template substitution."""
+    content = []
+
+    for idx, row in sheet_boxes.iterrows():
+        if left_to_right:
+            x = row['start_x']
+            width = row['end_x'] - row['start_x']
+        else:
+            x = row['end_x']
+            width = row['start_x'] - row['end_x']
+
+        y = row['y'] * 24 + 24
+        classes = ' '.join(row['Keywords'])
+        content.append(f'<rect x="{x}" y="{y}" width="{width}" height="24" class="{classes}"/>')
+
+        middle_x = (row['start_x'] + row['end_x']) / 2
+        label = row['Label']
+        content.append(f'<text x="{middle_x}" y="{y + 12}" class="{classes}">{label}</text>')
+
+    return '\n'.join(content)
 
 
 def get_years(sheet: int) -> list[int]:
@@ -367,7 +350,7 @@ def extract_sheet_boxes(boxes: pd.DataFrame,
 
     sheet_boxes['start_x'] = sheet_boxes['Start'].apply(calculate_x, args=(start_year, end_year, left_to_right))
     sheet_boxes['end_x'] = sheet_boxes['End'].apply(calculate_x, args=(start_year, end_year, left_to_right))
-    
+
     return sheet_boxes
 
 

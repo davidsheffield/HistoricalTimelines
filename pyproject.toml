@@ -1,0 +1,9 @@
+[tool.ruff]
+line-length = 80
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "I", "B", "UP"]
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "single"

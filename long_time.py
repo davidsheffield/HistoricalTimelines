@@ -1,6 +1,6 @@
 import datetime
 from operator import index as _index
-from typing import Union, Optional
+from typing import Union
 
 
 class date:
@@ -297,7 +297,7 @@ class date:
         if not isinstance(other, date):
             return False
         return self._cmp(other) == 0
-    
+
 
     def __le__(self, other: 'date') -> bool:
         """
@@ -388,7 +388,7 @@ class date:
             elif (m, d) > (m2, d2):
                 return 1
             else: return -1
-    
+
 
     def __hash__(self) -> int:
         """

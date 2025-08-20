@@ -28,7 +28,6 @@ import argparse
 import os
 import pathlib
 from string import Template
-from typing import Union
 
 import pandas as pd
 import yaml
@@ -52,10 +51,10 @@ def timeline() -> None:
     Examples:
         >>> # Generate sheet 50 (around 1 CE)
         >>> python timeline.py --sheet 50
-        >>> 
+        >>>
         >>> # Generate all sheets
         >>> python timeline.py --all
-        >>> 
+        >>>
         >>> # Generate with debug guides
         >>> python timeline.py --sheet 1 --debug
     """

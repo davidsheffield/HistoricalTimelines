@@ -44,4 +44,4 @@ code in this repository.
 - PEP 8
 - 4 space indents
 - 80 characters per line unless it will make the result harder to read than a long line
-- Do not leave any trailing whitespace
+- Run `ruff check . --select W291 --fix` after making changes to remove trailing whitespace

@@ -215,7 +215,21 @@ def _generate_timeline_boxes(sheet_boxes: pd.DataFrame, left_to_right: bool) -> 
 
         y = row['y'] * 24 + 24
         classes = ' '.join(row['Keywords'])
+
         content.append(f'<rect x="{x}" y="{y}" width="{width}" height="24" class="{classes}"/>')
+
+        # Check if border is needed (draw after main rect so it appears on top)
+        if 'border_left' in row['Keywords']:
+            # Find the party class to determine border style
+            party_class = None
+            for keyword in row['Keywords']:
+                if keyword.startswith('Party_'):
+                    party_class = keyword
+                    break
+
+            if party_class:
+                border_classes = f'border {party_class}'
+                content.append(f'<rect x="{x}" y="{y}" width="2" height="24" class="{border_classes}"/>')
 
         middle_x = (row['start_x'] + row['end_x']) / 2
         label = row['Label']
@@ -307,6 +321,7 @@ def extract_dates(dates: dict[str, pd.DataFrame]) -> pd.DataFrame:
             end_date = long_time.date.fromisoformat(row['End'])
         except TypeError:
             end_date = long_time.date.fromdatetime(row['End'])
+
         boxes.append({'Label': row['Label'],
                       'Keywords': row['Keywords'],
                       'Start': start_date,

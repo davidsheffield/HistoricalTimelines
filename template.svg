@@ -12,6 +12,14 @@ rect.Party_Democratic { fill: #0044c9; }
 rect.Party_Whig { fill: #f0c862; }
 rect.Party_Republican { fill: #e81b23; }
 
+rect.border.Party_Unaffiliated_Federalist { fill: #c49e8a; }
+rect.border.Party_Federalist { fill: #d47a51; }
+rect.border.Party_Democratic-Republican { fill: #003399; }
+rect.border.Party_National_Republican { fill: #003399; }
+rect.border.Party_Democratic { fill: #003399; }
+rect.border.Party_Whig { fill: #deb23b; }
+rect.border.Party_Republican { fill: #b8141a; }
+
 text.President {
     text-anchor: middle;
     dominant-baseline: middle;

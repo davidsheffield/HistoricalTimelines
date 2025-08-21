@@ -112,3 +112,81 @@ def test_calculate_font_size_formula_consistency():
 
     result = timeline._calculate_font_size(label, box_width)
     assert result == expected_font_size
+
+
+@pytest.mark.parametrize('range_string,expected',
+                         [
+                             # Single numbers
+                             ('1', [1]),
+                             ('5', [5]),
+                             ('91', [91]),
+
+                             # Simple ranges
+                             ('2-4', [2, 3, 4]),
+                             ('1-3', [1, 2, 3]),
+                             ('89-91', [89, 90, 91]),
+
+                             # Mixed single and ranges
+                             ('1-3,5', [1, 2, 3, 5]),
+                             ('1,3-5', [1, 3, 4, 5]),
+                             ('2,4-6,8', [2, 4, 5, 6, 8]),
+
+                             # Multiple ranges
+                             ('1-2,4-5', [1, 2, 4, 5]),
+                             ('1-3,5-7,10', [1, 2, 3, 5, 6, 7, 10]),
+
+                             # Overlapping ranges (should dedupe)
+                             ('1-3,2-4', [1, 2, 3, 4]),
+                             ('1,1-3', [1, 2, 3]),
+
+                             # Single item ranges
+                             ('5-5', [5]),
+
+                             # Whitespace handling
+                             (' 1 ', [1]),
+                             ('1 - 3', [1, 2, 3]),
+                             ('1, 3-5 , 7', [1, 3, 4, 5, 7]),
+                         ])
+def test_parse_sheet_ranges_valid(range_string, expected):
+    """Test parse_sheet_ranges with valid inputs."""
+    assert timeline.parse_sheet_ranges(range_string) == expected
+
+
+@pytest.mark.parametrize('range_string,error_message',
+                         [
+                             # Empty inputs
+                             ('', 'Empty range string'),
+                             ('   ', 'Empty range string'),
+
+                             # Invalid range formats
+                             ('1-', 'Invalid range format: 1-'),
+                             ('-3', 'Invalid range format: -3'),
+                             ('1--3', r'Invalid range 1--3: start 1 > end -3'),
+                             ('1-2-3', 'Invalid range format: 1-2-3'),
+
+                             # Invalid numbers
+                             ('abc', 'Invalid sheet number: abc'),
+                             ('1,abc', 'Invalid sheet number: abc'),
+                             ('1-abc', 'Invalid range format: 1-abc'),
+                             ('abc-3', 'Invalid range format: abc-3'),
+
+                             # Out of range numbers
+                             ('0', r'Sheet number 0 out of range \(1-91\)'),
+                             ('92', r'Sheet number 92 out of range \(1-91\)'),
+                             ('1-92', r'Sheet number 92 out of range \(1-91\)'),
+                             ('0-2', r'Sheet number 0 out of range \(1-91\)'),
+                             ('-1', 'Invalid range format: -1'),
+
+                             # Invalid range order
+                             ('5-3', r'Invalid range 5-3: start 5 > end 3'),
+                             ('10-1', r'Invalid range 10-1: start 10 > end 1'),
+
+                             # Empty parts
+                             ('1,,3', 'Invalid sheet number'),
+                             (',1', 'Invalid sheet number'),
+                             ('1,', 'Invalid sheet number'),
+                         ])
+def test_parse_sheet_ranges_invalid(range_string, error_message):
+    """Test parse_sheet_ranges with invalid inputs."""
+    with pytest.raises(ValueError, match=error_message):
+        timeline.parse_sheet_ranges(range_string)

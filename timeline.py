@@ -62,20 +62,97 @@ def timeline() -> None:
     parser = argparse.ArgumentParser(prog='timeline')
     sheet_group = parser.add_mutually_exclusive_group(required=True)
     sheet_group.add_argument('-a', '--all', action=argparse.BooleanOptionalAction)
-    sheet_group.add_argument('--sheet', '-s', action='store', type=int, choices=range(1, 92))
+    sheet_group.add_argument('--sheet', '-s', action='store', type=str)
     parser.add_argument('-d', '--debug', action=argparse.BooleanOptionalAction)
     args = parser.parse_args()
 
     if args.all:
         sheets = [1, 93]
     else:
-        sheets = [args.sheet]
+        sheets = parse_sheet_ranges(args.sheet)
 
     dates = load_data()
 
     boxes = extract_dates(dates)
 
     make_svgs(sheets, boxes, args.debug)
+
+
+def parse_sheet_ranges(range_string: str) -> list[int]:
+    """
+    Parse sheet range string into list of sheet numbers.
+
+    Supports single numbers and ranges separated by commas.
+    Ranges are specified with dashes (e.g., '1-3' becomes [1,2,3]).
+
+    Args:
+        range_string: String like '1', '2-4', '1-3,5', or '1-2,4-5'
+
+    Returns:
+        list[int]: List of sheet numbers in ascending order
+
+    Raises:
+        ValueError: If range format is invalid or numbers are out of bounds
+
+    Examples:
+        >>> parse_sheet_ranges('1')
+        [1]
+        >>> parse_sheet_ranges('2-4')
+        [2, 3, 4]
+        >>> parse_sheet_ranges('1-3,5')
+        [1, 2, 3, 5]
+        >>> parse_sheet_ranges('1-2,4-5')
+        [1, 2, 4, 5]
+    """
+
+    if not range_string.strip():
+        raise ValueError('Empty range string')
+
+    sheets = set()
+
+    # Split by commas to handle multiple ranges
+    for part in range_string.split(','):
+        part = part.strip()
+        if not part:
+            raise ValueError('Invalid sheet number')
+
+        if '-' in part:
+            # Handle range like '2-4'
+            try:
+                start_str, end_str = part.split('-', 1)
+                start_str = start_str.strip()
+                end_str = end_str.strip()
+
+                if not start_str or not end_str:
+                    raise ValueError(f'Invalid range format: {part}')
+
+                start = int(start_str)
+                end = int(end_str)
+
+                if start > end:
+                    raise ValueError(f'Invalid range {part}: start {start} > end {end}')
+
+                sheets.update(range(start, end + 1))
+
+            except ValueError as e:
+                if 'invalid literal' in str(e):
+                    raise ValueError(f'Invalid range format: {part}')
+                raise
+
+        else:
+            # Handle single number like '1'
+            try:
+                sheet = int(part)
+                sheets.add(sheet)
+            except ValueError:
+                raise ValueError(f'Invalid sheet number: {part}')
+
+    # Validate all sheet numbers are in valid range
+    for sheet in sheets:
+        if sheet < 1 or sheet > 91:
+            raise ValueError(f'Sheet number {sheet} out of range (1-91)')
+
+    return sorted(list(sheets))
 
 
 def load_data() -> dict[str, pd.DataFrame]:

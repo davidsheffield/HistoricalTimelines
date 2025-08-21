@@ -25,6 +25,7 @@ Output:
 """
 
 import argparse
+import logging
 import os
 import pathlib
 from string import Template
@@ -33,6 +34,9 @@ import pandas as pd
 import yaml
 
 import long_time
+
+
+logger = logging.getLogger(__name__)
 
 
 def timeline() -> None:
@@ -304,6 +308,13 @@ def _calculate_font_size(label: str,
 
     # Calculate font size needed to fit text
     estimated_font_size = usable_width / (len(label) * char_width_ratio)
+
+    # Log warning if estimated font size is below minimum
+    if estimated_font_size < min_font_size:
+        logger.warning(
+            f"Label '{label}' may not fit properly in box (width: {box_width}px). "
+            f"Estimated font size {estimated_font_size:.1f}px is below minimum {min_font_size}px."
+        )
 
     # Clamp to min/max bounds
     font_size = max(min_font_size, min(max_font_size, estimated_font_size))

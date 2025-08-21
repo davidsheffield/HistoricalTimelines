@@ -2,6 +2,7 @@
 Test the file timeline.py
 """
 
+import logging
 import pytest
 
 import long_time
@@ -112,6 +113,63 @@ def test_calculate_font_size_formula_consistency():
 
     result = timeline._calculate_font_size(label, box_width)
     assert result == expected_font_size
+
+
+def test_calculate_font_size_logging(caplog):
+    """Test that log messages are issued when estimated font size is below minimum."""
+
+    # Test case where estimated font size is below minimum
+    with caplog.at_level(logging.WARNING):
+        result = timeline._calculate_font_size('Very Long Text That Should Trigger Warning', 30)
+        assert result == 8  # Should return minimum font size
+
+    # Check that warning was logged
+    assert len(caplog.records) == 1
+    assert caplog.records[0].levelname == 'WARNING'
+    assert "Label 'Very Long Text That Should Trigger Warning' may not fit properly in box" in caplog.records[0].message
+    assert "width: 30px" in caplog.records[0].message
+    assert "below minimum 8px" in caplog.records[0].message
+
+    # Clear the log for next test
+    caplog.clear()
+
+    # Test case where estimated font size is above minimum (no log message)
+    result = timeline._calculate_font_size('Short', 200)
+    assert result == 16  # Should return max font size with no log message
+    assert len(caplog.records) == 0  # No log messages should be recorded
+
+    # Test case where estimated font size is exactly at minimum (no log message)
+    # Calculate a box width that gives exactly min_font_size
+    label = 'Test'
+    min_font_size = 8
+    char_width_ratio = 0.55
+    box_width = (len(label) * char_width_ratio * min_font_size) / 0.95
+    result = timeline._calculate_font_size(label, box_width)
+    assert result == min_font_size
+    assert len(caplog.records) == 0  # No log messages should be recorded
+
+
+def test_calculate_font_size_logging_with_custom_bounds(caplog):
+    """Test logging functionality with custom min/max font sizes."""
+
+    # Test with custom bounds where estimated size is below custom minimum
+    with caplog.at_level(logging.WARNING):
+        result = timeline._calculate_font_size('Long Text String', 50, max_font_size=20, min_font_size=12)
+        assert result == 12  # Should return custom minimum
+
+    # Check that warning was logged with custom minimum
+    assert len(caplog.records) == 1
+    assert caplog.records[0].levelname == 'WARNING'
+    assert "Label 'Long Text String' may not fit properly in box" in caplog.records[0].message
+    assert "below minimum 12px" in caplog.records[0].message
+
+    # Clear the log for next test
+    caplog.clear()
+
+    # Test with custom bounds where no log message should be issued
+    result = timeline._calculate_font_size('Short', 200, max_font_size=20, min_font_size=12)
+    assert result == 20  # Should return custom maximum with no log message
+    assert len(caplog.records) == 0  # No log messages should be recorded
 
 
 @pytest.mark.parametrize('range_string,expected',

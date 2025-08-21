@@ -201,6 +201,39 @@ def _generate_year_markers(years: list[int]) -> str:
     return '\n'.join(content)
 
 
+def _calculate_font_size(label: str,
+                         box_width: float,
+                         max_font_size: int = 16,
+                         min_font_size: int = 8) -> int:
+    """
+    Calculate appropriate font size for a label to fit within a box.
+
+    Args:
+        label: Text label to display
+        box_width: Width of the box in pixels
+        max_font_size: Maximum font size to use (current standard)
+        min_font_size: Minimum font size for readability
+
+    Returns:
+        int: Font size in pixels that should fit the label in the box
+    """
+    if not label.strip():
+        return max_font_size
+
+    # Estimate character width as 55% of font size
+    char_width_ratio = 0.55
+    # Use 95% of box width to allow some padding
+    usable_width = box_width * 0.95
+
+    # Calculate font size needed to fit text
+    estimated_font_size = usable_width / (len(label) * char_width_ratio)
+
+    # Clamp to min/max bounds
+    font_size = max(min_font_size, min(max_font_size, estimated_font_size))
+
+    return font_size
+
+
 def _generate_timeline_boxes(sheet_boxes: pd.DataFrame, left_to_right: bool) -> str:
     """Generate timeline box elements for template substitution."""
     content = []
@@ -233,7 +266,8 @@ def _generate_timeline_boxes(sheet_boxes: pd.DataFrame, left_to_right: bool) -> 
 
         middle_x = (row['start_x'] + row['end_x']) / 2
         label = row['Label']
-        content.append(f'<text x="{middle_x}" y="{y + 12}" class="{classes}">{label}</text>')
+        font_size = _calculate_font_size(label, width)
+        content.append(f'<text x="{middle_x}" y="{y + 12}" class="{classes}" style="font-size:{font_size}px">{label}</text>')
 
     return '\n'.join(content)
 

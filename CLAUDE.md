@@ -13,7 +13,7 @@ code in this repository.
 ### Running the Timeline Generator
 - Generate a specific sheet: `python timeline.py --sheet 50`
 - Generate all sheets: `python timeline.py --all`
-- Debug mode: `python timeline.py --sheet 50 --debug`
+- Debug mode: `python timeline.py --sheet 3 --debug`
 
 ## Architecture
 

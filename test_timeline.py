@@ -338,3 +338,129 @@ def test_params_field_processing():
     # Verify Params field is correctly populated
     assert result.iloc[0]['Params'] == ['border_left']
     assert result.iloc[1]['Params'] == []  # Should default to empty list
+
+
+def test_label_position_above():
+    """Test that label_position:above positions text above the box."""
+
+    # Create test data with label_position:above
+    test_data = pd.DataFrame([{
+        'Label': 'Test Label',
+        'Keywords': ['USA', 'President'],
+        'Params': ['label_position:above'],
+        'start_x': 100,
+        'end_x': 200,
+        'y': 1
+    }])
+
+    # Generate timeline boxes
+    result = timeline._generate_timeline_boxes(test_data, left_to_right=True)
+
+    # Check that text y position is above the box (y*24 + 24 - 4 = 44)
+    expected_y = 44  # y=1, so 1*24 + 24 - 4 = 44
+    assert f'y="{expected_y}"' in result
+    assert 'Test Label' in result
+    # Check that default font size is used
+    assert 'font-size:16px' in result
+    # Check that outside_label class is added
+    assert 'outside_label' in result
+
+
+def test_label_position_below():
+    """Test that label_position:below positions text below the box."""
+
+    # Create test data with label_position:below
+    test_data = pd.DataFrame([{
+        'Label': 'Test Label',
+        'Keywords': ['USA', 'President'],
+        'Params': ['label_position:below'],
+        'start_x': 100,
+        'end_x': 200,
+        'y': 1
+    }])
+
+    # Generate timeline boxes
+    result = timeline._generate_timeline_boxes(test_data, left_to_right=True)
+
+    # Check that text y position is below the box (y*24 + 24 + 28 = 76)
+    expected_y = 76  # y=1, so 1*24 + 24 + 28 = 76
+    assert f'y="{expected_y}"' in result
+    assert 'Test Label' in result
+    # Check that default font size is used
+    assert 'font-size:16px' in result
+    # Check that outside_label class is added
+    assert 'outside_label' in result
+
+
+def test_label_position_default():
+    """Test that default positioning works when no label_position is specified."""
+
+    # Create test data without label_position
+    test_data = pd.DataFrame([{
+        'Label': 'Test Label',
+        'Keywords': ['USA', 'President'],
+        'Params': ['border_left'],
+        'start_x': 100,
+        'end_x': 200,
+        'y': 1
+    }])
+
+    # Generate timeline boxes
+    result = timeline._generate_timeline_boxes(test_data, left_to_right=True)
+
+    # Check that text y position is in the middle of the box (y*24 + 24 + 12 = 60)
+    expected_y = 60  # y=1, so 1*24 + 24 + 12 = 60
+    assert f'y="{expected_y}"' in result
+    assert 'Test Label' in result
+    # Check that outside_label class is NOT added for default positioning
+    assert 'outside_label' not in result
+
+
+def test_label_position_empty_params():
+    """Test that default positioning works when Params is empty."""
+
+    # Create test data with empty Params
+    test_data = pd.DataFrame([{
+        'Label': 'Test Label',
+        'Keywords': ['USA', 'President'],
+        'Params': [],
+        'start_x': 100,
+        'end_x': 200,
+        'y': 1
+    }])
+
+    # Generate timeline boxes
+    result = timeline._generate_timeline_boxes(test_data, left_to_right=True)
+
+    # Check that text y position is in the middle of the box (y*24 + 24 + 12 = 60)
+    expected_y = 60  # y=1, so 1*24 + 24 + 12 = 60
+    assert f'y="{expected_y}"' in result
+    assert 'Test Label' in result
+    # Check that outside_label class is NOT added for empty params
+    assert 'outside_label' not in result
+
+
+def test_label_position_mixed_params():
+    """Test that label_position works correctly when mixed with other params."""
+
+    # Create test data with multiple params including label_position
+    test_data = pd.DataFrame([{
+        'Label': 'Test Label',
+        'Keywords': ['USA', 'President'],
+        'Params': ['border_left', 'label_position:above', 'other_param'],
+        'start_x': 100,
+        'end_x': 200,
+        'y': 2
+    }])
+
+    # Generate timeline boxes
+    result = timeline._generate_timeline_boxes(test_data, left_to_right=True)
+
+    # Check that text y position is above the box (y*24 + 24 - 4 = 68)
+    expected_y = 68  # y=2, so 2*24 + 24 - 4 = 68
+    assert f'y="{expected_y}"' in result
+    assert 'Test Label' in result
+    # Check that default font size is used
+    assert 'font-size:16px' in result
+    # Check that outside_label class is added
+    assert 'outside_label' in result

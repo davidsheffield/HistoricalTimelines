@@ -80,6 +80,8 @@
     - President
     - Reign
     - Party_Whig
+  Params:
+    - label_position:below
 - Label: John Tyler
   Start: 1841-04-04
   End: 1845-03-04
@@ -106,6 +108,8 @@
     - President
     - Reign
     - Party_Whig
+  Params:
+    - label_position:below
 - Label: Millard Fillmore
   Start: 1850-07-09
   End: 1853-03-04
@@ -178,6 +182,7 @@
     - Party_Republican
   Params:
     - border_left
+    - label_position:below
 - Label: Chester A Arthur
   Start: 1881-09-19
   End: 1885-03-04
@@ -256,6 +261,8 @@
     - President
     - Reign
     - Party_Republican
+  Params:
+    - label_position:below
 - Label: Calvin Coolidge
   Start: 1923-08-02
   End: 1929-03-04

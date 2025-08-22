@@ -28,6 +28,10 @@ text.President {
     font-family: Palatino;
     fill: #ffffff;
     }
+
+text.outside_label {
+    fill: #000000;
+}
 </style>
 
 <!-- Crop marks and debug elements -->

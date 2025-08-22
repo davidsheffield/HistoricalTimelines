@@ -357,8 +357,29 @@ def _generate_timeline_boxes(sheet_boxes: pd.DataFrame, left_to_right: bool) -> 
 
         middle_x = (row['start_x'] + row['end_x']) / 2
         label = row['Label']
-        font_size = _calculate_font_size(label, width)
-        content.append(f'<text x="{middle_x}" y="{y + 12}" class="{classes}" style="font-size:{font_size}px">{label}</text>')
+
+        # Determine label position based on params
+        label_position = None
+        for param in params:
+            if param.startswith('label_position:'):
+                label_position = param.split(':', 1)[1]
+                break
+
+        # Calculate font size, y position, and classes based on label_position
+        text_y = y + 12  # Default: middle of box
+        text_classes = classes
+        if label_position == 'above':
+            text_y -= 24
+            font_size = 16  # Default font size
+            text_classes += ' outside_label'
+        elif label_position == 'below':
+            text_y += 24
+            font_size = 16  # Default font size
+            text_classes += ' outside_label'
+        else:
+            font_size = _calculate_font_size(label, width)
+
+        content.append(f'<text x="{middle_x}" y="{text_y}" class="{text_classes}" style="font-size:{font_size}px">{label}</text>')
 
     return '\n'.join(content)
 

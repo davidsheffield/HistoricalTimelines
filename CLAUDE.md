@@ -11,7 +11,7 @@ code in this repository.
 - Run specific test: `python -m pytest test_long_time.py::test_init__full`
 
 ### Running the Timeline Generator
-- Generate a specific sheet: `python timeline.py --sheet 50`
+- Generate a specific sheet: `python timeline.py --sheet 3`
 - Generate all sheets: `python timeline.py --all`
 - Debug mode: `python timeline.py --sheet 3 --debug`
 

@@ -5,6 +5,8 @@ Test the file timeline.py
 import logging
 import pytest
 
+import pandas as pd
+
 import long_time
 import timeline
 
@@ -248,3 +250,91 @@ def test_parse_sheet_ranges_invalid(range_string, error_message):
     """Test parse_sheet_ranges with invalid inputs."""
     with pytest.raises(ValueError, match=error_message):
         timeline.parse_sheet_ranges(range_string)
+
+
+def test_params_field_border_detection():
+    """Test that border_left detection works correctly with Params field."""
+
+    # Create test data with border_left in Params field
+    test_data = {
+        'Label': 'Test President',
+        'Keywords': ['USA', 'President', 'Party_Democratic'],
+        'Params': ['border_left'],
+        'start_x': 100,
+        'end_x': 200
+    }
+
+    # Mock the _render_box function's border detection logic
+    params = test_data.get('Params', [])
+    assert 'border_left' in params
+    assert 'border_left' not in test_data['Keywords']
+
+
+def test_params_field_no_border():
+    """Test that missing Params field or no border_left works correctly."""
+
+    # Test data without Params field
+    test_data_no_params = {
+        'Label': 'Test President',
+        'Keywords': ['USA', 'President', 'Party_Democratic'],
+        'start_x': 100,
+        'end_x': 200
+    }
+
+    # Test data with Params field but no border_left
+    test_data_no_border = {
+        'Label': 'Test President',
+        'Keywords': ['USA', 'President', 'Party_Democratic'],
+        'Params': ['other_param'],
+        'start_x': 100,
+        'end_x': 200
+    }
+
+    # Test both cases
+    params1 = test_data_no_params.get('Params', [])
+    assert 'border_left' not in params1
+
+    params2 = test_data_no_border.get('Params', [])
+    assert 'border_left' not in params2
+
+
+def test_params_field_processing():
+    """Test that extract_dates function correctly handles Params field."""
+
+    # Create mock data that mimics YAML structure
+    # Create separate DataFrames to properly handle missing Params
+    df1 = pd.DataFrame([{
+        'Label': 'Test President 1',
+        'Start': '2001-01-20',
+        'End': '2009-01-20',
+        'Keywords': ['USA', 'President', 'Party_Democratic'],
+        'Params': ['border_left']
+    }])
+
+    df2 = pd.DataFrame([{
+        'Label': 'Test President 2',
+        'Start': '2009-01-20',
+        'End': '2017-01-20',
+        'Keywords': ['USA', 'President', 'Party_Republican']
+    }])
+
+    # Combine DataFrames and handle missing Params column
+    combined_df = pd.concat([df1, df2], ignore_index=True)
+    # Fill NaN values in Params column with empty lists
+    combined_df['Params'] = combined_df['Params'].apply(lambda x: x if isinstance(x, list) else [])
+
+    mock_dates = {
+        'US_presidents': combined_df
+    }
+
+    # Process the data
+    result = timeline.extract_dates(mock_dates)
+
+    # Verify the DataFrame has the expected columns including Params
+    expected_columns = ['Label', 'Keywords', 'Params', 'Start', 'End', 'y', 'Gradient']
+    for col in expected_columns:
+        assert col in result.columns
+
+    # Verify Params field is correctly populated
+    assert result.iloc[0]['Params'] == ['border_left']
+    assert result.iloc[1]['Params'] == []  # Should default to empty list

@@ -196,7 +196,7 @@ def make_svgs(sheets: list[int],
     Args:
         sheets: List of sheet numbers to generate (1-91)
         boxes: DataFrame containing processed historical events with columns:
-               ['Label', 'Keywords', 'Start', 'End', 'y', 'Gradient']
+               ['Label', 'Keywords', 'Params', 'Start', 'End', 'y', 'Gradient']
         debug: If True, adds visual guides and corner markers
         left_to_right: If True, timeline flows left to right; if False, right to left
 
@@ -340,7 +340,10 @@ def _generate_timeline_boxes(sheet_boxes: pd.DataFrame, left_to_right: bool) -> 
         content.append(f'<rect x="{x}" y="{y}" width="{width}" height="24" class="{classes}"/>')
 
         # Check if border is needed (draw after main rect so it appears on top)
-        if 'border_left' in row['Keywords']:
+        params = row.get('Params', [])
+        if not isinstance(params, list):
+            params = []
+        if 'border_left' in params:
             # Find the party class to determine border style
             party_class = None
             for keyword in row['Keywords']:
@@ -420,12 +423,13 @@ def extract_dates(dates: dict[str, pd.DataFrame]) -> pd.DataFrame:
 
     Args:
         dates: Dictionary of DataFrames loaded from YAML files
-               Each DataFrame should have columns: ['Label', 'Start', 'End', 'Keywords']
+               Each DataFrame should have columns: ['Label', 'Start', 'End', 'Keywords', 'Params']
 
     Returns:
         pd.DataFrame: Processed timeline data with columns:
                      - Label: Event description
                      - Keywords: List of CSS classes for styling
+                     - Params: List of functional parameters (e.g., border_left)
                      - Start: long_time.date object for start date
                      - End: long_time.date object for end date
                      - y: Vertical position (0.5 for center)
@@ -446,6 +450,7 @@ def extract_dates(dates: dict[str, pd.DataFrame]) -> pd.DataFrame:
 
         boxes.append({'Label': row['Label'],
                       'Keywords': row['Keywords'],
+                      'Params': row.get('Params', []),
                       'Start': start_date,
                       'End': end_date,
                       'y': 0.5,

@@ -164,9 +164,13 @@ def load_data() -> dict[str, pd.DataFrame]:
     Load historical event data from YAML files in the dates/ directory.
 
     Scans the dates/ directory for .yaml files and loads them into pandas DataFrames.
+    Expects all YAML files to use the global/entries format.
 
     Returns:
         dict[str, pd.DataFrame]: Dictionary mapping file stems to DataFrames
+
+    Raises:
+        ValueError: If YAML file doesn't have the expected global/entries structure
     """
 
     dir_dates = pathlib.Path(__file__).parent.joinpath('dates')
@@ -176,9 +180,38 @@ def load_data() -> dict[str, pd.DataFrame]:
         file = pathlib.Path(file)
         if file.suffix != '.yaml':
             continue
-        with open(dir_dates.joinpath(file), 'r') as f:
-            df = pd.DataFrame(yaml.safe_load(f))
-            dates[file.stem] = df
+
+        file_path = dir_dates.joinpath(file)
+        with open(file_path) as f:
+            data = yaml.safe_load(f)
+
+            # Validate the YAML structure
+            if not isinstance(data, dict) or 'entries' not in data:
+                raise ValueError(f'YAML file {file} must have global/entries structure')
+
+            # Extract global settings and entries
+            global_settings = data.get('global', {})
+            entries = data['entries']
+
+            if not isinstance(entries, list):
+                raise ValueError(f'YAML file {file} entries must be a list')
+
+            # Apply global settings to each entry
+            for entry in entries:
+                # Merge global keywords with entry-specific keywords
+                if 'Keywords' in global_settings:
+                    global_keywords = global_settings['Keywords']
+                    entry_keywords = entry.get('Keywords', [])
+                    entry['Keywords'] = global_keywords + entry_keywords
+
+                # Merge global params with entry-specific params
+                if 'Params' in global_settings:
+                    global_params = global_settings['Params']
+                    entry_params = entry.get('Params', [])
+                    entry['Params'] = global_params + entry_params
+
+            dates[file.stem] = pd.DataFrame(entries)
+
     return dates
 
 

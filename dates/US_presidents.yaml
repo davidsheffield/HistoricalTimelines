@@ -1,34 +1,29 @@
-- Label: George Washington
-  Start: 1789-04-30
-  End: 1797-03-04
+global:
   Keywords:
     - USA
     - President
     - Reign
+
+entries:
+- Label: George Washington
+  Start: 1789-04-30
+  End: 1797-03-04
+  Keywords:
     - Party_Unaffiliated_Federalist
 - Label: John Adams
   Start: 1797-03-04
   End: 1801-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Federalist
 - Label: Thomas Jefferson
   Start: 1801-03-04
   End: 1809-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic-Republican
 - Label: James Madison
   Start: 1809-03-04
   End: 1817-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic-Republican
   Params:
     - border_left
@@ -36,9 +31,6 @@
   Start: 1817-03-04
   End: 1825-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic-Republican
   Params:
     - border_left
@@ -46,9 +38,6 @@
   Start: 1825-03-04
   End: 1829-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_National_Republican
   Params:
     - border_left
@@ -56,9 +45,6 @@
   Start: 1829-03-04
   End: 1837-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic
   Params:
     - border_left
@@ -66,9 +52,6 @@
   Start: 1837-03-04
   End: 1841-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic
   Params:
     - border_left
@@ -76,9 +59,6 @@
   Start: 1841-03-04
   End: 1841-04-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Whig
   Params:
     - label_position:below
@@ -86,17 +66,11 @@
   Start: 1841-04-04
   End: 1845-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Unaffiliated
 - Label: James K Polk
   Start: 1845-03-04
   End: 1849-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic
   Params:
     - border_left
@@ -104,9 +78,6 @@
   Start: 1849-03-04
   End: 1850-07-09
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Whig
   Params:
     - label_position:below
@@ -114,9 +85,6 @@
   Start: 1850-07-09
   End: 1853-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Whig
   Params:
     - border_left
@@ -124,17 +92,11 @@
   Start: 1853-03-04
   End: 1857-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic
 - Label: James Buchanan
   Start: 1857-03-04
   End: 1861-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic
   Params:
     - border_left
@@ -142,33 +104,21 @@
   Start: 1861-03-04
   End: 1865-04-15
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
 - Label: Andrew Johnson
   Start: 1865-04-15
   End: 1869-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic
 - Label: Ulysses S Grant
   Start: 1869-03-04
   End: 1877-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
 - Label: Rutherford B Hayes
   Start: 1877-03-04
   End: 1881-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
   Params:
     - border_left
@@ -176,9 +126,6 @@
   Start: 1881-03-04
   End: 1881-09-19
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
   Params:
     - border_left
@@ -187,9 +134,6 @@
   Start: 1881-09-19
   End: 1885-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
   Params:
     - border_left
@@ -197,41 +141,26 @@
   Start: 1885-03-04
   End: 1889-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic
 - Label: Benjamin Harrison
   Start: 1889-03-04
   End: 1893-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
 - Label: Grover Cleveland
   Start: 1893-03-04
   End: 1897-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic
 - Label: William McKinley
   Start: 1897-03-04
   End: 1901-09-14
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
 - Label: Theodore Roosevelt
   Start: 1901-09-14
   End: 1909-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
   Params:
     - border_left
@@ -239,9 +168,6 @@
   Start: 1909-03-04
   End: 1913-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
   Params:
     - border_left
@@ -249,17 +175,11 @@
   Start: 1913-03-04
   End: 1921-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic
 - Label: Warren G Harding
   Start: 1921-03-04
   End: 1923-08-02
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
   Params:
     - label_position:below
@@ -267,9 +187,6 @@
   Start: 1923-08-02
   End: 1929-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
   Params:
     - border_left
@@ -277,9 +194,6 @@
   Start: 1929-03-04
   End: 1933-03-04
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
   Params:
     - border_left
@@ -287,17 +201,11 @@
   Start: 1933-03-04
   End: 1945-04-12
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic
 - Label: Harry S Truman
   Start: 1945-04-12
   End: 1953-01-20
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic
   Params:
     - border_left
@@ -305,25 +213,16 @@
   Start: 1953-01-20
   End: 1961-01-20
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
 - Label: John F Kennedy
   Start: 1961-01-20
   End: 1963-11-22
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic
 - Label: Lyndon Baines Johnson
   Start: 1963-11-22
   End: 1969-01-20
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic
   Params:
     - border_left
@@ -331,17 +230,11 @@
   Start: 1969-01-20
   End: 1974-08-09
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
 - Label: Gerald Ford
   Start: 1974-08-09
   End: 1977-01-20
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
   Params:
     - border_left
@@ -349,25 +242,16 @@
   Start: 1977-01-20
   End: 1981-01-20
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic
 - Label: Ronald Reagan
   Start: 1981-01-20
   End: 1989-01-20
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
 - Label: George H W Bush
   Start: 1989-01-20
   End: 1993-01-20
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
   Params:
     - border_left
@@ -375,17 +259,11 @@
   Start: 1993-01-20
   End: 2001-01-20
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic
 - Label: George W Bush
   Start: 2001-01-20
   End: 2009-01-20
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
   Params:
     - border_left
@@ -393,33 +271,21 @@
   Start: 2009-01-20
   End: 2017-01-20
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic
 - Label: Donald Trump
   Start: 2017-01-20
   End: 2021-01-20
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
 - Label: Joe Biden
   Start: 2021-01-20
   End: 2025-01-20
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Democratic
 - Label: Donald Trump
   Start: 2025-01-20
   End: 2029-01-20
   Keywords:
-    - USA
-    - President
-    - Reign
     - Party_Republican
   Params:
     - border_left

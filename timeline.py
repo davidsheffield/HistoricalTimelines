@@ -276,7 +276,7 @@ def make_svgs(sheets: list[int],
             timeline_boxes=timeline_boxes
         )
 
-        with open(dir_sheets.joinpath(f'Sheet_{sheet}_{start_year}_{end_year}.svg'), 'w') as file:
+        with open(dir_sheets.joinpath(f'Sheet_{sheet:02d}_{start_year}_{end_year}.svg'), 'w') as file:
             file.write(svg_content)
 
 

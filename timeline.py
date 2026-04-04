@@ -314,7 +314,7 @@ def _generate_year_markers(years: list[int]) -> str:
     for year in years:
         abs_year = abs(year)
         if abs_year % 50 == 0:
-            x = (years[-1] - year) * 24 + 24 + 12
+            x = (year - years[0]) * 24 + 24 + 12
             content.append(f'<text x="{x}" y="790" text-anchor="middle" style="font-family:Optima; font-size:12px">{abs_year}</text>')
 
     return '\n'.join(content)

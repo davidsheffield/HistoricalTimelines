@@ -4,6 +4,10 @@
 <style>
 rect { stroke: none; }
 
+/******************
+** US presidents **
+******************/
+
 rect.Party_Unaffiliated_Federalist { fill : #e8bfb1; }
 rect.Party_Federalist { fill: #ea9978; }
 rect.Party_Democratic-Republican { fill: #0044c9; }
@@ -20,14 +24,31 @@ rect.border.Party_Democratic { fill: #003399; }
 rect.border.Party_Whig { fill: #deb23b; }
 rect.border.Party_Republican { fill: #b8141a; }
 
-text.President {
+text.Reign {
     text-anchor: middle;
     dominant-baseline: middle;
     }
-text.President {
+text.Reign {
     font-family: Palatino;
     fill: #ffffff;
     }
+
+/*******************************
+** British / English monarchs **
+*******************************/
+
+rect.House_of_Hanover { fill : #d13e4d; }
+rect.House_of_Saxe-Coburg_and_Gotha,
+rect.House_of_Windsor { fill : #d20c1f; }
+
+/*text.Monarch.UK {
+    text-anchor: middle;
+    dominant-baseline: middle;
+    }
+text.Monarch.UK {
+    font-family: Palatino;
+    fill: #ffffff;
+    }*/
 
 text.outside_label {
     fill: #000000;

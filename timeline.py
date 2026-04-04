@@ -493,7 +493,7 @@ def extract_dates(dates: dict[str, pd.DataFrame]) -> pd.DataFrame:
 
     boxes = []
 
-    dates = {k: v for k, v in dates.items() if k in ['US_presidents']}
+    dates = {k: v for k, v in dates.items() if k in ['US_presidents', 'British_monarchs']}
     for file_stem, df in dates.items():
         for idx, row in df.iterrows():
             # Determine start and end dates based on available columns

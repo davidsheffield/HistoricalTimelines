@@ -4,7 +4,7 @@ global:
     - Monarch
     - Reign
   Params:
-    - position:0.5
+    - position:2.5
 
 entries:
 - Label: George I
@@ -70,6 +70,8 @@ entries:
   DOD: 1972-05-28
   Keywords:
     - House_of_Windsor
+  Params:
+    - label_position:above
 - Label: George VI
   Start: 1936-12-11
   End: 1952-02-06
@@ -86,6 +88,7 @@ entries:
     - House_of_Windsor
 - Label: Charles III
   Start: 2022-09-08
+  End: 2036-01-01 # Life expectancy
   DOB: 1948-11-14
   Alive: true
   Keywords:

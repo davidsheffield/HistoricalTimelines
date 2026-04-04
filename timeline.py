@@ -475,6 +475,66 @@ def era_year(year: int, space: bool = True) -> str:
         return f'{abs(year)}{spacer}BCE'
 
 
+def _normalize_date_string(date_string: str) -> str:
+    """
+    Normalize a partial ISO date string to a full YYYY-MM-DD string.
+
+    Accepts year-only and year+month strings and fills in default values
+    (month=01, day=01) for missing components.
+
+    Args:
+        date_string: Partial or full ISO date string. Supported formats:
+                     - 'YYYY'        (e.g., '2010')
+                     - '-YYYY'       (e.g., '-0100')
+                     - 'YYYY-MM'     (e.g., '0983-04')
+                     - '-YYYY-MM'    (e.g., '-0300-10')
+                     - 'YYYY-MM-DD'  (e.g., '2010-03-15')
+                     - '-YYYY-MM-DD' (e.g., '-0044-03-15')
+
+    Returns:
+        str: Full ISO date string in 'YYYY-MM-DD' or '-YYYY-MM-DD' format
+    """
+    n = len(date_string)
+    bce = date_string.startswith('-')
+    if (bce and n == 5) or (not bce and n == 4):
+        return date_string + '-01-01'
+    if (bce and n == 8) or (not bce and n == 7):
+        return date_string + '-01'
+    return date_string
+
+
+def _parse_date_field(value, label: str, field_name: str) -> 'long_time.date':
+    """
+    Parse a date value into a long_time.date object.
+
+    Handles strings (including partial ISO formats), integers (year only),
+    and datetime.date objects.
+
+    Args:
+        value: Date value — a string (full or partial ISO format), an integer
+               year (positive for CE, negative for BCE), or datetime.date
+        label: Entry label for error messages
+        field_name: Field name for error messages (e.g., 'Start date', 'DOB')
+
+    Returns:
+        long_time.date: Parsed date object
+
+    Raises:
+        TypeError: If the value cannot be parsed as a date
+    """
+    if isinstance(value, int):
+        value = f'-{abs(value):04d}' if value < 0 else f'{value:04d}'
+    if isinstance(value, str):
+        value = _normalize_date_string(value)
+    try:
+        return long_time.date.fromisoformat(value)
+    except TypeError:
+        try:
+            return long_time.date.fromdatetime(value)
+        except TypeError as e:
+            raise TypeError(f"Invalid {field_name} for '{label}': {value!r}: {e}") from e
+
+
 def extract_dates(dates: dict[str, pd.DataFrame]) -> pd.DataFrame:
     """
     Process raw historical data into timeline boxes for visualization.
@@ -505,40 +565,16 @@ def extract_dates(dates: dict[str, pd.DataFrame]) -> pd.DataFrame:
             # Determine start and end dates based on available columns
             if 'Start' in row and 'End' in row and pd.notna(row['Start']) and pd.notna(row['End']):
                 # Period data (Start/End)
-                try:
-                    start_date = long_time.date.fromisoformat(row['Start'])
-                except TypeError:
-                    try:
-                        start_date = long_time.date.fromdatetime(row['Start'])
-                    except TypeError as e:
-                        raise TypeError(f"Invalid Start date for '{row['Label']}': {e}") from e
-                try:
-                    end_date = long_time.date.fromisoformat(row['End'])
-                except TypeError:
-                    try:
-                        end_date = long_time.date.fromdatetime(row['End'])
-                    except TypeError as e:
-                        raise TypeError(f"Invalid End date for '{row['Label']}': {e}") from e
+                start_date = _parse_date_field(row['Start'], row['Label'], 'Start date')
+                end_date = _parse_date_field(row['End'], row['Label'], 'End date')
 
             elif 'DOB' in row and pd.notna(row['DOB']) and ('DOD' in row or 'Alive' in row):
                 # Life data (DOB/DOD/Alive)
-                try:
-                    start_date = long_time.date.fromisoformat(row['DOB'])
-                except TypeError:
-                    try:
-                        start_date = long_time.date.fromdatetime(row['DOB'])
-                    except TypeError as e:
-                        raise TypeError(f"Invalid DOB for '{row['Label']}': {e}") from e
+                start_date = _parse_date_field(row['DOB'], row['Label'], 'DOB')
 
                 if 'DOD' in row and pd.notna(row['DOD']):
                     # Person has died
-                    try:
-                        end_date = long_time.date.fromisoformat(row['DOD'])
-                    except TypeError:
-                        try:
-                            end_date = long_time.date.fromdatetime(row['DOD'])
-                        except TypeError as e:
-                            raise TypeError(f"Invalid DOD for '{row['Label']}': {e}") from e
+                    end_date = _parse_date_field(row['DOD'], row['Label'], 'DOD')
                 elif 'Alive' in row and row['Alive']:
                     # Person is still alive, use current date as end
                     end_date = long_time.date(2025, 1, 1, True)  # Current year

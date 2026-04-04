@@ -826,7 +826,7 @@ def test_extract_dates_invalid_start_type_raises_error():
     """Test that extract_dates raises TypeError with label when Start is an invalid type."""
     df = pd.DataFrame([{
         'Label': 'Bad Start Entry',
-        'Start': 12345,  # Not a string or datetime
+        'Start': 12.5,  # Not a string, int, or datetime
         'End': '2009-01-20',
         'Keywords': ['USA'],
         'Params': ['position:0.5']
@@ -834,7 +834,7 @@ def test_extract_dates_invalid_start_type_raises_error():
 
     mock_dates = {'test_data': df}
 
-    with pytest.raises(TypeError, match="Invalid Start date for 'Bad Start Entry'"):
+    with pytest.raises(TypeError, match=r"Invalid Start date for 'Bad Start Entry': 12\.5"):
         timeline.extract_dates(mock_dates)
 
 
@@ -843,14 +843,14 @@ def test_extract_dates_invalid_end_type_raises_error():
     df = pd.DataFrame([{
         'Label': 'Bad End Entry',
         'Start': '2001-01-20',
-        'End': 12345,  # Not a string or datetime
+        'End': 12.5,  # Not a string, int, or datetime
         'Keywords': ['USA'],
         'Params': ['position:0.5']
     }])
 
     mock_dates = {'test_data': df}
 
-    with pytest.raises(TypeError, match="Invalid End date for 'Bad End Entry'"):
+    with pytest.raises(TypeError, match=r"Invalid End date for 'Bad End Entry': 12\.5"):
         timeline.extract_dates(mock_dates)
 
 
@@ -858,7 +858,7 @@ def test_extract_dates_invalid_dob_type_raises_error():
     """Test that extract_dates raises TypeError with label when DOB is an invalid type."""
     df = pd.DataFrame([{
         'Label': 'Bad DOB Entry',
-        'DOB': 12345,  # Not a string or datetime
+        'DOB': 12.5,  # Not a string, int, or datetime
         'Alive': True,
         'Keywords': ['family'],
         'Params': ['position:0.5']
@@ -866,7 +866,7 @@ def test_extract_dates_invalid_dob_type_raises_error():
 
     mock_dates = {'test_data': df}
 
-    with pytest.raises(TypeError, match="Invalid DOB for 'Bad DOB Entry'"):
+    with pytest.raises(TypeError, match=r"Invalid DOB for 'Bad DOB Entry': 12\.5"):
         timeline.extract_dates(mock_dates)
 
 
@@ -875,14 +875,14 @@ def test_extract_dates_invalid_dod_type_raises_error():
     df = pd.DataFrame([{
         'Label': 'Bad DOD Entry',
         'DOB': '1920-01-01',
-        'DOD': 12345,  # Not a string or datetime
+        'DOD': 12.5,  # Not a string, int, or datetime
         'Keywords': ['family'],
         'Params': ['position:0.5']
     }])
 
     mock_dates = {'test_data': df}
 
-    with pytest.raises(TypeError, match="Invalid DOD for 'Bad DOD Entry'"):
+    with pytest.raises(TypeError, match=r"Invalid DOD for 'Bad DOD Entry': 12\.5"):
         timeline.extract_dates(mock_dates)
 
 
@@ -904,3 +904,109 @@ def test_extract_dates_handles_missing_optional_fields():
     assert result.iloc[0]['Label'] == 'Minimal Entry'
     assert result.iloc[0]['Keywords'] == []  # Should default to empty list
     assert result.iloc[0]['y'] == 0.5       # Position from params
+
+
+@pytest.mark.parametrize('input_string,expected', [
+    # Year only CE
+    ('2010', '2010-01-01'),
+    ('0001', '0001-01-01'),
+    ('1776', '1776-01-01'),
+    # Year only BCE
+    ('-0100', '-0100-01-01'),
+    ('-0001', '-0001-01-01'),
+    ('-0753', '-0753-01-01'),
+    # Year + month CE
+    ('0983-04', '0983-04-01'),
+    ('2010-12', '2010-12-01'),
+    ('1776-07', '1776-07-01'),
+    # Year + month BCE
+    ('-0300-10', '-0300-10-01'),
+    ('-0044-03', '-0044-03-01'),
+    # Full dates unchanged
+    ('2010-03-15', '2010-03-15'),
+    ('-0044-03-15', '-0044-03-15'),
+])
+def test_normalize_date_string(input_string, expected):
+    assert timeline._normalize_date_string(input_string) == expected
+
+
+@pytest.mark.parametrize('start,end,expected_start,expected_end', [
+    # Year-only CE start and end
+    ('2010', '2020',
+     long_time.date(2010, 1, 1, True), long_time.date(2020, 1, 1, True)),
+    # Year-only BCE
+    ('-0100', '-0050',
+     long_time.date(100, 1, 1, False), long_time.date(50, 1, 1, False)),
+    # Year+month CE
+    ('0983-04', '1066-10',
+     long_time.date(983, 4, 1, True), long_time.date(1066, 10, 1, True)),
+    # Year+month BCE
+    ('-0300-10', '-0200-03',
+     long_time.date(300, 10, 1, False), long_time.date(200, 3, 1, False)),
+    # Mixed: year-only start, full end
+    ('1776', '1783-09-03',
+     long_time.date(1776, 1, 1, True), long_time.date(1783, 9, 3, True)),
+    # Mixed: year+month start, full end
+    ('1914-07', '1918-11-11',
+     long_time.date(1914, 7, 1, True), long_time.date(1918, 11, 11, True)),
+])
+def test_extract_dates_partial_date_strings(start, end, expected_start, expected_end):
+    """Test that extract_dates handles year-only and year+month date strings."""
+    df = pd.DataFrame([{
+        'Label': 'Test Entry',
+        'Start': start,
+        'End': end,
+        'Keywords': ['test'],
+        'Params': ['position:0.5']
+    }])
+
+    result = timeline.extract_dates({'test_data': df})
+
+    assert len(result) == 1
+    assert result.iloc[0]['Start'] == expected_start
+    assert result.iloc[0]['End'] == expected_end
+
+
+def test_extract_dates_partial_dob_dod():
+    """Test that extract_dates handles partial date strings in DOB/DOD fields."""
+    df = pd.DataFrame([{
+        'Label': 'Test Person',
+        'DOB': '1950',
+        'DOD': '2020-06',
+        'Keywords': ['family'],
+        'Params': ['position:0.5']
+    }])
+
+    result = timeline.extract_dates({'test_data': df})
+
+    assert len(result) == 1
+    assert result.iloc[0]['Start'] == long_time.date(1950, 1, 1, True)
+    assert result.iloc[0]['End'] == long_time.date(2020, 6, 1, True)
+
+
+@pytest.mark.parametrize('start,end,expected_start,expected_end', [
+    # Integer CE year (unquoted in YAML)
+    (978, 1013,
+     long_time.date(978, 1, 1, True), long_time.date(1013, 1, 1, True)),
+    # Integer BCE year
+    (-44, -31,
+     long_time.date(44, 1, 1, False), long_time.date(31, 1, 1, False)),
+    # Mixed: integer start, string end
+    (1013, '1016-04-23',
+     long_time.date(1013, 1, 1, True), long_time.date(1016, 4, 23, True)),
+])
+def test_extract_dates_integer_year(start, end, expected_start, expected_end):
+    """Test that extract_dates handles integer year values from unquoted YAML."""
+    df = pd.DataFrame([{
+        'Label': 'Test Entry',
+        'Start': start,
+        'End': end,
+        'Keywords': ['test'],
+        'Params': ['position:0.5']
+    }])
+
+    result = timeline.extract_dates({'test_data': df})
+
+    assert len(result) == 1
+    assert result.iloc[0]['Start'] == expected_start
+    assert result.iloc[0]['End'] == expected_end

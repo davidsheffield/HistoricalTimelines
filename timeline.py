@@ -508,25 +508,37 @@ def extract_dates(dates: dict[str, pd.DataFrame]) -> pd.DataFrame:
                 try:
                     start_date = long_time.date.fromisoformat(row['Start'])
                 except TypeError:
-                    start_date = long_time.date.fromdatetime(row['Start'])
+                    try:
+                        start_date = long_time.date.fromdatetime(row['Start'])
+                    except TypeError as e:
+                        raise TypeError(f"Invalid Start date for '{row['Label']}': {e}") from e
                 try:
                     end_date = long_time.date.fromisoformat(row['End'])
                 except TypeError:
-                    end_date = long_time.date.fromdatetime(row['End'])
+                    try:
+                        end_date = long_time.date.fromdatetime(row['End'])
+                    except TypeError as e:
+                        raise TypeError(f"Invalid End date for '{row['Label']}': {e}") from e
 
             elif 'DOB' in row and pd.notna(row['DOB']) and ('DOD' in row or 'Alive' in row):
                 # Life data (DOB/DOD/Alive)
                 try:
                     start_date = long_time.date.fromisoformat(row['DOB'])
                 except TypeError:
-                    start_date = long_time.date.fromdatetime(row['DOB'])
+                    try:
+                        start_date = long_time.date.fromdatetime(row['DOB'])
+                    except TypeError as e:
+                        raise TypeError(f"Invalid DOB for '{row['Label']}': {e}") from e
 
                 if 'DOD' in row and pd.notna(row['DOD']):
                     # Person has died
                     try:
                         end_date = long_time.date.fromisoformat(row['DOD'])
                     except TypeError:
-                        end_date = long_time.date.fromdatetime(row['DOD'])
+                        try:
+                            end_date = long_time.date.fromdatetime(row['DOD'])
+                        except TypeError as e:
+                            raise TypeError(f"Invalid DOD for '{row['Label']}': {e}") from e
                 elif 'Alive' in row and row['Alive']:
                     # Person is still alive, use current date as end
                     end_date = long_time.date(2025, 1, 1, True)  # Current year

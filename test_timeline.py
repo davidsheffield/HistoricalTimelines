@@ -822,6 +822,70 @@ def test_generate_timeline_boxes_includes_alternating_class():
     assert result.count('even') == 2
 
 
+def test_extract_dates_invalid_start_type_raises_error():
+    """Test that extract_dates raises TypeError with label when Start is an invalid type."""
+    df = pd.DataFrame([{
+        'Label': 'Bad Start Entry',
+        'Start': 12345,  # Not a string or datetime
+        'End': '2009-01-20',
+        'Keywords': ['USA'],
+        'Params': ['position:0.5']
+    }])
+
+    mock_dates = {'test_data': df}
+
+    with pytest.raises(TypeError, match="Invalid Start date for 'Bad Start Entry'"):
+        timeline.extract_dates(mock_dates)
+
+
+def test_extract_dates_invalid_end_type_raises_error():
+    """Test that extract_dates raises TypeError with label when End is an invalid type."""
+    df = pd.DataFrame([{
+        'Label': 'Bad End Entry',
+        'Start': '2001-01-20',
+        'End': 12345,  # Not a string or datetime
+        'Keywords': ['USA'],
+        'Params': ['position:0.5']
+    }])
+
+    mock_dates = {'test_data': df}
+
+    with pytest.raises(TypeError, match="Invalid End date for 'Bad End Entry'"):
+        timeline.extract_dates(mock_dates)
+
+
+def test_extract_dates_invalid_dob_type_raises_error():
+    """Test that extract_dates raises TypeError with label when DOB is an invalid type."""
+    df = pd.DataFrame([{
+        'Label': 'Bad DOB Entry',
+        'DOB': 12345,  # Not a string or datetime
+        'Alive': True,
+        'Keywords': ['family'],
+        'Params': ['position:0.5']
+    }])
+
+    mock_dates = {'test_data': df}
+
+    with pytest.raises(TypeError, match="Invalid DOB for 'Bad DOB Entry'"):
+        timeline.extract_dates(mock_dates)
+
+
+def test_extract_dates_invalid_dod_type_raises_error():
+    """Test that extract_dates raises TypeError with label when DOD is an invalid type."""
+    df = pd.DataFrame([{
+        'Label': 'Bad DOD Entry',
+        'DOB': '1920-01-01',
+        'DOD': 12345,  # Not a string or datetime
+        'Keywords': ['family'],
+        'Params': ['position:0.5']
+    }])
+
+    mock_dates = {'test_data': df}
+
+    with pytest.raises(TypeError, match="Invalid DOD for 'Bad DOD Entry'"):
+        timeline.extract_dates(mock_dates)
+
+
 def test_extract_dates_handles_missing_optional_fields():
     """Test that extract_dates handles missing Keywords gracefully when position is provided."""
 

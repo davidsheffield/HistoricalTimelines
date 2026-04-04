@@ -3,61 +3,63 @@ global:
     - England
     - Monarch
     - Reign
+  Params:
+    - position:0.5
 
 entries:
 - Label: Æthelstan
   Start: 927
-  End: 939-10-27
-  DOB: 894
-  DOD: 939-10-27
+  End: 0939-10-27
+  DOB: 0894
+  DOD: 0939-10-27
   Keywords:
     - House_of_Wessex
 - Label: Edmund I
-  Start: 939-10-27
-  End: 946-05-26
-  DOB: c. 921
-  DOD: 946-05-326
+  Start: 0939-10-27
+  End: 0946-05-26
+  DOB: c. 0921
+  DOD: 0946-05-326
   Keywords:
     - House_of_Wessex
 - Label: Eadred
-  Start: 946-05-26
-  End: 955-11-23
-  DOB: c. 923
-  DOD: 955-11-23
+  Start: 0946-05-26
+  End: 0955-11-23
+  DOB: c. 0923
+  DOD: 0955-11-23
   Keywords:
     - House_of_Wessex
 - Label: Eadwig
-  Start: 955-11-23
-  End: 959-10-01
-  DOB: c. 941
-  DOD: 959-10-01
+  Start: 0955-11-23
+  End: 0959-10-01
+  DOB: c. 0941
+  DOD: 0959-10-01
   Keywords:
     - House_of_Wessex
 - Label: Edgar the Peaceful
-  Start: 959-10-01
-  End: 975-07-08
-  DOB: c. 943
-  DOD: 975-07-08
+  Start: 0959-10-01
+  End: 0975-07-08
+  DOB: c. 0943
+  DOD: 0975-07-08
   Keywords:
     - House_of_Wessex
 - Label: Edward the Martyr
-  Start: 975-07-08
-  End: 978-03-18
-  DOB: c. 962
-  DOD: 978-03-18
+  Start: 0975-07-08
+  End: 0978-03-18
+  DOB: c. 0962
+  DOD: 0978-03-18
   Keywords:
     - House_of_Wessex
 - Label: Æthelred the Unready
-  Start: 978-03-18
+  Start: 0978-03-18
   End: 1013
-  DOB: c. 966
+  DOB: c. 0966
   DOD: 1016-04-23
   Keywords:
     - House_of_Wessex
 - Label: Sweyn Forkbeard
   Start: 1013
   End: 1014-02-03
-  DOB: 963-04-17
+  DOB: 0963-04-17
   DOD: 1014-02-03
   Keywords:
     - Denmark
@@ -65,21 +67,21 @@ entries:
 - Label: Æthelred the Unready
   Start: 1014-02-03
   End: 1016-04-23
-  DOB: c. 966
+  DOB: c. 0966
   DOD: 1016-04-23
   Keywords:
     - House_of_Wessex
 - Label: Edmund Ironside
   Start: 1016-04-23 # Sometime after 1016-04-23
   End: 1016-11-30
-  DOB: c. 990
+  DOB: c. 0990
   DOD: 1016-11-30
   Keywords:
     - House_of_Wessex
 - Label: Cnut the Great
   Start: 1016-11-30 # Sometime after 1016-04-23
   End: 1035-11-12
-  DOB: c. 995
+  DOB: c. 0995
   DOD: 1035-11-12
   Keywords:
     - House_of_Denmark

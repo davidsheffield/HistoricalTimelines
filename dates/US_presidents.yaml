@@ -3,6 +3,8 @@ global:
     - USA
     - President
     - Reign
+  Params:
+    - position:0.5
 
 entries:
 - Label: George Washington
@@ -62,6 +64,7 @@ entries:
     - Party_Whig
   Params:
     - label_position:below
+    - position:0.3
 - Label: John Tyler
   Start: 1841-04-04
   End: 1845-03-04
@@ -81,6 +84,7 @@ entries:
     - Party_Whig
   Params:
     - label_position:below
+    - position:0.7
 - Label: Millard Fillmore
   Start: 1850-07-09
   End: 1853-03-04

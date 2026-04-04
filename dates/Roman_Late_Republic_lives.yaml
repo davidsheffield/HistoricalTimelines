@@ -3,6 +3,8 @@ global:
     - Roman
     - Late_Republic
     - Life
+  Params:
+    - position:0.5
 
 entries:
 - Label: Julius Caesar

@@ -3,6 +3,8 @@ global:
     - Roman
     - Emperor
     - Reign
+  Params:
+    - position:0.5
 
 entries:
 - Label: Augustus
@@ -133,9 +135,9 @@ entries:
     - Nerva_Antonine_Dynasty
 - Label: Pertinax
   Start: 0193-01-01
-  End: 193-03-28
-  DOB: 126-08-01
-  DOD: 193-03-28
+  End: 0193-03-28
+  DOB: 0126-08-01
+  DOD: 0193-03-28
   Keywords:
     - Year_of_the_Five_Emperors
 - Label: Didius Julianus

@@ -311,20 +311,19 @@ def test_params_field_processing():
         'Start': '2001-01-20',
         'End': '2009-01-20',
         'Keywords': ['USA', 'President', 'Party_Democratic'],
-        'Params': ['border_left']
+        'Params': ['border_left', 'position:0.5']
     }])
 
     df2 = pd.DataFrame([{
         'Label': 'Test President 2',
         'Start': '2009-01-20',
         'End': '2017-01-20',
-        'Keywords': ['USA', 'President', 'Party_Republican']
+        'Keywords': ['USA', 'President', 'Party_Republican'],
+        'Params': ['position:0.3']
     }])
 
-    # Combine DataFrames and handle missing Params column
+    # Combine DataFrames
     combined_df = pd.concat([df1, df2], ignore_index=True)
-    # Fill NaN values in Params column with empty lists
-    combined_df['Params'] = combined_df['Params'].apply(lambda x: x if isinstance(x, list) else [])
 
     mock_dates = {
         'US_presidents': combined_df
@@ -339,8 +338,8 @@ def test_params_field_processing():
         assert col in result.columns
 
     # Verify Params field is correctly populated
-    assert result.iloc[0]['Params'] == ['border_left']
-    assert result.iloc[1]['Params'] == []  # Should default to empty list
+    assert result.iloc[0]['Params'] == ['border_left', 'position:0.5']
+    assert result.iloc[1]['Params'] == ['position:0.3']
 
 
 def test_label_position_above():
@@ -550,3 +549,235 @@ def test_load_data_invalid_structure_no_entries():
                 timeline.load_data()
         finally:
             timeline.__file__ = original_file
+
+
+def test_extract_dates_position_parameter():
+    """Test that extract_dates correctly processes position parameter from YAML."""
+
+    # Create mock data with position parameters
+    df1 = pd.DataFrame([{
+        'Label': 'Test President 1',
+        'Start': '2001-01-20',
+        'End': '2009-01-20',
+        'Keywords': ['USA', 'President'],
+        'Params': ['position:0.3']
+    }])
+
+    df2 = pd.DataFrame([{
+        'Label': 'Test President 2',
+        'Start': '2009-01-20',
+        'End': '2017-01-20',
+        'Keywords': ['USA', 'President'],
+        'Params': ['border_left', 'position:0.5']
+    }])
+
+    df3 = pd.DataFrame([{
+        'Label': 'Test Person',
+        'DOB': '1988-07-08',
+        'Alive': True,
+        'Keywords': ['family'],
+        'Params': ['position:0.8']
+    }])
+
+    mock_dates = {
+        'test_presidents1': df1,
+        'test_presidents2': df2,
+        'test_family': df3
+    }
+
+    # Process the data
+    result = timeline.extract_dates(mock_dates)
+
+    # Verify position parameter is correctly processed
+    assert len(result) == 3
+    assert result.iloc[0]['y'] == 0.3  # Explicit position
+    assert result.iloc[1]['y'] == 0.5  # Position with other params
+    assert result.iloc[2]['y'] == 0.8  # Position with DOB/Alive format
+
+
+def test_extract_dates_handles_dob_dod_format():
+    """Test that extract_dates correctly processes DOB/DOD/Alive format."""
+
+    # Create mock data with different life formats
+    df = pd.DataFrame([
+        {
+            'Label': 'Dead Person',
+            'DOB': '1920-12-24',
+            'DOD': '2004-06-04',
+            'Keywords': ['family'],
+            'Params': ['position:0.2']
+        },
+        {
+            'Label': 'Living Person',
+            'DOB': '1988-07-08',
+            'Alive': True,
+            'Keywords': ['family'],
+            'Params': ['position:0.4']
+        }
+    ])
+
+    mock_dates = {'test_family': df}
+    result = timeline.extract_dates(mock_dates)
+
+    # Verify both entries were processed
+    assert len(result) == 2
+
+    # Check dead person
+    assert result.iloc[0]['Label'] == 'Dead Person'
+    assert result.iloc[0]['Start'] == long_time.date.fromisoformat('1920-12-24')
+    assert result.iloc[0]['End'] == long_time.date.fromisoformat('2004-06-04')
+    assert result.iloc[0]['y'] == 0.2
+
+    # Check living person
+    assert result.iloc[1]['Label'] == 'Living Person'
+    assert result.iloc[1]['Start'] == long_time.date.fromisoformat('1988-07-08')
+    assert result.iloc[1]['End'] == long_time.date(2025, 1, 1, True)  # Current year
+    assert result.iloc[1]['y'] == 0.4
+
+
+def test_extract_dates_processes_all_files():
+    """Test that extract_dates processes all YAML files, not just US_presidents."""
+
+    # Create mock data for multiple files
+    df1 = pd.DataFrame([{
+        'Label': 'President',
+        'Start': '2001-01-20',
+        'End': '2009-01-20',
+        'Keywords': ['USA', 'President'],
+        'Params': ['position:0.5']
+    }])
+
+    df2 = pd.DataFrame([{
+        'Label': 'Emperor',
+        'Start': '0014-01-16',
+        'End': '0037-03-16',
+        'Keywords': ['Roman', 'Emperor'],
+        'Params': ['position:0.3']
+    }])
+
+    df3 = pd.DataFrame([{
+        'Label': 'Family Member',
+        'DOB': '1988-07-08',
+        'Alive': True,
+        'Keywords': ['family'],
+        'Params': ['position:0.7']
+    }])
+
+    mock_dates = {
+        'US_presidents': df1,
+        'Roman_emperors': df2,
+        'family': df3
+    }
+
+    result = timeline.extract_dates(mock_dates)
+
+    # Should process all files
+    assert len(result) == 3
+    labels = result['Label'].tolist()
+    assert 'President' in labels
+    assert 'Emperor' in labels
+    assert 'Family Member' in labels
+
+
+def test_extract_dates_skips_invalid_entries():
+    """Test that extract_dates skips entries without proper date fields."""
+
+    df = pd.DataFrame([
+        {
+            'Label': 'Valid Entry',
+            'Start': '2001-01-20',
+            'End': '2009-01-20',
+            'Keywords': ['USA', 'President'],
+            'Params': ['position:0.5']
+        },
+        {
+            'Label': 'Invalid Entry - Missing End',
+            'Start': '2001-01-20',
+            'Keywords': ['USA', 'President']
+        },
+        {
+            'Label': 'Invalid Entry - Missing DOD/Alive',
+            'DOB': '1988-07-08',
+            'Keywords': ['family']
+        },
+        {
+            'Label': 'Invalid Entry - No Date Fields',
+            'Keywords': ['other']
+        }
+    ])
+
+    mock_dates = {'test_data': df}
+    result = timeline.extract_dates(mock_dates)
+
+    # Should only process the valid entry
+    assert len(result) == 1
+    assert result.iloc[0]['Label'] == 'Valid Entry'
+
+
+def test_extract_dates_missing_position_raises_error():
+    """Test that extract_dates raises ValueError when position parameter is missing."""
+
+    df = pd.DataFrame([{
+        'Label': 'Entry Without Position',
+        'Start': '2001-01-20',
+        'End': '2009-01-20',
+        'Keywords': ['USA', 'President']
+        # No position parameter
+    }])
+
+    mock_dates = {'test_data': df}
+
+    with pytest.raises(ValueError, match="Missing required position parameter for entry: Entry Without Position"):
+        timeline.extract_dates(mock_dates)
+
+
+def test_extract_dates_invalid_position_format_raises_error():
+    """Test that extract_dates raises ValueError for invalid position format."""
+
+    # Test invalid format
+    df1 = pd.DataFrame([{
+        'Label': 'Invalid Position Format',
+        'Start': '2001-01-20',
+        'End': '2009-01-20',
+        'Keywords': ['USA', 'President'],
+        'Params': ['position:invalid_number']
+    }])
+
+    mock_dates1 = {'test_data': df1}
+
+    with pytest.raises(ValueError, match="Invalid position parameter format: position:invalid_number"):
+        timeline.extract_dates(mock_dates1)
+
+    # Test missing value after colon
+    df2 = pd.DataFrame([{
+        'Label': 'Missing Position Value',
+        'Start': '2001-01-20',
+        'End': '2009-01-20',
+        'Keywords': ['USA', 'President'],
+        'Params': ['position:']
+    }])
+
+    mock_dates2 = {'test_data': df2}
+
+    with pytest.raises(ValueError, match="Invalid position parameter format: position:"):
+        timeline.extract_dates(mock_dates2)
+
+
+def test_extract_dates_handles_missing_optional_fields():
+    """Test that extract_dates handles missing Keywords gracefully when position is provided."""
+
+    df = pd.DataFrame([{
+        'Label': 'Minimal Entry',
+        'Start': '2001-01-20',
+        'End': '2009-01-20',
+        'Params': ['position:0.5']
+        # No Keywords
+    }])
+
+    mock_dates = {'test_data': df}
+    result = timeline.extract_dates(mock_dates)
+
+    assert len(result) == 1
+    assert result.iloc[0]['Label'] == 'Minimal Entry'
+    assert result.iloc[0]['Keywords'] == []  # Should default to empty list
+    assert result.iloc[0]['y'] == 0.5       # Position from params

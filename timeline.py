@@ -477,7 +477,8 @@ def extract_dates(dates: dict[str, pd.DataFrame]) -> pd.DataFrame:
 
     Args:
         dates: Dictionary of DataFrames loaded from YAML files
-               Each DataFrame should have columns: ['Label', 'Start', 'End', 'Keywords', 'Params']
+               Each DataFrame should have columns: ['Label', 'Keywords', 'Params']
+               And either: ['Start', 'End'] or ['DOB', 'DOD'/'Alive']
 
     Returns:
         pd.DataFrame: Processed timeline data with columns:
@@ -486,29 +487,69 @@ def extract_dates(dates: dict[str, pd.DataFrame]) -> pd.DataFrame:
                      - Params: List of functional parameters (e.g., border_left)
                      - Start: long_time.date object for start date
                      - End: long_time.date object for end date
-                     - y: Vertical position (0.5 for center)
+                     - y: Vertical position (from Position field or default 0.5)
                      - Gradient: Styling gradient value (0)
     """
 
     boxes = []
 
-    for idx, row in dates['US_presidents'].iterrows():
-        try:
-            start_date = long_time.date.fromisoformat(row['Start'])
-        except TypeError:
-            start_date = long_time.date.fromdatetime(row['Start'])
-        try:
-            end_date = long_time.date.fromisoformat(row['End'])
-        except TypeError:
-            end_date = long_time.date.fromdatetime(row['End'])
+    dates = {k: v for k, v in dates.items() if k in ['US_presidents']}
+    for file_stem, df in dates.items():
+        for idx, row in df.iterrows():
+            # Determine start and end dates based on available columns
+            if 'Start' in row and 'End' in row and pd.notna(row['Start']) and pd.notna(row['End']):
+                # Period data (Start/End)
+                try:
+                    start_date = long_time.date.fromisoformat(row['Start'])
+                except TypeError:
+                    start_date = long_time.date.fromdatetime(row['Start'])
+                try:
+                    end_date = long_time.date.fromisoformat(row['End'])
+                except TypeError:
+                    end_date = long_time.date.fromdatetime(row['End'])
 
-        boxes.append({'Label': row['Label'],
-                      'Keywords': row['Keywords'],
-                      'Params': row.get('Params', []),
-                      'Start': start_date,
-                      'End': end_date,
-                      'y': 0.5,
-                      'Gradient': 0})
+            elif 'DOB' in row and pd.notna(row['DOB']) and ('DOD' in row or 'Alive' in row):
+                # Life data (DOB/DOD/Alive)
+                try:
+                    start_date = long_time.date.fromisoformat(row['DOB'])
+                except TypeError:
+                    start_date = long_time.date.fromdatetime(row['DOB'])
+
+                if 'DOD' in row and pd.notna(row['DOD']):
+                    # Person has died
+                    try:
+                        end_date = long_time.date.fromisoformat(row['DOD'])
+                    except TypeError:
+                        end_date = long_time.date.fromdatetime(row['DOD'])
+                elif 'Alive' in row and row['Alive']:
+                    # Person is still alive, use current date as end
+                    end_date = long_time.date(2025, 1, 1, True)  # Current year
+                else:
+                    continue  # Skip entries without proper end date
+            else:
+                continue  # Skip entries without proper date fields
+
+            # Get position from Params field
+            params = row.get('Params', [])
+            y_position = None
+            for param in params:
+                if param.startswith('position:'):
+                    try:
+                        y_position = float(param.split(':', 1)[1])
+                    except (ValueError, IndexError):
+                        raise ValueError(f"Invalid position parameter format: {param}")
+                    break
+
+            if y_position is None:
+                raise ValueError(f"Missing required position parameter for entry: {row['Label']}")
+
+            boxes.append({'Label': row['Label'],
+                          'Keywords': row.get('Keywords', []),
+                          'Params': params,
+                          'Start': start_date,
+                          'End': end_date,
+                          'y': y_position,
+                          'Gradient': 0})
 
     boxes = pd.DataFrame(boxes)
     return boxes

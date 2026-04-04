@@ -32,3 +32,12 @@ Uses a global section to eliminate repetition of common keywords and parameters:
 - **`DOD`**: Date of death (requires `DOB`, cannot be present with `Alive`)
 - **`Alive`**: Indicates that the person is currently alive and there is no date
                of death (requires `DOB`, cannot be present with `DOD`)
+
+### Parameters
+
+The `Params` field accepts various parameters to control styling and positioning:
+
+- **`border_left`**: Adds a colored border on the left side of the timeline box
+- **`label_position:above`**: Places the label above the timeline box
+- **`label_position:below`**: Places the label below the timeline box
+- **`position:<value>`**: Sets vertical position on timeline (required, e.g., `position:0.5`)

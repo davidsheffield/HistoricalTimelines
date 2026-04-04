@@ -317,6 +317,16 @@ def _generate_year_markers(years: list[int]) -> str:
             x = (year - years[0]) * 24 + 24 + 12
             content.append(f'<text x="{x}" y="790" text-anchor="middle" style="font-family:Optima; font-size:12px">{abs_year}</text>')
 
+    # Add BCE/CE transition labels and vertical line
+    if -1 in years:
+        x = (-1 - years[0]) * 24 + 24 + 24
+        content.append(f'<text x="{x - 8}" y="790" text-anchor="end" style="font-family:Optima; font-size:12px">BCE</text>')
+        content.append(f'<line x1="{x}" y1="778" x2="{x}" y2="796" stroke="#333333" stroke-width="1"/>')
+    if 1 in years:
+        x = (1 - years[0]) * 24 + 24
+        content.append(f'<text x="{x + 8}" y="790" text-anchor="start" style="font-family:Optima; font-size:12px">CE</text>')
+        content.append(f'<line x1="{x}" y1="778" x2="{x}" y2="796" stroke="#333333" stroke-width="1"/>')
+
     return '\n'.join(content)
 
 

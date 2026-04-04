@@ -763,6 +763,65 @@ def test_extract_dates_invalid_position_format_raises_error():
         timeline.extract_dates(mock_dates2)
 
 
+def test_assign_alternating_classes_single_dynasty():
+    """Two monarchs in same house get even/odd in chronological order."""
+    boxes = pd.DataFrame([
+        {'Label': 'George I', 'Keywords': ['Monarch', 'House_of_Hanover'],
+         'Start': long_time.date.fromisoformat('1714-08-01'),
+         'End': long_time.date.fromisoformat('1727-06-11')},
+        {'Label': 'George II', 'Keywords': ['Monarch', 'House_of_Hanover'],
+         'Start': long_time.date.fromisoformat('1727-06-11'),
+         'End': long_time.date.fromisoformat('1760-10-25')},
+    ])
+    result = timeline.assign_alternating_classes(boxes)
+    george_i = result[result['Label'] == 'George I'].iloc[0]
+    george_ii = result[result['Label'] == 'George II'].iloc[0]
+    assert george_i['alternating_class'] == 'even'
+    assert george_ii['alternating_class'] == 'odd'
+
+
+def test_assign_alternating_classes_no_house_keyword():
+    """Entries without a House_of_ keyword get empty alternating_class."""
+    boxes = pd.DataFrame([
+        {'Label': 'Obama', 'Keywords': ['USA', 'President', 'Party_Democratic'],
+         'Start': long_time.date.fromisoformat('2009-01-20'),
+         'End': long_time.date.fromisoformat('2017-01-20')},
+    ])
+    result = timeline.assign_alternating_classes(boxes)
+    assert result.iloc[0]['alternating_class'] == ''
+
+
+def test_assign_alternating_classes_multiple_dynasties():
+    """Alternation resets independently for each dynasty."""
+    boxes = pd.DataFrame([
+        {'Label': 'A1', 'Keywords': ['House_of_A'],
+         'Start': long_time.date.fromisoformat('1000-01-01'),
+         'End': long_time.date.fromisoformat('1010-01-01')},
+        {'Label': 'A2', 'Keywords': ['House_of_A'],
+         'Start': long_time.date.fromisoformat('1010-01-01'),
+         'End': long_time.date.fromisoformat('1020-01-01')},
+        {'Label': 'B1', 'Keywords': ['House_of_B'],
+         'Start': long_time.date.fromisoformat('1005-01-01'),
+         'End': long_time.date.fromisoformat('1015-01-01')},
+    ])
+    result = timeline.assign_alternating_classes(boxes)
+    assert result[result['Label'] == 'A1'].iloc[0]['alternating_class'] == 'even'
+    assert result[result['Label'] == 'A2'].iloc[0]['alternating_class'] == 'odd'
+    assert result[result['Label'] == 'B1'].iloc[0]['alternating_class'] == 'even'
+
+
+def test_generate_timeline_boxes_includes_alternating_class():
+    """even/odd class appears in both rect and text for House_of_ entries."""
+    boxes = pd.DataFrame([
+        {'Label': 'George I', 'Keywords': ['Monarch', 'House_of_Hanover'],
+         'Params': ['label_position:above'],
+         'alternating_class': 'even',
+         'start_x': 100, 'end_x': 200, 'y': 1},
+    ])
+    result = timeline._generate_timeline_boxes(boxes, left_to_right=True)
+    assert result.count('even') == 2
+
+
 def test_extract_dates_handles_missing_optional_fields():
     """Test that extract_dates handles missing Keywords gracefully when position is provided."""
 

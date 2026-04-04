@@ -78,6 +78,7 @@ def timeline() -> None:
     dates = load_data()
 
     boxes = extract_dates(dates)
+    boxes = assign_alternating_classes(boxes)
 
     make_svgs(sheets, boxes, args.debug)
 
@@ -179,6 +180,9 @@ def load_data() -> dict[str, pd.DataFrame]:
     for file in os.listdir(dir_dates):
         file = pathlib.Path(file)
         if file.suffix != '.yaml':
+            continue
+        if file.stem not in ('US_presidents', 'British_monarchs',
+                             'test_presidents', 'test_invalid'):
             continue
 
         file_path = dir_dates.joinpath(file)
@@ -369,6 +373,9 @@ def _generate_timeline_boxes(sheet_boxes: pd.DataFrame, left_to_right: bool) -> 
 
         y = row['y'] * 24 + 24
         classes = ' '.join(row['Keywords'])
+        alternating_class = row.get('alternating_class', '')
+        if alternating_class:
+            classes += ' ' + alternating_class
 
         content.append(f'<rect x="{x}" y="{y}" width="{width}" height="24" class="{classes}"/>')
 
@@ -493,7 +500,6 @@ def extract_dates(dates: dict[str, pd.DataFrame]) -> pd.DataFrame:
 
     boxes = []
 
-    dates = {k: v for k, v in dates.items() if k in ['US_presidents', 'British_monarchs']}
     for file_stem, df in dates.items():
         for idx, row in df.iterrows():
             # Determine start and end dates based on available columns
@@ -552,6 +558,45 @@ def extract_dates(dates: dict[str, pd.DataFrame]) -> pd.DataFrame:
                           'Gradient': 0})
 
     boxes = pd.DataFrame(boxes)
+    return boxes
+
+
+def assign_alternating_classes(boxes: pd.DataFrame) -> pd.DataFrame:
+    """
+    Add alternating 'even'/'odd' class to entries sharing a House_of_ keyword.
+
+    Within each dynasty, monarchs are ordered chronologically by Start date and
+    assigned alternating classes so successive rulers can be styled differently.
+    Entries without a House_of_ keyword receive an empty alternating_class.
+
+    Args:
+        boxes: DataFrame of all historical events with 'Keywords' and 'Start'
+
+    Returns:
+        pd.DataFrame: Copy of boxes with added 'alternating_class' column
+    """
+
+    boxes = boxes.copy()
+    boxes['alternating_class'] = ''
+
+    house_groups: dict[str, list] = {}
+    for idx, row in boxes.iterrows():
+        keywords = row['Keywords']
+        if not isinstance(keywords, list):
+            continue
+        house_keyword = next(
+            (k for k in keywords if k.startswith('House_of_')), None
+        )
+        if house_keyword:
+            house_groups.setdefault(house_keyword, []).append(idx)
+
+    for indices in house_groups.values():
+        sorted_indices = sorted(indices, key=lambda i: boxes.loc[i, 'Start'])
+        for position, idx in enumerate(sorted_indices):
+            boxes.at[idx, 'alternating_class'] = (
+                'even' if position % 2 == 0 else 'odd'
+            )
+
     return boxes
 
 

@@ -37,9 +37,12 @@ text.Reign {
 ** British / English monarchs **
 *******************************/
 
-rect.House_of_Hanover { fill : #d13e4d; }
-rect.House_of_Saxe-Coburg_and_Gotha,
-rect.House_of_Windsor { fill : #d20c1f; }
+rect.House_of_Hanover.even { fill : #1005de; }
+rect.House_of_Hanover.odd { fill : #4740d8; }
+rect.House_of_Saxe-Coburg_and_Gotha.even,
+rect.House_of_Windsor.even { fill : #d20c1f; }
+rect.House_of_Saxe-Coburg_and_Gotha.odd,
+rect.House_of_Windsor.odd { fill : #d13e4d; }
 
 /*text.Monarch.UK {
     text-anchor: middle;

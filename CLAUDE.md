@@ -44,4 +44,9 @@ code in this repository.
 - PEP 8
 - 4 space indents
 - 80 characters per line unless it will make the result harder to read than a long line
+- Prefer single quotes `''` over double quotes `""`
 - Run `ruff check . --select W291 --select W293 --fix` after making changes to remove trailing whitespace
+
+### Testing
+
+- Add unit tests when possible for new functionality or bug fixes

@@ -7,6 +7,28 @@ cover 1740 BCE to 2100 CE. The goal is to help me see the times between
 historical events and how events and lives overlapped. The dates are provided
 with YAML files in the [dates/](./dates/) directory.
 
+Usage
+-----
+
+Generate a specific sheet:
+
+    python timeline.py --sheet 50
+
+Generate a range of sheets:
+
+    python timeline.py --sheet 1-5
+
+Generate all sheets:
+
+    python timeline.py --all
+
+Debug mode (adds visual guides):
+
+    python timeline.py --sheet 50 --debug
+
+Output SVG files are written to the `sheets/` directory, named
+`Sheet_{number}_{start_year}_{end_year}.svg`.
+
 Files
 -----
 

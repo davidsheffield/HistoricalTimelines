@@ -37,6 +37,28 @@ text.Reign {
 ** British / English monarchs **
 *******************************/
 
+rect.House_of_Godwin.even,
+rect.House_of_Wessex.even,
+rect.House_of_Denmark.even { fill : #0c7c26; }
+rect.House_of_Godwin.odd,
+rect.House_of_Wessex.odd,
+rect.House_of_Denmark.odd { fill : #55be6e; }
+rect.House_of_Normandy.even,
+rect.House_of_Blois.even { fill : #0e20a8; }
+rect.House_of_Normandy.odd,
+rect.House_of_Blois.odd { fill : #4152d2; }
+rect.House_of_Plantagenet.even { fill : #0e3fa8; }
+rect.House_of_Plantagenet.odd { fill : #3b65bf; }
+rect.House_of_Lancaster.even { fill : #c82a22; }
+rect.House_of_Lancaster.odd { fill : #e8615a; }
+rect.House_of_York.even { fill : #d3b89a; }
+rect.House_of_York.odd { fill : #b7a692; }
+rect.House_of_Tudor.even { fill : #32a05e; }
+rect.House_of_Tudor.odd { fill : #61c78a; }
+rect.English_Interregnum.even { fill : #4e5099; }
+rect.English_Interregnum.odd { fill : #696ba4; }
+rect.House_of_Stuart.even { fill : #7710cb; }
+rect.House_of_Stuart.odd { fill : #9c40e7; }
 rect.House_of_Hanover.even { fill : #1005de; }
 rect.House_of_Hanover.odd { fill : #4740d8; }
 rect.House_of_Saxe-Coburg_and_Gotha.even,

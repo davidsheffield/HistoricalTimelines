@@ -182,6 +182,7 @@ def load_data() -> dict[str, pd.DataFrame]:
         if file.suffix != '.yaml':
             continue
         if file.stem not in ('US_presidents', 'British_monarchs',
+                             'English_monarchs',
                              'test_presidents', 'test_invalid'):
             continue
 
@@ -674,8 +675,13 @@ def extract_sheet_boxes(boxes: pd.DataFrame,
         X coordinates use 24 pixels per year scale with 24-pixel left margin.
     """
 
-    sheet_boxes = boxes.loc[(boxes['Start'] <= long_time.date.fromisoformat(f'{end_year}-12-31'))
-                            & (boxes['End'] >= long_time.date.fromisoformat(f'{start_year}-01-01'))].copy()
+    def _year_str(year: int) -> str:
+        return f'-{abs(year):04d}' if year < 0 else f'{year:04d}'
+
+    sheet_boxes = boxes.loc[
+        (boxes['Start'] <= long_time.date.fromisoformat(f'{_year_str(end_year)}-12-31'))
+        & (boxes['End'] >= long_time.date.fromisoformat(f'{_year_str(start_year)}-01-01'))
+    ].copy()
 
     sheet_boxes['start_x'] = sheet_boxes['Start'].apply(calculate_x, args=(start_year, end_year, left_to_right))
     sheet_boxes['end_x'] = sheet_boxes['End'].apply(calculate_x, args=(start_year, end_year, left_to_right))

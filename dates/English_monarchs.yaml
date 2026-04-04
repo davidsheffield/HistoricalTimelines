@@ -4,7 +4,7 @@ global:
     - Monarch
     - Reign
   Params:
-    - position:0.5
+    - position:2.5
 
 entries:
 - Label: Æthelstan
@@ -113,6 +113,8 @@ entries:
   DOD: 1066-10-14
   Keywords:
     - House_of_Godwin
+  Params:
+    - label_position:above
 - Label: William I
   Start: 1066-10-14
   End: 1087-09-09
@@ -253,6 +255,8 @@ entries:
   DOD: 1483-06-26
   Keywords:
     - House_of_York
+  Params:
+    - label_position:above
 - Label: Richard III
   Start: 1483-06-26
   End: 1485-08-22
@@ -288,6 +292,8 @@ entries:
   DOD: 1558-11-17
   Keywords:
     - House_of_Tudor
+  Params:
+    - label_position:above
 - Label: Philip
   Start: 1554-07-25
   End: 1558-11-17

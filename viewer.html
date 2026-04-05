@@ -78,6 +78,10 @@ function signedToNaive(y) { return y < 0 ? y + 1 : y; }
 function naiveToSigned(n) { return n <= 0 ? n - 1 : n; }
 
 function yearDisplay(signed) {
+    return signed > 0 ? signed + ' CE' : (-signed) + ' BCE';
+}
+
+function yearFilePart(signed) {
     return signed > 0 ? signed + 'CE' : (-signed) + 'BCE';
 }
 
@@ -87,8 +91,8 @@ function sheetFilename(N) {
     const signedEnd = naiveToSigned(naiveEnd);
     const signedStart = naiveToSigned(naiveStart);
     const NN = String(N).padStart(2, '0');
-    return 'Sheet_' + NN + '_' + yearDisplay(signedStart) +
-           '_' + yearDisplay(signedEnd) + '.svg';
+    return 'Sheet_' + NN + '_' + yearFilePart(signedStart) +
+           '_' + yearFilePart(signedEnd) + '.svg';
 }
 
 function sheetRange(N) {

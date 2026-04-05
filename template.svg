@@ -72,7 +72,34 @@ rect.House_of_Windsor.odd { fill : #d13e4d; }
 ** Roman Late Republic Lives **
 *******************************/
 
+/*******************
+** Roman emperors **
+*******************/
 
+rect.Julio_Claudian_Dynasty.even { fill : #510d90; }
+rect.Julio_Claudian_Dynasty.odd { fill : #6d2fa7; }
+rect.Year_of_the_Four_Emperors.even { fill : #bcbe4e; }
+rect.Year_of_the_Four_Emperors.odd { fill : #dfe178; }
+rect.Flavian_Dynasty.even { fill : #900d6b; }
+rect.Flavian_Dynasty.odd { fill : #b43791; }
+rect.Nerva_Antonine_Dynasty.even { fill : #510d90; }
+rect.Nerva_Antonine_Dynasty.odd { fill : #6d2fa7; }
+rect.Year_of_the_Five_Emperors.even { fill : #bcbe4e; }
+rect.Year_of_the_Five_Emperors.odd { fill : #dfe178; }
+rect.Severan_Dynasty.even { fill : #900d6b; }
+rect.Severan_Dynasty.odd { fill : #b43791; }
+rect.Crisis_of_the_Third_Century.even { fill : #bcbe4e; }
+rect.Crisis_of_the_Third_Century.odd { fill : #dfe178; }
+rect.Tetrarchy.even { fill : #510d90; }
+rect.Tetrarchy.odd { fill : #6d2fa7; }
+rect.Constantinian_Dynasty.even { fill : #900d6b; }
+rect.Constantinian_Dynasty.odd { fill : #b43791; }
+rect.Valentinian_Dynasty.even { fill : #510d90; }
+rect.Valentinian_Dynasty.odd { fill : #6d2fa7; }
+rect.Theodosian_Dynasty.even { fill : #900d6b; }
+rect.Theodosian_Dynasty.odd { fill : #b43791; }
+rect.Last_Western_Emperors.even { fill : #bcbe4e; }
+rect.Last_Western_Emperors.odd { fill : #dfe178; }
 
 /*********************
 ** Final formatting **

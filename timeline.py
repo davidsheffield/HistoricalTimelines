@@ -210,6 +210,7 @@ def load_data() -> dict[str, pd.DataFrame]:
             continue
         if file.stem not in ('US_presidents', 'British_monarchs',
                              'English_monarchs', 'Roman_Late_Republic_lives',
+                             'Roman_emperors',
                              'test_presidents', 'test_invalid'):
             continue
 
@@ -688,8 +689,17 @@ def assign_alternating_classes(boxes: pd.DataFrame) -> pd.DataFrame:
         keywords = row['Keywords']
         if not isinstance(keywords, list):
             continue
+        _alternating_keywords = {
+            'Year_of_the_Four_Emperors',
+            'Year_of_the_Five_Emperors',
+            'Crisis_of_the_Third_Century',
+            'Tetrarchy',
+            'Last_Western_Emperors',
+        }
         house_keyword = next(
-            (k for k in keywords if k.startswith('House_of_')), None
+            (k for k in keywords
+             if k.startswith('House_of_') or k.endswith('Dynasty')
+             or k in _alternating_keywords), None
         )
         if house_keyword:
             house_groups.setdefault(house_keyword, []).append(idx)

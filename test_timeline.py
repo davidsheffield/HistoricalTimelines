@@ -855,6 +855,39 @@ def test_assign_alternating_classes_multiple_dynasties():
     assert result[result['Label'] == 'B1'].iloc[0]['alternating_class'] == 'even'
 
 
+def test_assign_alternating_classes_dynasty_suffix():
+    """Entries with a keyword ending in 'Dynasty' get even/odd classes."""
+    boxes = pd.DataFrame([
+        {'Label': 'Augustus', 'Keywords': ['Roman_Emperor', 'Julio_Claudian_Dynasty'],
+         'Start': long_time.date.fromisoformat('-0027-01-16'),
+         'End': long_time.date.fromisoformat('0014-08-19')},
+        {'Label': 'Tiberius', 'Keywords': ['Roman_Emperor', 'Julio_Claudian_Dynasty'],
+         'Start': long_time.date.fromisoformat('0014-08-19'),
+         'End': long_time.date.fromisoformat('0037-03-16')},
+    ])
+    result = timeline.assign_alternating_classes(boxes)
+    assert result[result['Label'] == 'Augustus'].iloc[0]['alternating_class'] == 'even'
+    assert result[result['Label'] == 'Tiberius'].iloc[0]['alternating_class'] == 'odd'
+
+
+def test_assign_alternating_classes_specific_keywords():
+    """Entries with specific period keywords get even/odd classes."""
+    for keyword in ('Year_of_the_Four_Emperors', 'Year_of_the_Five_Emperors',
+                    'Crisis_of_the_Third_Century', 'Tetrarchy',
+                    'Last_Western_Emperors'):
+        boxes = pd.DataFrame([
+            {'Label': 'A', 'Keywords': ['Roman_Emperor', keyword],
+             'Start': long_time.date.fromisoformat('0069-01-01'),
+             'End': long_time.date.fromisoformat('0069-12-31')},
+            {'Label': 'B', 'Keywords': ['Roman_Emperor', keyword],
+             'Start': long_time.date.fromisoformat('0070-01-01'),
+             'End': long_time.date.fromisoformat('0070-12-31')},
+        ])
+        result = timeline.assign_alternating_classes(boxes)
+        assert result[result['Label'] == 'A'].iloc[0]['alternating_class'] == 'even', keyword
+        assert result[result['Label'] == 'B'].iloc[0]['alternating_class'] == 'odd', keyword
+
+
 def test_generate_timeline_boxes_includes_alternating_class():
     """even/odd class appears in both rect and text for House_of_ entries."""
     boxes = pd.DataFrame([

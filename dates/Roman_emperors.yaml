@@ -429,128 +429,128 @@ entries:
   Keywords:
     - Constantinian_Dynasty
 - Label: Valentinian I
-  Start: 364-02-17
-  End: 375-11-17
-  DOB: 321-01-01
-  DOD: 375-11-17
+  Start: 0364-02-17
+  End: 0375-11-17
+  DOB: 0321-01-01
+  DOD: 0375-11-17
   Keywords:
     - Valentinian_Dynasty
 - Label: Valens
-  Start: 364-02-17
-  End: 378-08-09
-  DOB: 328-01-01
-  DOD: 378-08-09
+  Start: 0364-02-17
+  End: 0378-08-09
+  DOB: 0328-01-01
+  DOD: 0378-08-09
   Keywords:
     - Valentinian_Dynasty
 - Label: Gratian
-  Start: 367-08-24
-  End: 383-08-25
-  DOB: 359-04-18
-  DOD: 383-08-25
+  Start: 0367-08-24
+  End: 0383-08-25
+  DOB: 0359-04-18
+  DOD: 0383-08-25
   Keywords:
     - Valentinian_Dynasty
 - Label: Valentinian II
-  Start: 375-11-17
-  End: 392-05-15
-  DOB: 371-04-02
-  DOD: 392-05-15
+  Start: 0375-11-17
+  End: 0392-05-15
+  DOB: 0371-04-02
+  DOD: 0392-05-15
   Keywords:
     - Valentinian_Dynasty
 - Label: Theodosius I
-  Start: 379-01-19
-  End: 395-01-17
-  DOB: 347-01-11
-  DOD: 395-01-17
+  Start: 0379-01-19
+  End: 0395-01-17
+  DOB: 0347-01-11
+  DOD: 0395-01-17
   Keywords:
     - Theodosian_Dynasty
 - Label: Arcadius
-  Start: 395-01-17
-  End: 408-05-01
-  DOB: 377-01-01
-  DOD: 408-05-01
+  Start: 0395-01-17
+  End: 0408-05-01
+  DOB: 0377-01-01
+  DOD: 0408-05-01
   Keywords:
     - Theodosian_Dynasty
 - Label: Honorius
-  Start: 393-01-23
-  End: 423-08-15
-  DOB: 384-09-09
-  DOD: 423-08-15
+  Start: 0393-01-23
+  End: 0423-08-15
+  DOB: 0384-09-09
+  DOD: 0423-08-15
   Keywords:
     - Theodosian_Dynasty
 - Label: Theodosius II
-  Start: 408-05-01
-  End: 450-07-28
-  DOB: 401-04-10
-  DOD: 450-07-28
+  Start: 0408-05-01
+  End: 0450-07-28
+  DOB: 0401-04-10
+  DOD: 0450-07-28
   Keywords:
     - Theodosian_Dynasty
 - Label: Marcian
-  Start: 450-07-28
-  End: 457-01-27
-  DOB: 392-01-01
-  DOD: 457-01-27
+  Start: 0450-07-28
+  End: 0457-01-27
+  DOB: 0392-01-01
+  DOD: 0457-01-27
   Keywords:
     - Theodosian_Dynasty
 - Label: Petronius Maximinus
-  Start: 455-03-17
-  End: 455-04-22
-  DOB: 400-01-01
-  DOD: 455-04-22
+  Start: 0455-03-17
+  End: 0455-04-22
+  DOB: 0400-01-01
+  DOD: 0455-04-22
   Keywords:
     - Last_Western_Emperors
 - Label: Avitus
-  Start: 455-04-22
-  End: 456-10-17
-  DOB: 385-01-01
-  DOD: 456-10-17
+  Start: 0455-04-22
+  End: 0456-10-17
+  DOB: 0385-01-01
+  DOD: 0456-10-17
   Keywords:
     - Last_Western_Emperors
 - Label: Majorian
-  Start: 457-01-27
-  End: 461-08-02
-  DOB: 420-01-01
-  DOD: 461-08-02
+  Start: 0457-01-27
+  End: 0461-08-02
+  DOB: 0420-01-01
+  DOD: 0461-08-02
   Keywords:
     - Last_Western_Emperors
 - Label: Libius Severus
-  Start: 461-08-02
-  End: 465-11-15
-  DOB: 420-01-01
-  DOD: 465-11-15
+  Start: 0461-08-02
+  End: 0465-11-15
+  DOB: 0420-01-01
+  DOD: 0465-11-15
   Keywords:
     - Last_Western_Emperors
 - Label: Anthemius
-  Start: 467-04-12
-  End: 472-07-11
-  DOB: 420-01-01
-  DOD: 472-07-11
+  Start: 0467-04-12
+  End: 0472-07-11
+  DOB: 0420-01-01
+  DOD: 0472-07-11
   Keywords:
     - Last_Western_Emperors
 - Label: Olybrius
-  Start: 472-07-11
-  End: 472-10-23
-  DOB: 420-01-01
-  DOD: 472-10-23
+  Start: 0472-07-11
+  End: 0472-10-23
+  DOB: 0420-01-01
+  DOD: 0472-10-23
   Keywords:
     - Last_Western_Emperors
 - Label: Glycerius
-  Start: 473-03-03
-  End: 474-06-24
-  DOB: 420-01-01
-  DOD: 474-06-24
+  Start: 0473-03-03
+  End: 0474-06-24
+  DOB: 0420-01-01
+  DOD: 0474-06-24
   Keywords:
     - Last_Western_Emperors
 - Label: Julius Nepos 
-  Start: 474-06-24
-  End: 475-05-28
-  DOB: 430-01-01
-  DOD: 480-01-01
+  Start: 0474-06-24
+  End: 0475-05-28
+  DOB: 0430-01-01
+  DOD: 0480-01-01
   Keywords:
     - Last_Western_Emperors
 - Label: Romulus Augustulus
-  Start: 475-05-28
-  End: 476-09-04
-  DOB: 460-01-01
-  DOD: 507-01-01
+  Start: 0475-05-28
+  End: 0476-09-04
+  DOB: 0460-01-01
+  DOD: 0507-01-01
   Keywords:
     - Last_Western_Emperors

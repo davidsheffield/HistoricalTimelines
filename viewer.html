@@ -21,7 +21,9 @@
                       border: 1px solid #666; border-radius: 2px;
                       font-size: 13px; }
     #toolbar button:hover { background: #555; }
-    #readout { margin-left: auto;
+    #mouse-pos { margin-left: auto; font-variant-numeric: tabular-nums;
+                 opacity: 0.85; }
+    #readout { margin-left: 16px;
                font-variant-numeric: tabular-nums; opacity: 0.85; }
     #scroll-container { position: absolute; top: 38px; left: 0;
                         right: 0; bottom: 0; overflow-x: auto;
@@ -56,6 +58,7 @@
     <button id='go'>Go</button>
     <button id='prev' title='Older (left)'>&larr;</button>
     <button id='next' title='Newer (right)'>&rarr;</button>
+    <span id='mouse-pos'>&mdash;</span>
     <span id='readout'>&mdash;</span>
 </div>
 <div id='scroll-container'><div id='strip'></div></div>
@@ -290,6 +293,35 @@ scroller.addEventListener('wheel', function(e) {
 }, { passive: false });
 
 scroller.addEventListener('scroll', updateReadout);
+
+const mouseEl = document.getElementById('mouse-pos');
+
+scroller.addEventListener('mousemove', function(e) {
+    const rect = scroller.getBoundingClientRect();
+    const absX = scroller.scrollLeft + (e.clientX - rect.left);
+    const absY = e.clientY - rect.top;
+
+    let yearText = '\u2014';
+    for (const [N, w] of wrappers) {
+        if (absX >= w.offsetLeft && absX < w.offsetLeft + SHEET_W) {
+            const r = sheetRange(N);
+            const localX = absX - w.offsetLeft;
+            const naiveY = r.naiveStart + Math.floor(localX / PX_PER_YEAR);
+            yearText = yearDisplay(naiveToSigned(naiveY));
+            break;
+        }
+    }
+
+    // y_param is the position coordinate used by timeline.py:
+    //   svg_y = y_param * 24 + 24  →  y_param = (svg_y - 24) / 24
+    const yParam = (absY - 24) / 24;
+
+    mouseEl.textContent = yearText + ' \u00b7 y\u202f' + yParam.toFixed(2);
+});
+
+scroller.addEventListener('mouseleave', function() {
+    mouseEl.textContent = '\u2014';
+});
 
 (async function init() {
     const found = await probeSheets();

@@ -71,3 +71,15 @@ entries:
   Params:
     - position:4.5
     - fill:#14ac75
+- Label: Gaius Gracchus
+  DOB: c. -0154
+  DOD: -0121
+  Params:
+    - position:0.5
+    - fill:#ac5214
+- Label: Tiberius Gracchus
+  DOB: c. -0163
+  DOD: -0133
+  Params:
+    - position:1.5
+    - fill:#de6816

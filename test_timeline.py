@@ -43,7 +43,10 @@ def test_era_year__no_space(year, expected):
                           (long_time.date(2016, 12, 31, True), 1975, 2016, True, 1032), # Right edge of the sheet
                           (long_time.date(2017, 1, 1, True), 1975, 2016, True, 1032), # Just after
                           (long_time.date(2017, 12, 31, True), 1975, 2016, True, 1056), # One year after
-                          (long_time.date(1975, 1, 1, True), 1975, 2016, False, 1032)]) # Right edge for right to left
+                          (long_time.date(1975, 1, 1, True), 1975, 2016, False, 1032), # Right edge for right to left
+                          (long_time.date(44, 1, 1, False), -50, -9, True, 168), # BCE date: 44 BCE, 6 years into sheet
+                          (long_time.date(50, 1, 1, False), -50, -9, True, 24), # BCE date: left edge of sheet
+                          (long_time.date(44, 1, 1, False), -50, -9, False, 888)]) # BCE date: right to left
 def test_calculate_x(date, start_year, end_year, left_to_right, expected):
     assert timeline.calculate_x(date, start_year, end_year, left_to_right) == expected
 
@@ -925,6 +928,15 @@ def test_extract_dates_handles_missing_optional_fields():
     # Full dates unchanged
     ('2010-03-15', '2010-03-15'),
     ('-0044-03-15', '-0044-03-15'),
+    # Circa prefix with space (BCE)
+    ('c. -0085', '-0085-01-01'),
+    ('c. -0044-03-15', '-0044-03-15'),
+    # Circa prefix with space (CE)
+    ('c. 1066', '1066-01-01'),
+    ('c. 0983-04', '0983-04-01'),
+    # Circa prefix without space
+    ('c.-0085', '-0085-01-01'),
+    ('c.1066', '1066-01-01'),
 ])
 def test_normalize_date_string(input_string, expected):
     assert timeline._normalize_date_string(input_string) == expected

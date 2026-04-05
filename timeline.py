@@ -182,7 +182,7 @@ def load_data() -> dict[str, pd.DataFrame]:
         if file.suffix != '.yaml':
             continue
         if file.stem not in ('US_presidents', 'British_monarchs',
-                             'English_monarchs',
+                             'English_monarchs', 'Roman_Late_Republic_lives',
                              'test_presidents', 'test_invalid'):
             continue
 
@@ -491,7 +491,8 @@ def _normalize_date_string(date_string: str) -> str:
     Normalize a partial ISO date string to a full YYYY-MM-DD string.
 
     Accepts year-only and year+month strings and fills in default values
-    (month=01, day=01) for missing components.
+    (month=01, day=01) for missing components. A leading circa prefix
+    ('c.' or 'c. ') is stripped before processing.
 
     Args:
         date_string: Partial or full ISO date string. Supported formats:
@@ -501,10 +502,14 @@ def _normalize_date_string(date_string: str) -> str:
                      - '-YYYY-MM'    (e.g., '-0300-10')
                      - 'YYYY-MM-DD'  (e.g., '2010-03-15')
                      - '-YYYY-MM-DD' (e.g., '-0044-03-15')
+                     Any of the above may be prefixed with 'c.' or 'c. '
+                     to indicate an approximate date (e.g., 'c. -0085').
 
     Returns:
         str: Full ISO date string in 'YYYY-MM-DD' or '-YYYY-MM-DD' format
     """
+    if date_string.startswith('c.'):
+        date_string = date_string[2:].lstrip()
     n = len(date_string)
     bce = date_string.startswith('-')
     if (bce and n == 5) or (not bce and n == 4):
@@ -724,7 +729,8 @@ def calculate_x(date: 'long_time.date', start_year: int, end_year: int, left_to_
         - Reverses for right-to-left layout
     """
 
-    years_since_start = date.year - start_year + (date.ordinal_day() - 1) / (date.days_in_year() - 1)
+    signed_year = date.year if date.era else -date.year
+    years_since_start = signed_year - start_year + (date.ordinal_day() - 1) / (date.days_in_year() - 1)
     if left_to_right:
         return 24 + years_since_start * 24
     else:

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Historical Timeline Viewer</title>
+<style>
+    html, body { margin: 0; padding: 0; height: 100%; background: #222;
+                 font-family: -apple-system, system-ui, sans-serif;
+                 overflow: hidden; }
+    #toolbar { position: fixed; top: 0; left: 0; right: 0;
+               background: rgba(0, 0, 0, 0.85); color: #fff;
+               padding: 6px 12px; z-index: 100; display: flex;
+               gap: 12px; align-items: center; font-size: 13px;
+               box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4); }
+    #toolbar label { display: flex; align-items: center; gap: 4px; }
+    #toolbar input { width: 90px; padding: 3px 6px; font-size: 13px;
+                     border: 1px solid #555; background: #333;
+                     color: #fff; border-radius: 2px; }
+    #toolbar button { padding: 3px 10px; cursor: pointer;
+                      background: #444; color: #fff;
+                      border: 1px solid #666; border-radius: 2px;
+                      font-size: 13px; }
+    #toolbar button:hover { background: #555; }
+    #readout { margin-left: auto;
+               font-variant-numeric: tabular-nums; opacity: 0.85; }
+    #scroll-container { position: absolute; top: 38px; left: 0;
+                        right: 0; bottom: 0; overflow-x: auto;
+                        overflow-y: hidden; }
+    #strip { height: 816px; display: flex; flex-direction: row;
+             width: max-content; }
+    .sheet-wrapper { width: 1008px; height: 816px; overflow: hidden;
+                     position: relative; flex: 0 0 1008px;
+                     background: #fff; }
+    .sheet-wrapper img { position: absolute; left: -24px; top: 0;
+                         width: 1056px; height: 816px; display: block; }
+    .sheet-wrapper .num { position: absolute; bottom: 4px; right: 4px;
+                          font-size: 10px; color: #666;
+                          background: rgba(255, 255, 255, 0.75);
+                          padding: 1px 5px; pointer-events: none;
+                          border-radius: 2px; }
+    .sheet-wrapper.loading::before { content: ''; position: absolute;
+                                     inset: 0;
+                                     background: repeating-linear-gradient(
+                                        45deg, #f4f4f4, #f4f4f4 10px,
+                                        #eaeaea 10px, #eaeaea 20px); }
+</style>
+</head>
+<body>
+<div id='toolbar'>
+    <label>Sheet #
+        <input type='number' id='sheet-input' min='1' max='200'>
+    </label>
+    <label>Year
+        <input type='text' id='year-input' placeholder='1776 or 44BCE'>
+    </label>
+    <button id='go'>Go</button>
+    <button id='prev' title='Older (left)'>&larr;</button>
+    <button id='next' title='Newer (right)'>&rarr;</button>
+    <span id='readout'>&mdash;</span>
+</div>
+<div id='scroll-container'><div id='strip'></div></div>
+<script>
+'use strict';
+
+const SHEET_W = 1008;
+const SHEET_H = 816;
+const PX_PER_YEAR = 24;
+const YEARS_PER_SHEET = 42;
+const FIRST_END = 2100;
+const MAX_PROBE = 200;
+const LAZY_MARGIN_SHEETS = 5;
+
+// Repo convention: no year 0. Signed year -1 = 1 BCE.
+function signedToNaive(y) { return y < 0 ? y + 1 : y; }
+function naiveToSigned(n) { return n <= 0 ? n - 1 : n; }
+
+function yearDisplay(signed) {
+    return signed > 0 ? signed + 'CE' : (-signed) + 'BCE';
+}
+
+function sheetFilename(N) {
+    const naiveEnd = FIRST_END - (N - 1) * YEARS_PER_SHEET;
+    const naiveStart = naiveEnd - (YEARS_PER_SHEET - 1);
+    const signedEnd = naiveToSigned(naiveEnd);
+    const signedStart = naiveToSigned(naiveStart);
+    const NN = String(N).padStart(2, '0');
+    return 'Sheet_' + NN + '_' + yearDisplay(signedStart) +
+           '_' + yearDisplay(signedEnd) + '.svg';
+}
+
+function sheetRange(N) {
+    const naiveEnd = FIRST_END - (N - 1) * YEARS_PER_SHEET;
+    const naiveStart = naiveEnd - (YEARS_PER_SHEET - 1);
+    return {
+        signedStart: naiveToSigned(naiveStart),
+        signedEnd: naiveToSigned(naiveEnd),
+        naiveStart: naiveStart,
+        naiveEnd: naiveEnd
+    };
+}
+
+function yearToSheet(signedYear) {
+    const naive = signedToNaive(signedYear);
+    return Math.floor((FIRST_END - naive) / YEARS_PER_SHEET) + 1;
+}
+
+function parseYearInput(s) {
+    if (s == null) return null;
+    s = String(s).trim().toUpperCase();
+    if (!s) return null;
+    const m = s.match(/^(-?\d+)\s*(BCE|BC|CE|AD)?$/);
+    if (!m) return null;
+    const n = parseInt(m[1], 10);
+    const suffix = m[2];
+    if (suffix === 'BCE' || suffix === 'BC') {
+        return -Math.abs(n);
+    }
+    if (n === 0) return -1;
+    return n;
+}
+
+function probeOne(url) {
+    // Use Image() so this works under file:// (fetch is blocked there).
+    return new Promise(function(resolve) {
+        const img = new Image();
+        img.onload = function() { resolve(true); };
+        img.onerror = function() { resolve(false); };
+        img.src = url;
+    });
+}
+
+async function probeSheets() {
+    // Probe sequentially; stop after 2 consecutive misses.
+    const found = [];
+    let misses = 0;
+    for (let N = 1; N <= MAX_PROBE; N++) {
+        const ok = await probeOne('sheets/' + sheetFilename(N));
+        if (ok) {
+            found.push(N);
+            misses = 0;
+        } else {
+            misses++;
+            if (misses >= 2) break;
+        }
+    }
+    return found;
+}
+
+const strip = document.getElementById('strip');
+const scroller = document.getElementById('scroll-container');
+const wrappers = new Map();
+
+function buildStrip(sheetNums) {
+    // Left edge = highest N (oldest); right edge = lowest N (most recent).
+    sheetNums.sort((a, b) => b - a);
+    for (const N of sheetNums) {
+        const w = document.createElement('div');
+        w.className = 'sheet-wrapper loading';
+        w.dataset.sheetNum = N;
+        w.dataset.filename = sheetFilename(N);
+        const label = document.createElement('div');
+        label.className = 'num';
+        const r = sheetRange(N);
+        label.textContent = '#' + N + ' · ' +
+            yearDisplay(r.signedStart) + '–' + yearDisplay(r.signedEnd);
+        w.appendChild(label);
+        strip.appendChild(w);
+        wrappers.set(N, w);
+    }
+}
+
+const observer = new IntersectionObserver(function(entries) {
+    for (const e of entries) {
+        const w = e.target;
+        if (e.isIntersecting) {
+            if (!w.querySelector('img')) {
+                const img = document.createElement('img');
+                img.src = 'sheets/' + w.dataset.filename;
+                img.alt = 'Sheet ' + w.dataset.sheetNum;
+                img.addEventListener('load', function() {
+                    w.classList.remove('loading');
+                });
+                w.insertBefore(img, w.firstChild);
+            }
+        } else {
+            const img = w.querySelector('img');
+            if (img) {
+                img.remove();
+                w.classList.add('loading');
+            }
+        }
+    }
+}, {
+    root: scroller,
+    rootMargin: (SHEET_W * LAZY_MARGIN_SHEETS) + 'px ' +
+                (SHEET_W * LAZY_MARGIN_SHEETS) + 'px'
+});
+
+function observeAll() {
+    for (const w of wrappers.values()) observer.observe(w);
+}
+
+function scrollToSheet(N, yearWithin) {
+    const w = wrappers.get(N);
+    if (!w) return;
+    let centerX;
+    if (yearWithin != null) {
+        const r = sheetRange(N);
+        const naiveY = signedToNaive(yearWithin);
+        const localX = (naiveY - r.naiveStart) * PX_PER_YEAR +
+                       PX_PER_YEAR / 2;
+        centerX = w.offsetLeft + localX;
+    } else {
+        centerX = w.offsetLeft + SHEET_W / 2;
+    }
+    scroller.scrollLeft = centerX - scroller.clientWidth / 2;
+}
+
+function currentSheet() {
+    const centerX = scroller.scrollLeft + scroller.clientWidth / 2;
+    for (const entry of wrappers) {
+        const N = entry[0];
+        const w = entry[1];
+        if (centerX >= w.offsetLeft &&
+            centerX < w.offsetLeft + SHEET_W) {
+            const r = sheetRange(N);
+            const localX = centerX - w.offsetLeft;
+            const yearOffset = Math.floor(localX / PX_PER_YEAR);
+            const naiveY = r.naiveStart + yearOffset;
+            return { N: N, year: naiveToSigned(naiveY) };
+        }
+    }
+    return null;
+}
+
+function updateReadout() {
+    const cur = currentSheet();
+    const r = document.getElementById('readout');
+    if (cur) {
+        r.textContent = 'Sheet #' + cur.N + ' · ' + yearDisplay(cur.year);
+    } else {
+        r.textContent = '—';
+    }
+}
+
+function go() {
+    const sInput = document.getElementById('sheet-input').value.trim();
+    const yInput = document.getElementById('year-input').value.trim();
+    if (yInput) {
+        const y = parseYearInput(yInput);
+        if (y != null) scrollToSheet(yearToSheet(y), y);
+    } else if (sInput) {
+        scrollToSheet(parseInt(sInput, 10));
+    }
+}
+
+document.getElementById('go').addEventListener('click', go);
+document.getElementById('sheet-input').addEventListener('keydown',
+    function(e) { if (e.key === 'Enter') go(); });
+document.getElementById('year-input').addEventListener('keydown',
+    function(e) { if (e.key === 'Enter') go(); });
+document.getElementById('prev').addEventListener('click', function() {
+    const c = currentSheet();
+    if (c) scrollToSheet(c.N + 1);
+});
+document.getElementById('next').addEventListener('click', function() {
+    const c = currentSheet();
+    if (c && c.N > 1) scrollToSheet(c.N - 1);
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.target && e.target.tagName === 'INPUT') return;
+    if (e.key === 'ArrowLeft') {
+        const c = currentSheet();
+        if (c) scrollToSheet(c.N + 1);
+        e.preventDefault();
+    } else if (e.key === 'ArrowRight') {
+        const c = currentSheet();
+        if (c && c.N > 1) scrollToSheet(c.N - 1);
+        e.preventDefault();
+    }
+});
+
+// Plain wheel -> horizontal scroll (no vertical scroll needed).
+scroller.addEventListener('wheel', function(e) {
+    if (e.deltaY !== 0 && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        scroller.scrollLeft += e.deltaY;
+        e.preventDefault();
+    }
+}, { passive: false });
+
+scroller.addEventListener('scroll', updateReadout);
+
+(async function init() {
+    const found = await probeSheets();
+    if (!found.length) {
+        strip.textContent = 'No sheets found in sheets/';
+        strip.style.color = '#fff';
+        strip.style.padding = '40px';
+        return;
+    }
+    buildStrip(found);
+    observeAll();
+    const params = new URLSearchParams(location.search);
+    if (params.has('year')) {
+        const y = parseYearInput(params.get('year'));
+        if (y != null) {
+            const N = yearToSheet(y);
+            scrollToSheet(N, y);
+        }
+    } else if (params.has('sheet')) {
+        scrollToSheet(parseInt(params.get('sheet'), 10));
+    } else {
+        scrollToSheet(1);
+    }
+    updateReadout();
+})();
+</script>
+</body>
+</html>

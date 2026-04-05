@@ -28,6 +28,7 @@ import argparse
 import logging
 import os
 import pathlib
+import re
 from string import Template
 
 import pandas as pd
@@ -37,6 +38,32 @@ import long_time
 
 
 logger = logging.getLogger(__name__)
+
+
+# PyYAML uses YAML 1.1 which treats 0NNN as octal (e.g. -0115 -> -77).
+# This custom loader replaces the int resolver with one that only handles
+# decimal, hex, and binary — no octal — matching YAML 1.2 behaviour.
+_INT_NO_OCTAL = re.compile(
+    r'''^(?:[-+]?0b[0-1_]+
+         |[-+]?0x[0-9a-fA-F_]+
+         |[-+]?(?:0|[1-9][0-9_]*)
+         |[-+]?[1-9][0-9_]*(?::[0-5]?[0-9])+)$''',
+    re.X
+)
+
+
+class _Loader(yaml.SafeLoader):
+    pass
+
+
+for _ch in list(_Loader.yaml_implicit_resolvers.keys()):
+    _Loader.yaml_implicit_resolvers[_ch] = [
+        (tag, regexp)
+        for tag, regexp in _Loader.yaml_implicit_resolvers[_ch]
+        if tag != 'tag:yaml.org,2002:int'
+    ]
+_Loader.add_implicit_resolver('tag:yaml.org,2002:int', _INT_NO_OCTAL,
+                               list('-+0123456789'))
 
 
 def timeline() -> None:
@@ -188,7 +215,7 @@ def load_data() -> dict[str, pd.DataFrame]:
 
         file_path = dir_dates.joinpath(file)
         with open(file_path) as f:
-            data = yaml.safe_load(f)
+            data = yaml.load(f, Loader=_Loader)
 
             # Validate the YAML structure
             if not isinstance(data, dict) or 'entries' not in data:
@@ -388,12 +415,25 @@ def _generate_timeline_boxes(sheet_boxes: pd.DataFrame, left_to_right: bool) -> 
         if alternating_class:
             classes += ' ' + alternating_class
 
-        content.append(f'<rect x="{x}" y="{y}" width="{width}" height="24" class="{classes}"/>')
-
-        # Check if border is needed (draw after main rect so it appears on top)
         params = row.get('Params', [])
         if not isinstance(params, list):
             params = []
+
+        # Build inline styles from any key:value param that isn't functional
+        _functional_prefixes = ('position:', 'label_position:')
+        rect_styles = {
+            p.split(':', 1)[0]: p.split(':', 1)[1]
+            for p in params
+            if ':' in p and not any(p.startswith(fp) for fp in _functional_prefixes)
+        }
+        style_attr = (
+            f' style="{"; ".join(f"{k}:{v}" for k, v in rect_styles.items())}"'
+            if rect_styles else ''
+        )
+
+        content.append(f'<rect x="{x}" y="{y}" width="{width}" height="24" class="{classes}"{style_attr}/>')
+
+        # Check if border is needed (draw after main rect so it appears on top)
         if 'border_left' in params:
             # Find the party class to determine border style
             party_class = None

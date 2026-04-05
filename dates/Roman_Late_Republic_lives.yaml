@@ -9,54 +9,65 @@ entries:
   DOB: -0100-07-12
   DOD: -0044-03-15
   Params:
-    - position:0.5
-- Label: Brutus
+    - position:3.5
+    - fill:#c11616
+- Label: Marcus Junius Brutus
   DOB: c. -0085
   DOD: -0042-10-23
   Params:
-    - position:1.5
+    - position:5.5
+    - fill:#301dce
 - Label: Cassius
   DOB: c. -0086
   DOD: -0042-10-03
   Params:
-    - position:2.5
+    - position:6.5
+    - fill:#584cb9
 - Label: Pompey
   DOB: -0106-09-29
   DOD: -0048-09-28
   Params:
-    - position:3.5
+    - position:1.5
+    - fill:#b01c66
 - Label: Julia
   DOB: c. -0076
   DOD: -0054-09
   Params:
-    - position:4.5
+    - position:2.5
+    - fill:#dc4545
 - Label: Mark Antony
   DOB: -0083-01-14
   DOD: -0030-08-01
   Params:
-    - position:5.5
+    - position:4.5
+    - fill:#c07373
 - Label: Crassus
   DOB: -0115
   DOD: -0053-06
   Params:
-    - position:6.5
+    - position:0.5
+    - fill:#cbb019
 - Label: Cicero
   DOB: -0106-01-03
   DOD: -0043-12-07
   Params:
-    - position:7.5
+    - position:8.5
+    - fill:#5015db
 - Label: Cato
   DOB: -0095
   DOD: -0046-04
   Params:
-    - position:8.5
+    - position:7.5
+    - fill:#3540c4
 - Label: Sulla
   DOB: -0138
   DOD: -0078
   Params:
-    - position:9.5
+    - position:2.5
+    - fill:#2b7d0b
 - Label: Marius
   DOB: c. -0157
   DOD: -0086-01-13
   Params:
-    - position:10.5
+    - position:4.5
+    - fill:#14ac75

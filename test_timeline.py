@@ -554,6 +554,48 @@ def test_load_data_invalid_structure_no_entries():
             timeline.__file__ = original_file
 
 
+def test_load_data_octal_year_parsed_as_decimal():
+    """Test that year-only values like -0115 are loaded as decimal, not octal.
+
+    PyYAML (YAML 1.1) treats unquoted 0NNN as octal, so -0115 would become
+    -77 unless we use a custom loader. This test verifies the fix.
+    """
+    yaml_content = '''global:
+  Keywords:
+    - Roman
+entries:
+- Label: Crassus
+  DOB: -0115
+  DOD: -0053
+  Params:
+    - position:0.5
+'''
+
+    with tempfile.NamedTemporaryFile(mode='w', suffix='.yaml', delete=False) as f:
+        f.write(yaml_content)
+        temp_file = f.name
+
+    with tempfile.TemporaryDirectory() as temp_dir:
+        dates_dir = os.path.join(temp_dir, 'dates')
+        os.makedirs(dates_dir)
+        yaml_file = os.path.join(dates_dir, 'test_presidents.yaml')
+        os.rename(temp_file, yaml_file)
+
+        original_file = timeline.__file__
+        timeline.__file__ = os.path.join(temp_dir, 'timeline.py')
+
+        try:
+            data = timeline.load_data()
+            boxes = timeline.extract_dates(data)
+            crassus = boxes[boxes['Label'] == 'Crassus'].iloc[0]
+            assert crassus['Start'].year == 115, (
+                f'Crassus start year should be 115 BCE but got {crassus["Start"].year}. '
+                f'YAML may be parsing -0115 as octal -77 (decimal).'
+            )
+        finally:
+            timeline.__file__ = original_file
+
+
 def test_extract_dates_position_parameter():
     """Test that extract_dates correctly processes position parameter from YAML."""
 
@@ -907,6 +949,61 @@ def test_extract_dates_handles_missing_optional_fields():
     assert result.iloc[0]['Label'] == 'Minimal Entry'
     assert result.iloc[0]['Keywords'] == []  # Should default to empty list
     assert result.iloc[0]['y'] == 0.5       # Position from params
+
+
+def _make_boxes(params):
+    """Helper: build a minimal single-row sheet_boxes DataFrame."""
+    return pd.DataFrame([{
+        'Label': 'Test Entry',
+        'Keywords': ['TestClass'],
+        'Params': params,
+        'alternating_class': '',
+        'start_x': 100,
+        'end_x': 300,
+        'y': 1,
+    }])
+
+
+def test_generate_timeline_boxes_fill_param():
+    """fill: param sets inline style on the rect."""
+    result = timeline._generate_timeline_boxes(
+        _make_boxes(['position:0.5', 'fill:#ff0000']), left_to_right=True
+    )
+    assert 'style="fill:#ff0000"' in result
+
+
+def test_generate_timeline_boxes_multiple_style_params():
+    """Multiple style params are combined into a single style attribute."""
+    result = timeline._generate_timeline_boxes(
+        _make_boxes(['position:0.5', 'fill:#ff0000', 'opacity:0.5']),
+        left_to_right=True
+    )
+    assert 'fill:#ff0000' in result
+    assert 'opacity:0.5' in result
+    # Both in one style attribute on the rect
+    rect_line = [l for l in result.splitlines() if l.startswith('<rect')][0]
+    assert 'style=' in rect_line
+
+
+def test_generate_timeline_boxes_no_style_params():
+    """No style params means no style attribute on the rect."""
+    result = timeline._generate_timeline_boxes(
+        _make_boxes(['position:0.5', 'label_position:above']), left_to_right=True
+    )
+    rect_line = [l for l in result.splitlines() if l.startswith('<rect')][0]
+    assert 'style=' not in rect_line
+
+
+def test_generate_timeline_boxes_functional_params_excluded_from_style():
+    """position: and label_position: are not treated as style properties."""
+    result = timeline._generate_timeline_boxes(
+        _make_boxes(['position:0.5', 'label_position:below', 'fill:#aabbcc']),
+        left_to_right=True
+    )
+    rect_line = [l for l in result.splitlines() if l.startswith('<rect')][0]
+    assert 'position' not in rect_line
+    assert 'label_position' not in rect_line
+    assert 'fill:#aabbcc' in rect_line
 
 
 @pytest.mark.parametrize('input_string,expected', [

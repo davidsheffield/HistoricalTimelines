@@ -5,12 +5,14 @@
 rect { stroke: none; }
 
 text.Reign,
-text.Life {
+text.Life,
+text.War {
     text-anchor: middle;
     dominant-baseline: middle;
     }
 text.Reign,
-text.Life {
+text.Life,
+text.War {
     font-family: Palatino;
     fill: #ffffff;
     }
@@ -100,6 +102,14 @@ rect.Theodosian_Dynasty.even { fill : #900d6b; }
 rect.Theodosian_Dynasty.odd { fill : #b43791; }
 rect.Last_Western_Emperors.even { fill : #bcbe4e; }
 rect.Last_Western_Emperors.odd { fill : #dfe178; }
+
+/************
+** Wars **
+************/
+
+rect.War.Global { fill : #767d98; }
+rect.War.USA { fill : #04208f; }
+rect.War.Rome { fill : #c81d1a; }
 
 /*********************
 ** Final formatting **

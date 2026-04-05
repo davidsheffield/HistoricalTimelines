@@ -1,0 +1,207 @@
+global:
+  Keywords:
+    - War
+  Params:
+    - position:10.5
+
+entries:
+# US Wars
+- Label: Revolutionary War
+  Start: 1775-04-19
+  End: 1783-09-03
+  Keywords:
+    - USA
+- Label: War of 1812
+  Start: 1812-06-18
+  End: 1815-02-17
+  Keywords:
+    - USA
+- Label: Mexican–American War
+  Start: 1846-04-25
+  End: 1848-02-02
+  Keywords:
+    - USA
+  Params:
+    - label_position:below
+- Label: Civil War
+  Start: 1861-04-12
+  End: 1865-05-26
+  Keywords:
+    - USA
+- Label: Spanish–American War
+  Start: 1898-04-21
+  End: 1898-08-13
+  Keywords:
+    - USA
+  Params:
+    - label_position:below
+- Label: World War I
+  Start: 1914-07-28
+  End: 1918-11-11
+  Keywords:
+    - Global
+- Label: World War I
+  Start: 1917-04-06
+  End: 1918-11-11
+  Keywords:
+    - USA
+- Label: World War II
+  Start: 1939-09-01
+  End: 1945-09-02
+  Keywords:
+    - Global
+- Label: World War II
+  Start: 1941-12-07
+  End: 1945-09-02
+  Keywords:
+    - USA
+- Label: Korean War
+  Start: 1950-06-25
+  End: 1953-07-27
+  Keywords:
+    - USA
+- Label: Vietnam War
+  Start: 1955-11-01
+  End: 1975-04-30
+  Keywords:
+    - USA
+- Label: Gulf War
+  Start: 1990-08-02
+  End: 1991-01-17
+  Keywords:
+    - USA
+  Params:
+    - label_position:below
+- Label: Afghanistan War
+  Start: 2001-10-07
+  End: 2021-08-30
+  Keywords:
+    - USA
+- Label: Iraq War
+  Start: 2003-03-20
+  End: 2011-12-18
+  Keywords:
+    - USA
+  Params:
+    - position:11.5
+# British Wars
+- Label: Seven Years’ War
+  Start: 1756-05-17
+  End: 1763-02-10
+  Keywords:
+    - Global
+- Label: Crimean War
+  Start: 1853-10-16
+  End: 1856-03-30
+  Keywords:
+    - Global
+# Roman Wars
+- Label: First Samnite War
+  Start: -0343
+  End: -0341
+  Keywords:
+    - Rome
+- Label: Latin War
+  Start: -0340
+  End: -0338
+  Keywords:
+    - Rome
+- Label: Second Samnite War
+  Start: -0326
+  End: -0304
+  Keywords:
+    - Rome
+- Label: Third Samnite War
+  Start: -0298
+  End: -0290
+  Keywords:
+    - Rome
+- Label: Pyrrhic War
+  Start: -0281
+  End: -0275
+  Keywords:
+    - Rome
+- Label: First Punic War
+  Start: -0264
+  End: -0241
+  Keywords:
+    - Rome
+- Label: Second Punic War
+  Start: -0218-04 # Spring
+  End: -0201
+  Keywords:
+    - Rome
+- Label: Second Macedonian War
+  Start: -0200
+  End: -0197
+  Keywords:
+    - Rome
+- Label: Third Macedonian War
+  Start: -0171
+  End: -0168
+  Keywords:
+    - Rome
+- Label: Third Punic War
+  Start: -0149
+  End: -0146
+  Keywords:
+    - Rome
+- Label: Social War
+  Start: -0091
+  End: -0087
+  Keywords:
+    - Rome
+    - civil_war
+- Label: First Mithridatic War
+  Start: -0089
+  End: -0085
+  Keywords:
+    - Rome
+- Label: Second Mithridatic War
+  Start: -0083
+  End: -0081
+  Keywords:
+    - Rome
+- Label: Sulla’s Civil War
+  Start: -0083
+  End: -0081
+  Keywords:
+    - Rome
+    - civil_war
+- Label: Third Mithridatic War
+  Start: -0073
+  End: -0063
+  Keywords:
+    - Rome
+- Label: Third Servile War
+  Start: -0073
+  End: -0071
+  Keywords:
+    - Rome
+    - civil_war
+- Label: Gallic Wars
+  Start: -0058
+  End: -0051
+  Keywords:
+    - Rome
+- Label: Caesar’s Civil War
+  Start: -0049
+  End: -0045
+  Keywords:
+    - Rome
+    - civil_war
+- Label: First Dacian War
+  Start: 0101
+  End: 0102
+  Keywords:
+    - Rome
+- Label: Second Dacian War
+  Start: 0105
+  End: 0106
+  Keywords:
+    - Rome
+- Label: Marcomannic Wars
+  Start: 0166
+  End: 0180
+  Keywords:
+    - Rome

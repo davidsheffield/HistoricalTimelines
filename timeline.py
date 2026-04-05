@@ -208,10 +208,7 @@ def load_data() -> dict[str, pd.DataFrame]:
         file = pathlib.Path(file)
         if file.suffix != '.yaml':
             continue
-        if file.stem not in ('US_presidents', 'British_monarchs',
-                             'English_monarchs', 'Roman_Late_Republic_lives',
-                             'Roman_emperors',
-                             'test_presidents', 'test_invalid'):
+        if file.stem == 'family':
             continue
 
         file_path = dir_dates.joinpath(file)

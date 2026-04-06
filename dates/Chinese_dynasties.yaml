@@ -1,0 +1,109 @@
+global:
+  Keywords:
+    - China
+    - Dynasty
+    - Reign
+  Params:
+    - position:30.5
+
+entries:
+- Label: Shang
+  Start: c. -1600
+  End: c. -1046
+  Params:
+    - fill:#b5500a;
+- Label: Western Zhou
+  Start: c. -1046
+  End: c. -0771
+  Params:
+    - fill:#d07032;
+- Label: Spring and Autumn
+  Start: c. -0770
+  End: c. -0476
+  Params:
+    - fill:#b5500a;
+- Label: Warring States
+  Start: c. -0475
+  End: c. -0221
+  Params:
+    - fill:#d07032;
+- Label: Eastern Zhou
+  Start: c. -0771
+  End: c. -0256
+  Params:
+    - fill:#b5500a;
+- Label: Qin
+  Start: -0221
+  End: -0207
+  Params:
+    - fill:#d07032;
+- Label: Western Han
+  Start: -0202
+  End: 0009
+  Params:
+    - fill:#b5500a;
+- Label: Eastern Han
+  Start: 0025
+  End: 0220
+  Params:
+    - fill:#d07032;
+- Label: Three Kingdoms Period
+  Start: 0220
+  End: 0280
+  Params:
+    - fill:#b5500a;
+- Label: Western Jin
+  Start: 0266
+  End: 0316
+  Params:
+    - fill:#d07032;
+- Label: Eastern Jin
+  Start: 0317
+  End: 0420
+  Params:
+    - fill:#b5500a;
+- Label: Northern and Southern Dynasties
+  Start: 0420
+  End: 0589
+  Params:
+    - fill:#d07032;
+- Label: Sui
+  Start: 0581
+  End: 0618
+  Params:
+    - fill:#b5500a;
+- Label: Tang
+  Start: 0618
+  End: 0907
+  Params:
+    - fill:#d07032;
+- Label: Five Dynasties and Ten Kingdoms
+  Start: 0907
+  End: 0979
+  Params:
+    - fill:#b5500a;
+- Label: Northern Song
+  Start: 0960
+  End: 1127
+  Params:
+    - fill:#d07032;
+- Label: Southern Song
+  Start: 1127
+  End: 1279
+  Params:
+    - fill:#b5500a;
+- Label: Yuan
+  Start: 1271
+  End: 1368
+  Params:
+    - fill:#d07032;
+- Label: Ming
+  Start: 1368
+  End: 1644
+  Params:
+    - fill:#b5500a;
+- Label: Qing
+  Start: 1644
+  End: 1912
+  Params:
+    - fill:#d07032;

@@ -6,13 +6,15 @@ rect { stroke: none; }
 
 text.Reign,
 text.Life,
-text.War {
+text.War,
+text.Dynasty {
     text-anchor: middle;
     dominant-baseline: middle;
     }
 text.Reign,
 text.Life,
-text.War {
+text.War,
+text.Dynasty {
     font-family: Palatino;
     fill: #ffffff;
     }

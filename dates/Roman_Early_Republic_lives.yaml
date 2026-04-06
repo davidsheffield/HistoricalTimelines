@@ -1,0 +1,49 @@
+global:
+  Keywords:
+    - Roman
+    - Early_Republic
+    - Life
+
+entries:
+# - Label: Lucius Junius Brutus
+#   DOB: Unknown
+#   DOD: c. -0500
+#   Params:
+#     - position:1.5
+#     - fill:#1a7a2e
+# - Label: Coriolanus
+#   DOB: 
+#   DOD: 
+#   Params:
+#     - position:5.5
+#     - fill:#2e9e3a
+- Label: Cincinnatus
+  DOB: c. -0519
+  DOD: c. -0430
+  Params:
+    - position:0.5
+    - fill:#3ab84a
+- Label: Camillus
+  DOB: c. -0448
+  DOD: c. -0365
+  Params:
+    - position:1.5
+    - fill:#5c8e1a
+# - Label: Marcus Manlius Capitolinus
+#   DOB: Unknown
+#   DOD: -0384
+#   Params:
+#     - position:0.5
+#     - fill:#7ab82e
+# - Label: Appius Claudius Caecus
+#   DOB: Unknown
+#   DOD: c. -0273
+#   Params:
+#     - position:3.5
+#     - fill:#4d9a5a
+# - Label: Manius Curius Dentatus
+#   DOB: Unknown
+#   DOD: -0270
+#   Params:
+#     - position:4.5
+#     - fill:#3a7a4a

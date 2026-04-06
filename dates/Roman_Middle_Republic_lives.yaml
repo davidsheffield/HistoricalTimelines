@@ -1,0 +1,49 @@
+global:
+  Keywords:
+    - Roman
+    - Middle_Republic
+    - Life
+
+entries:
+- Label: Fabius Maximus
+  DOB: c. -0280
+  DOD: -0203
+  Params:
+    - position:0.5
+    - fill:#c96a0a
+- Label: Gaius Flaminius
+  DOB: c. -0270
+  DOD: -0217-06-21
+  Params:
+    - position:1.5
+    - fill:#e08010
+- Label: Scipio Africanus
+  DOB: -0236 # 236/235
+  DOD: c. -0183
+  Params:
+    - position:3.5
+    - fill:#c84020
+# - Label: Titus Quinctius Flamininus
+#   DOB: c. -0228
+#   DOD: -0174
+#   Params:
+#     - position:4.5
+#     - fill:#b86020
+- Label: Aemilius Paullus
+  DOB: c. -0229
+  DOD: -0160
+  Params:
+    - position:5.5
+    - fill:#c05030
+- Label: Cato the Elder
+  DOB: -0234
+  DOD: -0149
+  Params:
+    - position:6.5
+    - fill:#d4700a
+- Label: Scipio Aemilianus
+  DOB: -0185
+  DOD: -0129
+  Params:
+    - position:7.5
+    - fill:#a03020

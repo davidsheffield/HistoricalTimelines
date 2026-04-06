@@ -1,0 +1,201 @@
+global:
+  Keywords:
+    - Ancient_Greece
+    - Life
+
+entries:
+# Athenians
+- Label: Solon
+  DOB: c. -0630
+  DOD: c. -0560
+  Params:
+    - position:2.5
+- Label: Cleisthenes
+  DOB: c. -0570
+  DOD: c. -0508
+  Params:
+    - position:3.5
+- Label: Themistocles
+  DOB: c. -0524
+  DOD: c. -0459
+  Params:
+    - position:2.5
+- Label: Pericles
+  DOB: c. -0495
+  DOD: -0429
+  Params:
+    - position:3.5
+- Label: Demosthenes
+  DOB: -0384
+  DOD: -0322-10-12
+  Params:
+    - position:2.5
+# Spartans
+- Label: Leonidas I
+  DOB: c. -0540
+  DOD: -0480-08-11
+  Params:
+    - position:4.5
+- Label: Lysander
+  DOB: c. -0454
+  DOD: -0395
+  Params:
+    - position:4.5
+- Label: Alcibiades
+  DOB: c. -0450
+  DOD: -0404
+  Params:
+    - position:5.5
+# Macedonians
+- Label: Philip II
+  DOB: -0382
+  DOD: -0336-10
+  Params:
+    - position:4.5
+- Label: Alexander the Great
+  DOB: -0356-07-20 # July 20/21
+  DOD: -0323-06-11 # June 10/11
+  Params:
+    - position:5.5
+# STEM
+- Label: Pythagoras
+  DOB: c. -0570
+  DOD: c. -0495
+  Params:
+    - position:12.5
+- Label: Hippocrates
+  DOB: c. -0460
+  DOD: c. -0370
+  Params:
+    - position:12.5
+- Label: Archimedes
+  DOB: c. -0287
+  DOD: c. -0212
+  Params:
+    - position:12.5
+- Label: Eratosthenes
+  DOB: c. -0276
+  DOD: c. -0194
+  Params:
+    - position:13.5
+- Label: Hipparchus
+  DOB: c. -0190
+  DOD: c. -0120
+  Params:
+    - position:12.5
+- Label: Ptolemy
+  DOB: 0100
+  DOD: 0170 # 160s/170s
+  Params:
+    - position:12.5
+- Label: Hypatia
+  DOB: c. 0360 # c. 350-370 CE
+  DOD: 0415-03
+  Params:
+    - position:12.5
+# Historians
+- Label: Herodotus
+  DOB: c. -0484
+  DOD: c. -0425
+  Params:
+    - position:14.5
+- Label: Thucydides
+  DOB: c. -0460
+  DOD: c. -0400
+  Params:
+    - position:15.5
+- Label: Xenophon
+  DOB: c. -0430
+  DOD: c. -0354 # 355/354
+  Params:
+    - position:16.5
+- Label: Polybius
+  DOB: c. -0200
+  DOD: c. -0118
+  Params:
+    - position:14.5
+# Philosophers
+# - Label: Empedocles
+#   DOB: c. -0494
+#   DOD: c. -0434
+- Label: Socrates
+  DOB: c. -0470
+  DOD: -0399
+  Params:
+    - position:19.5
+- Label: Democritus
+  DOB: c. -0460
+  DOD: c. -0370
+  Params:
+    - position:18.5
+- Label: Plato
+  DOB: c. -0428 # 428/427 or 424/423
+  DOD: c. -0347 # 348/347
+  Params:
+    - position:20.5
+- Label: Diogenes of Sinope
+  DOB: c. -0413 # 413 or 403
+  DOD: c. -0324 # 324 or 321
+  Params:
+    - position:17.5
+- Label: Aristotle
+  DOB: -0384
+  DOD: -0322
+  Params:
+    - position:19.5
+- Label: Epicurus
+  DOB: -0341-02
+  DOD: -0270
+  Params:
+    - position:18.5
+- Label: Zeno of Citium
+  DOB: c. -0334
+  DOD: c. -0262
+  Params:
+    - position:16.5
+- Label: Zeno of Elea
+  DOB: c. -0490
+  DOD: c. -0430
+  Params:
+    - position:17.5
+#Artists
+- Label: Sappho
+  DOB: c. -0630
+  DOD: c. -0570
+  Params:
+    - position:21.5
+- Label: Aeschylus
+  DOB: c. -0525
+  DOD: c. -0456
+  Params:
+    - position:21.5
+- Label: Pindar
+  DOB: c. -0518
+  DOD: c. -0438
+  Params:
+    - position:22.5
+- Label: Sophocles
+  DOB: c. -0497 # 497/496
+  DOD: -0405-01 # Winter 406/405
+  Params:
+    - position:23.5
+- Label: Euripides
+  DOB: c. -0480
+  DOD: c. -0406
+  Params:
+    - position:24.5
+- Label: Aristophanes
+  DOB: c. -0446
+  DOD: c. -0386
+  Params:
+    - position:21.5
+- Label: Menander
+  DOB: c. -0341 # 342/341
+  DOD: c. -0290
+  Params:
+    - position:21.5
+- Label: Phidias
+  DOB: c. -0480
+  DOD: c. -0430
+  Params:
+    - position:25.5

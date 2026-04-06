@@ -71,6 +71,12 @@ rect.House_of_Saxe-Coburg_and_Gotha.odd,
 rect.House_of_Windsor.odd { fill : #d13e4d; }
 
 /*******************************
+** Ancient Greek lives **
+*******************************/
+
+rect.Ancient_Greece.Life { fill : #3ed1b6; }
+
+/*******************************
 ** Roman Late Republic Lives **
 *******************************/
 

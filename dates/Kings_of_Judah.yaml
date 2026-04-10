@@ -1,0 +1,155 @@
+global:
+  Keywords:
+    - Judah
+    - Monarch
+    - Reign
+  Params:
+    - position:27.5
+
+entries:
+
+# Kingdom of Judah (931–586 BC)
+# All dates from Galil chronology.
+# Many reigns overlap due to co-regencies.
+
+- Label: Rehoboam
+  Start: c. -0931
+  End: c. -0914
+  Keywords:
+    - House_of_David
+    - Unconfirmed
+
+- Label: Abijah
+  Start: c. -0914
+  End: c. -0911
+  Keywords:
+    - House_of_David
+    - Unconfirmed
+
+- Label: Asa
+  Start: c. -0911
+  End: c. -0870
+  Keywords:
+    - House_of_David
+    - Unconfirmed
+
+# Jehoshaphat overlaps with Jehoram (co-regency)
+- Label: Jehoshaphat
+  Start: c. -0870
+  End: c. -0845
+  Keywords:
+    - House_of_David
+    - Unconfirmed
+
+# Jehoram co-regent from 851, sole ruler from 845
+- Label: Jehoram
+  Start: c. -0851
+  End: c. -0843
+  Keywords:
+    - House_of_David
+    - Unconfirmed
+
+- Label: Ahaziah
+  Start: c. -0843
+  End: c. -0842
+  Keywords:
+    - House_of_David
+
+- Label: Athaliah
+  Start: c. -0842
+  End: c. -0835
+  Keywords:
+    - House_of_David
+    - Unconfirmed
+
+# Jehoash overlaps with Amaziah (co-regency)
+- Label: Jehoash
+  Start: c. -0835
+  End: c. -0802
+  Keywords:
+    - House_of_David
+    - Unconfirmed
+
+# Amaziah co-regent from 805, sole ruler from 802
+- Label: Amaziah
+  Start: c. -0805
+  End: c. -0776
+  Keywords:
+    - House_of_David
+    - Unconfirmed
+
+# Uzziah co-regent from 788, sole ruler from 776
+- Label: Uzziah
+  Start: c. -0788
+  End: c. -0736
+  Keywords:
+    - House_of_David
+    - Unconfirmed
+
+# Jotham co-regent from 758, sole ruler from 736
+- Label: Jotham
+  Start: c. -0758
+  End: c. -0742
+  Keywords:
+    - House_of_David
+
+- Label: Ahaz
+  Start: c. -0742
+  End: c. -0726
+  Keywords:
+    - House_of_David
+
+- Label: Hezekiah
+  Start: c. -0726
+  End: c. -0697
+  Keywords:
+    - House_of_David
+
+- Label: Manasseh
+  Start: c. -0697
+  End: c. -0642
+  Keywords:
+    - House_of_David
+
+- Label: Amon
+  Start: c. -0642
+  End: c. -0640
+  Keywords:
+    - House_of_David
+    - Unconfirmed
+
+- Label: Josiah
+  Start: c. -0640
+  End: c. -0609
+  Keywords:
+    - House_of_David
+    - Unconfirmed
+
+# Jehoahaz reigned only 3 months before being deposed by Egypt
+- Label: Jehoahaz
+  Start: c. -0609
+  End: c. -0609
+  Keywords:
+    - House_of_David
+    - Unconfirmed
+
+- Label: Jehoiakim
+  Start: c. -0609
+  End: c. -0598
+  Keywords:
+    - House_of_David
+    - Unconfirmed
+
+# Jehoiachin reigned only 3 months and 10 days before deportation to Babylon
+- Label: Jehoiachin
+  Start: c. -0598
+  End: c. -0597
+  Keywords:
+    - House_of_David
+
+- Label: Zedekiah
+  Start: c. -0597
+  End: c. -0586
+  Keywords:
+    - House_of_David
+    - Unconfirmed

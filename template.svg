@@ -135,6 +135,15 @@ rect.Herodian_Dynasty.Ethnarch.even { fill: #5a6b1a; }
 rect.Herodian_Dynasty.Ethnarch.odd { fill: #7a8b3a; }
 
 /*******************************
+** Achaemenid rulers **
+*******************************/
+
+rect.Achaemenid_Dynasty.even { fill: #005f73; }
+rect.Achaemenid_Dynasty.odd { fill: #0a9396; }
+rect.Achaemenid_Dynasty.Unconfirmed.even { fill: #7ab8c0; }
+rect.Achaemenid_Dynasty.Unconfirmed.odd { fill: #9dcdd4; }
+
+/*******************************
 ** Ancient Greek lives **
 *******************************/
 

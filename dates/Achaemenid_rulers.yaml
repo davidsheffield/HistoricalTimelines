@@ -1,0 +1,126 @@
+global:
+  Keywords:
+    - Persia
+    - Monarch
+    - Reign
+  Params:
+    - position:29.5
+
+entries:
+
+# Achaemenid rulers (705–330 BC)
+# Early rulers attested only by Behistun Inscription; dates are legendary.
+# Wikipedia dates: Achaemenes ~705 BC, Teispes ~640 BC, Cyrus I ~580 BC,
+# Cambyses I ~550 BC. These are treated as rough attested dates; start/end
+# ranges are estimated to give sequential, non-overlapping spans.
+
+- Label: Achaemenes
+  Start: c. -0705
+  End: c. -0640
+  Keywords:
+    - Achaemenid_Dynasty
+    - Unconfirmed
+
+- Label: Teispes
+  Start: c. -0640
+  End: c. -0600
+  Keywords:
+    - Achaemenid_Dynasty
+    - Unconfirmed
+
+- Label: Cyrus I
+  Start: c. -0600
+  End: c. -0580
+  Keywords:
+    - Achaemenid_Dynasty
+
+# Cambyses I: Wikipedia gives ~550 BC but Cyrus II's reign began c. 559 BC;
+# dates adjusted to maintain sequential order.
+- Label: Cambyses I
+  Start: c. -0580
+  End: c. -0559
+  Keywords:
+    - Achaemenid_Dynasty
+
+# Achaemenid Empire proper
+
+- Label: Cyrus II
+  Start: -0559
+  End: -0530
+  Keywords:
+    - Achaemenid_Dynasty
+
+- Label: Cambyses II
+  Start: -0530
+  End: -0522
+  Keywords:
+    - Achaemenid_Dynasty
+
+# Bardiya reigned only ~7 months; allegedly an impostor named Gaumata
+- Label: Bardiya
+  Start: -0522
+  End: -0522
+  Keywords:
+    - Achaemenid_Dynasty
+
+- Label: Darius I
+  Start: -0522
+  End: -0486
+  Keywords:
+    - Achaemenid_Dynasty
+
+- Label: Xerxes I
+  Start: -0486
+  End: -0465
+  Keywords:
+    - Achaemenid_Dynasty
+
+- Label: Artaxerxes I
+  Start: -0465
+  End: -0424
+  Keywords:
+    - Achaemenid_Dynasty
+
+# Xerxes II reigned only 45 days before assassination
+- Label: Xerxes II
+  Start: -0424
+  End: -0424
+  Keywords:
+    - Achaemenid_Dynasty
+
+- Label: Sogdianus
+  Start: -0424
+  End: -0423
+  Keywords:
+    - Achaemenid_Dynasty
+
+- Label: Darius II
+  Start: -0423
+  End: -0405
+  Keywords:
+    - Achaemenid_Dynasty
+
+- Label: Artaxerxes II
+  Start: -0405
+  End: -0358
+  Keywords:
+    - Achaemenid_Dynasty
+
+- Label: Artaxerxes III
+  Start: -0358
+  End: -0338
+  Keywords:
+    - Achaemenid_Dynasty
+
+- Label: Artaxerxes IV
+  Start: -0338
+  End: -0336
+  Keywords:
+    - Achaemenid_Dynasty
+
+# Darius III: last ruler; defeated by Alexander the Great
+- Label: Darius III
+  Start: -0336
+  End: -0330
+  Keywords:
+    - Achaemenid_Dynasty

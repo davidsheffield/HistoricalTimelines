@@ -417,6 +417,30 @@ def _generate_timeline_boxes(sheet_boxes: pd.DataFrame, left_to_right: bool) -> 
         if not isinstance(params, list):
             params = []
 
+        # Determine label position based on params (used by both Event and period paths)
+        label_position = None
+        for param in params:
+            if param.startswith('label_position:'):
+                label_position = param.split(':', 1)[1]
+                break
+
+        label = row['Label']
+
+        # Event: render a line marker + unfilled label, skip the period rect
+        if 'Event' in row['Keywords']:
+            event_x = row['start_x']
+            content.append(
+                f'<line x1="{event_x}" y1="{y}"'
+                f' x2="{event_x}" y2="{y + 24}" class="{classes}"/>'
+            )
+            text_y = y + 36 if label_position == 'below' else y - 6
+            text_classes = classes + ' outside_label'
+            content.append(
+                f'<text x="{event_x}" y="{text_y}"'
+                f' class="{text_classes}" style="font-size:10px">{label}</text>'
+            )
+            continue
+
         # Build inline styles from any key:value param that isn't functional
         _functional_prefixes = ('position:', 'label_position:')
         rect_styles = {
@@ -445,14 +469,6 @@ def _generate_timeline_boxes(sheet_boxes: pd.DataFrame, left_to_right: bool) -> 
                 content.append(f'<rect x="{x}" y="{y}" width="2" height="24" class="{border_classes}"/>')
 
         middle_x = (row['start_x'] + row['end_x']) / 2
-        label = row['Label']
-
-        # Determine label position based on params
-        label_position = None
-        for param in params:
-            if param.startswith('label_position:'):
-                label_position = param.split(':', 1)[1]
-                break
 
         # Calculate font size, y position, and classes based on label_position
         text_y = y + 12  # Default: middle of box
@@ -621,6 +637,12 @@ def extract_dates(dates: dict[str, pd.DataFrame]) -> pd.DataFrame:
                 # Period data (Start/End)
                 start_date = _parse_date_field(row['Start'], row['Label'], 'Start date')
                 end_date = _parse_date_field(row['End'], row['Label'], 'End date')
+
+            elif 'Date' in row and pd.notna(row['Date']):
+                # Point-in-time event (Start == End)
+                date_val = _parse_date_field(row['Date'], row['Label'], 'Date')
+                start_date = date_val
+                end_date = date_val
 
             elif 'DOB' in row and pd.notna(row['DOB']) and ('DOD' in row or 'Alive' in row):
                 # Life data (DOB/DOD/Alive)

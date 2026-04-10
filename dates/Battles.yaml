@@ -1,0 +1,72 @@
+global:
+  Keywords:
+    - Battle
+    - Event
+
+entries:
+# Second Punic War
+- Label: Cannae
+  Date: -0216-08-02
+  Params:
+    - position:15
+- Label: Zama
+  Date: -0202
+  Params:
+    - position:15
+# English Conquest
+- Label: Hastings
+  Date: 1066-10-14
+  Params:
+    - position:15
+# Hundred Years War
+- Label: Crécy
+  Date: 1346-08-26
+  Params:
+    - position:15
+- Label: Agincourt
+  Date: 1415-10-25
+  Params:
+    - position:15
+- Label: Castillon
+  Date: 1453-07-17
+  Params:
+    - position:15
+# War of the Roses
+- Label: Towton
+  Date: 1461-03-29
+  Params:
+    - position:15
+- Label: Tewkesbury
+  Date: 1471-05-04
+  Params:
+    - position:15
+- Label: Bosworth
+  Date: 1485-08-22
+  Params:
+    - position:15
+# Revolutionary War
+- Label: Trenton
+  Date: 1776-12-26
+  Params:
+    - position:15
+- Label: Princeton
+  Date: 1777-01-03
+  Params:
+    - position:17
+- Label: Brandywine
+  Date: 1777-09-11
+  Params:
+    - position:19
+- Label: Monmouth
+  Date: 1778-06-28
+  Params:
+    - position:15
+- Label: Yorktown
+  Date: 1781-10-19
+  Params:
+    - position:15
+# Napoleonic Wars
+- Label: Waterloo
+  Date: 1815-06-18
+  Params:
+    - position:15

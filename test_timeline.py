@@ -1152,3 +1152,117 @@ def test_extract_dates_integer_year(start, end, expected_start, expected_end):
     assert len(result) == 1
     assert result.iloc[0]['Start'] == expected_start
     assert result.iloc[0]['End'] == expected_end
+
+
+def test_extract_dates__event_date_field():
+    """Date: field produces an entry with Start == End (point-in-time event)."""
+    df = pd.DataFrame([{
+        'Label': 'Agincourt',
+        'Date': '1415-10-25',
+        'Keywords': ['Battle', 'Event'],
+        'Params': ['position:15']
+    }])
+
+    result = timeline.extract_dates({'battles': df})
+
+    assert len(result) == 1
+    expected = long_time.date.fromisoformat('1415-10-25')
+    assert result.iloc[0]['Start'] == expected
+    assert result.iloc[0]['End'] == expected
+    assert result.iloc[0]['y'] == 15
+
+
+def test_extract_dates__event_skipped_without_date_fields():
+    """Entry with no Start/End, DOB, or Date is skipped."""
+    df = pd.DataFrame([
+        {
+            'Label': 'Valid',
+            'Start': '2001-01-20',
+            'End': '2009-01-20',
+            'Keywords': ['test'],
+            'Params': ['position:0.5']
+        },
+        {
+            'Label': 'No Dates',
+            'Keywords': ['test'],
+        },
+    ])
+
+    result = timeline.extract_dates({'test': df})
+
+    assert len(result) == 1
+    assert result.iloc[0]['Label'] == 'Valid'
+
+
+def test_generate_timeline_boxes__event_renders_line():
+    """Event keyword produces a <line> marker and no <rect>."""
+    boxes = pd.DataFrame([{
+        'Label': 'Agincourt',
+        'Keywords': ['Battle', 'Event'],
+        'Params': [],
+        'alternating_class': '',
+        'start_x': 200.0,
+        'end_x': 200.0,
+        'y': 15,
+    }])
+
+    result = timeline._generate_timeline_boxes(boxes, left_to_right=True)
+
+    assert '<line' in result
+    assert '<rect' not in result
+    assert 'Agincourt' in result
+    assert 'outside_label' in result
+
+
+def test_generate_timeline_boxes__event_label_above_by_default():
+    """Event label defaults to above the marker."""
+    boxes = pd.DataFrame([{
+        'Label': 'Agincourt',
+        'Keywords': ['Battle', 'Event'],
+        'Params': [],
+        'alternating_class': '',
+        'start_x': 200.0,
+        'end_x': 200.0,
+        'y': 1,
+    }])
+
+    result = timeline._generate_timeline_boxes(boxes, left_to_right=True)
+
+    y_px = 1 * 24 + 24   # 48
+    assert f'y="{y_px - 6}"' in result
+
+
+def test_generate_timeline_boxes__event_label_below():
+    """label_position:below places the Event label below the marker."""
+    boxes = pd.DataFrame([{
+        'Label': 'Agincourt',
+        'Keywords': ['Battle', 'Event'],
+        'Params': ['label_position:below'],
+        'alternating_class': '',
+        'start_x': 200.0,
+        'end_x': 200.0,
+        'y': 1,
+    }])
+
+    result = timeline._generate_timeline_boxes(boxes, left_to_right=True)
+
+    y_px = 1 * 24 + 24   # 48
+    assert f'y="{y_px + 36}"' in result
+
+
+def test_generate_timeline_boxes__non_event_still_uses_rect():
+    """Non-Event entries are unaffected and still produce a <rect>."""
+    boxes = pd.DataFrame([{
+        'Label': 'Augustus',
+        'Keywords': ['Roman', 'Emperor', 'Reign'],
+        'Params': [],
+        'alternating_class': 'even',
+        'start_x': 100.0,
+        'end_x': 400.0,
+        'y': 1,
+    }])
+
+    result = timeline._generate_timeline_boxes(boxes, left_to_right=True)
+
+    assert '<rect' in result
+    assert '<line' not in result

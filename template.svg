@@ -196,6 +196,18 @@ rect.War.Global { fill : #767d98; }
 rect.War.USA { fill : #04208f; }
 rect.War.Rome { fill : #c81d1a; }
 
+/***********
+** Events **
+***********/
+
+line.Battle { stroke: #8b1a00; stroke-width: 2; }
+
+text.Event {
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font-family: Palatino;
+    }
+
 /*********************
 ** Final formatting **
 *********************/

@@ -1,0 +1,83 @@
+global:
+  Keywords:
+    - Hasmonean_Dynasty
+    - Monarch
+    - Reign
+  Params:
+    - position:28.5
+
+entries:
+
+# Hasmonean Kingdom (167–37 BC)
+
+# Maccabean Revolt leaders
+- Label: Mattathias
+  Start: c. -0170
+  End: c. -0167
+  Keywords:
+    - Rebel_Leader
+
+- Label: Judas Maccabeus
+  Start: c. -0167
+  End: c. -0160
+  Keywords:
+    - Rebel_Leader
+
+# Jonathan became High Priest from 152 BC
+- Label: Jonathan Apphus
+  Start: c. -0160
+  End: c. -0143
+  Keywords:
+    - Rebel_Leader
+
+# Ethnarchs and High Priests
+- Label: Simon Thassi
+  Start: c. -0142
+  End: c. -0134
+  Keywords:
+    - Ethnarch
+
+- Label: John Hyrcanus I
+  Start: c. -0134
+  End: c. -0104
+  Keywords:
+    - Ethnarch
+
+# Kings and High Priests
+- Label: Aristobulus I
+  Start: c. -0104
+  End: c. -0103
+
+- Label: Alexander Jannaeus
+  Start: c. -0103
+  End: c. -0076
+
+# Only Queen regnant of the Hasmonean Kingdom
+- Label: Salome Alexandra
+  Start: c. -0076
+  End: c. -0067
+
+# First reign
+- Label: Hyrcanus II
+  Start: c. -0067
+  End: c. -0066
+
+- Label: Aristobulus II
+  Start: c. -0066
+  End: c. -0063
+
+# Restored: High Priest from 63, Ethnarch from 47
+- Label: Hyrcanus II
+  Start: c. -0063
+  End: c. -0040
+
+- Label: Antigonus
+  Start: c. -0040
+  End: c. -0037
+
+# High Priest only, briefly, before being executed by Herod
+- Label: Aristobulus III
+  Start: c. -0036
+  End: c. -0036
+  Keywords:
+    - High_Priest_Only

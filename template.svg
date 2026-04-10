@@ -82,6 +82,36 @@ rect.House_of_David.Unconfirmed.even { fill : #91a2db; }
 rect.House_of_David.Unconfirmed.odd { fill : #b8c0da; }
 
 /*******************************
+** Hasmonean Kingdom **
+*******************************/
+
+rect.Hasmonean_Dynasty.even { fill: #2e6e1a; }
+rect.Hasmonean_Dynasty.odd { fill: #4e8e3a; }
+rect.Hasmonean_Dynasty.Rebel_Leader.even { fill: #8a5a00; }
+rect.Hasmonean_Dynasty.Rebel_Leader.odd { fill: #aa7a1e; }
+rect.Hasmonean_Dynasty.Ethnarch.even { fill: #1a5e5e; }
+rect.Hasmonean_Dynasty.Ethnarch.odd { fill: #3a7e7e; }
+rect.Hasmonean_Dynasty.High_Priest_Only.even { fill: #5e5e1a; }
+rect.Hasmonean_Dynasty.High_Priest_Only.odd { fill: #7e7e3a; }
+
+/*******************************
+** Herodian Kingdom **
+*******************************/
+
+rect.Herodian_Dynasty.even { fill: #6b1a7f; }
+rect.Herodian_Dynasty.odd { fill: #8b3a9f; }
+rect.Herodian_Dynasty.King.even { fill: #6b1a7f; }
+rect.Herodian_Dynasty.King.odd { fill: #8b3a9f; }
+rect.Herodian_Dynasty.Governor.even { fill: #2a4a8f; }
+rect.Herodian_Dynasty.Governor.odd { fill: #4a6aaf; }
+rect.Herodian_Dynasty.Procurator.even { fill: #8f1a1a; }
+rect.Herodian_Dynasty.Procurator.odd { fill: #af3a3a; }
+rect.Herodian_Dynasty.Tetrarch.even { fill: #1a6b6b; }
+rect.Herodian_Dynasty.Tetrarch.odd { fill: #3a8b8b; }
+rect.Herodian_Dynasty.Ethnarch.even { fill: #5a6b1a; }
+rect.Herodian_Dynasty.Ethnarch.odd { fill: #7a8b3a; }
+
+/*******************************
 ** Ancient Greek lives **
 *******************************/
 

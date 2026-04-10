@@ -1,0 +1,85 @@
+global:
+  Keywords:
+    - Herodian_Dynasty
+    - Monarch
+    - Reign
+  Params:
+    - position:29.5
+
+entries:
+
+# Herodian Kingdom (47 BC – 44 AD)
+
+- Label: Antipater
+  Start: c. -0047
+  End: c. -0044
+  Keywords:
+    - Procurator
+
+# Herod the Great: Governor → Tetrarch → King (gap 40–37 BC, Antigonus ruled)
+- Label: Herod
+  Start: c. -0047
+  End: c. -0044
+  Keywords:
+    - Governor
+
+- Label: Herod
+  Start: c. -0044
+  End: c. -0040
+  Keywords:
+    - Tetrarch
+
+- Label: Herod the Great
+  Start: c. -0037
+  End: c. -0004
+  Keywords:
+    - King
+
+- Label: Phasael
+  Start: c. -0047
+  End: c. -0040
+  Keywords:
+    - Governor
+
+- Label: Pheroras
+  Start: c. -0020
+  End: c. -0005
+  Keywords:
+    - Governor
+
+- Label: Archelaus
+  Start: c. -0004
+  End: c. 0006
+  Keywords:
+    - Ethnarch
+
+- Label: Herod Antipas
+  Start: c. -0004
+  End: c. 0039
+  Keywords:
+    - Tetrarch
+
+- Label: Philip
+  Start: c. -0004
+  End: c. 0034
+  Keywords:
+    - Tetrarch
+
+- Label: Salome I
+  Start: c. -0004
+  End: c. 0010
+  Keywords:
+    - Tetrarch
+
+- Label: Tigranes V
+  Start: c. 0006
+  End: c. 0012
+  Keywords:
+    - King
+
+# Herod Agrippa: Batanaea 37, Galilee 40, all Judaea 41–44
+- Label: Herod Agrippa
+  Start: c. 0037
+  End: c. 0044
+  Keywords:
+    - King

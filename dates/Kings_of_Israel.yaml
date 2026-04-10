@@ -1,0 +1,143 @@
+global:
+  Keywords:
+    - Israel
+    - Monarch
+    - Reign
+  Params:
+    - position:28.5
+
+entries:
+
+# Kingdom of Israel / Northern Kingdom (931–722 BC)
+# All dates from Galil chronology.
+# Many reigns overlap due to co-regencies.
+
+- Label: Jeroboam I
+  Start: c. -0931
+  End: c. -0909
+  Keywords:
+    - House_of_Jeroboam
+    - Unconfirmed
+
+- Label: Nadab
+  Start: c. -0909
+  End: c. -0908
+  Keywords:
+    - House_of_Jeroboam
+    - Unconfirmed
+
+- Label: Baasha
+  Start: c. -0908
+  End: c. -0885
+  Keywords:
+    - House_of_Baasha
+    - Unconfirmed
+
+- Label: Elah
+  Start: c. -0885
+  End: c. -0884
+  Keywords:
+    - House_of_Baasha
+    - Unconfirmed
+
+# Zimri reigned only 7 days
+- Label: Zimri
+  Start: c. -0884
+  End: c. -0884
+  Keywords:
+    - House_of_Zimri
+    - Unconfirmed
+
+- Label: Omri
+  Start: c. -0884
+  End: c. -0873
+  Keywords:
+    - House_of_Omri
+
+- Label: Ahab
+  Start: c. -0873
+  End: c. -0852
+  Keywords:
+    - House_of_Omri
+
+- Label: Ahaziah
+  Start: c. -0852
+  End: c. -0851
+  Keywords:
+    - House_of_Omri
+    - Unconfirmed
+
+- Label: Joram
+  Start: c. -0851
+  End: c. -0842
+  Keywords:
+    - House_of_Omri
+
+- Label: Jehu
+  Start: c. -0842
+  End: c. -0815
+  Keywords:
+    - House_of_Jehu
+
+# Jehoahaz co-regent from 819, sole ruler from 815
+- Label: Jehoahaz
+  Start: c. -0819
+  End: c. -0804
+  Keywords:
+    - House_of_Jehu
+    - Unconfirmed
+
+# Jehoash co-regent from 805, sole ruler from 804
+- Label: Jehoash
+  Start: c. -0805
+  End: c. -0790
+  Keywords:
+    - House_of_Jehu
+
+- Label: Jeroboam II
+  Start: c. -0790
+  End: c. -0750
+  Keywords:
+    - House_of_Jehu
+    - Unconfirmed
+
+# Zachariah reigned only 6 months
+- Label: Zachariah
+  Start: c. -0750
+  End: c. -0749
+  Keywords:
+    - House_of_Jehu
+    - Unconfirmed
+
+# Shallum reigned only 1 month
+- Label: Shallum
+  Start: c. -0749
+  End: c. -0749
+  Keywords:
+    - House_of_Shallum
+    - Unconfirmed
+
+- Label: Menahem
+  Start: c. -0749
+  End: c. -0738
+  Keywords:
+    - House_of_Menahem
+
+- Label: Pekahiah
+  Start: c. -0738
+  End: c. -0736
+  Keywords:
+    - House_of_Menahem
+    - Unconfirmed
+
+- Label: Pekah
+  Start: c. -0736
+  End: c. -0732
+  Keywords:
+    - House_of_Pekah
+
+- Label: Hoshea
+  Start: c. -0732
+  End: c. -0722
+  Keywords:
+    - House_of_Hoshea

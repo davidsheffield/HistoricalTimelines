@@ -82,6 +82,29 @@ rect.House_of_David.Unconfirmed.even { fill : #91a2db; }
 rect.House_of_David.Unconfirmed.odd { fill : #b8c0da; }
 
 /*******************************
+** Kings of Israel **
+*******************************/
+
+rect.House_of_Jeroboam.even { fill: #8b6914; }
+rect.House_of_Jeroboam.odd { fill: #b8912a; }
+rect.House_of_Baasha.even { fill: #8b3014; }
+rect.House_of_Baasha.odd { fill: #b85030; }
+rect.House_of_Zimri.even { fill: #5a5a6e; }
+rect.House_of_Zimri.odd { fill: #7a7a8e; }
+rect.House_of_Omri.even { fill: #1a3060; }
+rect.House_of_Omri.odd { fill: #3a5080; }
+rect.House_of_Jehu.even { fill: #1a5a30; }
+rect.House_of_Jehu.odd { fill: #3a7a50; }
+rect.House_of_Shallum.even { fill: #7a6a10; }
+rect.House_of_Shallum.odd { fill: #9a8a30; }
+rect.House_of_Menahem.even { fill: #1a5a5a; }
+rect.House_of_Menahem.odd { fill: #3a7a7a; }
+rect.House_of_Pekah.even { fill: #6a1a3a; }
+rect.House_of_Pekah.odd { fill: #8a3a5a; }
+rect.House_of_Hoshea.even { fill: #4a5a1a; }
+rect.House_of_Hoshea.odd { fill: #6a7a3a; }
+
+/*******************************
 ** Hasmonean Kingdom **
 *******************************/
 

@@ -72,14 +72,20 @@ rect.House_of_Windsor.even { fill : #d20c1f; }
 rect.House_of_Saxe-Coburg_and_Gotha.odd,
 rect.House_of_Windsor.odd { fill : #d13e4d; }
 
+/******************
+** English lives **
+******************/
+
+rect.England.Life { fill : #1daf5f; }
+
 /*******************************
 ** Kings of Judah **
 *******************************/
 
 rect.House_of_David.even { fill : #0b3cdb; }
 rect.House_of_David.odd { fill : #3255c9; }
-rect.House_of_David.Unconfirmed.even { fill : #91a2db; }
-rect.House_of_David.Unconfirmed.odd { fill : #b8c0da; }
+rect.House_of_David.Unconfirmed.even { fill : #b6c2e8; }
+rect.House_of_David.Unconfirmed.odd { fill : #d7ddef; }
 
 /*******************************
 ** Kings of Israel **

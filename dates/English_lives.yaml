@@ -1,0 +1,49 @@
+global:
+  Keywords:
+    - England
+    - Life
+
+entries:
+# Politicians
+- Label: Thomas Wolsey
+  DOB: c. 1473-03
+  DOD: 1530-11-29
+  Params:
+    - position:9.5
+- Label: Thomas Cromwell
+  DOB: c. 1485
+  DOD: 1540-07-28
+  Params:
+    - position:10.5
+- Label: Thomas More
+  DOB: 1478-02-07
+  DOD: 1535-07-06
+  Params:
+    - position:11.5
+# Physicists
+- Label: Isaac Newton
+  DOB: 1643-01-04
+  DOD: 1727-03-31
+  Params:
+    - position:10.5
+# Writers
+- Label: Venerable Bede
+  DOB: c. 0673 # 672/3
+  DOD: 0735-05-26
+  Params:
+    - position:10.5
+- Label: Geoffrey of Monmouth
+  DOB: c. 1095
+  DOD: c. 1155
+  Params:
+    - position:10.5
+- Label: Geoffrey Chaucer
+  DOB: c. 1343
+  DOD: 1400-10-25
+  Params:
+    - position:10.5
+- Label: William Shakespeare
+  DOB: c. 1564-04-23
+  DOD: 1616-04-23
+  Params:
+    - position:10.5

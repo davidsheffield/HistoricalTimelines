@@ -1,0 +1,119 @@
+global:
+  Keywords:
+    - Egypt
+    - Dynasty
+    - Reign
+  Params:
+    - position:26.5
+
+entries:
+
+# Second Intermediate Period (c. 1650–1550 BC)
+- Label: Fifteenth Dynasty (Hyksos)
+  Start: c. -1650
+  End: c. -1550
+  Params:
+    - fill:#8b4513;
+- Label: Sixteenth Dynasty (Thebes)
+  Start: c. -1650
+  End: c. -1580
+  Params:
+    - fill:#cd853f;
+- Label: Abydos Dynasty
+  Start: c. -1640
+  End: c. -1580
+  Params:
+    - fill:#8b4513;
+- Label: Seventeenth Dynasty (Thebes)
+  Start: c. -1580
+  End: c. -1550
+  Params:
+    - fill:#cd853f;
+
+# New Kingdom (c. 1550–1077 BC)
+- Label: Eighteenth Dynasty
+  Start: c. -1550
+  End: c. -1292
+  Params:
+    - fill:#8b4513;
+- Label: Nineteenth Dynasty (Ramesside)
+  Start: c. -1292
+  End: c. -1189
+  Params:
+    - fill:#cd853f;
+- Label: Twentieth Dynasty (Ramesside)
+  Start: c. -1189
+  End: c. -1077
+  Params:
+    - fill:#8b4513;
+
+# Third Intermediate Period (c. 1077–664 BC)
+- Label: Twenty-first Dynasty (Tanis)
+  Start: c. -1076
+  End: c. -0944
+  Params:
+    - fill:#cd853f;
+- Label: Twenty-second Dynasty (Libyan)
+  Start: c. -0943
+  End: c. -0731
+  Params:
+    - fill:#8b4513;
+- Label: Twenty-third Dynasty (Libyan)
+  Start: c. -0837
+  End: c. -0715
+  Params:
+    - fill:#cd853f;
+- Label: Twenty-fourth Dynasty (1st Saite)
+  Start: c. -0726
+  End: c. -0712
+  Params:
+    - fill:#8b4513;
+- Label: Twenty-fifth Dynasty (Nubian)
+  Start: c. -0743
+  End: -0656
+  Params:
+    - fill:#cd853f;
+
+# Late Period (664–332 BC)
+- Label: Twenty-sixth Dynasty (Saite)
+  Start: -0664
+  End: c. -0525
+  Params:
+    - fill:#8b4513;
+- Label: Twenty-seventh Dynasty (Achaemenid)
+  Start: c. -0525
+  End: -0404
+  Params:
+    - fill:#cd853f;
+- Label: Twenty-eighth Dynasty
+  Start: c. -0404
+  End: c. -0399
+  Params:
+    - fill:#8b4513;
+- Label: Twenty-ninth Dynasty
+  Start: c. -0399
+  End: c. -0380
+  Params:
+    - fill:#cd853f;
+- Label: Thirtieth Dynasty
+  Start: c. -0380
+  End: c. -0342
+  Params:
+    - fill:#8b4513;
+- Label: Thirty-first Dynasty (Achaemenid)
+  Start: c. -0342
+  End: -0332
+  Params:
+    - fill:#cd853f;
+
+# Macedonian and Ptolemaic (332–30 BC)
+- Label: Thirty-second Dynasty (Argead)
+  Start: -0332
+  End: -0305
+  Params:
+    - fill:#8b4513;
+- Label: Thirty-third Dynasty (Ptolemaic)
+  Start: -0304
+  End: -0030
+  Params:
+    - fill:#cd853f;

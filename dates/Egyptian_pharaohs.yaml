@@ -1,0 +1,649 @@
+global:
+  Keywords:
+    - Egypt
+    - Monarch
+    - Reign
+  Params:
+    - position:25.5
+
+entries:
+
+# Second Intermediate Period
+
+# Fifteenth Dynasty (Hyksos, c. 1650–1550 BC)
+# No pharaohs have known absolute dates.
+# - Label: Semqen
+#   Keywords:
+#     - Fifteenth_Dynasty
+# - Label: Apepi
+#   Keywords:
+#     - Fifteenth_Dynasty
+# - Label: Khamudi
+#   Keywords:
+#     - Fifteenth_Dynasty
+
+# Sixteenth and Abydos Dynasties: no known absolute dates.
+
+# Seventeenth Dynasty (Thebes, c. 1580–1550 BC)
+# Only Kamose has a known approximate date range.
+# Other pharaohs (Rahotep, Sobekemsaf I, Sobekemsaf II, Intef V–VII,
+# Ahmose the Elder, Seqenenre Tao) have no absolute dates.
+- Label: Kamose
+  Start: c. -1543
+  End: c. -1540
+  Keywords:
+    - Seventeenth_Dynasty
+
+# New Kingdom
+
+# Eighteenth Dynasty (c. 1550–1292 BC)
+- Label: Ahmose I
+  Start: c. -1540
+  End: c. -1515
+  Keywords:
+    - Eighteenth_Dynasty
+- Label: Amenhotep I
+  Start: c. -1514
+  End: c. -1494
+  Keywords:
+    - Eighteenth_Dynasty
+- Label: Thutmose I
+  Start: c. -1493
+  End: c. -1483
+  Keywords:
+    - Eighteenth_Dynasty
+- Label: Thutmose II
+  Start: c. -1482
+  End: c. -1480
+  Keywords:
+    - Eighteenth_Dynasty
+- Label: Hatshepsut
+  Start: -1479-04-28
+  End: c. -1457
+  Keywords:
+    - Eighteenth_Dynasty
+- Label: Thutmose III
+  Start: -1479-04-28
+  End: -1425-03-25
+  Keywords:
+    - Eighteenth_Dynasty
+- Label: Amenhotep II
+  Start: c. -1425
+  End: c. -1400
+  Keywords:
+    - Eighteenth_Dynasty
+- Label: Thutmose IV
+  Start: c. -1400
+  End: c. -1390
+  Keywords:
+    - Eighteenth_Dynasty
+- Label: Amenhotep III
+  Start: c. -1390
+  End: c. -1353
+  Keywords:
+    - Eighteenth_Dynasty
+- Label: Akhenaten
+  Start: c. -1353
+  End: c. -1336
+  Keywords:
+    - Eighteenth_Dynasty
+- Label: Smenkhkare
+  Start: c. -1336
+  End: c. -1334
+  Keywords:
+    - Eighteenth_Dynasty
+- Label: Neferneferuaten
+  Start: c. -1334
+  End: c. -1333
+  Keywords:
+    - Eighteenth_Dynasty
+- Label: Tutankhamun
+  Start: c. -1333
+  End: c. -1324
+  Keywords:
+    - Eighteenth_Dynasty
+- Label: Ay II
+  Start: c. -1323
+  End: c. -1320
+  Keywords:
+    - Eighteenth_Dynasty
+- Label: Horemheb
+  Start: c. -1319
+  End: c. -1292
+  Keywords:
+    - Eighteenth_Dynasty
+
+# Nineteenth Dynasty (Ramesside, c. 1292–1189 BC)
+- Label: Ramesses I
+  Start: c. -1292
+  End: c. -1291
+  Keywords:
+    - Nineteenth_Dynasty
+- Label: Seti I
+  Start: c. -1290
+  End: c. -1279
+  Keywords:
+    - Nineteenth_Dynasty
+- Label: Ramesses II
+  Start: -1279-05-31
+  End: -1213-08-13
+  Keywords:
+    - Nineteenth_Dynasty
+- Label: Merneptah
+  Start: -1213
+  End: -1203
+  Keywords:
+    - Nineteenth_Dynasty
+- Label: Seti II
+  Start: c. -1203
+  End: c. -1198
+  Keywords:
+    - Nineteenth_Dynasty
+# Amenmesse was a rival/usurper with overlapping dates; uncertain chronology.
+# - Label: Amenmesse
+#   Start: c. -1203
+#   End: c. -1200
+#   Keywords:
+#     - Nineteenth_Dynasty
+- Label: Siptah
+  Start: c. -1198
+  End: c. -1192
+  Keywords:
+    - Nineteenth_Dynasty
+# Tausret was co-regent and then ruler; reign dates overlap with Siptah.
+# - Label: Tausret
+#   Start: c. -1198
+#   End: c. -1191
+#   Keywords:
+#     - Nineteenth_Dynasty
+
+# Twentieth Dynasty (Ramesside, c. 1189–1077 BC)
+- Label: Setnakhte
+  Start: c. -1190
+  End: c. -1188
+  Keywords:
+    - Twentieth_Dynasty
+- Label: Ramesses III
+  Start: c. -1187
+  End: c. -1157
+  Keywords:
+    - Twentieth_Dynasty
+- Label: Ramesses IV
+  Start: c. -1156
+  End: c. -1150
+  Keywords:
+    - Twentieth_Dynasty
+- Label: Ramesses V
+  Start: c. -1149
+  End: c. -1146
+  Keywords:
+    - Twentieth_Dynasty
+- Label: Ramesses VI
+  Start: c. -1145
+  End: c. -1139
+  Keywords:
+    - Twentieth_Dynasty
+- Label: Ramesses VII
+  Start: c. -1138
+  End: c. -1131
+  Keywords:
+    - Twentieth_Dynasty
+- Label: Ramesses VIII
+  Start: c. -1130
+  End: c. -1129
+  Keywords:
+    - Twentieth_Dynasty
+- Label: Ramesses IX
+  Start: c. -1129
+  End: c. -1111
+  Keywords:
+    - Twentieth_Dynasty
+- Label: Ramesses X
+  Start: c. -1110
+  End: c. -1107
+  Keywords:
+    - Twentieth_Dynasty
+- Label: Ramesses XI
+  Start: c. -1106
+  End: c. -1077
+  Keywords:
+    - Twentieth_Dynasty
+
+# Third Intermediate Period
+
+# Twenty-first Dynasty (Tanis, c. 1076–944 BC)
+- Label: Smendes I
+  Start: c. -1076
+  End: c. -1052
+  Keywords:
+    - Twenty-first_Dynasty
+# Amenemnisu: uncertain dates.
+# - Label: Amenemnisu
+#   Keywords:
+#     - Twenty-first_Dynasty
+- Label: Psusennes I
+  Start: c. -1051
+  End: c. -1002
+  Keywords:
+    - Twenty-first_Dynasty
+- Label: Amenemope
+  Start: c. -1002
+  End: c. -0993
+  Keywords:
+    - Twenty-first_Dynasty
+- Label: Osorkon the Elder
+  Start: -0992
+  End: -0987
+  Keywords:
+    - Twenty-first_Dynasty
+- Label: Siamun
+  Start: -0986
+  End: -0968
+  Keywords:
+    - Twenty-first_Dynasty
+- Label: Psusennes II
+  Start: c. -0967
+  End: c. -0944
+  Keywords:
+    - Twenty-first_Dynasty
+
+# Twenty-second Dynasty (Libyan, c. 943–731 BC)
+- Label: Shoshenq I
+  Start: c. -0943
+  End: c. -0922
+  Keywords:
+    - Twenty-second_Dynasty
+- Label: Osorkon I
+  Start: c. -0922
+  End: c. -0887
+  Keywords:
+    - Twenty-second_Dynasty
+- Label: Takelot I
+  Start: c. -0887
+  End: c. -0873
+  Keywords:
+    - Twenty-second_Dynasty
+# Shoshenq IIa, IIb, IIc: uncertain dates.
+# - Label: Shoshenq IIa
+#   Keywords:
+#     - Twenty-second_Dynasty
+- Label: Osorkon II
+  Start: c. -0865
+  End: c. -0830
+  Keywords:
+    - Twenty-second_Dynasty
+- Label: Shoshenq III
+  Start: c. -0830
+  End: c. -0791
+  Keywords:
+    - Twenty-second_Dynasty
+- Label: Shoshenq IV
+  Start: c. -0791
+  End: c. -0778
+  Keywords:
+    - Twenty-second_Dynasty
+- Label: Pami
+  Start: c. -0778
+  End: c. -0769
+  Keywords:
+    - Twenty-second_Dynasty
+- Label: Shoshenq V
+  Start: c. -0769
+  End: c. -0731
+  Keywords:
+    - Twenty-second_Dynasty
+
+# Twenty-third Dynasty (Libyan, c. 837–715 BC)
+# This dynasty had parallel lines; dates overlap with Dynasty XXII.
+- Label: Harsiese A
+  Start: c. -0870
+  End: c. -0860
+  Keywords:
+    - Twenty-third_Dynasty
+- Label: Pedubast I
+  Start: c. -0822
+  End: c. -0799
+  Keywords:
+    - Twenty-third_Dynasty
+- Label: Takelot II
+  Start: c. -0834
+  End: c. -0809
+  Keywords:
+    - Twenty-third_Dynasty
+- Label: Shoshenq VI
+  Start: c. -0799
+  End: c. -0793
+  Keywords:
+    - Twenty-third_Dynasty
+- Label: Iuput I
+  Start: c. -0809
+  End: c. -0798
+  Keywords:
+    - Twenty-third_Dynasty
+- Label: Osorkon III
+  Start: c. -0791
+  End: c. -0764
+  Keywords:
+    - Twenty-third_Dynasty
+- Label: Takelot III
+  Start: c. -0768
+  End: c. -0756
+  Keywords:
+    - Twenty-third_Dynasty
+- Label: Rudamun
+  Start: c. -0756
+  End: c. -0750
+  Keywords:
+    - Twenty-third_Dynasty
+- Label: Ini III
+  Start: c. -0750
+  End: c. -0745
+  Keywords:
+    - Twenty-third_Dynasty
+- Label: Peftjauawybast
+  Start: c. -0750
+  End: c. -0720
+  Keywords:
+    - Twenty-third_Dynasty
+- Label: Djehutyemhat
+  Start: c. -0745
+  End: c. -0735
+  Keywords:
+    - Twenty-third_Dynasty
+- Label: Nimlot
+  Start: c. -0735
+  End: c. -0720
+  Keywords:
+    - Twenty-third_Dynasty
+- Label: Iuput II
+  Start: c. -0735
+  End: c. -0715
+  Keywords:
+    - Twenty-third_Dynasty
+- Label: Pedubast II
+  Start: c. -0730
+  End: c. -0725
+  Keywords:
+    - Twenty-third_Dynasty
+- Label: Osorkon IV
+  Start: c. -0725
+  End: c. -0716
+  Keywords:
+    - Twenty-third_Dynasty
+
+# Twenty-fourth Dynasty (1st Saite, c. 726–712 BC)
+- Label: Tefnakht I
+  Start: c. -0726
+  End: c. -0718
+  Keywords:
+    - Twenty-fourth_Dynasty
+- Label: Bakenranef
+  Start: c. -0718
+  End: c. -0712
+  Keywords:
+    - Twenty-fourth_Dynasty
+
+# Twenty-fifth Dynasty (Nubian, c. 743–656 BC)
+- Label: Piye
+  Start: c. -0743
+  End: c. -0713
+  Keywords:
+    - Twenty-fifth_Dynasty
+- Label: Shebitku
+  Start: c. -0713
+  End: c. -0705
+  Keywords:
+    - Twenty-fifth_Dynasty
+- Label: Shabaka
+  Start: c. -0705
+  End: c. -0690
+  Keywords:
+    - Twenty-fifth_Dynasty
+- Label: Taharqa
+  Start: -0690
+  End: -0664
+  Keywords:
+    - Twenty-fifth_Dynasty
+- Label: Tantamani
+  Start: -0664
+  End: -0656
+  Keywords:
+    - Twenty-fifth_Dynasty
+
+# Late Period
+
+# Twenty-sixth Dynasty (Saite, 664–525 BC)
+- Label: Psamtik I
+  Start: -0664
+  End: -0610
+  Keywords:
+    - Twenty-sixth_Dynasty
+- Label: Necho II
+  Start: -0610
+  End: -0595
+  Keywords:
+    - Twenty-sixth_Dynasty
+- Label: Psamtik II
+  Start: -0595
+  End: -0589
+  Keywords:
+    - Twenty-sixth_Dynasty
+- Label: Apries
+  Start: -0589
+  End: c. -0570
+  Keywords:
+    - Twenty-sixth_Dynasty
+- Label: Amasis II
+  Start: c. -0570
+  End: c. -0526
+  Keywords:
+    - Twenty-sixth_Dynasty
+- Label: Psamtik III
+  Start: c. -0526
+  End: c. -0525
+  Keywords:
+    - Twenty-sixth_Dynasty
+
+# Twenty-seventh Dynasty (Achaemenid, c. 525–404 BC)
+- Label: Cambyses II
+  Start: c. -0525
+  End: c. -0522
+  Keywords:
+    - Twenty-seventh_Dynasty
+# Bardiya: ephemeral usurper, 2 months only.
+# - Label: Bardiya
+#   Keywords:
+#     - Twenty-seventh_Dynasty
+- Label: Darius I
+  Start: -0522
+  End: -0486
+  Keywords:
+    - Twenty-seventh_Dynasty
+- Label: Xerxes I
+  Start: -0486
+  End: -0465
+  Keywords:
+    - Twenty-seventh_Dynasty
+# Artabanus: regent only (7 months); not a true pharaoh.
+# - Label: Artabanus
+#   Keywords:
+#     - Twenty-seventh_Dynasty
+- Label: Artaxerxes I
+  Start: -0465
+  End: c. -0424
+  Keywords:
+    - Twenty-seventh_Dynasty
+# Xerxes II: 45 days only.
+# - Label: Xerxes II
+#   Keywords:
+#     - Twenty-seventh_Dynasty
+# Sogdianus: ~1 month only.
+# - Label: Sogdianus
+#   Keywords:
+#     - Twenty-seventh_Dynasty
+- Label: Darius II
+  Start: -0423
+  End: -0404
+  Keywords:
+    - Twenty-seventh_Dynasty
+
+# Twenty-eighth Dynasty (404–399 BC)
+- Label: Amyrtaeus
+  Start: c. -0404
+  End: c. -0399
+  Keywords:
+    - Twenty-eighth_Dynasty
+
+# Twenty-ninth Dynasty (c. 399–380 BC)
+- Label: Nepherites I
+  Start: c. -0399
+  End: c. -0393
+  Keywords:
+    - Twenty-ninth_Dynasty
+- Label: Hakor
+  Start: c. -0393
+  End: c. -0380
+  Keywords:
+    - Twenty-ninth_Dynasty
+# Psammuthes: usurped throne briefly (~1 year); chronology uncertain.
+# - Label: Psammuthes
+#   Keywords:
+#     - Twenty-ninth_Dynasty
+# Nepherites II: 4 months only.
+# - Label: Nepherites II
+#   Keywords:
+#     - Twenty-ninth_Dynasty
+
+# Thirtieth Dynasty (c. 380–342 BC)
+- Label: Nectanebo I
+  Start: c. -0380
+  End: c. -0362
+  Keywords:
+    - Thirtieth_Dynasty
+- Label: Teos
+  Start: c. -0362
+  End: c. -0360
+  Keywords:
+    - Thirtieth_Dynasty
+- Label: Nectanebo II
+  Start: c. -0360
+  End: c. -0342
+  Keywords:
+    - Thirtieth_Dynasty
+
+# Thirty-first Dynasty / 2nd Achaemenid (c. 342–332 BC)
+- Label: Artaxerxes III
+  Start: c. -0342
+  End: c. -0338
+  Keywords:
+    - Thirty-first_Dynasty
+- Label: Artaxerxes IV
+  Start: -0338
+  End: -0336
+  Keywords:
+    - Thirty-first_Dynasty
+- Label: Darius III
+  Start: -0336
+  End: -0332
+  Keywords:
+    - Thirty-first_Dynasty
+
+# Macedonian and Ptolemaic
+
+# Thirty-second Dynasty / Argead (332–305 BC)
+- Label: Alexander the Great
+  Start: -0332
+  End: -0323
+  Keywords:
+    - Thirty-second_Dynasty
+- Label: Philip III Arrhidaeus
+  Start: -0323
+  End: -0317
+  Keywords:
+    - Thirty-second_Dynasty
+- Label: Alexander IV
+  Start: -0317
+  End: -0305
+  Keywords:
+    - Thirty-second_Dynasty
+
+# Thirty-third Dynasty / Ptolemaic (305–30 BC)
+- Label: Ptolemy I Soter
+  Start: -0304
+  End: -0282
+  Keywords:
+    - Thirty-third_Dynasty
+- Label: Ptolemy II Philadelphus
+  Start: -0284
+  End: -0246
+  Keywords:
+    - Thirty-third_Dynasty
+- Label: Ptolemy III Euergetes
+  Start: -0246
+  End: c. -0222
+  Keywords:
+    - Thirty-third_Dynasty
+- Label: Ptolemy IV Philopator
+  Start: c. -0222
+  End: c. -0204
+  Keywords:
+    - Thirty-third_Dynasty
+- Label: Ptolemy V Epiphanes
+  Start: -0210
+  End: -0180
+  Keywords:
+    - Thirty-third_Dynasty
+- Label: Ptolemy VI Philometor
+  Start: -0180
+  End: c. -0145
+  Keywords:
+    - Thirty-third_Dynasty
+# Ptolemy VIII Physcon had three separate reigns (170-163, 145-130, 127-116 BC);
+# commenting out due to complexity.
+# - Label: Ptolemy VIII Physcon
+#   Start: -0145
+#   End: -0116
+#   Keywords:
+#     - Thirty-third_Dynasty
+- Label: Cleopatra II
+  Start: -0131
+  End: -0127
+  Keywords:
+    - Thirty-third_Dynasty
+- Label: Ptolemy IX Soter II
+  Start: -0116
+  End: c. -0107
+  Keywords:
+    - Thirty-third_Dynasty
+- Label: Ptolemy X Alexander I
+  Start: -0107
+  End: c. -0088
+  Keywords:
+    - Thirty-third_Dynasty
+# Berenice III: two separate short reigns.
+# - Label: Berenice III
+#   Keywords:
+#     - Thirty-third_Dynasty
+# Ptolemy XI: 18 days only.
+# - Label: Ptolemy XI Alexander II
+#   Keywords:
+#     - Thirty-third_Dynasty
+- Label: Ptolemy XII Auletes
+  Start: c. -0080
+  End: c. -0051
+  Keywords:
+    - Thirty-third_Dynasty
+- Label: Cleopatra VII
+  Start: c. -0051
+  End: -0030
+  Keywords:
+    - Thirty-third_Dynasty
+# Ptolemy XIII–XIV: co-rulers/brothers of Cleopatra VII with uncertain individual dates.
+# - Label: Ptolemy XIII
+#   Keywords:
+#     - Thirty-third_Dynasty
+- Label: Ptolemy XV Caesarion
+  Start: -0044
+  End: -0030
+  Keywords:
+    - Thirty-third_Dynasty

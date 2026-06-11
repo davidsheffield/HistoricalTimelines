@@ -1,0 +1,231 @@
+global:
+  Keywords:
+    - Steppe
+
+# Steppe nomad peoples, khanates, and notable rulers (c. 700 BC – early 16th c.)
+# Tiered detail: most famous rulers get full lives (reign + DOB/DOD), mid-tier
+# khans get reigns only, and lesser-known polities appear as period spans.
+# Dates are approximate and drawn from rough attested ranges; the "# CHECK"
+# comment on each label marks dates that should be verified later.
+# Note: the Yuan dynasty is intentionally omitted here as it already appears in
+# Chinese_dynasties.yaml.
+# position: values group overlapping contemporaneous khanates onto separate
+# rows; they may need tuning after a first render.
+
+entries:
+
+# --- Tier 1: most famous rulers (full lives: reign Start/End + DOB/DOD) ---
+
+- Label: Attila the Hun  # CHECK
+  Start: 0434
+  End: 0453
+  DOB: c. 0406
+  DOD: 0453
+  Keywords:
+    - Hunnic
+    - Reign
+    - Life
+  Params:
+    - position:29.5
+
+- Label: Genghis Khan  # CHECK
+  Start: 1206
+  End: 1227-08-18
+  DOB: c. 1162
+  DOD: 1227-08-18
+  Keywords:
+    - Mongol_Empire
+    - Reign
+    - Life
+  Params:
+    - position:29.5
+
+- Label: Kublai Khan  # CHECK
+  Start: 1260
+  End: 1294-02-18
+  DOB: 1215-09-23
+  DOD: 1294-02-18
+  Keywords:
+    - Mongol_Empire
+    - Reign
+    - Life
+  Params:
+    - position:21.5
+
+- Label: Timur  # CHECK
+  Start: 1370
+  End: 1405-02-18
+  DOB: 1336-04-09
+  DOD: 1405-02-18
+  Keywords:
+    - Timurid
+    - Reign
+    - Life
+  Params:
+    - position:29.5
+
+# --- Tier 2: mid-tier khans (reign Start/End only) ---
+
+- Label: Ögedei Khan  # CHECK
+  Start: 1229
+  End: 1241
+  Keywords:
+    - Mongol_Empire
+    - Reign
+  Params:
+    - position:22.5
+
+- Label: Güyük Khan  # CHECK
+  Start: 1246
+  End: 1248
+  Keywords:
+    - Mongol_Empire
+    - Reign
+  Params:
+    - position:22.5
+
+- Label: Möngke Khan  # CHECK
+  Start: 1251
+  End: 1259
+  Keywords:
+    - Mongol_Empire
+    - Reign
+  Params:
+    - position:22.5
+
+- Label: Ghazan  # CHECK
+  Start: 1295
+  End: 1304
+  Keywords:
+    - Ilkhanate
+    - Reign
+  Params:
+    - position:22.5
+
+- Label: Batu Khan  # CHECK
+  Start: 1227
+  End: 1255
+  Keywords:
+    - Golden_Horde
+    - Reign
+  Params:
+    - position:23.5
+
+- Label: Hulagu Khan  # CHECK
+  Start: 1256
+  End: 1265
+  Keywords:
+    - Ilkhanate
+    - Reign
+  Params:
+    - position:23.5
+
+# --- Tier 3: peoples, khanates, and dynasties (period spans) ---
+
+- Label: Scythians  # CHECK
+  Start: c. -0700
+  End: c. -0300
+  Keywords:
+    - Scythian
+  Params:
+    - position:25.5
+    - fill:#7a5230;
+
+- Label: Xiongnu Empire  # CHECK
+  Start: c. -0209
+  End: c. 0093
+  Keywords:
+    - Xiongnu
+  Params:
+    - position:25.5
+    - fill:#9c6b3c;
+
+- Label: Hunnic Empire  # CHECK
+  Start: c. 0370
+  End: c. 0469
+  Keywords:
+    - Hunnic
+  Params:
+    - position:25.5
+    - fill:#7a5230;
+
+- Label: Rouran Khaganate  # CHECK
+  Start: c. 0330
+  End: 0555
+  Keywords:
+    - Rouran
+  Params:
+    - position:26.5
+    - fill:#9c6b3c;
+
+- Label: Göktürk Khaganate  # CHECK
+  Start: 0552
+  End: 0744
+  Keywords:
+    - Turkic
+  Params:
+    - position:25.5
+    - fill:#9c6b3c;
+
+- Label: Uyghur Khaganate  # CHECK
+  Start: 0744
+  End: 0840
+  Keywords:
+    - Uyghur
+  Params:
+    - position:26.5
+    - fill:#7a5230;
+
+- Label: Khitan (Liao dynasty)  # CHECK
+  Start: 0916
+  End: 1125
+  Keywords:
+    - Khitan
+  Params:
+    - position:25.5
+    - fill:#7a5230;
+
+- Label: Mongol Empire  # CHECK
+  Start: 1206
+  End: 1368
+  Keywords:
+    - Mongol_Empire
+  Params:
+    - position:25.5
+    - fill:#9c6b3c;
+
+- Label: Golden Horde  # CHECK
+  Start: 1242
+  End: 1502
+  Keywords:
+    - Golden_Horde
+  Params:
+    - position:26.5
+    - fill:#9c6b3c;
+
+- Label: Ilkhanate  # CHECK
+  Start: 1256
+  End: 1335
+  Keywords:
+    - Ilkhanate
+  Params:
+    - position:27.5
+    - fill:#7a5230;
+
+- Label: Chagatai Khanate  # CHECK
+  Start: 1226
+  End: 1347
+  Keywords:
+    - Chagatai
+  Params:
+    - position:28.5
+    - fill:#9c6b3c;
+
+- Label: Timurid Empire  # CHECK
+  Start: 1370
+  End: 1507
+  Keywords:
+    - Timurid
+  Params:
+    - position:25.5
+    - fill:#7a5230;

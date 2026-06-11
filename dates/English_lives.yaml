@@ -20,10 +20,36 @@ entries:
   DOD: 1535-07-06
   Params:
     - position:11.5
-# Physicists
-- Label: Isaac Newton
-  DOB: 1643-01-04
-  DOD: 1727-03-31
+# - Label: Robert Walpole
+#   DOB: 1676-08-26
+#   DOD: 1745-03-18
+#   Params:
+#     - position:10.5
+# - Label: William Pitt the Younger
+#   DOB: 1759-05-28
+#   DOD: 1806-01-23
+#   Params:
+#     - position:10.5
+- Label: Benjamin Disraeli
+  DOB: 1804-12-21
+  DOD: 1881-04-19
+  Params:
+    - position:9.5
+# - Label: William Gladstone
+#   DOB: 1809-12-29
+#   DOD: 1898-05-19
+#   Params:
+#     - position:11.5
+- Label: Winston Churchill
+  DOB: 1874-11-30
+  DOD: 1965-01-24
+  Params:
+    - position:10.5
+
+# Scientists
+- Label: Charles Darwin
+  DOB: 1809-02-12
+  DOD: 1882-04-19
   Params:
     - position:10.5
 # Writers
@@ -47,3 +73,92 @@ entries:
   DOD: 1616-04-23
   Params:
     - position:10.5
+- Label: John Milton
+  DOB: 1608-12-09
+  DOD: 1674-11-08
+  Params:
+    - position:10.5
+- Label: Samuel Johnson
+  DOB: 1709-09-18
+  DOD: 1784-12-13
+  Params:
+    - position:10.5
+- Label: Jane Austen
+  DOB: 1775-12-16
+  DOD: 1817-07-18
+  Params:
+    - position:10.5
+- Label: Charles Dickens
+  DOB: 1812-02-07
+  DOD: 1870-06-09
+  Params:
+    - position:9.5
+# - Label: Charlotte Bronte
+#   DOB: 1816-04-21
+#   DOD: 1855-03-31
+#   Params:
+#     - position:10.5
+# - Label: Thomas Hardy
+#   DOB: 1840-06-02
+#   DOD: 1928-01-11
+#   Params:
+#     - position:11.5
+- Label: George Orwell
+  DOB: 1903-06-25
+  DOD: 1950-01-21
+  Params:
+    - position:10.5
+- Label: E. M. Forster
+  DOB: 1879-01-01
+  DOD: 1970-06-07
+  Params:
+    - position:11.5
+- Label: Christopher Isherwood
+  DOB: 1904-08-26
+  DOD: 1986-01-04
+  Params:
+    - position:12.5
+- Label: Don Bachardy # Isherwood's Partner, not English
+  DOB: 1934-05-18
+  Alive: true
+  Params:
+    - position:12.5
+- Label: W. H. Auden
+  DOB: 1907-02-21
+  DOD: 1973-09-29
+  Params:
+    - position:13.5
+- Label: Lord Byron
+  DOB: 1788-01-22
+  DOD: 1824-04-19
+  Params:
+    - position:14.5
+
+# Other
+- Label: John Maynard Keynes
+  DOB: 1883-06-05
+  DOD: 1946-04-21
+  Params:
+    - position:11.5
+- Label: Charles Babbage
+  DOB: 1791-12-26
+  DOD: 1871-10-18
+  Params:
+    - position:12.5
+- Label: Ada Lovelace
+  DOB: 1815-12-10
+  DOD: 1852-11-27
+  Params:
+    - position:13.5
+
+# Musicians
+- Label: Benjamin Britten
+  DOB: 1913-11-22
+  DOD: 1976-12-04
+  Params:
+    - position:14.5
+- Label: Peter Pears
+  DOB: 1910-06-22
+  DOD: 1986-04-03
+  Params:
+    - position:15.5

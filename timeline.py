@@ -663,15 +663,27 @@ def extract_dates(dates: dict[str, pd.DataFrame]) -> pd.DataFrame:
             params = row.get('Params', [])
             y_position = None
             for param in params:
+                if not isinstance(param, str):
+                    raise ValueError(
+                        f"{file_stem}.yaml: entry {row['Label']!r}: "
+                        f"Params item must be a string, got {param!r} "
+                        f"(hint: use 'position:1.5' not 'position: 1.5')"
+                    )
                 if param.startswith('position:'):
                     try:
                         y_position = float(param.split(':', 1)[1])
                     except (ValueError, IndexError):
-                        raise ValueError(f"Invalid position parameter format: {param}")
+                        raise ValueError(
+                            f"{file_stem}.yaml: entry {row['Label']!r}: "
+                            f"invalid position parameter format: {param!r}"
+                        )
                     break
 
             if y_position is None:
-                raise ValueError(f"Missing required position parameter for entry: {row['Label']}")
+                raise ValueError(
+                    f"{file_stem}.yaml: entry {row['Label']!r}: "
+                    f"missing required position parameter"
+                )
 
             boxes.append({'Label': row['Label'],
                           'Keywords': row.get('Keywords', []),

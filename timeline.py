@@ -98,7 +98,7 @@ def timeline() -> None:
     args = parser.parse_args()
 
     if args.all:
-        sheets = [1, 93]
+        sheets = list(range(1, 92))
     else:
         sheets = parse_sheet_ranges(args.sheet)
 

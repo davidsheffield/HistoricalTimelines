@@ -45,77 +45,77 @@ rect.border.Party_Republican { fill: #b8141a; }
 
 rect.House_of_Godwin.even,
 rect.House_of_Wessex.even,
-rect.House_of_Denmark.even { fill : #0c7c26; }
+rect.House_of_Denmark.even { fill : #1f7a3d; }
 rect.House_of_Godwin.odd,
 rect.House_of_Wessex.odd,
-rect.House_of_Denmark.odd { fill : #55be6e; }
+rect.House_of_Denmark.odd { fill : #4caf6e; }
 rect.House_of_Normandy.even,
-rect.House_of_Blois.even { fill : #0e20a8; }
+rect.House_of_Blois.even { fill : #234a9e; }
 rect.House_of_Normandy.odd,
-rect.House_of_Blois.odd { fill : #4152d2; }
-rect.House_of_Plantagenet.even { fill : #0e3fa8; }
-rect.House_of_Plantagenet.odd { fill : #3b65bf; }
-rect.House_of_Lancaster.even { fill : #c82a22; }
-rect.House_of_Lancaster.odd { fill : #e8615a; }
-rect.House_of_York.even { fill : #d3b89a; }
-rect.House_of_York.odd { fill : #b7a692; }
-rect.House_of_Tudor.even { fill : #32a05e; }
-rect.House_of_Tudor.odd { fill : #61c78a; }
-rect.English_Interregnum.even { fill : #4e5099; }
-rect.English_Interregnum.odd { fill : #696ba4; }
-rect.House_of_Stuart.even { fill : #7710cb; }
-rect.House_of_Stuart.odd { fill : #9c40e7; }
-rect.House_of_Hanover.even { fill : #1005de; }
-rect.House_of_Hanover.odd { fill : #4740d8; }
+rect.House_of_Blois.odd { fill : #5570c6; }
+rect.House_of_Plantagenet.even { fill : #5b3a86; }
+rect.House_of_Plantagenet.odd { fill : #8261ad; }
+rect.House_of_Lancaster.even { fill : #b3242e; }
+rect.House_of_Lancaster.odd { fill : #d6545d; }
+rect.House_of_York.even { fill : #c9a24a; }
+rect.House_of_York.odd { fill : #e0c074; }
+rect.House_of_Tudor.even { fill : #2e8b57; }
+rect.House_of_Tudor.odd { fill : #5cb585; }
+rect.English_Interregnum.even { fill : #4a4d99; }
+rect.English_Interregnum.odd { fill : #7174b8; }
+rect.House_of_Stuart.even { fill : #6a1ea8; }
+rect.House_of_Stuart.odd { fill : #9148cf; }
+rect.House_of_Hanover.even { fill : #1746c4; }
+rect.House_of_Hanover.odd { fill : #4a72de; }
 rect.House_of_Saxe-Coburg_and_Gotha.even,
-rect.House_of_Windsor.even { fill : #d20c1f; }
+rect.House_of_Windsor.even { fill : #c01526; }
 rect.House_of_Saxe-Coburg_and_Gotha.odd,
-rect.House_of_Windsor.odd { fill : #d13e4d; }
+rect.House_of_Windsor.odd { fill : #d8424f; }
 
 /******************
 ** English lives **
 ******************/
 
-rect.England.Life { fill : #1daf5f; }
+rect.England.Life { fill : #3aa76a; }
 
 /*******************************
 ** Kings of Judah **
 *******************************/
 
-rect.House_of_David.even { fill : #0b3cdb; }
-rect.House_of_David.odd { fill : #3255c9; }
-rect.House_of_David.Unconfirmed.even { fill : #b6c2e8; }
-rect.House_of_David.Unconfirmed.odd { fill : #d7ddef; }
+rect.House_of_David.even { fill : #1f4fd0; }
+rect.House_of_David.odd { fill : #4f74dc; }
+rect.House_of_David.Unconfirmed.even { fill : #aebfe8; }
+rect.House_of_David.Unconfirmed.odd { fill : #cdd7f0; }
 
 /*******************************
 ** Kings of Israel **
 *******************************/
 
-rect.House_of_Jeroboam.even { fill: #8b6914; }
-rect.House_of_Jeroboam.odd { fill: #b8912a; }
-rect.House_of_Baasha.even { fill: #8b3014; }
-rect.House_of_Baasha.odd { fill: #b85030; }
-rect.House_of_Zimri.even { fill: #5a5a6e; }
-rect.House_of_Zimri.odd { fill: #7a7a8e; }
-rect.House_of_Omri.even { fill: #1a3060; }
-rect.House_of_Omri.odd { fill: #3a5080; }
-rect.House_of_Jehu.even { fill: #1a5a30; }
-rect.House_of_Jehu.odd { fill: #3a7a50; }
-rect.House_of_Shallum.even { fill: #7a6a10; }
-rect.House_of_Shallum.odd { fill: #9a8a30; }
-rect.House_of_Menahem.even { fill: #1a5a5a; }
-rect.House_of_Menahem.odd { fill: #3a7a7a; }
-rect.House_of_Pekah.even { fill: #6a1a3a; }
-rect.House_of_Pekah.odd { fill: #8a3a5a; }
-rect.House_of_Hoshea.even { fill: #4a5a1a; }
-rect.House_of_Hoshea.odd { fill: #6a7a3a; }
+rect.House_of_Jeroboam.even { fill: #b8860b; }
+rect.House_of_Jeroboam.odd { fill: #d9a82e; }
+rect.House_of_Baasha.even { fill: #b5502a; }
+rect.House_of_Baasha.odd { fill: #d4744d; }
+rect.House_of_Zimri.even { fill: #5a5a72; }
+rect.House_of_Zimri.odd { fill: #7d7d96; }
+rect.House_of_Omri.even { fill: #1f3a72; }
+rect.House_of_Omri.odd { fill: #46608f; }
+rect.House_of_Jehu.even { fill: #1f6e3c; }
+rect.House_of_Jehu.odd { fill: #46915f; }
+rect.House_of_Shallum.even { fill: #8a7a1a; }
+rect.House_of_Shallum.odd { fill: #aa9a3e; }
+rect.House_of_Menahem.even { fill: #1f6e6e; }
+rect.House_of_Menahem.odd { fill: #46918f; }
+rect.House_of_Pekah.even { fill: #7a2244; }
+rect.House_of_Pekah.odd { fill: #9c4467; }
+rect.House_of_Hoshea.even { fill: #5a6e1f; }
+rect.House_of_Hoshea.odd { fill: #7d9146; }
 
 /*******************************
 ** Hasmonean Kingdom **
 *******************************/
 
-rect.Hasmonean_Dynasty.even { fill: #2e6e1a; }
-rect.Hasmonean_Dynasty.odd { fill: #4e8e3a; }
+rect.Hasmonean_Dynasty.even { fill: #2f7d2a; }
+rect.Hasmonean_Dynasty.odd { fill: #54a44a; }
 rect.Hasmonean_Dynasty.Rebel_Leader.even { fill: #8a5a00; }
 rect.Hasmonean_Dynasty.Rebel_Leader.odd { fill: #aa7a1e; }
 rect.Hasmonean_Dynasty.Ethnarch.even { fill: #1a5e5e; }
@@ -127,10 +127,10 @@ rect.Hasmonean_Dynasty.High_Priest_Only.odd { fill: #7e7e3a; }
 ** Herodian Kingdom **
 *******************************/
 
-rect.Herodian_Dynasty.even { fill: #6b1a7f; }
-rect.Herodian_Dynasty.odd { fill: #8b3a9f; }
-rect.Herodian_Dynasty.King.even { fill: #6b1a7f; }
-rect.Herodian_Dynasty.King.odd { fill: #8b3a9f; }
+rect.Herodian_Dynasty.even { fill: #6e1f8c; }
+rect.Herodian_Dynasty.odd { fill: #9148ad; }
+rect.Herodian_Dynasty.King.even { fill: #6e1f8c; }
+rect.Herodian_Dynasty.King.odd { fill: #9148ad; }
 rect.Herodian_Dynasty.Governor.even { fill: #2a4a8f; }
 rect.Herodian_Dynasty.Governor.odd { fill: #4a6aaf; }
 rect.Herodian_Dynasty.Procurator.even { fill: #8f1a1a; }
@@ -163,30 +163,33 @@ rect.Ancient_Greece.Life { fill : #3ed1b6; }
 ** Roman emperors **
 *******************/
 
-rect.Julio_Claudian_Dynasty.even { fill : #510d90; }
-rect.Julio_Claudian_Dynasty.odd { fill : #6d2fa7; }
-rect.Year_of_the_Four_Emperors.even { fill : #bcbe4e; }
-rect.Year_of_the_Four_Emperors.odd { fill : #dfe178; }
-rect.Flavian_Dynasty.even { fill : #900d6b; }
-rect.Flavian_Dynasty.odd { fill : #b43791; }
-rect.Nerva_Antonine_Dynasty.even { fill : #510d90; }
-rect.Nerva_Antonine_Dynasty.odd { fill : #6d2fa7; }
-rect.Year_of_the_Five_Emperors.even { fill : #bcbe4e; }
-rect.Year_of_the_Five_Emperors.odd { fill : #dfe178; }
-rect.Severan_Dynasty.even { fill : #900d6b; }
-rect.Severan_Dynasty.odd { fill : #b43791; }
-rect.Crisis_of_the_Third_Century.even { fill : #bcbe4e; }
-rect.Crisis_of_the_Third_Century.odd { fill : #dfe178; }
-rect.Tetrarchy.even { fill : #510d90; }
-rect.Tetrarchy.odd { fill : #6d2fa7; }
-rect.Constantinian_Dynasty.even { fill : #900d6b; }
-rect.Constantinian_Dynasty.odd { fill : #b43791; }
-rect.Valentinian_Dynasty.even { fill : #510d90; }
-rect.Valentinian_Dynasty.odd { fill : #6d2fa7; }
-rect.Theodosian_Dynasty.even { fill : #900d6b; }
-rect.Theodosian_Dynasty.odd { fill : #b43791; }
-rect.Last_Western_Emperors.even { fill : #bcbe4e; }
-rect.Last_Western_Emperors.odd { fill : #dfe178; }
+/* Main dynasties alternate imperial purple and Tyrian crimson; the short
+** transitional periods (Year of N Emperors, Crisis, Last Western) use an
+** olive-gold so they stand out against the dynasties on either side. */
+rect.Julio_Claudian_Dynasty.even { fill : #5a1e8f; }
+rect.Julio_Claudian_Dynasty.odd { fill : #7d40b0; }
+rect.Year_of_the_Four_Emperors.even { fill : #b08a1e; }
+rect.Year_of_the_Four_Emperors.odd { fill : #d4ab3e; }
+rect.Flavian_Dynasty.even { fill : #9c1d3f; }
+rect.Flavian_Dynasty.odd { fill : #c0445f; }
+rect.Nerva_Antonine_Dynasty.even { fill : #5a1e8f; }
+rect.Nerva_Antonine_Dynasty.odd { fill : #7d40b0; }
+rect.Year_of_the_Five_Emperors.even { fill : #b08a1e; }
+rect.Year_of_the_Five_Emperors.odd { fill : #d4ab3e; }
+rect.Severan_Dynasty.even { fill : #9c1d3f; }
+rect.Severan_Dynasty.odd { fill : #c0445f; }
+rect.Crisis_of_the_Third_Century.even { fill : #b08a1e; }
+rect.Crisis_of_the_Third_Century.odd { fill : #d4ab3e; }
+rect.Tetrarchy.even { fill : #5a1e8f; }
+rect.Tetrarchy.odd { fill : #7d40b0; }
+rect.Constantinian_Dynasty.even { fill : #9c1d3f; }
+rect.Constantinian_Dynasty.odd { fill : #c0445f; }
+rect.Valentinian_Dynasty.even { fill : #5a1e8f; }
+rect.Valentinian_Dynasty.odd { fill : #7d40b0; }
+rect.Theodosian_Dynasty.even { fill : #9c1d3f; }
+rect.Theodosian_Dynasty.odd { fill : #c0445f; }
+rect.Last_Western_Emperors.even { fill : #b08a1e; }
+rect.Last_Western_Emperors.odd { fill : #d4ab3e; }
 
 /************
 ** Wars **

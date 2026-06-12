@@ -471,6 +471,100 @@ def test_label_position_mixed_params():
     assert 'outside_label' in result
 
 
+def test_bar_default_thickness_centered():
+    """Bars default to DEFAULT_BAR_HEIGHT centered in their 24px row slot."""
+
+    test_data = pd.DataFrame([{
+        'Label': 'Test',
+        'Keywords': ['USA', 'President'],
+        'Params': [],
+        'start_x': 100,
+        'end_x': 200,
+        'y': 1
+    }])
+
+    result = timeline._generate_timeline_boxes(test_data, left_to_right=True)
+
+    # y=1 -> slot_top=48, y_center=60, default height 20 -> rect y = 50.
+    # x/width are inset 1px per side (100..200 -> 101..199, width 98).
+    assert 'height="20"' in result
+    assert '<rect x="101" y="50.0" width="98" height="20"' in result
+
+
+def test_bar_height_param_overrides_and_recenters():
+    """A 'height:<px>' Param overrides thickness and keeps the bar centered."""
+
+    test_data = pd.DataFrame([{
+        'Label': 'Test',
+        'Keywords': ['USA', 'President'],
+        'Params': ['height:8'],
+        'start_x': 100,
+        'end_x': 200,
+        'y': 1
+    }])
+
+    result = timeline._generate_timeline_boxes(test_data, left_to_right=True)
+
+    # y_center=60, thickness 8 -> rect y = 56; x/width inset 1px per side.
+    assert 'height="8.0"' in result
+    assert '<rect x="101" y="56.0" width="98" height="8.0"' in result
+
+
+def test_bar_too_narrow_keeps_full_width():
+    """Bars too narrow to spare the inset keep their full width."""
+
+    test_data = pd.DataFrame([{
+        'Label': 'X',
+        'Keywords': ['USA', 'President'],
+        'Params': [],
+        'start_x': 100,
+        'end_x': 102,  # width 2, not greater than 2*BAR_INSET
+        'y': 1
+    }])
+
+    result = timeline._generate_timeline_boxes(test_data, left_to_right=True)
+
+    assert '<rect x="100" y="50.0" width="2" height="20"' in result
+
+
+def test_bar_height_param_not_leaked_into_style():
+    """'height:' is functional and must not appear as an inline rect style."""
+
+    test_data = pd.DataFrame([{
+        'Label': 'Test',
+        'Keywords': ['USA', 'President'],
+        'Params': ['height:30', 'fill:#abcdef'],
+        'start_x': 100,
+        'end_x': 200,
+        'y': 1
+    }])
+
+    result = timeline._generate_timeline_boxes(test_data, left_to_right=True)
+
+    # height becomes the rect attribute, fill remains an inline style
+    assert 'height="30.0"' in result
+    assert 'style="fill:#abcdef"' in result
+    assert 'height:30' not in result  # never rendered as CSS
+
+
+def test_event_label_not_smaller_than_bar_text():
+    """Event labels render at the standard label size, not the old 10px."""
+
+    test_data = pd.DataFrame([{
+        'Label': 'Cannae',
+        'Keywords': ['Battle', 'Event'],
+        'Params': [],
+        'start_x': 100,
+        'end_x': 100,
+        'y': 1
+    }])
+
+    result = timeline._generate_timeline_boxes(test_data, left_to_right=True)
+
+    assert 'font-size:10px' not in result
+    assert f'font-size:{timeline.LABEL_FONT_PX}px' in result
+
+
 def test_load_data_basic_global_entries():
     """Test load_data with basic global/entries YAML format."""
     yaml_content = {

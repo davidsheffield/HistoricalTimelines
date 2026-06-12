@@ -129,7 +129,7 @@ entries:
     - Scythian
   Params:
     - position:25.5
-    - fill:#7a5230;
+    - fill:#6e4a28;
 
 - Label: Xiongnu Empire  # CHECK
   Start: c. -0209
@@ -138,7 +138,7 @@ entries:
     - Xiongnu
   Params:
     - position:25.5
-    - fill:#9c6b3c;
+    - fill:#9c7040;
 
 - Label: Hunnic Empire  # CHECK
   Start: c. 0370
@@ -147,7 +147,7 @@ entries:
     - Hunnic
   Params:
     - position:25.5
-    - fill:#7a5230;
+    - fill:#6e4a28;
 
 - Label: Rouran Khaganate  # CHECK
   Start: c. 0330
@@ -156,7 +156,7 @@ entries:
     - Rouran
   Params:
     - position:26.5
-    - fill:#9c6b3c;
+    - fill:#9c7040;
 
 - Label: Göktürk Khaganate  # CHECK
   Start: 0552
@@ -165,7 +165,7 @@ entries:
     - Turkic
   Params:
     - position:25.5
-    - fill:#9c6b3c;
+    - fill:#9c7040;
 
 - Label: Uyghur Khaganate  # CHECK
   Start: 0744
@@ -174,7 +174,7 @@ entries:
     - Uyghur
   Params:
     - position:26.5
-    - fill:#7a5230;
+    - fill:#6e4a28;
 
 - Label: Khitan (Liao dynasty)  # CHECK
   Start: 0916
@@ -183,7 +183,7 @@ entries:
     - Khitan
   Params:
     - position:25.5
-    - fill:#7a5230;
+    - fill:#6e4a28;
 
 - Label: Mongol Empire  # CHECK
   Start: 1206
@@ -192,7 +192,7 @@ entries:
     - Mongol_Empire
   Params:
     - position:25.5
-    - fill:#9c6b3c;
+    - fill:#9c7040;
 
 - Label: Golden Horde  # CHECK
   Start: 1242
@@ -201,7 +201,7 @@ entries:
     - Golden_Horde
   Params:
     - position:26.5
-    - fill:#9c6b3c;
+    - fill:#9c7040;
 
 - Label: Ilkhanate  # CHECK
   Start: 1256
@@ -210,7 +210,7 @@ entries:
     - Ilkhanate
   Params:
     - position:27.5
-    - fill:#7a5230;
+    - fill:#6e4a28;
 
 - Label: Chagatai Khanate  # CHECK
   Start: 1226
@@ -219,7 +219,7 @@ entries:
     - Chagatai
   Params:
     - position:28.5
-    - fill:#9c6b3c;
+    - fill:#9c7040;
 
 - Label: Timurid Empire  # CHECK
   Start: 1370
@@ -228,4 +228,4 @@ entries:
     - Timurid
   Params:
     - position:25.5
-    - fill:#7a5230;
+    - fill:#6e4a28;

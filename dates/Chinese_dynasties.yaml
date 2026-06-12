@@ -11,99 +11,99 @@ entries:
   Start: c. -1600
   End: c. -1046
   Params:
-    - fill:#b5500a;
+    - fill:#c2570f;
 - Label: Western Zhou
   Start: c. -1046
   End: c. -0771
   Params:
-    - fill:#d07032;
+    - fill:#e2823f;
 - Label: Spring and Autumn
   Start: c. -0770
   End: c. -0476
   Params:
-    - fill:#b5500a;
+    - fill:#c2570f;
 - Label: Warring States
   Start: c. -0475
   End: c. -0221
   Params:
-    - fill:#d07032;
+    - fill:#e2823f;
 - Label: Eastern Zhou
   Start: c. -0771
   End: c. -0256
   Params:
-    - fill:#b5500a;
+    - fill:#c2570f;
 - Label: Qin
   Start: -0221
   End: -0207
   Params:
-    - fill:#d07032;
+    - fill:#e2823f;
 - Label: Western Han
   Start: -0202
   End: 0009
   Params:
-    - fill:#b5500a;
+    - fill:#c2570f;
 - Label: Eastern Han
   Start: 0025
   End: 0220
   Params:
-    - fill:#d07032;
+    - fill:#e2823f;
 - Label: Three Kingdoms Period
   Start: 0220
   End: 0280
   Params:
-    - fill:#b5500a;
+    - fill:#c2570f;
 - Label: Western Jin
   Start: 0266
   End: 0316
   Params:
-    - fill:#d07032;
+    - fill:#e2823f;
 - Label: Eastern Jin
   Start: 0317
   End: 0420
   Params:
-    - fill:#b5500a;
+    - fill:#c2570f;
 - Label: Northern and Southern Dynasties
   Start: 0420
   End: 0589
   Params:
-    - fill:#d07032;
+    - fill:#e2823f;
 - Label: Sui
   Start: 0581
   End: 0618
   Params:
-    - fill:#b5500a;
+    - fill:#c2570f;
 - Label: Tang
   Start: 0618
   End: 0907
   Params:
-    - fill:#d07032;
+    - fill:#e2823f;
 - Label: Five Dynasties and Ten Kingdoms
   Start: 0907
   End: 0979
   Params:
-    - fill:#b5500a;
+    - fill:#c2570f;
 - Label: Northern Song
   Start: 0960
   End: 1127
   Params:
-    - fill:#d07032;
+    - fill:#e2823f;
 - Label: Southern Song
   Start: 1127
   End: 1279
   Params:
-    - fill:#b5500a;
+    - fill:#c2570f;
 - Label: Yuan
   Start: 1271
   End: 1368
   Params:
-    - fill:#d07032;
+    - fill:#e2823f;
 - Label: Ming
   Start: 1368
   End: 1644
   Params:
-    - fill:#b5500a;
+    - fill:#c2570f;
 - Label: Qing
   Start: 1644
   End: 1912
   Params:
-    - fill:#d07032;
+    - fill:#e2823f;

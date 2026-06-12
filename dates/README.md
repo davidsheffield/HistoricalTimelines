@@ -41,3 +41,6 @@ The `Params` field accepts various parameters to control styling and positioning
 - **`label_position:above`**: Places the label above the timeline box
 - **`label_position:below`**: Places the label below the timeline box
 - **`position:<value>`**: Sets vertical position on timeline (required, e.g., `position:0.5`)
+- **`height:<px>`**: Sets the bar thickness in pixels (optional, e.g., `height:12`).
+                     Defaults to 20px, centered in the 24px row slot. Use it to
+                     give bars different sizes (thicker periods, thinner lanes).

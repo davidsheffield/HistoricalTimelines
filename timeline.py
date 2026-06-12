@@ -40,6 +40,22 @@ import long_time
 logger = logging.getLogger(__name__)
 
 
+# Standard label font size, shared by in-box labels (as the upper bound),
+# outside (above/below) labels, and event labels so that event text is never
+# smaller than the bars' text.
+LABEL_FONT_PX = 16
+
+# Default bar thickness in pixels. Each entry occupies a 24px row slot; a
+# 20px bar centered in that slot leaves a 2px gap above and below so adjacent
+# bars never touch. Overridable per entry with a 'height:<px>' Param.
+DEFAULT_BAR_HEIGHT = 20
+
+# Horizontal inset applied to each side of a bar so that horizontally
+# adjacent bars (e.g. successive reigns) never touch, matching the white-gap
+# separation of the timeline style. Skipped on bars too narrow to spare it.
+BAR_INSET = 1
+
+
 # PyYAML uses YAML 1.1 which treats 0NNN as octal (e.g. -0115 -> -77).
 # This custom loader replaces the int resolver with one that only handles
 # decimal, hex, and binary — no octal — matching YAML 1.2 behaviour.
@@ -357,7 +373,7 @@ def _generate_year_markers(years: list[int]) -> str:
 
 def _calculate_font_size(label: str,
                          box_width: float,
-                         max_font_size: int = 16,
+                         max_font_size: int = LABEL_FONT_PX,
                          min_font_size: int = 8) -> int:
     """
     Calculate appropriate font size for a label to fit within a box.
@@ -407,7 +423,15 @@ def _generate_timeline_boxes(sheet_boxes: pd.DataFrame, left_to_right: bool) -> 
             x = row['end_x']
             width = row['start_x'] - row['end_x']
 
-        y = row['y'] * 24 + 24
+        # Inset each side so horizontally adjacent bars never touch, unless the
+        # bar is too narrow to spare the gap.
+        if width > 2 * BAR_INSET:
+            x += BAR_INSET
+            width -= 2 * BAR_INSET
+
+        slot_top = row['y'] * 24 + 24
+        y_center = slot_top + 12  # Vertical center of the row slot
+
         classes = ' '.join(row['Keywords'])
         alternating_class = row.get('alternating_class', '')
         if alternating_class:
@@ -424,25 +448,42 @@ def _generate_timeline_boxes(sheet_boxes: pd.DataFrame, left_to_right: bool) -> 
                 label_position = param.split(':', 1)[1]
                 break
 
+        # Bar thickness: default leaves a gap between rows; 'height:<px>'
+        # overrides it so bars can be different sizes. The bar is centered in
+        # its row slot regardless of thickness.
+        thickness = DEFAULT_BAR_HEIGHT
+        for param in params:
+            if param.startswith('height:'):
+                try:
+                    thickness = float(param.split(':', 1)[1])
+                except ValueError:
+                    logger.warning(
+                        f"Invalid height param {param!r} for {row['Label']!r}; "
+                        f"using default {DEFAULT_BAR_HEIGHT}px"
+                    )
+                break
+        rect_y = y_center - thickness / 2
+
         label = row['Label']
 
-        # Event: render a line marker + unfilled label, skip the period rect
+        # Event: render a line marker + unfilled label, skip the period rect.
+        # The marker spans the full row slot; the label matches bar text size.
         if 'Event' in row['Keywords']:
             event_x = row['start_x']
             content.append(
-                f'<line x1="{event_x}" y1="{y}"'
-                f' x2="{event_x}" y2="{y + 24}" class="{classes}"/>'
+                f'<line x1="{event_x}" y1="{slot_top}"'
+                f' x2="{event_x}" y2="{slot_top + 24}" class="{classes}"/>'
             )
-            text_y = y + 36 if label_position == 'below' else y - 6
+            text_y = slot_top + 36 if label_position == 'below' else slot_top - 6
             text_classes = classes + ' outside_label'
             content.append(
                 f'<text x="{event_x}" y="{text_y}"'
-                f' class="{text_classes}" style="font-size:10px">{label}</text>'
+                f' class="{text_classes}" style="font-size:{LABEL_FONT_PX}px">{label}</text>'
             )
             continue
 
         # Build inline styles from any key:value param that isn't functional
-        _functional_prefixes = ('position:', 'label_position:')
+        _functional_prefixes = ('position:', 'label_position:', 'height:')
         rect_styles = {
             p.split(':', 1)[0]: p.split(':', 1)[1]
             for p in params
@@ -453,7 +494,7 @@ def _generate_timeline_boxes(sheet_boxes: pd.DataFrame, left_to_right: bool) -> 
             if rect_styles else ''
         )
 
-        content.append(f'<rect x="{x}" y="{y}" width="{width}" height="24" class="{classes}"{style_attr}/>')
+        content.append(f'<rect x="{x}" y="{rect_y}" width="{width}" height="{thickness}" class="{classes}"{style_attr}/>')
 
         # Check if border is needed (draw after main rect so it appears on top)
         if 'border_left' in params:
@@ -466,20 +507,20 @@ def _generate_timeline_boxes(sheet_boxes: pd.DataFrame, left_to_right: bool) -> 
 
             if party_class:
                 border_classes = f'border {party_class}'
-                content.append(f'<rect x="{x}" y="{y}" width="2" height="24" class="{border_classes}"/>')
+                content.append(f'<rect x="{x}" y="{rect_y}" width="2" height="{thickness}" class="{border_classes}"/>')
 
         middle_x = (row['start_x'] + row['end_x']) / 2
 
         # Calculate font size, y position, and classes based on label_position
-        text_y = y + 12  # Default: middle of box
+        text_y = y_center  # Default: middle of the row slot
         text_classes = classes
         if label_position == 'above':
             text_y -= 24
-            font_size = 16  # Default font size
+            font_size = LABEL_FONT_PX
             text_classes += ' outside_label'
         elif label_position == 'below':
             text_y += 24
-            font_size = 16  # Default font size
+            font_size = LABEL_FONT_PX
             text_classes += ' outside_label'
         else:
             font_size = _calculate_font_size(label, width)

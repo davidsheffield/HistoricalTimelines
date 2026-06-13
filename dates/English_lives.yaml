@@ -150,15 +150,3 @@ entries:
   DOD: 1852-11-27
   Params:
     - position:13.5
-
-# Musicians
-- Label: Benjamin Britten
-  DOB: 1913-11-22
-  DOD: 1976-12-04
-  Params:
-    - position:14.5
-- Label: Peter Pears
-  DOB: 1910-06-22
-  DOD: 1986-04-03
-  Params:
-    - position:15.5

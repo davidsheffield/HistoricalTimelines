@@ -1,0 +1,327 @@
+# The 36 sultans of the Ottoman Empire, from Osman I (c. 1299) through
+# Mehmed VI (deposed 1922), each shown as a reign span (Start/End) with
+# birth/death dates (DOB/DOD).
+#
+# This file is the per-ruler REIGN LIST and is complementary to the single
+# Ottoman Empire PERIOD SPAN that already appears in Islamic_caliphates.yaml;
+# it is not a duplicate of it.
+#
+# Ottoman reigns are strictly sequential, so all entries sit on the base
+# position:3.5 set in global Params (no overlaps expected). Row 2.5 is
+# reserved by British_monarchs.yaml, which overlaps in time.
+#
+# Dates: extended ISO 8601, years zero-padded to 4 digits. Approximate
+# dates use a quoted 'c. ' prefix. Year-only is used where the day is
+# unknown. A '# CHECK' comment marks labels with uncertain dates (notably
+# the early sultans' birth dates and the foundational reign of Osman I).
+#
+# Mustafa I reigned twice (1617-1618 and 1622-1623); he is shown here as a
+# single span covering his first accession through his second deposition.
+
+global:
+  Keywords:
+    - Ottoman
+    - Sultan
+    - Reign
+  Params:
+    - position:3.5
+
+entries:
+
+- Label: Osman I  # CHECK
+  Start: 'c. 1299'
+  End: 'c. 1323'
+  DOB: 'c. 1255'
+  DOD: 'c. 1323'
+  Keywords:
+    - House_of_Osman
+
+- Label: Orhan  # CHECK
+  Start: 'c. 1323'
+  End: 1362
+  DOB: 'c. 1281'
+  DOD: 1362
+  Keywords:
+    - House_of_Osman
+
+- Label: Murad I
+  Start: 1362
+  End: 1389-06-15
+  DOB: 1326-06-29
+  DOD: 1389-06-15
+  Keywords:
+    - House_of_Osman
+
+- Label: Bayezid I  # CHECK
+  Start: 1389-06-15
+  End: 1402-07-20
+  DOB: 'c. 1360'
+  DOD: 1403-03-08
+  Keywords:
+    - House_of_Osman
+
+# Ottoman Interregnum (1402-1413) following Bayezid I's defeat at Ankara.
+
+- Label: Mehmed I  # CHECK
+  Start: 1413-07-05
+  End: 1421-05-26
+  DOB: 'c. 1386'
+  DOD: 1421-05-26
+  Keywords:
+    - House_of_Osman
+
+- Label: Murad II  # CHECK
+  Start: 1421-06-25
+  End: 1451-02-03
+  DOB: 1404-06-16
+  DOD: 1451-02-03
+  Keywords:
+    - House_of_Osman
+
+- Label: Mehmed II
+  Start: 1451-02-03
+  End: 1481-05-03
+  DOB: 1432-03-30
+  DOD: 1481-05-03
+  Keywords:
+    - House_of_Osman
+
+- Label: Bayezid II
+  Start: 1481-05-19
+  End: 1512-04-24
+  DOB: 1447-12-03
+  DOD: 1512-05-26
+  Keywords:
+    - House_of_Osman
+
+- Label: Selim I
+  Start: 1512-04-24
+  End: 1520-09-22
+  DOB: 1470-10-10
+  DOD: 1520-09-22
+  Keywords:
+    - House_of_Osman
+
+- Label: Suleiman I
+  Start: 1520-09-30
+  End: 1566-09-06
+  DOB: 1494-11-06
+  DOD: 1566-09-06
+  Keywords:
+    - House_of_Osman
+
+- Label: Selim II
+  Start: 1566-09-07
+  End: 1574-12-15
+  DOB: 1524-05-28
+  DOD: 1574-12-15
+  Keywords:
+    - House_of_Osman
+
+- Label: Murad III
+  Start: 1574-12-27
+  End: 1595-01-16
+  DOB: 1546-07-04
+  DOD: 1595-01-16
+  Keywords:
+    - House_of_Osman
+
+- Label: Mehmed III
+  Start: 1595-01-16
+  End: 1603-12-22
+  DOB: 1566-05-26
+  DOD: 1603-12-22
+  Keywords:
+    - House_of_Osman
+
+- Label: Ahmed I
+  Start: 1603-12-22
+  End: 1617-11-22
+  DOB: 1590-04-18
+  DOD: 1617-11-22
+  Keywords:
+    - House_of_Osman
+
+- Label: Mustafa I  # CHECK
+  Start: 1617-11-22
+  End: 1623-09-10
+  DOB: 'c. 1591'
+  DOD: 1639-01-20
+  Keywords:
+    - House_of_Osman
+
+- Label: Osman II
+  Start: 1618-02-26
+  End: 1622-05-20
+  DOB: 1604-11-03
+  DOD: 1622-05-20
+  Keywords:
+    - House_of_Osman
+  Params:
+    - label_position:above
+
+- Label: Murad IV
+  Start: 1623-09-10
+  End: 1640-02-08
+  DOB: 1612-07-27
+  DOD: 1640-02-08
+  Keywords:
+    - House_of_Osman
+
+- Label: Ibrahim
+  Start: 1640-02-08
+  End: 1648-08-08
+  DOB: 1615-11-05
+  DOD: 1648-08-18
+  Keywords:
+    - House_of_Osman
+
+- Label: Mehmed IV
+  Start: 1648-08-08
+  End: 1687-11-08
+  DOB: 1642-01-02
+  DOD: 1693-01-06
+  Keywords:
+    - House_of_Osman
+
+- Label: Suleiman II
+  Start: 1687-11-08
+  End: 1691-06-22
+  DOB: 1642-04-15
+  DOD: 1691-06-22
+  Keywords:
+    - House_of_Osman
+
+- Label: Ahmed II
+  Start: 1691-06-22
+  End: 1695-02-06
+  DOB: 1643-02-25
+  DOD: 1695-02-06
+  Keywords:
+    - House_of_Osman
+
+- Label: Mustafa II
+  Start: 1695-02-06
+  End: 1703-08-22
+  DOB: 1664-06-06
+  DOD: 1703-12-29
+  Keywords:
+    - House_of_Osman
+
+- Label: Ahmed III
+  Start: 1703-08-22
+  End: 1730-10-01
+  DOB: 1673-12-30
+  DOD: 1736-07-01
+  Keywords:
+    - House_of_Osman
+
+- Label: Mahmud I
+  Start: 1730-10-02
+  End: 1754-12-13
+  DOB: 1696-08-02
+  DOD: 1754-12-13
+  Keywords:
+    - House_of_Osman
+
+- Label: Osman III
+  Start: 1754-12-13
+  End: 1757-10-30
+  DOB: 1699-01-02
+  DOD: 1757-10-30
+  Keywords:
+    - House_of_Osman
+  Params:
+    - label_position:above
+
+- Label: Mustafa III
+  Start: 1757-10-30
+  End: 1774-01-21
+  DOB: 1717-01-28
+  DOD: 1774-01-21
+  Keywords:
+    - House_of_Osman
+
+- Label: Abdulhamid I
+  Start: 1774-01-21
+  End: 1789-04-07
+  DOB: 1725-03-20
+  DOD: 1789-04-07
+  Keywords:
+    - House_of_Osman
+
+- Label: Selim III
+  Start: 1789-04-07
+  End: 1807-05-29
+  DOB: 1761-12-24
+  DOD: 1808-07-28
+  Keywords:
+    - House_of_Osman
+
+- Label: Mustafa IV
+  Start: 1807-05-29
+  End: 1808-07-28
+  DOB: 1779-09-08
+  DOD: 1808-11-17
+  Keywords:
+    - House_of_Osman
+  Params:
+    - label_position:above
+
+- Label: Mahmud II
+  Start: 1808-07-28
+  End: 1839-07-01
+  DOB: 1785-07-20
+  DOD: 1839-07-01
+  Keywords:
+    - House_of_Osman
+
+- Label: Abdulmejid I
+  Start: 1839-07-01
+  End: 1861-06-25
+  DOB: 1823-04-25
+  DOD: 1861-06-25
+  Keywords:
+    - House_of_Osman
+
+- Label: Abdulaziz
+  Start: 1861-06-25
+  End: 1876-05-30
+  DOB: 1830-02-08
+  DOD: 1876-06-04
+  Keywords:
+    - House_of_Osman
+
+- Label: Murad V
+  Start: 1876-05-30
+  End: 1876-08-31
+  DOB: 1840-09-21
+  DOD: 1904-08-29
+  Keywords:
+    - House_of_Osman
+  Params:
+    - label_position:above
+
+- Label: Abdulhamid II
+  Start: 1876-08-31
+  End: 1909-04-27
+  DOB: 1842-09-21
+  DOD: 1918-02-10
+  Keywords:
+    - House_of_Osman
+
+- Label: Mehmed V
+  Start: 1909-04-27
+  End: 1918-07-03
+  DOB: 1844-11-02
+  DOD: 1918-07-03
+  Keywords:
+    - House_of_Osman
+
+- Label: Mehmed VI
+  Start: 1918-07-04
+  End: 1922-11-01
+  DOB: 1861-01-14
+  DOD: 1926-05-16
+  Keywords:
+    - House_of_Osman

@@ -1,0 +1,99 @@
+global:
+  Keywords:
+    - War
+  Params:
+    - position:10.5
+
+# The French Revolutionary Wars (1792-1802) and Napoleonic Wars
+# (1803-1815): the overarching conflicts, the seven Coalition wars, and
+# the major sub-campaigns (Peninsular War, invasion of Russia, Hundred
+# Days). Alternating entries use label_position:below to reduce label
+# overlap on closely-spaced wars. A second section lists iconic battles
+# as point-in-time events.
+entries:
+# War periods
+- Label: 'French Revolutionary Wars'
+  Start: '1792-04-20'
+  End: '1802-03-25'
+- Label: 'War of the First Coalition'
+  Start: '1792-04-20'
+  End: '1797-10-17'
+  Params:
+    - label_position:below
+- Label: 'War of the Second Coalition'
+  Start: '1798-11-29'
+  End: '1802-03-25'
+- Label: 'Napoleonic Wars'
+  Start: '1803-05-18'
+  End: '1815-11-20'
+  Params:
+    - label_position:below
+- Label: 'War of the Third Coalition'
+  Start: '1805-08-25'
+  End: '1805-12-26'
+- Label: 'War of the Fourth Coalition'
+  Start: '1806-10-09'
+  End: '1807-07-09'
+  Params:
+    - label_position:below
+- Label: 'Peninsular War'
+  Start: '1807-10-27'
+  End: '1814-04-17'
+- Label: 'War of the Fifth Coalition'
+  Start: '1809-04-10'
+  End: '1809-10-14'
+  Params:
+    - label_position:below
+- Label: 'French Invasion of Russia'
+  Start: '1812-06-24'
+  End: '1812-12-14'
+- Label: 'War of the Sixth Coalition'
+  Start: '1813-03-03'
+  End: '1814-05-30'
+  Params:
+    - label_position:below
+- Label: 'War of the Seventh Coalition'
+  Start: '1815-03-20'
+  End: '1815-07-08'
+- Label: 'Hundred Days'
+  Start: '1815-03-20'
+  End: '1815-07-08'
+  Params:
+    - label_position:below
+
+# Iconic battles (point-in-time events)
+- Label: 'Trafalgar'
+  Date: '1805-10-21'
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:15
+- Label: 'Austerlitz'
+  Date: '1805-12-02'
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:17
+- Label: 'Borodino'
+  Date: '1812-09-07'
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:19
+- Label: 'Leipzig'
+  Date: '1813-10-16'
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:15
+- Label: 'Waterloo'
+  Date: '1815-06-18'
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:17

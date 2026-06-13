@@ -1,0 +1,165 @@
+global:
+  Keywords:
+    - Mathematician
+    - Life
+
+entries:
+# Ancient Greek
+- Label: Thales
+  DOB: 'c. -0624'
+  DOD: 'c. -0546'
+  Params:
+    - position:9.5
+- Label: Pythagoras
+  DOB: 'c. -0570'
+  DOD: 'c. -0495'
+  Params:
+    - position:10.5
+- Label: Euclid
+  DOB: 'c. -0325'
+  DOD: 'c. -0265'
+  Params:
+    - position:11.5
+- Label: Archimedes
+  DOB: 'c. -0287'
+  DOD: -0212-11-12
+  Params:
+    - position:12.5
+- Label: Apollonius
+  DOB: 'c. -0240'
+  DOD: 'c. -0190'
+  Params:
+    - position:13.5
+# Late Antiquity
+- Label: Hypatia
+  DOB: 'c. 0360'
+  DOD: 0415-03
+  Params:
+    - position:14.5
+# Medieval / Islamic Golden Age
+- Label: Brahmagupta
+  DOB: 0598
+  DOD: 'c. 0668'
+  Params:
+    - position:9.5
+- Label: Al-Khwarizmi
+  DOB: 'c. 0780'
+  DOD: 'c. 0850'
+  Params:
+    - position:10.5
+# Medieval Europe
+- Label: Fibonacci
+  DOB: 'c. 1170'
+  DOD: 'c. 1250'
+  Params:
+    - position:11.5
+# Early Modern
+- Label: Cardano
+  DOB: 1501-09-24
+  DOD: 1576-09-21
+  Params:
+    - position:12.5
+- Label: John Napier
+  DOB: 1550-02-01
+  DOD: 1617-04-04
+  Params:
+    - position:13.5
+- Label: Pierre de Fermat
+  DOB: 1607-08-17
+  DOD: 1665-01-12
+  Params:
+    - position:14.5
+- Label: Blaise Pascal
+  DOB: 1623-06-19
+  DOD: 1662-08-19
+  Params:
+    - position:9.5
+- Label: Isaac Newton
+  DOB: 1643-01-04
+  DOD: 1727-03-31
+  Params:
+    - position:10.5
+- Label: Gottfried Leibniz
+  DOB: 1646-07-01
+  DOD: 1716-11-14
+  Params:
+    - position:11.5
+# 18th Century
+- Label: Leonhard Euler
+  DOB: 1707-04-15
+  DOD: 1783-09-18
+  Params:
+    - position:12.5
+- Label: Joseph-Louis Lagrange
+  DOB: 1736-01-25
+  DOD: 1813-04-10
+  Params:
+    - position:13.5
+- Label: Pierre-Simon Laplace
+  DOB: 1749-03-23
+  DOD: 1827-03-05
+  Params:
+    - position:14.5
+# 19th Century
+- Label: Carl Friedrich Gauss
+  DOB: 1777-04-30
+  DOD: 1855-02-23
+  Params:
+    - position:9.5
+- Label: Augustin-Louis Cauchy
+  DOB: 1789-08-21
+  DOD: 1857-05-23
+  Params:
+    - position:10.5
+- Label: Niels Henrik Abel
+  DOB: 1802-08-05
+  DOD: 1829-04-06
+  Params:
+    - position:11.5
+- Label: "Évariste Galois"
+  DOB: 1811-10-25
+  DOD: 1832-05-31
+  Params:
+    - position:12.5
+- Label: Bernhard Riemann
+  DOB: 1826-09-17
+  DOD: 1866-07-20
+  Params:
+    - position:13.5
+- Label: Georg Cantor
+  DOB: 1845-03-03
+  DOD: 1918-01-06
+  Params:
+    - position:14.5
+# Late 19th / Early 20th Century
+- Label: "Henri Poincaré"
+  DOB: 1854-04-29
+  DOD: 1912-07-17
+  Params:
+    - position:9.5
+- Label: David Hilbert
+  DOB: 1862-01-23
+  DOD: 1943-02-14
+  Params:
+    - position:10.5
+- Label: Emmy Noether
+  DOB: 1882-03-23
+  DOD: 1935-04-14
+  Params:
+    - position:11.5
+- Label: Srinivasa Ramanujan
+  DOB: 1887-12-22
+  DOD: 1920-04-26
+  Params:
+    - position:12.5
+# 20th Century
+- Label: John von Neumann
+  DOB: 1903-12-28
+  DOD: 1957-02-08
+  Params:
+    - position:13.5
+- Label: Alan Turing
+  DOB: 1912-06-23
+  DOD: 1954-06-07
+  Params:
+    - position:14.5

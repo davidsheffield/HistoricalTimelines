@@ -4,58 +4,312 @@ global:
     - Life
 
 entries:
-- Label: Robert Hooke
-  DOB: 1635-07-28
-  DOD: 1703-03-03
+# Founders / astronomy
+- Label: Nicolaus Copernicus
+  DOB: 1473-02-19
+  DOD: 1543-05-24
   Params:
     - position:9.5
+# - Label: Tycho Brahe
+#   DOB: 1546-12-14
+#   DOD: 1601-10-24
+#   Params:
+#     - position:22.5
+- Label: Galileo Galilei
+  DOB: 1564-02-15
+  DOD: 1642-01-08
+  Params:
+    - position:9.5
+- Label: Johannes Kepler
+  DOB: 1571-12-27
+  DOD: 1630-11-15
+  Params:
+    - position:10.5
+# - Label: René Descartes
+#   DOB: 1596-03-31
+#   DOD: 1650-02-11
+#   Params:
+#     - position:23.5
+# - Label: Christiaan Huygens
+#   DOB: 1629-04-14
+#   DOD: 1695-07-08
+#   Params:
+#     - position:22.5
+# Classical, electromagnetism & thermodynamics
+# - Label: Robert Hooke
+#   DOB: 1635-07-28
+#   DOD: 1703-03-03
+#   Params:
+#     - position:24.5
 - Label: Isaac Newton
   DOB: 1643-01-04
   DOD: 1727-03-31
   Params:
-    - position:10.5
-- Label: Edmond Halley
-  DOB: 1656-11-08
-  DOD: 1742-01-25
-  Params:
-    - position:11.5
-- Label: Henry Cavendish
-  DOB: 1731-10-10
-  DOD: 1810-02-24
-  Params:
-    - position:10.5
-- Label: William Herschel
-  DOB: 1738-11-15
-  DOD: 1822-08-25
-  Params:
-    - position:11.5
-- Label: John Herschel
-  DOB: 1792-03-07
-  DOD: 1871-05-11
-  Params:
-    - position:12.5
+    - position:9.5
+# - Label: Edmond Halley
+#   DOB: 1656-11-08
+#   DOD: 1742-01-25
+#   Params:
+#     - position:23.5
+# - Label: Henry Cavendish
+#   DOB: 1731-10-10
+#   DOD: 1810-02-24
+#   Params:
+#     - position:22.5
+# - Label: William Herschel
+#   DOB: 1738-11-15
+#   DOD: 1822-08-25
+#   Params:
+#     - position:24.5
+# - Label: André-Marie Ampère
+#   DOB: 1775-01-20
+#   DOD: 1836-06-10
+#   Params:
+#     - position:23.5
+# - Label: Carl Friedrich Gauss
+#   DOB: 1777-04-30
+#   DOD: 1855-02-23
+#   Params:
+#     - position:25.5
+# - Label: Georg Ohm
+#   DOB: 1789-03-16
+#   DOD: 1854-07-06
+#   Params:
+#     - position:26.5
 - Label: Michael Faraday
   DOB: 1791-09-22
   DOD: 1867-08-25
   Params:
     - position:9.5
-- Label: James Prescott Joule
-  DOB: 1818-12-24
-  DOD: 1889-10-11
+# - Label: John Herschel
+#   DOB: 1792-03-07
+#   DOD: 1871-05-11
+#   Params:
+#     - position:27.5
+# - Label: James Prescott Joule
+#   DOB: 1818-12-24
+#   DOD: 1889-10-11
+#   Params:
+#     - position:22.5
+# - Label: Lord Kelvin
+#   DOB: 1824-06-26
+#   DOD: 1907-12-17
+#   Params:
+#     - position:24.5
+- Label: James Clerk Maxwell
+  DOB: 1831-06-13
+  DOD: 1879-11-05
   Params:
-    - position:11.5
+    - position:10.5
+# - Label: Lord Rayleigh
+#   DOB: 1842-11-12
+#   DOD: 1919-06-30
+#   Params:
+#     - position:23.5
+# - Label: Ludwig Boltzmann
+#   DOB: 1844-02-20
+#   DOD: 1906-09-05
+#   Params:
+#     - position:28.5
+# - Label: Wilhelm Röntgen
+#   DOB: 1845-03-27
+#   DOD: 1923-02-10
+#   Params:
+#     - position:29.5
+# - Label: Henri Becquerel
+#   DOB: 1852-12-15
+#   DOD: 1908-08-25
+#   Params:
+#     - position:30.5
+# - Label: Albert Michelson
+#   DOB: 1852-12-19
+#   DOD: 1931-05-09
+#   Params:
+#     - position:31.5
+# - Label: Hendrik Lorentz
+#   DOB: 1853-07-18
+#   DOD: 1928-02-04
+#   Params:
+#     - position:32.5
+# - Label: Henri Poincaré
+#   DOB: 1854-04-29
+#   DOD: 1912-07-17
+#   Params:
+#     - position:33.5
 - Label: J. J. Thomson
   DOB: 1856-12-18
   DOD: 1940-08-30
   Params:
+    - position:11.5
+# - Label: Heinrich Hertz
+#   DOB: 1857-02-22
+#   DOD: 1894-01-01
+#   Params:
+#     - position:25.5
+# Quantum pioneers
+- Label: Max Planck
+  DOB: 1858-04-23
+  DOD: 1947-10-04
+  Params:
+    - position:12.5
+# - Label: Pierre Curie
+#   DOB: 1859-05-15
+#   DOD: 1906-04-19
+#   Params:
+#     - position:26.5
+- Label: Marie Curie
+  DOB: 1867-11-07
+  DOD: 1934-07-04
+  Params:
+    - position:13.5
+# - Label: Robert Millikan
+#   DOB: 1868-03-22
+#   DOD: 1953-12-19
+#   Params:
+#     - position:34.5
+- Label: Ernest Rutherford
+  DOB: 1871-08-30
+  DOD: 1937-10-19
+  Params:
     - position:9.5
+- Label: Albert Einstein
+  DOB: 1879-03-14
+  DOD: 1955-04-18
+  Params:
+    - position:14.5
+# - Label: Max Born
+#   DOB: 1882-12-11
+#   DOD: 1970-01-05
+#   Params:
+#     - position:27.5
+- Label: Niels Bohr
+  DOB: 1885-10-07
+  DOD: 1962-11-18
+  Params:
+    - position:10.5
+- Label: Erwin Schrödinger
+  DOB: 1887-08-12
+  DOD: 1961-01-04
+  Params:
+    - position:15.5
+# - Label: James Chadwick
+#   DOB: 1891-10-20
+#   DOD: 1974-07-24
+#   Params:
+#     - position:22.5
+# - Label: Louis de Broglie
+#   DOB: 1892-08-15
+#   DOD: 1987-03-19
+#   Params:
+#     - position:35.5
+# - Label: Arthur Compton
+#   DOB: 1892-09-10
+#   DOD: 1962-03-15
+#   Params:
+#     - position:36.5
+# - Label: Wolfgang Pauli
+#   DOB: 1900-04-25
+#   DOD: 1958-12-15
+#   Params:
+#     - position:25.5
+- Label: Enrico Fermi
+  DOB: 1901-09-29
+  DOD: 1954-11-28
+  Params:
+    - position:16.5
+- Label: Werner Heisenberg
+  DOB: 1901-12-05
+  DOD: 1976-02-01
+  Params:
+    - position:17.5
 - Label: Paul Dirac
   DOB: 1902-08-08
   DOD: 1984-10-20
   Params:
-    - position:10.5
+    - position:18.5
+# - Label: J. Robert Oppenheimer
+#   DOB: 1904-04-22
+#   DOD: 1967-02-18
+#   Params:
+#     - position:37.5
+# - Label: Sin-Itiro Tomonaga
+#   DOB: 1906-03-31
+#   DOD: 1979-07-08
+#   Params:
+#     - position:38.5
+# - Label: Hans Bethe
+#   DOB: 1906-07-02
+#   DOD: 2005-03-06
+#   Params:
+#     - position:39.5
+# - Label: Hideki Yukawa
+#   DOB: 1907-01-23
+#   DOD: 1981-09-08
+#   Params:
+#     - position:26.5
+# - Label: Lev Landau
+#   DOB: 1908-01-22
+#   DOD: 1968-04-01
+#   Params:
+#     - position:24.5
+# Particle & modern theoretical
+# - Label: Julian Schwinger
+#   DOB: 1918-02-12
+#   DOD: 1994-07-16
+#   Params:
+#     - position:28.5
+- Label: Richard Feynman
+  DOB: 1918-05-11
+  DOD: 1988-02-15
+  Params:
+    - position:19.5
+# - Label: Chen-Ning Yang
+#   DOB: 1922-10-01
+#   DOD: 2025-10-18
+#   Params:
+#     - position:23.5
+# - Label: Abdus Salam
+#   DOB: 1926-01-29
+#   DOD: 1996-11-21
+#   Params:
+#     - position:29.5
+- Label: Peter Higgs
+  DOB: 1929-05-29
+  DOD: 2024-04-08
+  Params:
+    - position:20.5
+- Label: Murray Gell-Mann
+  DOB: 1929-09-15
+  DOD: 2019-05-24
+  Params:
+    - position:21.5
+# - Label: Roger Penrose
+#   DOB: 1931-08-08
+#   Alive: true
+#   Params:
+#     - position:30.5
+# - Label: Sheldon Glashow
+#   DOB: 1932-12-05
+#   Alive: true
+#   Params:
+#     - position:31.5
+# - Label: Steven Weinberg
+#   DOB: 1933-05-03
+#   DOD: 2021-07-23
+#   Params:
+#     - position:32.5
 - Label: Stephen Hawking
   DOB: 1942-01-08
   DOD: 2018-03-14
   Params:
-    - position:11.5
+    - position:9.5
+# - Label: Gerard 't Hooft
+#   DOB: 1946-07-05
+#   Alive: true
+#   Params:
+#     - position:33.5
+# - Label: Edward Witten
+#   DOB: 1951-08-26
+#   Alive: true
+#   Params:
+#     - position:40.5

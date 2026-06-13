@@ -1,0 +1,108 @@
+global:
+  Keywords:
+    - Eastern_Mediterranean
+    - Civilization
+  Params:
+    - position:8.5
+
+# Ancient Eastern Mediterranean and Anatolian civilizations (period spans),
+# c. 1900 BCE - 146 BCE. Excludes Egypt, Greece (lives), Achaemenid Persia,
+# Rome, the Steppe peoples, and the Israelite/Judahite kingdoms, which are
+# covered in other files; Minoan and Mycenaean CIVILIZATION periods are
+# included here since only Greek lives are covered elsewhere.
+# Dates are approximate and drawn from rough attested/conventional ranges;
+# the "# CHECK" comment on a Label marks dates that should be verified later.
+# position: values stagger time-overlapping spans onto separate rows so the
+# bars do not collide; they may need tuning after a first render.
+
+entries:
+
+# --- Aegean Bronze Age (overlapping; staggered rows) ---
+
+- Label: Minoan civilization (palatial Crete)  # CHECK
+  Start: c. -1900
+  End: c. -1100
+  Params:
+    - position:8.5
+    - fill:#2e7d8a;
+
+- Label: Mycenaean Greece  # CHECK
+  Start: c. -1750
+  End: c. -1050
+  Params:
+    - position:9.5
+    - fill:#50a3b0;
+
+- Label: Greek Dark Age  # CHECK
+  Start: c. -1100
+  End: c. -0750
+  Params:
+    - position:9.5
+    - fill:#2e7d8a;
+
+- Label: Troy VI-VIIa  # CHECK
+  Start: c. -1750
+  End: c. -1180
+  Params:
+    - position:10.5
+    - fill:#50a3b0;
+
+# --- Anatolian kingdoms ---
+
+- Label: Hittite Old Kingdom  # CHECK
+  Start: c. -1650
+  End: c. -1500
+  Params:
+    - position:11.5
+    - fill:#2e7d8a;
+
+- Label: Hittite Empire (New Kingdom)  # CHECK
+  Start: c. -1400
+  End: c. -1180
+  Params:
+    - position:11.5
+    - fill:#50a3b0;
+
+- Label: Phrygia  # CHECK
+  Start: c. -1200
+  End: c. -0680
+  Params:
+    - position:10.5
+    - fill:#2e7d8a;
+
+- Label: Urartu  # CHECK
+  Start: c. -0860
+  End: c. -0590
+  Params:
+    - position:11.5
+    - fill:#2e7d8a;
+
+- Label: Lydia (Mermnad dynasty)  # CHECK
+  Start: c. -0700
+  End: -0546
+  Params:
+    - position:10.5
+    - fill:#50a3b0;
+
+# --- Levantine and western Mediterranean ---
+
+- Label: Phoenician city-states (Tyre and Sidon)  # CHECK
+  Start: c. -1200
+  End: c. -0539
+  Params:
+    - position:8.5
+    - fill:#50a3b0;
+
+- Label: Carthage (Carthaginian Republic)  # CHECK
+  Start: c. -0814
+  End: -0146
+  Params:
+    - position:9.5
+    - fill:#2e7d8a;
+
+- Label: Etruscan civilization  # CHECK
+  Start: c. -0800
+  End: c. -0264
+  Params:
+    - position:8.5
+    - fill:#2e7d8a;

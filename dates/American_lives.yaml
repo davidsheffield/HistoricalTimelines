@@ -1,0 +1,231 @@
+global:
+  Keywords:
+    - USA
+    - Life
+
+entries:
+# Founders / statesmen
+- Label: Benjamin Franklin
+  DOB: 1706-01-17
+  DOD: 1790-04-17
+  Params:
+    - position:9.5
+- Label: John Jay
+  DOB: 1745-12-23
+  DOD: 1829-05-17
+  Params:
+    - position:10.5
+- Label: Alexander Hamilton
+  DOB: 1755-01-11
+  DOD: 1804-07-12
+  Params:
+    - position:11.5
+
+# Jurists
+- Label: John Marshall
+  DOB: 1755-09-24
+  DOD: 1835-07-06
+  Params:
+    - position:12.5
+- Label: Thurgood Marshall
+  DOB: 1908-07-02
+  DOD: 1993-01-24
+  Params:
+    - position:9.5
+- Label: Ruth Bader Ginsburg
+  DOB: 1933-03-15
+  DOD: 2020-09-18
+  Params:
+    - position:10.5
+
+# Inventors / scientists / industrialists
+- Label: Andrew Carnegie
+  DOB: 1835-11-25
+  DOD: 1919-08-11
+  Params:
+    - position:9.5
+- Label: John D. Rockefeller
+  DOB: 1839-07-08
+  DOD: 1937-05-23
+  Params:
+    - position:10.5
+- Label: J.P. Morgan
+  DOB: 1837-04-17
+  DOD: 1913-03-31
+  Params:
+    - position:11.5
+- Label: Alexander Graham Bell
+  DOB: 1847-03-03
+  DOD: 1922-08-02
+  Params:
+    - position:12.5
+- Label: Thomas Edison
+  DOB: 1847-02-11
+  DOD: 1931-10-18
+  Params:
+    - position:13.5
+- Label: Nikola Tesla
+  DOB: 1856-07-10
+  DOD: 1943-01-07
+  Params:
+    - position:14.5
+- Label: Henry Ford
+  DOB: 1863-07-30
+  DOD: 1947-04-07
+  Params:
+    - position:15.5
+- Label: Wilbur Wright
+  DOB: 1867-04-16
+  DOD: 1912-05-30
+  Params:
+    - position:16.5
+- Label: Orville Wright
+  DOB: 1871-08-19
+  DOD: 1948-01-30
+  Params:
+    - position:17.5
+
+# Writers
+- Label: Edgar Allan Poe
+  DOB: 1809-01-19
+  DOD: 1849-10-07
+  Params:
+    - position:9.5
+- Label: Walt Whitman
+  DOB: 1819-05-31
+  DOD: 1892-03-26
+  Params:
+    - position:10.5
+- Label: Emily Dickinson
+  DOB: 1830-12-10
+  DOD: 1886-05-15
+  Params:
+    - position:11.5
+- Label: Mark Twain
+  DOB: 1835-11-30
+  DOD: 1910-04-21
+  Params:
+    - position:12.5
+- Label: F. Scott Fitzgerald
+  DOB: 1896-09-24
+  DOD: 1940-12-21
+  Params:
+    - position:13.5
+- Label: Ernest Hemingway
+  DOB: 1899-07-21
+  DOD: 1961-07-02
+  Params:
+    - position:14.5
+- Label: John Steinbeck
+  DOB: 1902-02-27
+  DOD: 1968-12-20
+  Params:
+    - position:15.5
+- Label: Toni Morrison
+  DOB: 1931-02-18
+  DOD: 2019-08-05
+  Params:
+    - position:16.5
+
+# Activists / reformers
+- Label: John Brown
+  DOB: 1800-05-09
+  DOD: 1859-12-02
+  Params:
+    - position:9.5
+- Label: Frederick Douglass
+  DOB: c. 1818-02
+  DOD: 1895-02-20
+  Params:
+    - position:10.5
+- Label: Harriet Tubman
+  DOB: c. 1822
+  DOD: 1913-03-10
+  Params:
+    - position:11.5
+- Label: Susan B. Anthony
+  DOB: 1820-02-15
+  DOD: 1906-03-13
+  Params:
+    - position:12.5
+- Label: Malcolm X
+  DOB: 1925-05-19
+  DOD: 1965-02-21
+  Params:
+    - position:9.5
+- Label: Rosa Parks
+  DOB: 1913-02-04
+  DOD: 2005-10-24
+  Params:
+    - position:10.5
+- Label: Martin Luther King Jr.
+  DOB: 1929-01-15
+  DOD: 1968-04-04
+  Params:
+    - position:11.5
+
+# Artists / musicians / cultural figures
+- Label: Louis Armstrong
+  DOB: 1901-08-04
+  DOD: 1971-07-06
+  Params:
+    - position:9.5
+- Label: Ella Fitzgerald
+  DOB: 1917-04-25
+  DOD: 1996-06-15
+  Params:
+    - position:10.5
+- Label: Frank Sinatra
+  DOB: 1915-12-12
+  DOD: 1998-05-14
+  Params:
+    - position:11.5
+- Label: Georgia O'Keeffe
+  DOB: 1887-11-15
+  DOD: 1986-03-06
+  Params:
+    - position:12.5
+- Label: Andy Warhol
+  DOB: 1928-08-06
+  DOD: 1987-02-22
+  Params:
+    - position:13.5
+- Label: Elvis Presley
+  DOB: 1935-01-08
+  DOD: 1977-08-16
+  Params:
+    - position:14.5
+- Label: Marilyn Monroe
+  DOB: 1926-06-01
+  DOD: 1962-08-05
+  Params:
+    - position:15.5
+- Label: Walt Disney
+  DOB: 1901-12-05
+  DOD: 1966-12-15
+  Params:
+    - position:16.5
+
+# Explorers / aviators / astronauts
+- Label: Amelia Earhart
+  DOB: 1897-07-24
+  DOD: 1937-07-02
+  Params:
+    - position:9.5
+- Label: Neil Armstrong
+  DOB: 1930-08-05
+  DOD: 2012-08-25
+  Params:
+    - position:10.5
+
+# Modern figures
+- Label: Steve Jobs
+  DOB: 1955-02-24
+  DOD: 2011-10-05
+  Params:
+    - position:9.5
+- Label: Muhammad Ali
+  DOB: 1942-01-17
+  DOD: 2016-06-03
+  Params:
+    - position:10.5

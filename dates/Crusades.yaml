@@ -1,0 +1,113 @@
+global:
+  Keywords:
+    - War
+  Params:
+    - position:16.5
+
+# The Crusades as period spans (c. 1096-1444 CE): the numbered Levantine
+# crusades (First through Ninth) plus notable named crusades. The Reconquista
+# and general medieval wars live in other files (Medieval_wars.yaml,
+# Battles.yaml) and are not duplicated here.
+# Base band ~16.5-18.5. Near-contemporaneous campaigns (e.g. the People's
+# Crusade with the First, and the Albigensian / Children's Crusades during the
+# Fourth-Fifth) are staggered onto adjacent rows so the bars do not collide.
+# Each entry carries a single cross-red fill for a consistent look.
+# "# CHECK" marks dates that should be verified later.
+entries:
+- Label: People's Crusade
+  Start: 1096-04
+  End: 1096-10-21
+  Params:
+    - position:17.5
+    - fill:#9c2b2b;
+    - label_position:below
+- Label: First Crusade
+  Start: 1096-08-15
+  End: 1099-07-15
+  Params:
+    - position:16.5
+    - fill:#9c2b2b;
+- Label: Second Crusade
+  Start: 1147
+  End: 1150
+  Params:
+    - position:16.5
+    - fill:#9c2b2b;
+    - label_position:below
+- Label: Northern (Baltic) Crusades  # CHECK
+  Start: 1147
+  End: 1435
+  Params:
+    - position:18.5
+    - fill:#9c2b2b;
+- Label: Third Crusade
+  Start: 1189-05-11
+  End: 1192-09-02
+  Params:
+    - position:16.5
+    - fill:#9c2b2b;
+- Label: Fourth Crusade
+  Start: 1202
+  End: 1204
+  Params:
+    - position:16.5
+    - fill:#9c2b2b;
+    - label_position:below
+- Label: Albigensian Crusade
+  Start: 1209
+  End: 1229
+  Params:
+    - position:17.5
+    - fill:#9c2b2b;
+- Label: Children's Crusade
+  Start: 1212-05
+  End: 1212-09
+  Params:
+    - position:16.5
+    - fill:#9c2b2b;
+    - label_position:below
+- Label: Fifth Crusade
+  Start: 1217
+  End: 1221
+  Params:
+    - position:16.5
+    - fill:#9c2b2b;
+- Label: Sixth Crusade
+  Start: 1228
+  End: 1229
+  Params:
+    - position:16.5
+    - fill:#9c2b2b;
+    - label_position:below
+- Label: Seventh Crusade
+  Start: 1248
+  End: 1254
+  Params:
+    - position:16.5
+    - fill:#9c2b2b;
+- Label: Eighth Crusade
+  Start: 1270
+  End: 1270
+  Params:
+    - position:16.5
+    - fill:#9c2b2b;
+    - label_position:below
+- Label: Ninth Crusade
+  Start: 1271
+  End: 1272
+  Params:
+    - position:17.5
+    - fill:#9c2b2b;
+- Label: Hussite Crusades  # CHECK
+  Start: 1420
+  End: 1431
+  Params:
+    - position:16.5
+    - fill:#9c2b2b;
+- Label: Crusade of Varna
+  Start: 1443
+  End: 1444-11-10
+  Params:
+    - position:16.5
+    - fill:#9c2b2b;
+    - label_position:below

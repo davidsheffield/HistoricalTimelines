@@ -1,0 +1,176 @@
+global:
+  Keywords:
+    - Space
+    - Event
+
+entries:
+# Space Age begins
+- Label: Sputnik 1 (first satellite)
+  Date: 1957-10-04
+  Params:
+    - position:15
+- Label: Sputnik 2 / Laika (first animal in orbit)
+  Date: 1957-11-03
+  Params:
+    - position:17
+- Label: Explorer 1 (first US satellite)
+  Date: 1958-02-01
+  Params:
+    - position:19
+- Label: Luna 2 (first spacecraft to reach the Moon)
+  Date: 1959-09-14
+  Params:
+    - position:21
+# Human spaceflight begins
+- Label: Vostok 1 (Gagarin, first human in space)
+  Date: 1961-04-12
+  Params:
+    - position:15
+- Label: Freedom 7 (Shepard, first American in space)
+  Date: 1961-05-05
+  Params:
+    - position:17
+- Label: Friendship 7 (Glenn, first American to orbit)
+  Date: 1962-02-20
+  Params:
+    - position:19
+- Label: Vostok 6 (Tereshkova, first woman in space)
+  Date: 1963-06-16
+  Params:
+    - position:21
+- Label: Voskhod 2 (Leonov, first spacewalk)
+  Date: 1965-03-18
+  Params:
+    - position:15
+- Label: Gemini 4 (White, first US spacewalk)
+  Date: 1965-06-03
+  Params:
+    - position:17
+- Label: Luna 9 (first soft Moon landing)
+  Date: 1966-02-03
+  Params:
+    - position:19
+# Apollo program
+- Label: Apollo 1 fire (Grissom, White, Chaffee)
+  Date: 1967-01-27
+  Params:
+    - position:21
+- Label: Apollo 8 (first crewed lunar orbit)
+  Date: 1968-12-21
+  Params:
+    - position:15
+- Label: Apollo 11 (first Moon landing)
+  Date: 1969-07-20
+  Params:
+    - position:17
+- Label: Apollo 13 (aborted lunar landing)
+  Date: 1970-04-11
+  Params:
+    - position:19
+# Space stations and interplanetary probes
+- Label: Salyut 1 (first space station)
+  Date: 1971-04-19
+  Params:
+    - position:21
+- Label: Mariner 9 (first spacecraft to orbit Mars)
+  Date: 1971-11-14
+  Params:
+    - position:15
+- Label: Pioneer 10 launch
+  Date: 1972-03-03
+  Params:
+    - position:17
+- Label: Skylab launch
+  Date: 1973-05-14
+  Params:
+    - position:19
+- Label: Apollo-Soyuz (first US-Soviet docking)
+  Date: 1975-07-17
+  Params:
+    - position:21
+- Label: Viking 1 lands on Mars
+  Date: 1976-07-20
+  Params:
+    - position:15
+- Label: Voyager 2 launch
+  Date: 1977-08-20
+  Params:
+    - position:17
+- Label: Voyager 1 launch
+  Date: 1977-09-05
+  Params:
+    - position:19
+# Shuttle era
+- Label: Space Shuttle Columbia STS-1
+  Date: 1981-04-12
+  Params:
+    - position:21
+- Label: Challenger disaster (STS-51-L)
+  Date: 1986-01-28
+  Params:
+    - position:15
+- Label: Mir space station launch
+  Date: 1986-02-20
+  Params:
+    - position:17
+- Label: Hubble Space Telescope launch
+  Date: 1990-04-24
+  Params:
+    - position:19
+- Label: Galileo arrives at Jupiter
+  Date: 1995-12-07
+  Params:
+    - position:21
+- Label: Mars Pathfinder / Sojourner lands
+  Date: 1997-07-04
+  Params:
+    - position:15
+# International Space Station and beyond
+- Label: Zarya (ISS first module) launch
+  Date: 1998-11-20
+  Params:
+    - position:17
+- Label: Spirit rover lands on Mars
+  Date: 2004-01-04
+  Params:
+    - position:19
+- Label: Opportunity rover lands on Mars
+  Date: 2004-01-25
+  Params:
+    - position:21
+- Label: SpaceShipOne (first private crewed spaceflight)
+  Date: 2004-06-21
+  Params:
+    - position:15
+- Label: Cassini enters Saturn orbit
+  Date: 2004-07-01
+  Params:
+    - position:17
+- Label: New Horizons launch
+  Date: 2006-01-19
+  Params:
+    - position:19
+- Label: Curiosity rover lands on Mars
+  Date: 2012-08-06
+  Params:
+    - position:21
+- Label: New Horizons Pluto flyby
+  Date: 2015-07-14
+  Params:
+    - position:15
+- Label: SpaceX Falcon Heavy first flight
+  Date: 2018-02-06
+  Params:
+    - position:17
+- Label: SpaceX Crew Dragon Demo-2 (first crewed commercial orbital)
+  Date: 2020-05-30
+  Params:
+    - position:19
+- Label: James Webb Space Telescope launch
+  Date: 2021-12-25
+  Params:
+    - position:21
+- Label: Artemis 1 (first SLS launch)
+  Date: 2022-11-16
+  Params:
+    - position:15

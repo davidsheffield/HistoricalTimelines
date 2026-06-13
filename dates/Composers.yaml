@@ -1,0 +1,258 @@
+global:
+  Keywords:
+    - Composer
+    - Life
+
+entries:
+# Renaissance / Early Baroque
+- Label: Claudio Monteverdi
+  DOB: 1567-05-15
+  DOD: 1643-11-29
+  Params:
+    - position:9.5
+# Baroque
+- Label: Henry Purcell
+  DOB: c. 1659-09-10
+  DOD: 1695-11-21
+  Params:
+    - position:9.5
+- Label: Antonio Vivaldi
+  DOB: 1678-03-04
+  DOD: 1741-07-28
+  Params:
+    - position:9.5
+- Label: Georg Philipp Telemann
+  DOB: 1681-03-14
+  DOD: 1767-06-25
+  Params:
+    - position:10.5
+- Label: Johann Sebastian Bach
+  DOB: 1685-03-31
+  DOD: 1750-07-28
+  Params:
+    - position:11.5
+- Label: George Frideric Handel
+  DOB: 1685-02-23
+  DOD: 1759-04-14
+  Params:
+    - position:12.5
+- Label: Domenico Scarlatti
+  DOB: 1685-10-26
+  DOD: 1757-07-23
+  Params:
+    - position:13.5
+# Classical
+- Label: Christoph Willibald Gluck
+  DOB: 1714-07-02
+  DOD: 1787-11-15
+  Params:
+    - position:9.5
+- Label: Carl Philipp Emanuel Bach
+  DOB: 1714-03-08
+  DOD: 1788-12-14
+  Params:
+    - position:10.5
+- Label: Joseph Haydn
+  DOB: 1732-03-31
+  DOD: 1809-05-31
+  Params:
+    - position:9.5
+- Label: Wolfgang Amadeus Mozart
+  DOB: 1756-01-27
+  DOD: 1791-12-05
+  Params:
+    - position:10.5
+- Label: Ludwig van Beethoven
+  DOB: 1770-12-17
+  DOD: 1827-03-26
+  Params:
+    - position:11.5
+# Romantic
+- Label: Gioachino Rossini
+  DOB: 1792-02-29
+  DOD: 1868-11-13
+  Params:
+    - position:9.5
+- Label: Franz Schubert
+  DOB: 1797-01-31
+  DOD: 1828-11-19
+  Params:
+    - position:10.5
+- Label: Hector Berlioz
+  DOB: 1803-12-11
+  DOD: 1869-03-08
+  Params:
+    - position:11.5
+- Label: Felix Mendelssohn
+  DOB: 1809-02-03
+  DOD: 1847-11-04
+  Params:
+    - position:9.5
+- Label: Frédéric Chopin
+  DOB: 1810-03-01
+  DOD: 1849-10-17
+  Params:
+    - position:10.5
+- Label: Robert Schumann
+  DOB: 1810-06-08
+  DOD: 1856-07-29
+  Params:
+    - position:11.5
+- Label: Franz Liszt
+  DOB: 1811-10-22
+  DOD: 1886-07-31
+  Params:
+    - position:12.5
+- Label: Richard Wagner
+  DOB: 1813-05-22
+  DOD: 1883-02-13
+  Params:
+    - position:13.5
+- Label: Giuseppe Verdi
+  DOB: 1813-10-10
+  DOD: 1901-01-27
+  Params:
+    - position:14.5
+- Label: Anton Bruckner
+  DOB: 1824-09-04
+  DOD: 1896-10-11
+  Params:
+    - position:9.5
+- Label: Johannes Brahms
+  DOB: 1833-05-07
+  DOD: 1897-04-03
+  Params:
+    - position:10.5
+- Label: Camille Saint-Saëns
+  DOB: 1835-10-09
+  DOD: 1921-12-16
+  Params:
+    - position:11.5
+- Label: Georges Bizet
+  DOB: 1838-10-25
+  DOD: 1875-06-03
+  Params:
+    - position:12.5
+- Label: Modest Mussorgsky
+  DOB: 1839-03-21
+  DOD: 1881-03-28
+  Params:
+    - position:13.5
+- Label: Pyotr Ilyich Tchaikovsky
+  DOB: 1840-05-07
+  DOD: 1893-11-06
+  Params:
+    - position:14.5
+- Label: Antonín Dvořák
+  DOB: 1841-09-08
+  DOD: 1904-05-01
+  Params:
+    - position:9.5
+- Label: Edvard Grieg
+  DOB: 1843-06-15
+  DOD: 1907-09-04
+  Params:
+    - position:10.5
+- Label: Nikolai Rimsky-Korsakov
+  DOB: 1844-03-18
+  DOD: 1908-06-21
+  Params:
+    - position:11.5
+# Post Romantic
+- Label: Gustav Mahler
+  DOB: 1860-07-07
+  DOD: 1911-05-18
+  Params:
+    - position:12.5
+- Label: Claude Debussy
+  DOB: 1862-08-22
+  DOD: 1918-03-25
+  Params:
+    - position:13.5
+- Label: Richard Strauss
+  DOB: 1864-06-11
+  DOD: 1949-09-08
+  Params:
+    - position:14.5
+- Label: Jean Sibelius
+  DOB: 1865-12-08
+  DOD: 1957-09-20
+  Params:
+    - position:9.5
+- Label: Giacomo Puccini
+  DOB: 1858-12-22
+  DOD: 1924-11-29
+  Params:
+    - position:10.5
+- Label: Sergei Rachmaninoff
+  DOB: 1873-04-01
+  DOD: 1943-03-28
+  Params:
+    - position:11.5
+- Label: Maurice Ravel
+  DOB: 1875-03-07
+  DOD: 1937-12-28
+  Params:
+    - position:12.5
+# Modern / 20th century
+- Label: Arnold Schoenberg
+  DOB: 1874-09-13
+  DOD: 1951-07-13
+  Params:
+    - position:13.5
+- Label: Charles Ives
+  DOB: 1874-10-20
+  DOD: 1954-05-19
+  Params:
+    - position:14.5
+- Label: Béla Bartók
+  DOB: 1881-03-25
+  DOD: 1945-09-26
+  Params:
+    - position:9.5
+- Label: Igor Stravinsky
+  DOB: 1882-06-17
+  DOD: 1971-04-06
+  Params:
+    - position:10.5
+- Label: Sergei Prokofiev
+  DOB: 1891-04-23
+  DOD: 1953-03-05
+  Params:
+    - position:11.5
+- Label: George Gershwin
+  DOB: 1898-09-26
+  DOD: 1937-07-11
+  Params:
+    - position:12.5
+- Label: Aaron Copland
+  DOB: 1900-11-14
+  DOD: 1990-12-02
+  Params:
+    - position:13.5
+- Label: Dmitri Shostakovich
+  DOB: 1906-09-25
+  DOD: 1975-08-09
+  Params:
+    - position:14.5
+- Label: Benjamin Britten
+  DOB: 1913-11-22
+  DOD: 1976-12-04
+  Params:
+    - position:9.5
+- Label: Peter Pears
+  DOB: 1910-06-22
+  DOD: 1986-04-03
+  Params:
+    - position:10.5
+- Label: Leonard Bernstein
+  DOB: 1918-08-25
+  DOD: 1990-10-14
+  Params:
+    - position:10.5
+# American film / contemporary
+- Label: John Williams
+  DOB: 1932-02-08
+  Alive: true
+  Params:
+    - position:11.5

@@ -1,0 +1,32 @@
+global:
+  Keywords:
+    - USSR
+    - Reign
+  Params:
+    - position:0.5
+
+entries:
+- Label: Lenin
+  Start: 1917-11-07
+  End: 1924-01-21
+- Label: Stalin
+  Start: 1924-01-21
+  End: 1953-03-05
+- Label: Malenkov
+  Start: 1953-03-05
+  End: 1953-09-07
+- Label: Khrushchev
+  Start: 1953-09-07
+  End: 1964-10-14
+- Label: Brezhnev
+  Start: 1964-10-14
+  End: 1982-11-10
+- Label: Andropov
+  Start: 1982-11-12
+  End: 1984-02-09
+- Label: Chernenko
+  Start: 1984-02-13
+  End: 1985-03-10
+- Label: Gorbachev
+  Start: 1985-03-11
+  End: 1991-12-25

@@ -1,0 +1,126 @@
+global:
+  Keywords:
+    - World
+    - Event
+  Params:
+    - position:13
+
+# Iconic single-moment turning points in world history, rendered as point
+# markers (a single `Date:` each, not Start/End spans). This is the "famous
+# moments" layer: coronations, foundings, proclamations, and other singular
+# events. Battles live in Battles.yaml and reign/war spans live elsewhere, so
+# they are not duplicated here.
+#
+# Dates use extended ISO 8601 with negative, zero-padded years for BCE. Full
+# dates are given where firmly known; year-only otherwise. The "c. " prefix
+# marks approximate/traditional dates. Where several events cluster in time,
+# their `position:` values are staggered (13/11/15/...) so labels do not
+# overlap, the same way Battles.yaml staggers the Revolutionary War battles.
+# "# CHECK" marks genuinely uncertain or traditional dates.
+
+entries:
+# Ancient Near East and classical world
+- Label: Code of Hammurabi
+  Date: c. -1754  # CHECK traditional/approximate
+  Params:
+    - position:13
+- Label: Traditional founding of Rome
+  Date: c. -0753  # CHECK legendary date
+  Params:
+    - position:13
+- Label: Eruption of Vesuvius
+  Date: 0079
+  Params:
+    - position:13
+- Label: Fall of the Western Roman Empire
+  Date: 0476
+  Params:
+    - position:11
+- Label: The Hijra
+  Date: c. 0622-09-24  # CHECK sources vary 24-27 Sept
+  Params:
+    - position:15
+# Medieval Europe
+- Label: Coronation of Charlemagne
+  Date: 0800-12-25
+  Params:
+    - position:13
+- Label: Norman Conquest of England
+  Date: 1066-10-14
+  Params:
+    - position:13
+- Label: Magna Carta sealed
+  Date: 1215-06-15
+  Params:
+    - position:13
+- Label: Black Death peak in Europe
+  Date: c. 1348  # CHECK representative of 1347-1351 pandemic peak
+  Params:
+    - position:11
+- Label: Fall of Constantinople
+  Date: 1453-05-29
+  Params:
+    - position:15
+# Age of exploration and reformation
+- Label: Columbus reaches the Americas
+  Date: 1492-10-12
+  Params:
+    - position:13
+- Label: Luther's 95 Theses
+  Date: 1517-10-31
+  Params:
+    - position:11
+- Label: Magellan expedition circumnavigates globe
+  Date: 1522-09-06
+  Params:
+    - position:15
+- Label: Defeat of the Spanish Armada
+  Date: 1588-08-08  # CHECK Battle of Gravelines
+  Params:
+    - position:13
+- Label: Gunpowder Plot foiled
+  Date: 1605-11-05
+  Params:
+    - position:11
+# Enlightenment and revolution
+- Label: US Declaration of Independence
+  Date: 1776-07-04
+  Params:
+    - position:13
+- Label: Storming of the Bastille
+  Date: 1789-07-14
+  Params:
+    - position:11
+- Label: Congress of Vienna concludes
+  Date: 1815-06-09
+  Params:
+    - position:15
+# Industrial and modern era
+- Label: Emancipation Proclamation
+  Date: 1863-01-01
+  Params:
+    - position:13
+- Label: First powered flight (Wright brothers)
+  Date: 1903-12-17
+  Params:
+    - position:11
+- Label: Russian Revolution (October Revolution)
+  Date: 1917-11-07  # CHECK Gregorian; 25 Oct Julian
+  Params:
+    - position:15
+- Label: Wall Street Crash
+  Date: 1929-10-29
+  Params:
+    - position:13
+- Label: Partition of India
+  Date: 1947-08-15
+  Params:
+    - position:11
+- Label: First Moon landing (Apollo 11)
+  Date: 1969-07-20
+  Params:
+    - position:15
+- Label: Fall of the Berlin Wall
+  Date: 1989-11-09
+  Params:
+    - position:13

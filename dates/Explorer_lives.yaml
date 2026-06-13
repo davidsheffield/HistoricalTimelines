@@ -1,0 +1,131 @@
+global:
+  Keywords:
+    - Explorer
+    - Life
+
+entries:
+- Label: Leif Erikson
+  DOB: 'c. 0970'
+  DOD: 'c. 1020'
+  Params:
+    - position:9.5
+- Label: Marco Polo
+  DOB: 1254-09-15
+  DOD: 1324-01-08
+  Params:
+    - position:10.5
+- Label: Ibn Battuta
+  DOB: 1304-02-24
+  DOD: 'c. 1368'
+  Params:
+    - position:11.5
+- Label: Zheng He
+  DOB: 'c. 1371'
+  DOD: 'c. 1433'
+  Params:
+    - position:12.5
+- Label: Henry the Navigator
+  DOB: 1394-03-04
+  DOD: 1460-11-13
+  Params:
+    - position:13.5
+- Label: Bartolomeu Dias
+  DOB: 'c. 1450'
+  DOD: 1500-05-29
+  Params:
+    - position:14.5
+- Label: Christopher Columbus
+  DOB: 'c. 1451'
+  DOD: 1506-05-20
+  Params:
+    - position:9.5
+- Label: Amerigo Vespucci
+  DOB: 1454-03-09
+  DOD: 1512-02-22
+  Params:
+    - position:10.5
+- Label: John Cabot
+  DOB: 'c. 1450'
+  DOD: 'c. 1500'
+  Params:
+    - position:11.5
+- Label: Vasco da Gama
+  DOB: 'c. 1460'
+  DOD: 1524-12-24
+  Params:
+    - position:12.5
+- Label: Ferdinand Magellan
+  DOB: 'c. 1480'
+  DOD: 1521-04-27
+  Params:
+    - position:13.5
+- Label: Hernán Cortés
+  DOB: 1485-12-01
+  DOD: 1547-12-02
+  Params:
+    - position:14.5
+- Label: Francisco Pizarro
+  DOB: 'c. 1478'
+  DOD: 1541-06-26
+  Params:
+    - position:9.5
+- Label: Jacques Cartier
+  DOB: 1491-12-31
+  DOD: 1557-09-01
+  Params:
+    - position:10.5
+- Label: Francis Drake
+  DOB: 'c. 1540'
+  DOD: 1596-01-28
+  Params:
+    - position:11.5
+- Label: Henry Hudson
+  DOB: 'c. 1565'
+  DOD: 'c. 1611'
+  Params:
+    - position:12.5
+- Label: Abel Tasman
+  DOB: 'c. 1603'
+  DOD: 1659-10-10
+  Params:
+    - position:13.5
+- Label: James Cook
+  DOB: 1728-10-27
+  DOD: 1779-02-14
+  Params:
+    - position:14.5
+- Label: Alexander von Humboldt
+  DOB: 1769-09-14
+  DOD: 1859-05-06
+  Params:
+    - position:9.5
+- Label: Meriwether Lewis
+  DOB: 1774-08-18
+  DOD: 1809-10-11
+  Params:
+    - position:10.5
+- Label: William Clark
+  DOB: 1770-08-01
+  DOD: 1838-09-01
+  Params:
+    - position:11.5
+- Label: David Livingstone
+  DOB: 1813-03-19
+  DOD: 1873-05-01
+  Params:
+    - position:12.5
+- Label: Robert Falcon Scott
+  DOB: 1868-06-06
+  DOD: 1912-03-29
+  Params:
+    - position:13.5
+- Label: Ernest Shackleton
+  DOB: 1874-02-15
+  DOD: 1922-01-05
+  Params:
+    - position:14.5
+- Label: Roald Amundsen
+  DOB: 1872-07-16
+  DOD: 1928-06-18
+  Params:
+    - position:9.5

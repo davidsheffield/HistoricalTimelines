@@ -1,0 +1,112 @@
+global:
+  Keywords:
+    - Mesopotamia
+    - Near_East
+    - Empire
+  Params:
+    - position:2.5
+
+# Mesopotamian and ancient Near Eastern empires and periods.
+# Period spans for the major polities of Mesopotamia and the surrounding
+# Near East, from the Akkadian Empire through the Neo-Babylonian (Chaldean)
+# Empire. Dates follow the conventional "middle chronology" and are
+# approximate; the "# CHECK" comment marks labels whose ranges are
+# especially uncertain or scholar-dependent.
+# Egypt, the Achaemenid Persians, the Israelite/Judahite kingdoms, and the
+# Steppe peoples are intentionally omitted (covered in other files).
+# fill: alternates two bronze/tan shades to evoke ancient Mesopotamia.
+# position: values stagger contemporaneous, overlapping polities onto
+# separate rows; they are a first pass and may need tuning after a render.
+
+entries:
+
+- Label: Akkadian Empire  # CHECK
+  Start: c. -2334
+  End: c. -2154
+  Params:
+    - fill:#8a6d3b;
+    - position:2.5
+
+- Label: Third Dynasty of Ur (Ur III)  # CHECK
+  Start: c. -2112
+  End: c. -2004
+  Params:
+    - fill:#b08d57;
+    - position:2.5
+
+- Label: Old Assyrian Period
+  Start: c. -2025
+  End: c. -1378
+  Params:
+    - fill:#8a6d3b;
+    - position:3.5
+
+- Label: Mari (Lim dynasty)  # CHECK
+  Start: c. -1830
+  End: c. -1761
+  Params:
+    - fill:#b08d57;
+    - position:4.5
+
+- Label: Old Babylonian Empire (Hammurabi)
+  Start: c. -1894
+  End: c. -1595
+  Params:
+    - fill:#8a6d3b;
+    - position:2.5
+
+- Label: Elam (Sukkalmah / Old Elamite)  # CHECK
+  Start: c. -1900
+  End: c. -1500
+  Params:
+    - fill:#b08d57;
+    - position:5.5
+
+- Label: Mitanni  # CHECK
+  Start: c. -1550
+  End: c. -1260
+  Params:
+    - fill:#8a6d3b;
+    - position:4.5
+
+- Label: Kassite Babylonia
+  Start: c. -1595
+  End: c. -1155
+  Params:
+    - fill:#b08d57;
+    - position:2.5
+
+- Label: Middle Assyrian Empire
+  Start: c. -1363
+  End: c. -1050
+  Params:
+    - fill:#8a6d3b;
+    - position:3.5
+
+- Label: Middle Elamite Period  # CHECK
+  Start: c. -1500
+  End: c. -1100
+  Params:
+    - fill:#b08d57;
+    - position:5.5
+
+- Label: Neo-Elamite Period  # CHECK
+  Start: c. -1100
+  End: c. -0539
+  Params:
+    - fill:#8a6d3b;
+    - position:5.5
+
+- Label: Neo-Assyrian Empire
+  Start: c. -0911
+  End: -0609
+  Params:
+    - fill:#b08d57;
+    - position:3.5
+
+- Label: Neo-Babylonian (Chaldean) Empire
+  Start: -0626
+  End: -0539
+  Params:
+    - fill:#8a6d3b;
+    - position:2.5

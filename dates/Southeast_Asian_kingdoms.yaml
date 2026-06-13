@@ -1,0 +1,144 @@
+global:
+  Keywords:
+    - Southeast_Asia
+    - Kingdom
+  Params:
+    - position:23.5
+
+# Kingdoms and empires of mainland and maritime Southeast Asia
+# (c. 1st century CE – 19th century). Dates are approximate and drawn from
+# rough attested ranges; the "# CHECK" comment on a label marks dates that
+# should be verified later. Fills alternate between two olive/jade shades
+# (#6a8d2f / #8fae54) down the list. position: values stagger overlapping
+# contemporaneous polities onto separate rows (band ~23.5–27.5) so the bars
+# do not collide; they may need tuning after a first render.
+# Note: China, Mongols/Steppe peoples, and India are covered elsewhere and
+# are intentionally omitted here.
+
+entries:
+
+- Label: Funan  # CHECK
+  Start: c. 0050
+  End: c. 0627
+  Params:
+    - position:23.5
+    - fill:#6a8d2f;
+
+- Label: Champa  # CHECK
+  Start: c. 0192
+  End: 1832
+  Params:
+    - position:24.5
+    - fill:#8fae54;
+
+- Label: Dvaravati  # CHECK
+  Start: c. 0600
+  End: c. 1100
+  Params:
+    - position:25.5
+    - fill:#6a8d2f;
+
+- Label: Chenla  # CHECK
+  Start: c. 0550
+  End: 0802
+  Params:
+    - position:23.5
+    - fill:#8fae54;
+
+- Label: Srivijaya  # CHECK
+  Start: c. 0671
+  End: c. 1288
+  Params:
+    - position:26.5
+    - fill:#6a8d2f;
+
+- Label: Medang (Mataram) Kingdom  # CHECK
+  Start: c. 0716
+  End: 1016
+  Params:
+    - position:27.5
+    - fill:#8fae54;
+
+- Label: Hariphunchai  # CHECK
+  Start: c. 0750
+  End: 1292
+  Params:
+    - position:25.5
+    - fill:#6a8d2f;
+
+- Label: Pagan (Bagan) Kingdom  # CHECK
+  Start: 0849
+  End: 1297
+  Params:
+    - position:24.5
+    - fill:#8fae54;
+
+- Label: Khmer Empire (Angkor)  # CHECK
+  Start: 0802
+  End: 1431
+  Params:
+    - position:23.5
+    - fill:#6a8d2f;
+
+- Label: Đại Việt (Lý/Trần/Lê)  # CHECK
+  Start: 1009
+  End: 1789
+  Params:
+    - position:27.5
+    - fill:#8fae54;
+
+- Label: Sukhothai Kingdom  # CHECK
+  Start: 1238
+  End: 1438
+  Params:
+    - position:25.5
+    - fill:#6a8d2f;
+
+- Label: Majapahit  # CHECK
+  Start: 1293
+  End: c. 1527
+  Params:
+    - position:26.5
+    - fill:#8fae54;
+
+- Label: Lan Xang  # CHECK
+  Start: 1353
+  End: 1707
+  Params:
+    - position:24.5
+    - fill:#6a8d2f;
+
+- Label: Ayutthaya Kingdom  # CHECK
+  Start: 1351
+  End: 1767
+  Params:
+    - position:25.5
+    - fill:#8fae54;
+
+- Label: Sultanate of Malacca  # CHECK
+  Start: c. 1400
+  End: 1511
+  Params:
+    - position:26.5
+    - fill:#6a8d2f;
+
+- Label: Toungoo Dynasty  # CHECK
+  Start: 1510
+  End: 1752
+  Params:
+    - position:23.5
+    - fill:#8fae54;
+
+- Label: Mataram Sultanate  # CHECK
+  Start: 1587
+  End: 1755
+  Params:
+    - position:26.5
+    - fill:#6a8d2f;
+
+- Label: Konbaung Dynasty  # CHECK
+  Start: 1752
+  End: 1885
+  Params:
+    - position:23.5
+    - fill:#8fae54;

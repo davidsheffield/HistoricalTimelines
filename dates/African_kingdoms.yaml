@@ -1,0 +1,150 @@
+global:
+  Keywords:
+    - Africa
+    - Kingdom
+  Params:
+    - position:9.5
+
+# Kingdoms and empires of Africa beyond Egypt (period spans).
+# Dates are approximate and drawn from rough attested ranges; the "# CHECK"
+# comment marks dates and labels that should be verified later.
+# Egypt, Carthage/Rome, and Saharan/Mediterranean polities already covered
+# elsewhere are intentionally omitted. Sub-Saharan coverage is partial.
+# Colors alternate between two warm savanna amber/earth shades.
+# position: values stagger overlapping (contemporaneous) kingdoms onto
+# separate rows; they may need tuning after a first render.
+
+entries:
+
+- Label: Kingdom of Kerma  # CHECK
+  Start: c. -1740
+  End: c. -1500
+  Params:
+    - position:9.5
+    - fill:#b07d10;
+
+- Label: Kingdom of Kush (Napatan)  # CHECK
+  Start: c. -0750
+  End: c. -0270
+  Params:
+    - position:9.5
+    - fill:#d4a23a;
+
+- Label: Kingdom of Kush (Meroitic)  # CHECK
+  Start: c. -0270
+  End: c. 0350
+  Params:
+    - position:9.5
+    - fill:#b07d10;
+
+- Label: Kingdom of Aksum  # CHECK
+  Start: c. 0100
+  End: c. 0960
+  Params:
+    - position:10.5
+    - fill:#d4a23a;
+
+- Label: Ghana Empire (Wagadou)  # CHECK
+  Start: c. 0300
+  End: c. 1240
+  Params:
+    - position:11.5
+    - fill:#b07d10;
+
+- Label: Kanem Empire / Kanem-Bornu  # CHECK
+  Start: c. 0700
+  End: c. 1900
+  Params:
+    - position:12.5
+    - fill:#d4a23a;
+
+- Label: Zagwe dynasty  # CHECK
+  Start: c. 0900
+  End: 1270
+  Params:
+    - position:10.5
+    - fill:#b07d10;
+
+- Label: Hausa city-states  # CHECK
+  Start: c. 1000
+  End: c. 1808
+  Params:
+    - position:13.5
+    - fill:#d4a23a;
+
+- Label: Great Zimbabwe  # CHECK
+  Start: c. 1100
+  End: c. 1450
+  Params:
+    - position:14.5
+    - fill:#b07d10;
+
+- Label: Mali Empire  # CHECK
+  Start: c. 1235
+  End: c. 1670
+  Params:
+    - position:11.5
+    - fill:#d4a23a;
+
+- Label: Solomonic Empire (Abyssinia)  # CHECK
+  Start: 1270
+  End: 1974
+  Params:
+    - position:10.5
+    - fill:#b07d10;
+
+- Label: Kingdom of Benin  # CHECK
+  Start: c. 1180
+  End: 1897
+  Params:
+    - position:9.5
+    - fill:#d4a23a;
+
+- Label: Kingdom of Kongo  # CHECK
+  Start: c. 1390
+  End: 1914
+  Params:
+    - position:13.5
+    - fill:#b07d10;
+
+- Label: Kingdom of Mutapa (Mwenemutapa)  # CHECK
+  Start: c. 1430
+  End: 1760
+  Params:
+    - position:14.5
+    - fill:#d4a23a;
+
+- Label: Songhai Empire  # CHECK
+  Start: c. 1464
+  End: 1591
+  Params:
+    - position:11.5
+    - fill:#b07d10;
+
+- Label: Oyo Empire  # CHECK
+  Start: c. 1300
+  End: 1896
+  Params:
+    - position:12.5
+    - fill:#d4a23a;
+
+- Label: Kingdom of Buganda  # CHECK
+  Start: c. 1300
+  End: 1966
+  Params:
+    - position:14.5
+    - fill:#b07d10;
+
+- Label: Ashanti (Asante) Empire  # CHECK
+  Start: c. 1701
+  End: 1901
+  Params:
+    - position:13.5
+    - fill:#d4a23a;
+
+- Label: Zulu Kingdom  # CHECK
+  Start: 1816
+  End: 1897
+  Params:
+    - position:12.5
+    - fill:#b07d10;

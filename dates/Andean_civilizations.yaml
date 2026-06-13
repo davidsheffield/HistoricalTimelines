@@ -1,0 +1,104 @@
+global:
+  Keywords:
+    - Andean
+    - Americas
+  Params:
+    - position:22.5
+
+# Pre-Columbian Andean civilizations of South America (Peru/Bolivia region).
+# Period spans of major cultures, polities, and empires from the Caral-Supe
+# (Norte Chico) horizon through the Inca Empire (Tawantinsuyu).
+# Andean chronology is fuzzy and varies by source; most start/end dates are
+# approximate and carry a "c. " prefix. The "# CHECK" comment on uncertain
+# labels marks dates that should be verified later.
+# Norte Chico / Caral mostly predates the 1740 BCE canvas and is included with
+# c. dates for context.
+# Many of these cultures were contemporaneous; position: values group
+# overlapping spans onto separate rows so the bars do not collide. They may
+# need tuning after a first render.
+
+entries:
+
+- Label: Norte Chico (Caral-Supe)  # CHECK
+  Start: c. -3500
+  End: c. -1800
+  Params:
+    - position:22.5
+    - fill:#b8860b;
+
+- Label: Chavin culture  # CHECK
+  Start: c. -0900
+  End: c. -0200
+  Params:
+    - position:22.5
+    - fill:#d4a838;
+
+- Label: Paracas culture  # CHECK
+  Start: c. -0800
+  End: c. -0100
+  Params:
+    - position:23.5
+    - fill:#b8860b;
+
+- Label: Recuay culture  # CHECK
+  Start: c. -0200
+  End: c. 0600
+  Params:
+    - position:23.5
+    - fill:#d4a838;
+
+- Label: Moche (Mochica) culture  # CHECK
+  Start: c. 0100
+  End: c. 0700
+  Params:
+    - position:22.5
+    - fill:#b8860b;
+
+- Label: Nazca culture  # CHECK
+  Start: c. 0100
+  End: c. 0800
+  Params:
+    - position:24.5
+    - fill:#d4a838;
+
+- Label: Lima culture  # CHECK
+  Start: c. 0100
+  End: c. 0650
+  Params:
+    - position:25.5
+    - fill:#b8860b;
+
+- Label: Tiwanaku (Tiahuanaco)  # CHECK
+  Start: c. 0110
+  End: c. 1000
+  Params:
+    - position:26.5
+    - fill:#d4a838;
+
+- Label: Wari (Huari) Empire  # CHECK
+  Start: c. 0450
+  End: c. 1000
+  Params:
+    - position:22.5
+    - fill:#b8860b;
+
+- Label: Chachapoya culture  # CHECK
+  Start: c. 0800
+  End: c. 1470
+  Params:
+    - position:23.5
+    - fill:#d4a838;
+
+- Label: Chimu (Chimor) kingdom  # CHECK
+  Start: c. 0900
+  End: c. 1470
+  Params:
+    - position:22.5
+    - fill:#b8860b;
+
+- Label: Inca Empire (Tawantinsuyu)  # CHECK
+  Start: c. 1438
+  End: 1533
+  Params:
+    - position:24.5
+    - fill:#d4a838;

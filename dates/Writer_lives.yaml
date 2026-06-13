@@ -1,0 +1,218 @@
+# Major literary writers: poets, playwrights, and novelists across history.
+# Composers, painters, physicists, mathematicians, and philosophers have
+# their own files and are not duplicated here.
+# Ancient dates (esp. Greek and Chinese) are approximate; marked # CHECK.
+global:
+  Keywords:
+    - Writer
+    - Life
+
+entries:
+# Ancient Greek & Roman
+- Label: Homer
+  DOB: 'c. -0750'  # CHECK traditional; historicity debated
+  DOD: 'c. -0700'  # CHECK
+  Params:
+    - position:9.5
+- Label: Sappho
+  DOB: 'c. -0630'  # CHECK
+  DOD: 'c. -0570'  # CHECK
+  Params:
+    - position:10.5
+- Label: Aeschylus
+  DOB: 'c. -0525'  # CHECK
+  DOD: 'c. -0456'  # CHECK
+  Params:
+    - position:11.5
+- Label: Sophocles
+  DOB: 'c. -0497'  # CHECK
+  DOD: 'c. -0406'  # CHECK
+  Params:
+    - position:12.5
+- Label: Euripides
+  DOB: 'c. -0480'  # CHECK
+  DOD: 'c. -0406'  # CHECK
+  Params:
+    - position:13.5
+- Label: Aristophanes
+  DOB: 'c. -0446'  # CHECK
+  DOD: 'c. -0386'  # CHECK
+  Params:
+    - position:14.5
+- Label: Virgil
+  DOB: -0070-10-15
+  DOD: -0019-09-21
+  Params:
+    - position:9.5
+- Label: Ovid
+  DOB: -0043-03-20
+  DOD: 'c. 0017'  # CHECK
+  Params:
+    - position:10.5
+# Tang China
+- Label: Li Bai
+  DOB: 0701
+  DOD: 0762
+  Params:
+    - position:11.5
+- Label: Du Fu
+  DOB: 0712
+  DOD: 0770
+  Params:
+    - position:12.5
+# Heian Japan
+- Label: Murasaki Shikibu
+  DOB: 'c. 0973'  # CHECK
+  DOD: 'c. 1014'  # CHECK
+  Params:
+    - position:13.5
+# Medieval Europe
+- Label: Dante Alighieri
+  DOB: 'c. 1265'
+  DOD: 1321-09-14
+  Params:
+    - position:14.5
+- Label: Geoffrey Chaucer
+  DOB: 'c. 1343'  # CHECK
+  DOD: 1400-10-25  # CHECK traditional
+  Params:
+    - position:9.5
+# Renaissance & Early Modern
+- Label: William Shakespeare
+  DOB: 1564-04-26  # baptism
+  DOD: 1616-04-23
+  Params:
+    - position:10.5
+- Label: Miguel de Cervantes
+  DOB: 1547-09-29  # CHECK presumed
+  DOD: 1616-04-22
+  Params:
+    - position:11.5
+- Label: John Milton
+  DOB: 1608-12-09
+  DOD: 1674-11-08
+  Params:
+    - position:12.5
+- Label: "Molière"
+  DOB: 1622-01-15  # baptism
+  DOD: 1673-02-17
+  Params:
+    - position:13.5
+# Enlightenment & 18th Century
+- Label: Jonathan Swift
+  DOB: 1667-11-30
+  DOD: 1745-10-19
+  Params:
+    - position:14.5
+- Label: Voltaire
+  DOB: 1694-11-21
+  DOD: 1778-05-30
+  Params:
+    - position:9.5
+- Label: Johann Wolfgang von Goethe
+  DOB: 1749-08-28
+  DOD: 1832-03-22
+  Params:
+    - position:10.5
+# Romantic & 19th Century
+- Label: Jane Austen
+  DOB: 1775-12-16
+  DOD: 1817-07-18
+  Params:
+    - position:11.5
+- Label: Lord Byron
+  DOB: 1788-01-22
+  DOD: 1824-04-19
+  Params:
+    - position:12.5
+- Label: Victor Hugo
+  DOB: 1802-02-26
+  DOD: 1885-05-22
+  Params:
+    - position:13.5
+- Label: Edgar Allan Poe
+  DOB: 1809-01-19
+  DOD: 1849-10-07
+  Params:
+    - position:14.5
+- Label: Charles Dickens
+  DOB: 1812-02-07
+  DOD: 1870-06-09
+  Params:
+    - position:9.5
+- Label: "Charlotte Brontë"
+  DOB: 1816-04-21
+  DOD: 1855-03-31
+  Params:
+    - position:10.5
+- Label: Fyodor Dostoevsky
+  DOB: 1821-11-11
+  DOD: 1881-02-09
+  Params:
+    - position:11.5
+- Label: Leo Tolstoy
+  DOB: 1828-09-09
+  DOD: 1910-11-20
+  Params:
+    - position:12.5
+- Label: Emily Dickinson
+  DOB: 1830-12-10
+  DOD: 1886-05-15
+  Params:
+    - position:13.5
+- Label: Mark Twain
+  DOB: 1835-11-30
+  DOD: 1910-04-21
+  Params:
+    - position:14.5
+- Label: Oscar Wilde
+  DOB: 1854-10-16
+  DOD: 1900-11-30
+  Params:
+    - position:9.5
+- Label: Anton Chekhov
+  DOB: 1860-01-29
+  DOD: 1904-07-15
+  Params:
+    - position:10.5
+- Label: Marcel Proust
+  DOB: 1871-07-10
+  DOD: 1922-11-18
+  Params:
+    - position:11.5
+# 20th Century
+- Label: Virginia Woolf
+  DOB: 1882-01-25
+  DOD: 1941-03-28
+  Params:
+    - position:12.5
+- Label: James Joyce
+  DOB: 1882-02-02
+  DOD: 1941-01-13
+  Params:
+    - position:13.5
+- Label: Franz Kafka
+  DOB: 1883-07-03
+  DOD: 1924-06-03
+  Params:
+    - position:14.5
+- Label: Ernest Hemingway
+  DOB: 1899-07-21
+  DOD: 1961-07-02
+  Params:
+    - position:9.5
+- Label: Jorge Luis Borges
+  DOB: 1899-08-24
+  DOD: 1986-06-14
+  Params:
+    - position:10.5
+- Label: George Orwell
+  DOB: 1903-06-25
+  DOD: 1950-01-21
+  Params:
+    - position:11.5
+- Label: "Gabriel García Márquez"
+  DOB: 1927-03-06
+  DOD: 2014-04-17
+  Params:
+    - position:12.5

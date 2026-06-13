@@ -1,0 +1,147 @@
+global:
+  Keywords:
+    - Germany
+    - Life
+
+entries:
+# Medieval / Early Modern
+- Label: Johannes Gutenberg
+  DOB: c. 1400
+  DOD: 1468-02-03
+  Params:
+    - position:9.5
+- Label: Albrecht Dürer
+  DOB: 1471-05-21
+  DOD: 1528-04-06
+  Params:
+    - position:10.5
+- Label: Martin Luther
+  DOB: 1483-11-10
+  DOD: 1546-02-18
+  Params:
+    - position:11.5
+- Label: Philip Melanchthon
+  DOB: 1497-02-16
+  DOD: 1560-04-19
+  Params:
+    - position:12.5
+# Early Modern
+- Label: Gottfried Wilhelm Leibniz
+  DOB: 1646-07-01
+  DOD: 1716-11-14
+  Params:
+    - position:9.5
+# Enlightenment
+- Label: Frederick the Great
+  DOB: 1712-01-24
+  DOD: 1786-08-17
+  Params:
+    - position:10.5
+- Label: Immanuel Kant
+  DOB: 1724-04-22
+  DOD: 1804-02-12
+  Params:
+    - position:11.5
+- Label: Alexander von Humboldt
+  DOB: 1769-09-14
+  DOD: 1859-05-06
+  Params:
+    - position:12.5
+- Label: Johann Wolfgang von Goethe
+  DOB: 1749-08-28
+  DOD: 1832-03-22
+  Params:
+    - position:13.5
+- Label: Friedrich Schiller
+  DOB: 1759-11-10
+  DOD: 1805-05-09
+  Params:
+    - position:14.5
+- Label: Georg Wilhelm Friedrich Hegel
+  DOB: 1770-08-27
+  DOD: 1831-11-14
+  Params:
+    - position:9.5
+- Label: Carl Friedrich Gauss
+  DOB: 1777-04-30
+  DOD: 1855-02-23
+  Params:
+    - position:10.5
+- Label: Arthur Schopenhauer
+  DOB: 1788-02-22
+  DOD: 1860-09-21
+  Params:
+    - position:11.5
+- Label: Heinrich Heine
+  DOB: 1797-12-13
+  DOD: 1856-02-17
+  Params:
+    - position:12.5
+# 19th Century
+- Label: Otto von Bismarck
+  DOB: 1815-04-01
+  DOD: 1898-07-30
+  Params:
+    - position:13.5
+- Label: Karl Marx
+  DOB: 1818-05-05
+  DOD: 1883-03-14
+  Params:
+    - position:14.5
+- Label: Friedrich Nietzsche
+  DOB: 1844-10-15
+  DOD: 1900-08-25
+  Params:
+    - position:9.5
+- Label: Friedrich Engels
+  DOB: 1820-11-28
+  DOD: 1895-08-05
+  Params:
+    - position:10.5
+# Early 20th Century
+- Label: Max Weber
+  DOB: 1864-04-21
+  DOD: 1920-06-14
+  Params:
+    - position:11.5
+- Label: Rosa Luxemburg
+  DOB: 1871-03-05
+  DOD: 1919-01-15
+  Params:
+    - position:12.5
+- Label: Thomas Mann
+  DOB: 1875-06-06
+  DOD: 1955-08-12
+  Params:
+    - position:13.5
+- Label: Konrad Adenauer
+  DOB: 1876-01-05
+  DOD: 1967-04-19
+  Params:
+    - position:14.5
+# 20th Century
+- Label: Dietrich Bonhoeffer
+  DOB: 1906-02-04
+  DOD: 1945-04-09
+  Params:
+    - position:9.5
+- Label: Hannah Arendt
+  DOB: 1906-10-14
+  DOD: 1975-12-04
+  Params:
+    - position:10.5
+- Label: Willy Brandt
+  DOB: 1913-12-18
+  DOD: 1992-10-08
+  Params:
+    - position:11.5
+- Label: Helmut Kohl
+  DOB: 1930-04-03
+  DOD: 2017-06-16
+  Params:
+    - position:12.5
+- Label: Angela Merkel
+  DOB: 1954-07-17
+  Alive: true
+  Params:
+    - position:13.5

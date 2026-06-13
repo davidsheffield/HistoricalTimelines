@@ -1,0 +1,69 @@
+global:
+  Keywords:
+    - Islam
+    - Caliphate
+    - Empire
+  Params:
+    - position:19.5
+
+# The great Islamic caliphates and major Muslim empires of the Middle East,
+# Mediterranean, and al-Andalus (632 CE – 1924 CE). Entries are period spans
+# with an alternating emerald-green palette (#1f7a4d / #38a06b). Overlapping
+# or contemporaneous polities are staggered onto separate rows via per-entry
+# position overrides.
+# Dates are approximate; the "# CHECK" comment marks labels whose dates
+# should be verified later.
+
+entries:
+
+- Label: Rashidun Caliphate  # CHECK
+  Start: 0632
+  End: 0661
+  Params:
+    - fill:#1f7a4d;
+
+- Label: Umayyad Caliphate  # CHECK
+  Start: 0661
+  End: 0750
+  Params:
+    - fill:#38a06b;
+
+- Label: Abbasid Caliphate  # CHECK
+  Start: 0750
+  End: 1258
+  Params:
+    - fill:#1f7a4d;
+
+- Label: Umayyad Emirate / Caliphate of Córdoba  # CHECK
+  Start: 0756
+  End: 1031
+  Params:
+    - position:20.5
+    - fill:#38a06b;
+
+- Label: Fatimid Caliphate  # CHECK
+  Start: 0909
+  End: 1171
+  Params:
+    - position:21.5
+    - fill:#1f7a4d;
+
+- Label: Ayyubid Sultanate  # CHECK
+  Start: 1171
+  End: 1260
+  Params:
+    - position:21.5
+    - fill:#38a06b;
+
+- Label: Mamluk Sultanate  # CHECK
+  Start: 1250
+  End: 1517
+  Params:
+    - position:20.5
+    - fill:#1f7a4d;
+
+- Label: Ottoman Empire  # CHECK
+  Start: 1299
+  End: 1922
+  Params:
+    - fill:#38a06b;

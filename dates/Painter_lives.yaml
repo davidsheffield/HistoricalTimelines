@@ -1,0 +1,195 @@
+global:
+  Keywords:
+    - Painter
+    - Life
+
+entries:
+# Medieval / Proto-Renaissance
+- Label: Giotto di Bondone
+  DOB: 'c. 1267'
+  DOD: 1337-01-08
+  Params:
+    - position:9.5
+
+# Early Netherlandish
+- Label: Jan van Eyck
+  DOB: 'c. 1390'
+  DOD: 1441-07-09
+  Params:
+    - position:10.5
+
+# Early Renaissance (Italian sculpture included)
+- Label: Donatello
+  DOB: 'c. 1386'
+  DOD: 1466-12-13
+  Params:
+    - position:11.5
+
+- Label: Sandro Botticelli
+  DOB: 1445-03-01
+  DOD: 1510-05-17
+  Params:
+    - position:12.5
+
+# High Renaissance
+- Label: Leonardo da Vinci
+  DOB: 1452-04-15
+  DOD: 1519-05-02
+  Params:
+    - position:13.5
+
+- Label: Albrecht Dürer
+  DOB: 1471-05-21
+  DOD: 1528-04-06
+  Params:
+    - position:14.5
+
+- Label: Michelangelo
+  DOB: 1475-03-06
+  DOD: 1564-02-18
+  Params:
+    - position:9.5
+
+- Label: Raphael
+  DOB: 1483-04-06
+  DOD: 1520-04-06
+  Params:
+    - position:10.5
+
+- Label: Titian
+  DOB: 'c. 1488'
+  DOD: 1576-08-27
+  Params:
+    - position:11.5
+
+# Northern Renaissance / Mannerism
+- Label: Pieter Bruegel the Elder
+  DOB: 'c. 1525'
+  DOD: 1569-09-09
+  Params:
+    - position:12.5
+
+- Label: El Greco
+  DOB: 1541-10-01
+  DOD: 1614-04-07
+  Params:
+    - position:13.5
+
+# Baroque
+- Label: Caravaggio
+  DOB: 1571-09-29
+  DOD: 1610-07-18
+  Params:
+    - position:14.5
+
+- Label: Peter Paul Rubens
+  DOB: 1577-06-28
+  DOD: 1640-05-30
+  Params:
+    - position:9.5
+
+- Label: Artemisia Gentileschi
+  DOB: 1593-07-08
+  DOD: 'c. 1656'
+  Params:
+    - position:10.5
+
+- Label: Diego Velázquez
+  DOB: 1599-06-06
+  DOD: 1660-08-06
+  Params:
+    - position:11.5
+
+- Label: Rembrandt
+  DOB: 1606-07-15
+  DOD: 1669-10-04
+  Params:
+    - position:12.5
+
+- Label: Johannes Vermeer
+  DOB: 1632-10-31
+  DOD: 1675-12-15
+  Params:
+    - position:13.5
+
+# Romanticism / Neoclassicism
+- Label: Francisco Goya
+  DOB: 1746-03-30
+  DOD: 1828-04-16
+  Params:
+    - position:14.5
+
+- Label: J.M.W. Turner
+  DOB: 1775-04-23
+  DOD: 1851-12-19
+  Params:
+    - position:9.5
+
+# Impressionism / Post-Impressionism
+- Label: Claude Monet
+  DOB: 1840-11-14
+  DOD: 1926-12-05
+  Params:
+    - position:10.5
+
+- Label: Pierre-Auguste Renoir
+  DOB: 1841-02-25
+  DOD: 1919-12-03
+  Params:
+    - position:11.5
+
+- Label: Paul Cézanne
+  DOB: 1839-01-19
+  DOD: 1906-10-22
+  Params:
+    - position:12.5
+
+- Label: Georges Seurat
+  DOB: 1859-12-02
+  DOD: 1891-03-29
+  Params:
+    - position:13.5
+
+- Label: Vincent van Gogh
+  DOB: 1853-03-30
+  DOD: 1890-07-29
+  Params:
+    - position:14.5
+
+# Symbolism / Art Nouveau / Modernism
+- Label: Gustav Klimt
+  DOB: 1862-07-14
+  DOD: 1918-02-06
+  Params:
+    - position:9.5
+
+- Label: Henri Matisse
+  DOB: 1869-12-31
+  DOD: 1954-11-03
+  Params:
+    - position:10.5
+
+- Label: Pablo Picasso
+  DOB: 1881-10-25
+  DOD: 1973-04-08
+  Params:
+    - position:11.5
+
+# Surrealism / Abstract Expressionism
+- Label: Salvador Dalí
+  DOB: 1904-05-11
+  DOD: 1989-01-23
+  Params:
+    - position:12.5
+
+- Label: Frida Kahlo
+  DOB: 1907-07-06
+  DOD: 1954-07-13
+  Params:
+    - position:13.5
+
+- Label: Jackson Pollock
+  DOB: 1912-01-28
+  DOD: 1956-08-11
+  Params:
+    - position:14.5

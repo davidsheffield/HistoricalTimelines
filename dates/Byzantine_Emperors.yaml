@@ -1,0 +1,408 @@
+# Emperors of the Eastern Roman / Byzantine Empire, from the end of the
+# Theodosian line covered in Roman_emperors.yaml (which runs through Arcadius,
+# Theodosius II, and Marcian) down to the fall of Constantinople in 1453.
+#
+# REIGN-LIST format (see British_monarchs.yaml): each entry gives a reign
+# Start/End plus DOB/DOD where known, with the dynasty/house carried in
+# Keywords. Coverage is the major and notable emperors plus enough connective
+# reigns to show the principal dynasties: Leonid, Justinian, Heraclian,
+# Isaurian (Syrian), Amorian, Macedonian, Komnenian, Angelid, the Nicaean
+# Laskarids of the empire in exile, and the Palaiologoi. Minor and ephemeral
+# usurpers are omitted.
+#
+# Reigns are sequential, so the single base row in global Params works for
+# nearly all entries; co-emperors / overlapping rivals get a separate
+# position: so their bars do not collide. Approximate dates use a quoted
+# 'c. ' prefix; uncertain dates are flagged with a trailing # CHECK.
+
+global:
+  Keywords:
+    - Byzantine
+    - Emperor
+    - Reign
+  Params:
+    - position:0.5
+
+entries:
+
+# --- Leonid dynasty ---
+- Label: Leo I
+  Start: 0457-02-07
+  End: 0474-01-18
+  DOB: 'c. 0401'
+  DOD: 0474-01-18
+  Keywords:
+    - Leonid_Dynasty
+- Label: Zeno
+  Start: 0474-01-29
+  End: 0491-04-09
+  DOB: 'c. 0425'
+  DOD: 0491-04-09
+  Keywords:
+    - Leonid_Dynasty
+- Label: Anastasius I
+  Start: 0491-04-11
+  End: 0518-07-09
+  DOB: 'c. 0431'
+  DOD: 0518-07-09
+  Keywords:
+    - Leonid_Dynasty
+
+# --- Justinian dynasty ---
+- Label: Justin I
+  Start: 0518-07-09
+  End: 0527-08-01
+  DOB: 'c. 0450'
+  DOD: 0527-08-01
+  Keywords:
+    - Justinian_Dynasty
+- Label: Justinian I
+  Start: 0527-08-01
+  End: 0565-11-14
+  DOB: 'c. 0482'
+  DOD: 0565-11-14
+  Keywords:
+    - Justinian_Dynasty
+- Label: Justin II
+  Start: 0565-11-14
+  End: 0578-10-05
+  DOB: 'c. 0520'
+  DOD: 0578-10-05
+  Keywords:
+    - Justinian_Dynasty
+- Label: Tiberius II Constantine
+  Start: 0574-12-07
+  End: 0582-08-14
+  DOB: 'c. 0535'
+  DOD: 0582-08-14
+  Keywords:
+    - Justinian_Dynasty
+- Label: Maurice
+  Start: 0582-08-13
+  End: 0602-11-27
+  DOB: 0539-01-01
+  DOD: 0602-11-27
+  Keywords:
+    - Justinian_Dynasty
+- Label: Phocas
+  Start: 0602-11-23
+  End: 0610-10-05
+  DOB: 'c. 0547'
+  DOD: 0610-10-05
+  Keywords:
+    - Non_Dynastic
+
+# --- Heraclian dynasty ---
+- Label: Heraclius
+  Start: 0610-10-05
+  End: 0641-02-11
+  DOB: 'c. 0575'
+  DOD: 0641-02-11
+  Keywords:
+    - Heraclian_Dynasty
+- Label: Constans II
+  Start: 0641-09-01
+  End: 0668-07-15
+  DOB: 0630-11-07
+  DOD: 0668-07-15
+  Keywords:
+    - Heraclian_Dynasty
+- Label: Constantine IV
+  Start: 0668-07-15
+  End: 0685-09-01
+  DOB: 'c. 0652'
+  DOD: 0685-09-01
+  Keywords:
+    - Heraclian_Dynasty
+- Label: Justinian II
+  Start: 0685-09-01
+  End: 0711-12-04 # two reigns, 685-695 and 705-711
+  DOB: 'c. 0668'
+  DOD: 0711-12-04
+  Keywords:
+    - Heraclian_Dynasty
+
+# --- Twenty Years' Anarchy / Isaurian (Syrian) dynasty ---
+- Label: Leo III the Isaurian
+  Start: 0717-03-25
+  End: 0741-06-18
+  DOB: 'c. 0685'
+  DOD: 0741-06-18
+  Keywords:
+    - Isaurian_Dynasty
+- Label: Constantine V
+  Start: 0741-06-18
+  End: 0775-09-14
+  DOB: 0718-07-01
+  DOD: 0775-09-14
+  Keywords:
+    - Isaurian_Dynasty
+- Label: Leo IV the Khazar
+  Start: 0775-09-14
+  End: 0780-09-08
+  DOB: 0750-01-25
+  DOD: 0780-09-08
+  Keywords:
+    - Isaurian_Dynasty
+- Label: Constantine VI
+  Start: 0780-09-08
+  End: 0797-08-19
+  DOB: 0771-01-01
+  DOD: 'c. 0805'
+  Keywords:
+    - Isaurian_Dynasty
+- Label: Irene
+  Start: 0797-08-19
+  End: 0802-10-31
+  DOB: 'c. 0752'
+  DOD: 0803-08-09
+  Keywords:
+    - Isaurian_Dynasty
+  Params:
+    - position:2.5
+
+# --- Nikephorian dynasty ---
+- Label: Nikephoros I
+  Start: 0802-10-31
+  End: 0811-07-26
+  DOB: 'c. 0760'
+  DOD: 0811-07-26
+  Keywords:
+    - Nikephorian_Dynasty
+
+# --- Amorian (Phrygian) dynasty ---
+- Label: Michael II
+  Start: 0820-12-25
+  End: 0829-10-02
+  DOB: 0770-01-01
+  DOD: 0829-10-02
+  Keywords:
+    - Amorian_Dynasty
+- Label: Theophilos
+  Start: 0829-10-02
+  End: 0842-01-20
+  DOB: 'c. 0813'
+  DOD: 0842-01-20
+  Keywords:
+    - Amorian_Dynasty
+- Label: Michael III
+  Start: 0842-01-20
+  End: 0867-09-24
+  DOB: 0840-01-19
+  DOD: 0867-09-24
+  Keywords:
+    - Amorian_Dynasty
+
+# --- Macedonian dynasty ---
+- Label: Basil I
+  Start: 0867-09-24
+  End: 0886-08-29
+  DOB: 'c. 0811'
+  DOD: 0886-08-29
+  Keywords:
+    - Macedonian_Dynasty
+- Label: Leo VI the Wise
+  Start: 0886-08-29
+  End: 0912-05-11
+  DOB: 0866-09-19
+  DOD: 0912-05-11
+  Keywords:
+    - Macedonian_Dynasty
+- Label: Constantine VII
+  Start: 0913-06-06
+  End: 0959-11-09
+  DOB: 0905-09-02
+  DOD: 0959-11-09
+  Keywords:
+    - Macedonian_Dynasty
+- Label: Romanos I Lekapenos
+  Start: 0920-12-17
+  End: 0944-12-16
+  DOB: 'c. 0870'
+  DOD: 0948-06-15
+  Keywords:
+    - Macedonian_Dynasty
+  Params:
+    - position:2.5
+- Label: Nikephoros II Phokas
+  Start: 0963-08-16
+  End: 0969-12-11
+  DOB: 'c. 0912'
+  DOD: 0969-12-11
+  Keywords:
+    - Macedonian_Dynasty
+  Params:
+    - position:2.5
+- Label: John I Tzimiskes
+  Start: 0969-12-11
+  End: 0976-01-10
+  DOB: 'c. 0925'
+  DOD: 0976-01-10
+  Keywords:
+    - Macedonian_Dynasty
+  Params:
+    - position:2.5
+- Label: Basil II
+  Start: 0976-01-10
+  End: 1025-12-15
+  DOB: 'c. 0958'
+  DOD: 1025-12-15
+  Keywords:
+    - Macedonian_Dynasty
+- Label: Constantine VIII
+  Start: 1025-12-15
+  End: 1028-11-15
+  DOB: 'c. 0960'
+  DOD: 1028-11-15
+  Keywords:
+    - Macedonian_Dynasty
+
+# --- Komnenian and Doukid prelude ---
+- Label: Isaac I Komnenos
+  Start: 1057-09-01
+  End: 1059-11-22
+  DOB: 'c. 1007'
+  DOD: 'c. 1060'
+  Keywords:
+    - Komnenian_Dynasty
+- Label: Constantine X Doukas
+  Start: 1059-11-23
+  End: 1067-05-22
+  DOB: 'c. 1006'
+  DOD: 1067-05-22
+  Keywords:
+    - Doukid_Dynasty
+- Label: Romanos IV Diogenes
+  Start: 1068-01-01
+  End: 1071-08-26 # defeated at Manzikert
+  DOB: 'c. 1030'
+  DOD: 1072-01-01
+  Keywords:
+    - Doukid_Dynasty
+  Params:
+    - position:2.5
+- Label: Alexios I Komnenos
+  Start: 1081-04-01
+  End: 1118-08-15
+  DOB: 'c. 1057'
+  DOD: 1118-08-15
+  Keywords:
+    - Komnenian_Dynasty
+- Label: John II Komnenos
+  Start: 1118-08-15
+  End: 1143-04-08
+  DOB: 1087-09-13
+  DOD: 1143-04-08
+  Keywords:
+    - Komnenian_Dynasty
+- Label: Manuel I Komnenos
+  Start: 1143-04-08
+  End: 1180-09-24
+  DOB: 1118-11-28
+  DOD: 1180-09-24
+  Keywords:
+    - Komnenian_Dynasty
+
+# --- Angelid dynasty ---
+- Label: Isaac II Angelos
+  Start: 1185-09-12
+  End: 1195-04-08 # restored 1203-1204
+  DOB: 'c. 1156'
+  DOD: 1204-01-01
+  Keywords:
+    - Angelid_Dynasty
+- Label: Alexios III Angelos
+  Start: 1195-04-08
+  End: 1203-07-17
+  DOB: 'c. 1153'
+  DOD: 'c. 1211'
+  Keywords:
+    - Angelid_Dynasty
+  Params:
+    - position:2.5
+
+# --- Empire of Nicaea: Laskarid dynasty (1204 sack of Constantinople) ---
+- Label: Theodore I Laskaris
+  Start: 1205-01-01
+  End: 1221-11-01
+  DOB: 'c. 1174'
+  DOD: 1221-11-01
+  Keywords:
+    - Laskarid_Dynasty
+    - Empire_of_Nicaea
+- Label: John III Vatatzes
+  Start: 1221-12-15
+  End: 1254-11-03
+  DOB: 'c. 1193'
+  DOD: 1254-11-03
+  Keywords:
+    - Laskarid_Dynasty
+    - Empire_of_Nicaea
+- Label: Theodore II Laskaris
+  Start: 1254-11-03
+  End: 1258-08-18
+  DOB: 1221-11-01
+  DOD: 1258-08-18
+  Keywords:
+    - Laskarid_Dynasty
+    - Empire_of_Nicaea
+
+# --- Palaiologan dynasty (Constantinople recovered 1261) ---
+- Label: Michael VIII Palaiologos
+  Start: 1259-01-01
+  End: 1282-12-11
+  DOB: 'c. 1223'
+  DOD: 1282-12-11
+  Keywords:
+    - Palaiologan_Dynasty
+- Label: Andronikos II Palaiologos
+  Start: 1282-12-11
+  End: 1328-05-24
+  DOB: 1259-03-25
+  DOD: 1332-02-13
+  Keywords:
+    - Palaiologan_Dynasty
+- Label: Andronikos III Palaiologos
+  Start: 1328-05-24
+  End: 1341-06-15
+  DOB: 1297-03-25
+  DOD: 1341-06-15
+  Keywords:
+    - Palaiologan_Dynasty
+- Label: John V Palaiologos
+  Start: 1341-06-15
+  End: 1391-02-16
+  DOB: 1332-06-18
+  DOD: 1391-02-16
+  Keywords:
+    - Palaiologan_Dynasty
+- Label: John VI Kantakouzenos
+  Start: 1347-02-08
+  End: 1354-12-04
+  DOB: 'c. 1292'
+  DOD: 1383-06-15
+  Keywords:
+    - Palaiologan_Dynasty
+  Params:
+    - position:2.5
+- Label: Manuel II Palaiologos
+  Start: 1391-02-16
+  End: 1425-07-21
+  DOB: 1350-06-27
+  DOD: 1425-07-21
+  Keywords:
+    - Palaiologan_Dynasty
+- Label: John VIII Palaiologos
+  Start: 1425-07-21
+  End: 1448-10-31
+  DOB: 1392-12-18
+  DOD: 1448-10-31
+  Keywords:
+    - Palaiologan_Dynasty
+- Label: Constantine XI Palaiologos
+  Start: 1449-01-06
+  End: 1453-05-29 # fall of Constantinople
+  DOB: 1405-02-08
+  DOD: 1453-05-29
+  Keywords:
+    - Palaiologan_Dynasty

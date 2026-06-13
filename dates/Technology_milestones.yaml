@@ -1,0 +1,166 @@
+global:
+  Keywords:
+    - Technology
+    - Event
+
+# Point-in-time technology milestones: the invention or first achievement of a
+# significant technology, from prehistory to the present day. Positions cycle
+# through a band (15/17/19/21) so that markers with nearby dates are vertically
+# separated and their labels do not overlap, the same way American_events.yaml
+# and Battles.yaml stagger their lanes. Lives of inventors live elsewhere and
+# are not duplicated here. Prehistoric dates are necessarily approximate.
+entries:
+# Prehistory and antiquity
+- Label: Writing / cuneiform (Sumer)
+  Date: -3200
+  Params:
+    - position:15
+- Label: The wheel (Mesopotamia)
+  Date: -3500
+  Params:
+    - position:17
+- Label: Bronze metallurgy
+  Date: -3300
+  Params:
+    - position:19
+- Label: Iron metallurgy (Hittites)
+  Date: -1200
+  Params:
+    - position:21
+# Medieval and Renaissance
+- Label: Mechanical clock (Europe)
+  Date: 'c. 1300'
+  Params:
+    - position:15
+- Label: Printing press (Gutenberg)
+  Date: 'c. 1440'
+  Params:
+    - position:17
+- Label: Telescope (Lippershey)
+  Date: 1608
+  Params:
+    - position:19
+# Industrial Revolution
+- Label: Steam engine (Watt)
+  Date: 1769-01-05
+  Params:
+    - position:15
+- Label: Cotton gin (Whitney)
+  Date: 1794-03-14
+  Params:
+    - position:17
+- Label: Battery (Volta's pile)
+  Date: 1800
+  Params:
+    - position:19
+- Label: Photography (Niépce)
+  Date: 1826
+  Params:
+    - position:21
+- Label: Electric telegraph (Morse)
+  Date: 1844-05-24
+  Params:
+    - position:15
+- Label: Telephone (Bell)
+  Date: 1876-03-07
+  Params:
+    - position:17
+- Label: Internal combustion engine (Otto)
+  Date: 1876
+  Params:
+    - position:19
+- Label: Incandescent light bulb (Edison)
+  Date: 1879-10-22
+  Params:
+    - position:21
+- Label: Automobile (Benz)
+  Date: 1886-01-29
+  Params:
+    - position:15
+# Turn of the century
+- Label: Radio transmission (Marconi)
+  Date: 1895
+  Params:
+    - position:17
+- Label: Powered flight (Wright bros.)
+  Date: 1903-12-17
+  Params:
+    - position:19
+- Label: Moving assembly line (Ford)
+  Date: 1913-12-01
+  Params:
+    - position:21
+- Label: Television (Baird)
+  Date: 1926-01-26
+  Params:
+    - position:15
+# Computing age
+- Label: Z3 — first programmable computer
+  Date: 1941-05-12
+  Params:
+    - position:17
+- Label: ENIAC unveiled
+  Date: 1946-02-15
+  Params:
+    - position:19
+- Label: Transistor (Bell Labs)
+  Date: 1947-12-16
+  Params:
+    - position:21
+- Label: Integrated circuit (Kilby)
+  Date: 1958-09-12
+  Params:
+    - position:15
+- Label: Laser (Maiman)
+  Date: 1960-05-16
+  Params:
+    - position:17
+- Label: ARPANET first message
+  Date: 1969-10-29
+  Params:
+    - position:19
+- Label: Microprocessor (Intel 4004)
+  Date: 1971-11-15
+  Params:
+    - position:21
+- Label: Email (Tomlinson)
+  Date: 1971
+  Params:
+    - position:15
+- Label: Mobile phone call (Motorola)
+  Date: 1973-04-03
+  Params:
+    - position:17
+- Label: Personal computer (Altair 8800)
+  Date: 1975-01-01
+  Params:
+    - position:19
+# Networked and mobile era
+- Label: IBM PC released
+  Date: 1981-08-12
+  Params:
+    - position:21
+- Label: GPS first satellite
+  Date: 1978-02-22
+  Params:
+    - position:15
+- Label: World Wide Web proposed
+  Date: 1989-03-12
+  Params:
+    - position:17
+- Label: First website online
+  Date: 1991-08-06
+  Params:
+    - position:19
+- Label: Human Genome sequenced
+  Date: 2003-04-14
+  Params:
+    - position:21
+- Label: Smartphone (iPhone)
+  Date: 2007-06-29
+  Params:
+    - position:15
+- Label: CRISPR gene editing
+  Date: 2012-06-28
+  Params:
+    - position:17

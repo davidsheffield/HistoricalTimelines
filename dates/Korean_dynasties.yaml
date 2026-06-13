@@ -1,0 +1,99 @@
+global:
+  Keywords:
+    - Korea
+    - Dynasty
+
+# Historical states and dynasties of Korea (Gojoseon through the Korean
+# Empire, c. -0300 – 1910 CE). Dates are approximate; early states such as
+# Gojoseon have legendary founding traditions (2333 BCE) and the spans here
+# follow the rough historically attested ranges. The "# CHECK" comment marks
+# labels whose dates should be verified later.
+# The Three Kingdoms (Goguryeo, Baekje, Silla) and the Gaya confederacy were
+# contemporaneous, and Balhae overlapped Unified Silla; these are staggered
+# onto separate position rows so the bars do not collide.
+
+entries:
+
+- Label: Gojoseon  # CHECK
+  Start: c. -0300
+  End: -0108
+  Params:
+    - position:8.5
+    - fill:#2f4b8a;
+
+- Label: Proto–Three Kingdoms  # CHECK
+  Start: c. -0100
+  End: c. 0300
+  Params:
+    - position:8.5
+    - fill:#5570ad;
+
+- Label: Goguryeo  # CHECK
+  Start: c. -0037
+  End: 0668
+  Params:
+    - position:8.5
+    - fill:#2f4b8a;
+
+- Label: Baekje  # CHECK
+  Start: c. -0018
+  End: 0660
+  Params:
+    - position:9.5
+    - fill:#5570ad;
+
+- Label: Silla  # CHECK
+  Start: c. -0057
+  End: 0935
+  Params:
+    - position:10.5
+    - fill:#2f4b8a;
+
+- Label: Gaya confederacy  # CHECK
+  Start: c. 0042
+  End: 0562
+  Params:
+    - position:11.5
+    - fill:#5570ad;
+
+- Label: Unified Silla
+  Start: 0668
+  End: 0935
+  Params:
+    - position:8.5
+    - fill:#5570ad;
+
+- Label: Balhae
+  Start: 0698
+  End: 0926
+  Params:
+    - position:9.5
+    - fill:#2f4b8a;
+
+- Label: Later Three Kingdoms  # CHECK
+  Start: 0892
+  End: 0936
+  Params:
+    - position:10.5
+    - fill:#5570ad;
+
+- Label: Goryeo
+  Start: 0918
+  End: 1392
+  Params:
+    - position:8.5
+    - fill:#2f4b8a;
+
+- Label: Joseon
+  Start: 1392
+  End: 1897
+  Params:
+    - position:8.5
+    - fill:#5570ad;
+
+- Label: Korean Empire
+  Start: 1897
+  End: 1910
+  Params:
+    - position:8.5
+    - fill:#2f4b8a;

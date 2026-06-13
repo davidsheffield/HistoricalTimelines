@@ -1,0 +1,117 @@
+global:
+  Keywords:
+    - Pacific
+    - Polynesia
+    - Settlement
+  Params:
+    - position:26.5
+
+# Austronesian / Polynesian settlement of the Pacific, shown as period spans.
+# Each region's bar runs from its (approximate) first-settlement date to the
+# present, so the bar length shows how long that region has been inhabited;
+# the migration eras (Austronesian expansion, Lapita) are shown as shorter
+# process spans instead.
+#
+# Dates are APPROXIMATE and actively debated. East Polynesian dates follow the
+# "short / late" chronology of Wilmshurst et al. 2011 (high-precision class-1
+# radiocarbon), which pushed many first-settlement dates several centuries
+# later than older estimates; some scholars still favour somewhat earlier
+# dates. The "# CHECK" comment marks dates that are uncertain or contested.
+#
+# Note: Near Oceania (New Guinea, the Bismarcks, the Solomons) was first
+# settled ~40,000 BP, far earlier than this timeline's 1740 BCE start, so its
+# span is clamped to the canvas edge below.
+#
+# position: values spread overlapping contemporaneous spans onto separate rows
+# (band ~26.5-29.5) so the bars do not collide; they may need tuning after a
+# first render.
+
+entries:
+
+# --- Migration / cultural-process spans ---
+
+- Label: Austronesian expansion (out of Taiwan)  # CHECK
+  Start: c. -3500
+  End: c. -1200
+  Params:
+    - position:26.5
+    - fill:#1f6fae;
+
+- Label: Lapita cultural complex  # CHECK
+  Start: c. -1400
+  End: c. -0500
+  Params:
+    - position:27.5
+    - fill:#4f9bd4;
+
+# --- Region settlement eras (first arrival -> present) ---
+
+- Label: Near Oceania (settled c. 40,000 BP)  # CHECK
+  Start: c. -1740
+  End: 2100
+  Params:
+    - position:28.5
+    - fill:#1f6fae;
+
+- Label: Fiji  # CHECK
+  Start: c. -1100
+  End: 2100
+  Params:
+    - position:26.5
+    - fill:#4f9bd4;
+
+- Label: Tonga & Samoa (West Polynesia)  # CHECK
+  Start: c. -0900
+  End: 2100
+  Params:
+    - position:27.5
+    - fill:#1f6fae;
+
+- Label: The long pause  # CHECK
+  Start: c. -0850
+  End: c. 1000
+  Params:
+    - position:28.5
+    - fill:#4f9bd4;
+
+- Label: Society Islands (central E. Polynesia)  # CHECK
+  Start: c. 1025
+  End: 2100
+  Params:
+    - position:26.5
+    - fill:#1f6fae;
+
+- Label: Cook Islands  # CHECK
+  Start: c. 1200
+  End: 2100
+  Params:
+    - position:27.5
+    - fill:#4f9bd4;
+
+- Label: Marquesas  # CHECK
+  Start: c. 1200
+  End: 2100
+  Params:
+    - position:28.5
+    - fill:#1f6fae;
+
+- Label: Rapa Nui (Easter Island)  # CHECK
+  Start: c. 1200
+  End: 2100
+  Params:
+    - position:29.5
+    - fill:#4f9bd4;
+
+- Label: Hawaiʻi  # CHECK
+  Start: c. 1220
+  End: 2100
+  Params:
+    - position:26.5
+    - fill:#1f6fae;
+
+- Label: Aotearoa / New Zealand (Māori)  # CHECK
+  Start: c. 1280
+  End: 2100
+  Params:
+    - position:27.5
+    - fill:#4f9bd4;

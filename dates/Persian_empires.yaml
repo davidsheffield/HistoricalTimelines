@@ -1,0 +1,99 @@
+global:
+  Keywords:
+    - Persia
+    - Iran
+    - Empire
+  Params:
+    - position:13.5
+
+# Persian / Iranian empires and dynasties (c. 678 BC – 1979 CE).
+# The Achaemenid Empire is intentionally omitted here as it is covered
+# elsewhere. Entries are period spans with an alternating royal-purple
+# palette (#5b3a8c / #7d5cb0). Overlapping or contemporaneous dynasties are
+# staggered onto separate rows via per-entry position overrides.
+# Dates are approximate; the "# CHECK" comment marks labels whose dates
+# should be verified later.
+
+entries:
+
+- Label: Median Empire  # CHECK
+  Start: c. -0678
+  End: -0550
+  Params:
+    - fill:#5b3a8c;
+
+- Label: Seleucid Empire  # CHECK
+  Start: -0312
+  End: -0063
+  Params:
+    - fill:#7d5cb0;
+
+- Label: Parthian (Arsacid) Empire  # CHECK
+  Start: c. -0247
+  End: 0224
+  Params:
+    - position:14.5
+    - fill:#5b3a8c;
+
+- Label: Sasanian Empire  # CHECK
+  Start: 0224
+  End: 0651
+  Params:
+    - fill:#7d5cb0;
+
+- Label: Samanid Empire  # CHECK
+  Start: 0819
+  End: 0999
+  Params:
+    - fill:#5b3a8c;
+
+- Label: Buyid dynasty  # CHECK
+  Start: 0934
+  End: 1062
+  Params:
+    - position:14.5
+    - fill:#7d5cb0;
+
+- Label: Great Seljuk Empire  # CHECK
+  Start: 1037
+  End: 1194
+  Params:
+    - fill:#5b3a8c;
+
+- Label: Khwarazmian Empire  # CHECK
+  Start: 1077
+  End: 1231
+  Params:
+    - position:14.5
+    - fill:#7d5cb0;
+
+- Label: Safavid Empire  # CHECK
+  Start: 1501
+  End: 1736
+  Params:
+    - fill:#5b3a8c;
+
+- Label: Afsharid dynasty  # CHECK
+  Start: 1736
+  End: 1796
+  Params:
+    - fill:#7d5cb0;
+
+- Label: Zand dynasty  # CHECK
+  Start: 1751
+  End: 1794
+  Params:
+    - position:14.5
+    - fill:#5b3a8c;
+
+- Label: Qajar dynasty  # CHECK
+  Start: 1789
+  End: 1925
+  Params:
+    - fill:#7d5cb0;
+
+- Label: Pahlavi dynasty  # CHECK
+  Start: 1925
+  End: 1979
+  Params:
+    - fill:#5b3a8c;

@@ -1,0 +1,78 @@
+# Pre-Columbian cultures north of Mexico (c. 1000 BCE – c. 1600 CE)
+# Period spans for the major archaeological cultures and confederacies of North
+# America. Chronologies are approximate, so most dates carry the "c. " prefix
+# and a "# CHECK" comment marking values that should be verified later.
+# Terracotta palette (#b5552d / #d57f54) alternating between spans.
+# position: values (base 17.5, band ~17.5–21.5) stagger overlapping
+# contemporaneous spans onto separate rows; they may need tuning after a first
+# render.
+
+global:
+  Keywords:
+    - North_America
+    - Americas
+
+entries:
+
+- Label: Adena culture  # CHECK
+  Start: c. -1000
+  End: c. 0200
+  Params:
+    - position:17.5
+    - fill:#b5552d;
+
+- Label: Hopewell tradition  # CHECK
+  Start: c. -0200
+  End: c. 0500
+  Params:
+    - position:18.5
+    - fill:#d57f54;
+
+- Label: Hohokam  # CHECK
+  Start: c. 0300
+  End: c. 1450
+  Params:
+    - position:17.5
+    - fill:#d57f54;
+
+- Label: Ancestral Puebloan (Anasazi)  # CHECK
+  Start: c. 0100
+  End: c. 1600
+  Params:
+    - position:19.5
+    - fill:#b5552d;
+
+- Label: Fremont culture  # CHECK
+  Start: c. 0300
+  End: c. 1300
+  Params:
+    - position:18.5
+    - fill:#b5552d;
+
+- Label: Chaco Canyon florescence  # CHECK
+  Start: c. 0900
+  End: c. 1150
+  Params:
+    - position:20.5
+    - fill:#d57f54;
+
+- Label: Mississippian culture  # CHECK
+  Start: c. 0800
+  End: c. 1600
+  Params:
+    - position:17.5
+    - fill:#b5552d;
+
+- Label: Cahokia  # CHECK
+  Start: c. 1050
+  End: c. 1350
+  Params:
+    - position:21.5
+    - fill:#d57f54;
+
+- Label: Iroquois (Haudenosaunee) Confederacy  # CHECK
+  Start: c. 1450
+  End: 2100
+  Params:
+    - position:18.5
+    - fill:#d57f54;

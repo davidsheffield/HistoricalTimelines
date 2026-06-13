@@ -1,0 +1,79 @@
+global:
+  Keywords:
+    - War
+  Params:
+    - position:10.5
+
+# Major European wars of the early modern period (c. 1494-1789), after the
+# Middle Ages and before the French Revolution. Dates are in ISO format and
+# reflect the conventional start of hostilities and the peace treaty that ended
+# each conflict. The American Revolutionary War (1775) lives in Wars.yaml and is
+# intentionally not duplicated here.
+entries:
+- Label: 'Italian Wars'
+  Start: '1494-09-01'
+  End: '1559-04-03'
+- Label: 'Schmalkaldic War'
+  Start: '1546-07-10'
+  End: '1547-05-23'
+  Params:
+    - label_position:below
+- Label: 'French Wars of Religion'
+  Start: '1562-03-01'
+  End: '1598-04-13'
+- Label: 'Eighty Years'' War'
+  Start: '1568-05-23'
+  End: '1648-01-30'
+  Params:
+    - label_position:below
+- Label: 'Anglo-Spanish War'
+  Start: '1585-08-01'
+  End: '1604-08-28'
+- Label: 'Long Turkish War'
+  Start: '1593-07-29'
+  End: '1606-11-11'
+  Params:
+    - label_position:below
+- Label: 'Thirty Years'' War'
+  Start: '1618-05-23'
+  End: '1648-10-24'
+- Label: 'English Civil War'
+  Start: '1642-08-22'
+  End: '1651-09-03'
+  Params:
+    - label_position:below
+- Label: 'Nine Years'' War'
+  Start: '1688-09-27'
+  End: '1697-09-20'
+- Label: 'Williamite War in Ireland'
+  Start: '1689-03-12'
+  End: '1691-10-03'
+  Params:
+    - label_position:below
+- Label: 'Great Turkish War'
+  Start: '1683-07-14'
+  End: '1699-01-26'
+- Label: 'Great Northern War'
+  Start: '1700-02-22'
+  End: '1721-09-10'
+  Params:
+    - label_position:below
+- Label: 'War of the Spanish Succession'
+  Start: '1701-07-15'
+  End: '1714-09-07'
+- Label: 'War of the Polish Succession'
+  Start: '1733-10-10'
+  End: '1738-11-18'
+  Params:
+    - label_position:below
+- Label: 'War of Jenkins'' Ear'
+  Start: '1739-10-22'
+  End: '1748-10-18'
+- Label: 'War of the Austrian Succession'
+  Start: '1740-12-16'
+  End: '1748-10-18'
+  Params:
+    - label_position:below
+- Label: 'Russo-Turkish War'
+  Start: '1768-10-06'
+  End: '1774-07-21'

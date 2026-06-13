@@ -1,0 +1,36 @@
+global:
+  Keywords:
+    - China
+    - Reign
+  Params:
+    - position:0.5
+
+entries:
+- Label: Mao Zedong
+  Start: 1949-10-01
+  End: 1976-09-09
+- Label: Hua Guofeng
+  Start: 1976-09-09
+  End: 1978-12-18
+  Params:
+    - border_left
+- Label: Deng Xiaoping
+  Start: 1978-12-18
+  End: 1992-10-19
+  Params:
+    - border_left
+- Label: Jiang Zemin
+  Start: 1992-10-19
+  End: 2002-11-15
+  Params:
+    - border_left
+- Label: Hu Jintao
+  Start: 2002-11-15
+  End: 2012-11-15
+  Params:
+    - border_left
+- Label: Xi Jinping
+  Start: 2012-11-15
+  End: 2026-06-13
+  Params:
+    - border_left

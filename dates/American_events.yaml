@@ -1,0 +1,248 @@
+global:
+  Keywords:
+    - USA
+    - Event
+
+# Point-in-time milestones in American history, from the colonial era to the
+# modern day. Positions cycle through a band (15/17/19/21) so that markers with
+# nearby dates are vertically separated and their labels do not overlap, the
+# same way Battles.yaml and Physics_discoveries.yaml stagger their lanes. Wars
+# and battles live in Wars.yaml / Battles.yaml and are not duplicated here.
+entries:
+# Colonial era
+- Label: Jamestown founded
+  Date: 1607-05-14
+  Params:
+    - position:15
+- Label: Plymouth Colony (Mayflower)
+  Date: 1620-12-21
+  Params:
+    - position:17
+- Label: Mayflower Compact signed
+  Date: 1620-11-11
+  Params:
+    - position:19
+- Label: Massachusetts Bay Colony
+  Date: 1630
+  Params:
+    - position:15
+- Label: Salem witch trials
+  Date: 1692
+  Params:
+    - position:17
+- Label: Great Awakening begins
+  Date: 'c. 1730'
+  Params:
+    - position:19
+# Revolution and founding
+- Label: Boston Massacre
+  Date: 1770-03-05
+  Params:
+    - position:15
+- Label: Boston Tea Party
+  Date: 1773-12-16
+  Params:
+    - position:17
+- Label: First Continental Congress
+  Date: 1774-09-05
+  Params:
+    - position:19
+- Label: Declaration of Independence
+  Date: 1776-07-04
+  Params:
+    - position:21
+- Label: Articles of Confederation ratified
+  Date: 1781-03-01
+  Params:
+    - position:15
+- Label: Treaty of Paris (independence)
+  Date: 1783-09-03
+  Params:
+    - position:17
+- Label: Constitution signed
+  Date: 1787-09-17
+  Params:
+    - position:19
+- Label: Constitution ratified
+  Date: 1788-06-21
+  Params:
+    - position:21
+- Label: Washington inaugurated
+  Date: 1789-04-30
+  Params:
+    - position:15
+- Label: Bill of Rights ratified
+  Date: 1791-12-15
+  Params:
+    - position:17
+# Early republic and expansion
+- Label: Louisiana Purchase
+  Date: 1803-04-30
+  Params:
+    - position:15
+- Label: Lewis & Clark depart
+  Date: 1804-05-14
+  Params:
+    - position:17
+- Label: Missouri Compromise
+  Date: 1820-03-06
+  Params:
+    - position:19
+- Label: Erie Canal opens
+  Date: 1825-10-26
+  Params:
+    - position:21
+- Label: Trail of Tears
+  Date: 1838
+  Params:
+    - position:15
+- Label: Seneca Falls Convention
+  Date: 1848-07-19
+  Params:
+    - position:17
+- Label: California Gold Rush
+  Date: 1849
+  Params:
+    - position:19
+# Civil War era
+- Label: Emancipation Proclamation
+  Date: 1863-01-01
+  Params:
+    - position:15
+- Label: Gettysburg Address
+  Date: 1863-11-19
+  Params:
+    - position:17
+# Apparent from the end of Lincoln's presidency
+# - Label: Lincoln assassinated
+#   Date: 1865-04-15
+#   Params:
+#     - position:19
+- Label: 13th Amendment (abolishes slavery)
+  Date: 1865-12-06
+  Params:
+    - position:21
+# Industrial age
+- Label: Transcontinental railroad (Golden Spike)
+  Date: 1869-05-10
+  Params:
+    - position:15
+- Label: Telephone patented (Bell)
+  Date: 1876-03-07
+  Params:
+    - position:17
+- Label: Statue of Liberty dedicated
+  Date: 1886-10-28
+  Params:
+    - position:19
+- Label: Ellis Island opens
+  Date: 1892-01-01
+  Params:
+    - position:21
+- Label: Wright Brothers first flight
+  Date: 1903-12-17
+  Params:
+    - position:15
+- Label: Ford Model T introduced
+  Date: 1908-10-01
+  Params:
+    - position:17
+- Label: 19th Amendment (women's suffrage)
+  Date: 1920-08-18
+  Params:
+    - position:19
+# Boom, bust, and world war
+- Label: Wall Street Crash
+  Date: 1929-10-29
+  Params:
+    - position:15
+- Label: New Deal begins
+  Date: 1933-03-04
+  Params:
+    - position:17
+- Label: Social Security Act
+  Date: 1935-08-14
+  Params:
+    - position:19
+- Label: Pearl Harbor
+  Date: 1941-12-07
+  Params:
+    - position:21
+- Label: Trinity (first atomic bomb)
+  Date: 1945-07-16
+  Params:
+    - position:15
+# Postwar and Cold War
+- Label: Marshall Plan
+  Date: 1948-04-03
+  Params:
+    - position:17
+- Label: Brown v. Board of Education
+  Date: 1954-05-17
+  Params:
+    - position:19
+- Label: Montgomery Bus Boycott begins
+  Date: 1955-12-05
+  Params:
+    - position:21
+- Label: NASA established
+  Date: 1958-07-29
+  Params:
+    - position:15
+- Label: March on Washington
+  Date: 1963-08-28
+  Params:
+    - position:17
+- Label: JFK assassinated
+  Date: 1963-11-22
+  Params:
+    - position:19
+- Label: Civil Rights Act
+  Date: 1964-07-02
+  Params:
+    - position:21
+- Label: Voting Rights Act
+  Date: 1965-08-06
+  Params:
+    - position:15
+- Label: MLK assassinated
+  Date: 1968-04-04
+  Params:
+    - position:17
+- Label: Moon landing (Apollo 11)
+  Date: 1969-07-20
+  Params:
+    - position:19
+- Label: ARPANET first message
+  Date: 1969-10-29
+  Params:
+    - position:21
+# Modern era
+- Label: Watergate break-in
+  Date: 1972-06-17
+  Params:
+    - position:15
+- Label: Nixon resigns
+  Date: 1974-08-09
+  Params:
+    - position:17
+# - Label: Bicentennial
+#   Date: 1976-07-04
+#   Params:
+#     - position:19
+- Label: Berlin Wall falls
+  Date: 1989-11-09
+  Params:
+    - position:15
+- Label: World Wide Web public
+  Date: 1991-08-06
+  Params:
+    - position:17
+- Label: September 11 attacks
+  Date: 2001-09-11
+  Params:
+    - position:19
+- Label: Obama inaugurated
+  Date: 2009-01-20
+  Params:
+    - position:21

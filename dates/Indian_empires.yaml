@@ -1,0 +1,146 @@
+global:
+  Keywords:
+    - India
+    - Empire
+    - Dynasty
+  Params:
+    - position:24.5
+
+# Major empires and dynasties of the Indian subcontinent (South Asia),
+# c. 2600 BCE – 1849 CE. Entries are period spans with two alternating
+# saffron/rose shades (#9c3b6e and #c25c8f), distinct from China's orange.
+# Dates are approximate and drawn from rough attested/scholarly ranges; the
+# "# CHECK" comment on a label marks dates that should be verified later.
+# The Indus Valley mature phase mostly predates the 1740 BCE canvas but is
+# included with c. dates anyway.
+# position: values group overlapping contemporaneous polities (northern
+# empires vs. Deccan/southern dynasties) onto separate rows; they may need
+# tuning after a first render. Base row is 24.5; band ~24.5–28.5.
+
+entries:
+
+- Label: Indus Valley (Mature Harappan)  # CHECK
+  Start: c. -2600
+  End: c. -1900
+  Params:
+    - fill:#9c3b6e;
+    - position:24.5
+
+- Label: Vedic Period  # CHECK
+  Start: c. -1500
+  End: c. -0500
+  Params:
+    - fill:#c25c8f;
+    - position:24.5
+
+- Label: Mahajanapadas  # CHECK
+  Start: c. -0600
+  End: c. -0345
+  Params:
+    - fill:#9c3b6e;
+    - position:25.5
+
+- Label: Maurya Empire  # CHECK
+  Start: c. -0322
+  End: c. -0185
+  Params:
+    - fill:#c25c8f;
+    - position:24.5
+
+- Label: Shunga Empire  # CHECK
+  Start: c. -0185
+  End: c. -0073
+  Params:
+    - fill:#9c3b6e;
+    - position:24.5
+
+- Label: Satavahana Dynasty  # CHECK
+  Start: c. -0230
+  End: c. 0220
+  Params:
+    - fill:#c25c8f;
+    - position:25.5
+
+- Label: Kushan Empire  # CHECK
+  Start: c. 0030
+  End: c. 0375
+  Params:
+    - fill:#9c3b6e;
+    - position:24.5
+
+- Label: Gupta Empire  # CHECK
+  Start: c. 0320
+  End: c. 0550
+  Params:
+    - fill:#c25c8f;
+    - position:24.5
+
+- Label: Chalukya Dynasty (Badami)  # CHECK
+  Start: 0543
+  End: 0757
+  Params:
+    - fill:#9c3b6e;
+    - position:24.5
+
+- Label: Pallava Dynasty  # CHECK
+  Start: c. 0275
+  End: 0897
+  Params:
+    - fill:#c25c8f;
+    - position:25.5
+
+- Label: Rashtrakuta Dynasty  # CHECK
+  Start: 0753
+  End: 0982
+  Params:
+    - fill:#9c3b6e;
+    - position:24.5
+
+- Label: Chola Empire (Imperial Cholas)  # CHECK
+  Start: c. 0848
+  End: 1279
+  Params:
+    - fill:#c25c8f;
+    - position:25.5
+
+- Label: Delhi Sultanate  # CHECK
+  Start: 1206
+  End: 1526
+  Params:
+    - fill:#9c3b6e;
+    - position:24.5
+
+- Label: Bahmani Sultanate  # CHECK
+  Start: 1347
+  End: 1527
+  Params:
+    - fill:#c25c8f;
+    - position:25.5
+
+- Label: Vijayanagara Empire  # CHECK
+  Start: 1336
+  End: 1646
+  Params:
+    - fill:#9c3b6e;
+    - position:26.5
+
+- Label: Mughal Empire  # CHECK
+  Start: 1526
+  End: 1857
+  Params:
+    - fill:#c25c8f;
+    - position:24.5
+
+- Label: Maratha Empire  # CHECK
+  Start: 1674
+  End: 1818
+  Params:
+    - fill:#9c3b6e;
+    - position:25.5
+
+- Label: Sikh Empire  # CHECK
+  Start: 1799
+  End: 1849
+  Params:
+    - fill:#c25c8f;
+    - position:26.5

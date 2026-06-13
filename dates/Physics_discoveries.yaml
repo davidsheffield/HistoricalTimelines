@@ -1,0 +1,206 @@
+global:
+  Keywords:
+    - Physics
+    - Event
+
+# Point-in-time physics milestones: theory publications (Theory) and
+# experimental discoveries (Discovery). Positions cycle through a band
+# (22.5-28.5) so that markers with nearby dates are vertically separated and
+# their labels do not overlap, the same way Battles.yaml staggers 15/17/19.
+entries:
+# Classical foundations
+- Label: Heliocentrism (De revolutionibus)
+  Date: 1543
+  Keywords:
+    - Theory
+  Params:
+    - position:22.5
+- Label: Newton's Principia
+  Date: 1687-07-05
+  Keywords:
+    - Theory
+  Params:
+    - position:22.5
+- Label: Maxwell's equations
+  Date: 1865
+  Keywords:
+    - Theory
+  Params:
+    - position:22.5
+# Birth of modern physics
+- Label: X-rays
+  Date: 1895-11-08
+  Keywords:
+    - Discovery
+  Params:
+    - position:22.5
+- Label: Radioactivity
+  Date: 1896-03-01
+  Keywords:
+    - Discovery
+  Params:
+    - position:24.5
+- Label: Electron
+  Date: 1897-04-30
+  Keywords:
+    - Discovery
+  Params:
+    - position:26.5
+- Label: Planck's quantum
+  Date: 1900-12-14
+  Keywords:
+    - Theory
+  Params:
+    - position:28.5
+- Label: Special relativity
+  Date: 1905-06-30
+  Keywords:
+    - Theory
+  Params:
+    - position:22.5
+- Label: Photoelectric effect
+  Date: 1905-03-17
+  Keywords:
+    - Theory
+  Params:
+    - position:24.5
+- Label: Atomic nucleus
+  Date: 1911-05-01
+  Keywords:
+    - Discovery
+  Params:
+    - position:26.5
+- Label: Bohr model
+  Date: 1913-07-01
+  Keywords:
+    - Theory
+  Params:
+    - position:28.5
+- Label: General relativity
+  Date: 1915-11-25
+  Keywords:
+    - Theory
+  Params:
+    - position:22.5
+# Quantum mechanics
+- Label: Matrix mechanics
+  Date: 1925-07-01
+  Keywords:
+    - Theory
+  Params:
+    - position:24.5
+- Label: Schrödinger equation
+  Date: 1926-01-01
+  Keywords:
+    - Theory
+  Params:
+    - position:26.5
+- Label: Dirac equation
+  Date: 1928-02-01
+  Keywords:
+    - Theory
+  Params:
+    - position:28.5
+- Label: Neutron
+  Date: 1932-02-01
+  Keywords:
+    - Discovery
+  Params:
+    - position:22.5
+- Label: Positron
+  Date: 1932-08-02
+  Keywords:
+    - Discovery
+  Params:
+    - position:24.5
+- Label: Muon
+  Date: 1936-01-01
+  Keywords:
+    - Discovery
+  Params:
+    - position:26.5
+- Label: Pion
+  Date: 1947-01-01
+  Keywords:
+    - Discovery
+  Params:
+    - position:28.5
+- Label: Quantum electrodynamics
+  Date: 1948
+  Keywords:
+    - Theory
+  Params:
+    - position:22.5
+# Particle era
+- Label: Antiproton
+  Date: 1955-10-01
+  Keywords:
+    - Discovery
+  Params:
+    - position:24.5
+- Label: Neutrino detected
+  Date: 1956-06-01
+  Keywords:
+    - Discovery
+  Params:
+    - position:26.5
+- Label: Quark model
+  Date: 1964-01-01
+  Keywords:
+    - Theory
+  Params:
+    - position:28.5
+- Label: Higgs mechanism
+  Date: 1964-08-01
+  Keywords:
+    - Theory
+  Params:
+    - position:22.5
+- Label: Electroweak unification
+  Date: 1967-11-01
+  Keywords:
+    - Theory
+  Params:
+    - position:24.5
+- Label: Quarks observed (DIS)
+  Date: 1968-01-01
+  Keywords:
+    - Discovery
+  Params:
+    - position:26.5
+- Label: J/ψ — charm quark
+  Date: 1974-11-11
+  Keywords:
+    - Discovery
+  Params:
+    - position:28.5
+- Label: Tau lepton
+  Date: 1975-08-01
+  Keywords:
+    - Discovery
+  Params:
+    - position:22.5
+- Label: W and Z bosons
+  Date: 1983-01-01
+  Keywords:
+    - Discovery
+  Params:
+    - position:24.5
+- Label: Top quark
+  Date: 1995-03-02
+  Keywords:
+    - Discovery
+  Params:
+    - position:26.5
+- Label: Higgs boson
+  Date: 2012-07-04
+  Keywords:
+    - Discovery
+  Params:
+    - position:28.5
+- Label: Gravitational waves
+  Date: 2015-09-14
+  Keywords:
+    - Discovery
+  Params:
+    - position:22.5

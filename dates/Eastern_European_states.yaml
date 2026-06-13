@@ -1,0 +1,129 @@
+global:
+  Keywords:
+    - Eastern_Europe
+  Params:
+    - position:17.5
+
+# Medieval-through-early-modern states of Eastern Europe and Russia
+# (c. 833 CE – 1917 CE). Period spans only; dates are approximate and drawn
+# from rough attested ranges. The "# CHECK" comment on uncertain labels marks
+# dates that should be verified later.
+# Colors alternate between two slate/steel-blue shades (#3a5a78 / #5e80a0).
+# position: values group overlapping contemporaneous states onto separate
+# rows (band ~17.5-22.5); they may need tuning after a first render.
+# Note: Steppe/Mongol khanates (e.g. the Golden Horde) are intentionally
+# omitted here as they already appear in Steppe_nomads.yaml.
+
+entries:
+
+- Label: Great Moravia  # CHECK
+  Start: c. 0833
+  End: c. 0906
+  Params:
+    - fill:#3a5a78;
+    - position:17.5
+
+- Label: Kievan Rus'  # CHECK
+  Start: 0882
+  End: 1240
+  Params:
+    - fill:#5e80a0;
+    - position:18.5
+
+- Label: First Bulgarian Empire  # CHECK
+  Start: 0681
+  End: 1018
+  Params:
+    - fill:#5e80a0;
+    - position:19.5
+
+- Label: Second Bulgarian Empire  # CHECK
+  Start: 1185
+  End: 1396
+  Params:
+    - fill:#3a5a78;
+    - position:19.5
+
+- Label: Kingdom of Hungary  # CHECK
+  Start: 1000
+  End: 1526
+  Params:
+    - fill:#3a5a78;
+    - position:20.5
+
+- Label: Kingdom of Bohemia  # CHECK
+  Start: 1198
+  End: 1918
+  Params:
+    - fill:#5e80a0;
+    - position:21.5
+
+- Label: Kingdom of Poland  # CHECK
+  Start: 1025
+  End: 1569
+  Params:
+    - fill:#3a5a78;
+    - position:17.5
+
+- Label: Grand Duchy of Lithuania  # CHECK
+  Start: 1236
+  End: 1569
+  Params:
+    - fill:#5e80a0;
+    - position:18.5
+
+- Label: Serbian Empire  # CHECK
+  Start: 1346
+  End: 1371
+  Params:
+    - fill:#3a5a78;
+    - position:22.5
+
+- Label: Principality of Wallachia  # CHECK
+  Start: c. 1330
+  End: 1859
+  Params:
+    - fill:#5e80a0;
+    - position:20.5
+
+- Label: Principality of Moldavia  # CHECK
+  Start: c. 1346
+  End: 1859
+  Params:
+    - fill:#3a5a78;
+    - position:19.5
+
+- Label: Polish-Lithuanian Commonwealth  # CHECK
+  Start: 1569
+  End: 1795
+  Params:
+    - fill:#5e80a0;
+    - position:17.5
+
+- Label: Cossack Hetmanate  # CHECK
+  Start: 1648
+  End: 1764
+  Params:
+    - fill:#3a5a78;
+    - position:18.5
+
+- Label: Grand Duchy of Moscow  # CHECK
+  Start: 1263
+  End: 1547
+  Params:
+    - fill:#5e80a0;
+    - position:21.5
+
+- Label: Tsardom of Russia  # CHECK
+  Start: 1547
+  End: 1721
+  Params:
+    - fill:#3a5a78;
+    - position:21.5
+
+- Label: Russian Empire  # CHECK
+  Start: 1721
+  End: 1917
+  Params:
+    - fill:#5e80a0;
+    - position:21.5

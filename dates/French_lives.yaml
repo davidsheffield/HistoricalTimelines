@@ -1,0 +1,188 @@
+global:
+  Keywords:
+    - France
+    - Life
+
+entries:
+# Medieval / Early
+- Label: Joan of Arc
+  DOB: c. 1412-01-06
+  DOD: 1431-05-30
+  Params:
+    - position:9.5
+
+# Early Modern — Philosophers / Scientists
+- Label: René Descartes
+  DOB: 1596-03-31
+  DOD: 1650-02-11
+  Params:
+    - position:10.5
+
+- Label: Molière
+  DOB: 1622-01-15
+  DOD: 1673-02-17
+  Params:
+    - position:11.5
+
+- Label: Blaise Pascal
+  DOB: 1623-06-19
+  DOD: 1662-08-19
+  Params:
+    - position:12.5
+
+- Label: Jean Racine
+  DOB: 1639-12-22
+  DOD: 1699-04-21
+  Params:
+    - position:13.5
+
+# Monarchy
+- Label: Louis XIV
+  DOB: 1638-09-05
+  DOD: 1715-09-01
+  Params:
+    - position:14.5
+
+# Enlightenment
+- Label: Voltaire
+  DOB: 1694-11-21
+  DOD: 1778-05-30
+  Params:
+    - position:9.5
+
+- Label: Montesquieu
+  DOB: 1689-01-18
+  DOD: 1755-02-10
+  Params:
+    - position:10.5
+
+- Label: Denis Diderot
+  DOB: 1713-10-05
+  DOD: 1784-07-31
+  Params:
+    - position:11.5
+
+- Label: Jean-Jacques Rousseau
+  DOB: 1712-06-28
+  DOD: 1778-07-02
+  Params:
+    - position:12.5
+
+# Revolution / Empire
+- Label: Antoine Lavoisier
+  DOB: 1743-08-26
+  DOD: 1794-05-08
+  Params:
+    - position:13.5
+
+- Label: Maximilien Robespierre
+  DOB: 1758-05-06
+  DOD: 1794-07-28
+  Params:
+    - position:14.5
+
+- Label: Napoleon Bonaparte
+  DOB: 1769-08-15
+  DOD: 1821-05-05
+  Params:
+    - position:9.5
+
+# 19th Century — Writers / Novelists
+- Label: Honoré de Balzac
+  DOB: 1799-05-20
+  DOD: 1850-08-18
+  Params:
+    - position:10.5
+
+- Label: Victor Hugo
+  DOB: 1802-02-26
+  DOD: 1885-05-22
+  Params:
+    - position:11.5
+
+- Label: Alexis de Tocqueville
+  DOB: 1805-07-29
+  DOD: 1859-04-16
+  Params:
+    - position:12.5
+
+- Label: Gustave Flaubert
+  DOB: 1821-12-12
+  DOD: 1880-05-08
+  Params:
+    - position:13.5
+
+- Label: Émile Zola
+  DOB: 1840-04-02
+  DOD: 1902-09-29
+  Params:
+    - position:14.5
+
+# 19th Century — Scientists / Artists
+- Label: Louis Pasteur
+  DOB: 1822-12-27
+  DOD: 1895-09-28
+  Params:
+    - position:9.5
+
+- Label: Claude Monet
+  DOB: 1840-11-14
+  DOD: 1926-12-05
+  Params:
+    - position:10.5
+
+- Label: Auguste Rodin
+  DOB: 1840-11-12
+  DOD: 1917-11-17
+  Params:
+    - position:11.5
+
+- Label: Paul Cézanne
+  DOB: 1839-01-19
+  DOD: 1906-10-22
+  Params:
+    - position:12.5
+
+# Late 19th / Early 20th Century — Scientists
+- Label: Henri Poincaré
+  DOB: 1854-04-29
+  DOD: 1912-07-17
+  Params:
+    - position:13.5
+
+- Label: Marie Curie
+  DOB: 1867-11-07
+  DOD: 1934-07-04
+  Params:
+    - position:14.5
+
+# 20th Century — Statesmen / Philosophers
+- Label: Marcel Proust
+  DOB: 1871-07-10
+  DOD: 1922-11-18
+  Params:
+    - position:9.5
+
+- Label: Charles de Gaulle
+  DOB: 1890-11-22
+  DOD: 1970-11-09
+  Params:
+    - position:10.5
+
+- Label: Albert Camus
+  DOB: 1913-11-07
+  DOD: 1960-01-04
+  Params:
+    - position:11.5
+
+- Label: Jean-Paul Sartre
+  DOB: 1905-06-21
+  DOD: 1980-04-15
+  Params:
+    - position:12.5
+
+- Label: Simone de Beauvoir
+  DOB: 1908-01-09
+  DOD: 1986-04-14
+  Params:
+    - position:13.5

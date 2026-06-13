@@ -1,0 +1,78 @@
+# Pre-Columbian Mesoamerican civilizations (c. 1500 BCE – 1521 CE)
+# Period spans for the major cultures and states of Mesoamerica. These cultures
+# have inherently fuzzy chronologies, so most dates carry the "c. " prefix and a
+# "# CHECK" comment marking values that should be verified later.
+# Turquoise-jade palette (#0f8a7a / #34ad9c) alternating between spans.
+# position: values (base 11.5, band ~11.5–15.5) stagger overlapping
+# contemporaneous spans onto separate rows; they may need tuning after a first
+# render.
+
+global:
+  Keywords:
+    - Mesoamerica
+    - Americas
+
+entries:
+
+- Label: Olmec  # CHECK
+  Start: c. -1200
+  End: c. -0400
+  Params:
+    - position:11.5
+    - fill:#0f8a7a;
+
+- Label: Maya  # CHECK
+  Start: c. -1000
+  End: c. 1539
+  Params:
+    - position:15.5
+    - fill:#34ad9c;
+
+- Label: Zapotec / Monte Albán  # CHECK
+  Start: c. -0500
+  End: c. 0800
+  Params:
+    - position:12.5
+    - fill:#34ad9c;
+
+- Label: Maya Classic  # CHECK
+  Start: c. 0250
+  End: c. 0900
+  Params:
+    - position:14.5
+    - fill:#0f8a7a;
+
+- Label: Teotihuacan  # CHECK
+  Start: c. -0150
+  End: c. 0550
+  Params:
+    - position:13.5
+    - fill:#0f8a7a;
+
+- Label: Toltec / Tula  # CHECK
+  Start: c. 0950
+  End: c. 1150
+  Params:
+    - position:13.5
+    - fill:#34ad9c;
+
+- Label: Mixtec  # CHECK
+  Start: c. 0900
+  End: c. 1523
+  Params:
+    - position:12.5
+    - fill:#0f8a7a;
+
+- Label: Tarascan (Purépecha) State  # CHECK
+  Start: c. 1300
+  End: 1530
+  Params:
+    - position:14.5
+    - fill:#34ad9c;
+
+- Label: Aztec (Mexica) Empire  # CHECK
+  Start: 1428
+  End: 1521
+  Params:
+    - position:13.5
+    - fill:#0f8a7a;

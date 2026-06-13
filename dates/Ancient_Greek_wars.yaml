@@ -1,0 +1,148 @@
+global:
+  Keywords:
+    - War
+
+# Section 1: war periods (Start/End). Section 2: battles (Date, point-in-time).
+entries:
+# --- Wars (periods) ---
+- Label: Ionian Revolt
+  Start: -0499
+  End: -0493
+  Params:
+    - position:10.5
+- Label: Greco-Persian Wars
+  Start: -0499
+  End: -0449
+  Params:
+    - position:10.5
+    - label_position:below
+- Label: First Persian Invasion
+  Start: -0492
+  End: -0490
+  Params:
+    - position:10.5
+- Label: Second Persian Invasion
+  Start: -0480
+  End: -0479
+  Params:
+    - position:10.5
+    - label_position:below
+- Label: Peloponnesian War
+  Start: -0431
+  End: -0404
+  Params:
+    - position:10.5
+- Label: Corinthian War
+  Start: -0395
+  End: -0386
+  Params:
+    - position:10.5
+    - label_position:below
+- Label: Wars of Alexander the Great
+  Start: -0336
+  End: -0323
+  Params:
+    - position:10.5
+- Label: Lamian War
+  Start: -0323
+  End: -0322
+  Params:
+    - position:10.5
+    - label_position:below
+- Label: Wars of the Diadochi
+  Start: -0322
+  End: -0281
+  Params:
+    - position:10.5
+# --- Battles (point-in-time) ---
+- Label: Marathon
+  Date: -0490-09-12
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:15
+- Label: Thermopylae
+  Date: -0480-08
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:17
+- Label: Salamis
+  Date: -0480-09
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:19
+- Label: Plataea
+  Date: -0479-08
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:21
+- Label: Delium
+  Date: -0424-11
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:15
+- Label: Mantinea
+  Date: -0418
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:17
+- Label: Aegospotami
+  Date: -0405-09
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:19
+- Label: Leuctra
+  Date: -0371-07-06
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:21
+- Label: Chaeronea
+  Date: -0338-08-02
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:15
+- Label: Granicus
+  Date: -0334-05
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:17
+- Label: Issus
+  Date: -0333-11
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:19
+- Label: Gaugamela
+  Date: -0331-10-01
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:21
+- Label: Hydaspes
+  Date: -0326-05
+  Keywords:
+    - Battle
+    - Event
+  Params:
+    - position:15

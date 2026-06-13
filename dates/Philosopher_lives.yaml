@@ -1,0 +1,162 @@
+global:
+  Keywords:
+    - Philosopher
+    - Life
+
+entries:
+# Ancient Greek
+- Label: Thales of Miletus
+  DOB: 'c. -0624'
+  DOD: 'c. -0546'
+  Params:
+    - position:9.5
+- Label: Pythagoras
+  DOB: 'c. -0570'
+  DOD: 'c. -0495'
+  Params:
+    - position:10.5
+- Label: Heraclitus
+  DOB: 'c. -0535'
+  DOD: 'c. -0475'
+  Params:
+    - position:11.5
+- Label: Socrates
+  DOB: 'c. -0470'
+  DOD: -0399-01-01
+  Params:
+    - position:12.5
+- Label: Plato
+  DOB: 'c. -0428'
+  DOD: 'c. -0348'
+  Params:
+    - position:13.5
+- Label: Aristotle
+  DOB: -0384-01-01
+  DOD: -0322-01-01
+  Params:
+    - position:14.5
+- Label: Epicurus
+  DOB: -0341-01-01
+  DOD: -0270-01-01
+  Params:
+    - position:9.5
+- Label: Zeno of Citium
+  DOB: 'c. -0334'
+  DOD: 'c. -0262'
+  Params:
+    - position:10.5
+# Roman
+- Label: Seneca
+  DOB: 'c. -0004'
+  DOD: '0065-04-01'
+  Params:
+    - position:11.5
+- Label: Epictetus
+  DOB: 'c. 0050'
+  DOD: 'c. 0135'
+  Params:
+    - position:12.5
+- Label: Marcus Aurelius
+  DOB: 0121-04-26
+  DOD: 0180-03-17
+  Params:
+    - position:13.5
+- Label: Plotinus
+  DOB: 'c. 0204'
+  DOD: 0270-01-01
+  Params:
+    - position:14.5
+# Medieval
+- Label: Augustine of Hippo
+  DOB: 0354-11-13
+  DOD: 0430-08-28
+  Params:
+    - position:9.5
+- Label: Thomas Aquinas
+  DOB: 'c. 1225'
+  DOD: 1274-03-07
+  Params:
+    - position:10.5
+# Early Modern
+- Label: René Descartes
+  DOB: 1596-03-31
+  DOD: 1650-02-11
+  Params:
+    - position:11.5
+- Label: Baruch Spinoza
+  DOB: 1632-11-24
+  DOD: 1677-02-21
+  Params:
+    - position:12.5
+- Label: John Locke
+  DOB: 1632-08-29
+  DOD: 1704-10-28
+  Params:
+    - position:13.5
+- Label: Gottfried Leibniz
+  DOB: 1646-07-01
+  DOD: 1716-11-14
+  Params:
+    - position:14.5
+- Label: George Berkeley
+  DOB: 1685-03-12
+  DOD: 1753-01-14
+  Params:
+    - position:9.5
+- Label: David Hume
+  DOB: 1711-05-07
+  DOD: 1776-08-25
+  Params:
+    - position:10.5
+- Label: Jean-Jacques Rousseau
+  DOB: 1712-06-28
+  DOD: 1778-07-02
+  Params:
+    - position:11.5
+- Label: Immanuel Kant
+  DOB: 1724-04-22
+  DOD: 1804-02-12
+  Params:
+    - position:12.5
+# 19th Century
+- Label: Georg Hegel
+  DOB: 1770-08-27
+  DOD: 1831-11-14
+  Params:
+    - position:13.5
+- Label: Arthur Schopenhauer
+  DOB: 1788-02-22
+  DOD: 1860-09-21
+  Params:
+    - position:14.5
+- Label: John Stuart Mill
+  DOB: 1806-05-20
+  DOD: 1873-05-08
+  Params:
+    - position:9.5
+- Label: Søren Kierkegaard
+  DOB: 1813-05-05
+  DOD: 1855-11-11
+  Params:
+    - position:10.5
+- Label: Friedrich Nietzsche
+  DOB: 1844-10-15
+  DOD: 1900-08-25
+  Params:
+    - position:11.5
+# 20th Century
+- Label: Bertrand Russell
+  DOB: 1872-05-18
+  DOD: 1970-02-02
+  Params:
+    - position:12.5
+- Label: Ludwig Wittgenstein
+  DOB: 1889-04-26
+  DOD: 1951-04-29
+  Params:
+    - position:13.5
+- Label: Jean-Paul Sartre
+  DOB: 1905-06-21
+  DOD: 1980-04-15
+  Params:
+    - position:14.5

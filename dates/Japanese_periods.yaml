@@ -1,0 +1,112 @@
+global:
+  Keywords:
+    - Japan
+    - Period
+
+# Historical periods of Japan (Yayoi through Shōwa, c. 300 BCE – 1989 CE).
+# Dates are approximate; period boundaries vary between sources (e.g. the
+# Yayoi start and the Azuchi–Momoyama range are debated). The "# CHECK"
+# comment marks labels whose dates should be verified later.
+# Most eras are sequential and sit on the base row; Sengoku overlaps the
+# Muromachi (Ashikaga) period and is staggered to a separate position so the
+# bars do not collide.
+
+entries:
+
+- Label: Yayoi  # CHECK
+  Start: c. -0300
+  End: c. 0300
+  Params:
+    - position:4.5
+    - fill:#a32638;
+
+- Label: Kofun
+  Start: c. 0300
+  End: 0538
+  Params:
+    - position:4.5
+    - fill:#c75462;
+
+- Label: Asuka
+  Start: 0538
+  End: 0710
+  Params:
+    - position:4.5
+    - fill:#a32638;
+
+- Label: Nara
+  Start: 0710
+  End: 0794
+  Params:
+    - position:4.5
+    - fill:#c75462;
+
+- Label: Heian
+  Start: 0794
+  End: 1185
+  Params:
+    - position:4.5
+    - fill:#a32638;
+
+- Label: Kamakura
+  Start: 1185
+  End: 1333
+  Params:
+    - position:4.5
+    - fill:#c75462;
+
+- Label: Kenmu Restoration  # CHECK
+  Start: 1333
+  End: 1336
+  Params:
+    - position:4.5
+    - fill:#a32638;
+
+- Label: Muromachi (Ashikaga)
+  Start: 1336
+  End: 1573
+  Params:
+    - position:4.5
+    - fill:#c75462;
+
+- Label: Sengoku  # CHECK
+  Start: c. 1467
+  End: c. 1600
+  Params:
+    - position:5.5
+    - fill:#a32638;
+
+- Label: Azuchi–Momoyama  # CHECK
+  Start: 1573
+  End: 1603
+  Params:
+    - position:4.5
+    - fill:#a32638;
+
+- Label: Edo (Tokugawa)
+  Start: 1603
+  End: 1868
+  Params:
+    - position:4.5
+    - fill:#c75462;
+
+- Label: Meiji
+  Start: 1868
+  End: 1912
+  Params:
+    - position:4.5
+    - fill:#a32638;
+
+- Label: Taishō
+  Start: 1912
+  End: 1926
+  Params:
+    - position:4.5
+    - fill:#c75462;
+
+- Label: Shōwa
+  Start: 1926
+  End: 1989
+  Params:
+    - position:4.5
+    - fill:#a32638;

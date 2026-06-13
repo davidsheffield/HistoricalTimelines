@@ -1,0 +1,100 @@
+global:
+  Keywords:
+    - War
+  Params:
+    - position:10.5
+
+# Modern wars from ~1815 to the present (post-Napoleonic era).
+# Wars already covered elsewhere are intentionally omitted: the Crimean War,
+# World Wars I and II, the Korean War, the Vietnam War, the Gulf War, and the
+# 2001 Afghanistan / 2003 Iraq wars (see Wars.yaml), and the Napoleonic Wars
+# (covered separately).
+entries:
+- Label: First Italian War of Independence
+  Start: 1848-03-23
+  End: 1849-08-22
+- Label: Second Italian War of Independence
+  Start: 1859-04-26
+  End: 1859-07-12
+  Params:
+    - label_position:below
+- Label: Second Schleswig War
+  Start: 1864-02-01
+  End: 1864-10-30
+- Label: Austro-Prussian War
+  Start: 1866-06-15
+  End: 1866-08-23
+  Params:
+    - label_position:below
+- Label: Franco-Prussian War
+  Start: 1870-07-19
+  End: 1871-05-10
+- Label: First Boer War
+  Start: 1880-12-16
+  End: 1881-03-23
+  Params:
+    - label_position:below
+- Label: First Sino-Japanese War
+  Start: 1894-07-25
+  End: 1895-04-17
+- Label: Second Boer War
+  Start: 1899-10-11
+  End: 1902-05-31
+  Params:
+    - label_position:below
+- Label: Russo-Japanese War
+  Start: 1904-02-08
+  End: 1905-09-05
+- Label: First Balkan War
+  Start: 1912-10-08
+  End: 1913-05-30
+  Params:
+    - label_position:below
+- Label: Second Balkan War
+  Start: 1913-06-29
+  End: 1913-08-10
+- Label: Russian Civil War
+  Start: 1917-11-07
+  End: 1922-10-25
+  Params:
+    - label_position:below
+- Label: Chinese Civil War
+  Start: 1927-08-01
+  End: 1949-12-07
+- Label: Second Sino-Japanese War
+  Start: 1937-07-07
+  End: 1945-09-02
+  Params:
+    - label_position:below
+- Label: Spanish Civil War
+  Start: 1936-07-17
+  End: 1939-04-01
+- Label: Cold War
+  Start: 1947
+  End: 1991
+  Params:
+    - label_position:below
+- Label: Suez Crisis
+  Start: 1956-10-29
+  End: 1956-11-07
+- Label: Six-Day War
+  Start: 1967-06-05
+  End: 1967-06-10
+  Params:
+    - label_position:below
+- Label: Yom Kippur War
+  Start: 1973-10-06
+  End: 1973-10-25
+- Label: Soviet-Afghan War
+  Start: 1979-12-24
+  End: 1989-02-15
+  Params:
+    - label_position:below
+- Label: Iran-Iraq War
+  Start: 1980-09-22
+  End: 1988-08-20
+- Label: Falklands War
+  Start: 1982-04-02
+  End: 1982-06-14
+  Params:
+    - label_position:below

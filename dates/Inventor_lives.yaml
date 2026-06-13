@@ -1,0 +1,165 @@
+# Inventors and engineers across history.
+# People primarily known as physicists, mathematicians, painters, or
+# composers live in their own files and are excluded here.
+global:
+  Keywords:
+    - Inventor
+    - Life
+
+entries:
+# Antiquity
+- Label: Cai Lun
+  DOB: 'c. 0050'
+  DOD: 0121
+  Params:
+    - position:9.5
+# Renaissance / Early Modern
+- Label: Johannes Gutenberg
+  DOB: 'c. 1398'
+  DOD: 1468-02-03
+  Params:
+    - position:10.5
+# Industrial Revolution
+- Label: Thomas Newcomen
+  DOB: 'c. 1664-02-24'
+  DOD: 1729-08-05
+  Params:
+    - position:11.5
+- Label: Richard Arkwright
+  DOB: 1732-12-23
+  DOD: 1792-08-03
+  Params:
+    - position:12.5
+- Label: James Watt
+  DOB: 1736-01-19
+  DOD: 1819-08-25
+  Params:
+    - position:13.5
+- Label: Eli Whitney
+  DOB: 1765-12-08
+  DOD: 1825-01-08
+  Params:
+    - position:14.5
+- Label: Robert Fulton
+  DOB: 1765-11-14
+  DOD: 1815-02-24
+  Params:
+    - position:9.5
+- Label: George Stephenson
+  DOB: 1781-06-09
+  DOD: 1848-08-12
+  Params:
+    - position:10.5
+# 19th Century
+- Label: Samuel Morse
+  DOB: 1791-04-27
+  DOD: 1872-04-02
+  Params:
+    - position:11.5
+- Label: Charles Goodyear
+  DOB: 1800-12-29
+  DOD: 1860-07-01
+  Params:
+    - position:12.5
+- Label: Isambard Kingdom Brunel
+  DOB: 1806-04-09
+  DOD: 1859-09-15
+  Params:
+    - position:13.5
+- Label: Elisha Otis
+  DOB: 1811-08-03
+  DOD: 1861-04-08
+  Params:
+    - position:14.5
+- Label: "Étienne Lenoir"
+  DOB: 1822-01-12
+  DOD: 1900-08-04
+  Params:
+    - position:9.5
+- Label: Alfred Nobel
+  DOB: 1833-10-21
+  DOD: 1896-12-10
+  Params:
+    - position:10.5
+- Label: George Westinghouse
+  DOB: 1846-10-06
+  DOD: 1914-03-12
+  Params:
+    - position:11.5
+- Label: Alexander Graham Bell
+  DOB: 1847-03-03
+  DOD: 1922-08-02
+  Params:
+    - position:12.5
+- Label: Thomas Edison
+  DOB: 1847-02-11
+  DOD: 1931-10-18
+  Params:
+    - position:13.5
+- Label: Gottlieb Daimler
+  DOB: 1834-03-17
+  DOD: 1900-03-06
+  Params:
+    - position:14.5
+- Label: Karl Benz
+  DOB: 1844-11-25
+  DOD: 1929-04-04
+  Params:
+    - position:9.5
+- Label: Rudolf Diesel
+  DOB: 1858-03-18
+  DOD: 1913-09-29
+  Params:
+    - position:10.5
+- Label: Nikola Tesla
+  DOB: 1856-07-10
+  DOD: 1943-01-07
+  Params:
+    - position:11.5
+# Turn of the 20th Century
+- Label: Guglielmo Marconi
+  DOB: 1874-04-25
+  DOD: 1937-07-20
+  Params:
+    - position:12.5
+- Label: Henry Ford
+  DOB: 1863-07-30
+  DOD: 1947-04-07
+  Params:
+    - position:13.5
+- Label: Wilbur Wright
+  DOB: 1867-04-16
+  DOD: 1912-05-30
+  Params:
+    - position:14.5
+- Label: Orville Wright
+  DOB: 1871-08-19
+  DOD: 1948-01-30
+  Params:
+    - position:9.5
+- Label: Lee de Forest
+  DOB: 1873-08-26
+  DOD: 1961-06-30
+  Params:
+    - position:10.5
+# 20th Century
+- Label: John Logie Baird
+  DOB: 1888-08-13
+  DOD: 1946-06-14
+  Params:
+    - position:11.5
+- Label: Vladimir Zworykin
+  DOB: 1888-07-29
+  DOD: 1982-07-29
+  Params:
+    - position:12.5
+- Label: Jack Kilby
+  DOB: 1923-11-08
+  DOD: 2005-06-20
+  Params:
+    - position:13.5
+- Label: Robert Noyce
+  DOB: 1927-12-12
+  DOD: 1990-06-03
+  Params:
+    - position:14.5

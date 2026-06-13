@@ -1,0 +1,89 @@
+global:
+  Keywords:
+    - Religion
+    - Life
+
+entries:
+# Ancient / axial age founders
+- Label: Zoroaster
+  DOB: 'c. -0628'
+  DOD: 'c. -0551'
+  Params:
+    - position:9.5
+- Label: Mahavira
+  DOB: 'c. -0599'
+  DOD: 'c. -0527'
+  Params:
+    - position:10.5
+- Label: Siddhartha Gautama
+  DOB: 'c. -0563'
+  DOD: 'c. -0483'
+  Params:
+    - position:11.5
+- Label: Laozi
+  DOB: 'c. -0571'
+  DOD: 'c. -0471'
+  Params:
+    - position:12.5
+- Label: Confucius
+  DOB: -0551-09-28
+  DOD: -0479-04-11
+  Params:
+    - position:13.5
+# Second Temple / early Christian era
+- Label: Jesus of Nazareth
+  DOB: 'c. -0004'
+  DOD: 'c. 0030'
+  Params:
+    - position:9.5
+- Label: Paul the Apostle
+  DOB: 'c. 0005'
+  DOD: 'c. 0064'
+  Params:
+    - position:10.5
+# Islam
+- Label: Muhammad
+  DOB: 0570
+  DOD: 0632-06-08
+  Params:
+    - position:11.5
+# Medieval
+- Label: Maimonides
+  DOB: 1138-03-30
+  DOD: 1204-12-12
+  Params:
+    - position:9.5
+# Sikhism
+- Label: Guru Nanak
+  DOB: 1469-04-15
+  DOD: 1539-09-22
+  Params:
+    - position:12.5
+# Protestant Reformation
+- Label: Martin Luther
+  DOB: 1483-11-10
+  DOD: 1546-02-18
+  Params:
+    - position:10.5
+- Label: John Calvin
+  DOB: 1509-07-10
+  DOD: 1564-05-27
+  Params:
+    - position:11.5
+# Early modern dissenting movements
+- Label: George Fox
+  DOB: 1624-07
+  DOD: 1691-01-13
+  Params:
+    - position:9.5
+- Label: John Wesley
+  DOB: 1703-06-28
+  DOD: 1791-03-02
+  Params:
+    - position:10.5
+# Latter-day Saints
+- Label: Joseph Smith
+  DOB: 1805-12-23
+  DOD: 1844-06-27
+  Params:
+    - position:11.5

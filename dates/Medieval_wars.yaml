@@ -1,0 +1,89 @@
+global:
+  Keywords:
+    - War
+  Params:
+    - position:10.5
+
+# Major medieval war periods (c. 500-1500 CE). War PERIODS only (Start/End
+# spans); individual battles live in Battles.yaml and are not duplicated here.
+entries:
+- Label: Investiture Controversy
+  Start: 1076
+  End: 1122
+- Label: First Crusade
+  Start: 1096-08-15
+  End: 1099-07-15
+  Params:
+    - label_position:below
+- Label: Second Crusade
+  Start: 1147
+  End: 1150
+- Label: Third Crusade
+  Start: 1189-05-11
+  End: 1192-09-02
+  Params:
+    - label_position:below
+- Label: Fourth Crusade
+  Start: 1202
+  End: 1204
+- Label: Albigensian Crusade
+  Start: 1209
+  End: 1229
+  Params:
+    - label_position:below
+- Label: Fifth Crusade
+  Start: 1217
+  End: 1221
+- Label: Mongol Conquests
+  Start: 1206
+  End: 1294
+  Params:
+    - label_position:below
+- Label: Sixth Crusade
+  Start: 1228
+  End: 1229
+- Label: Seventh Crusade
+  Start: 1248
+  End: 1254
+  Params:
+    - label_position:below
+- Label: Eighth Crusade
+  Start: 1270
+  End: 1270
+- Label: Ninth Crusade
+  Start: 1271
+  End: 1272
+  Params:
+    - label_position:below
+- Label: First War of Scottish Independence
+  Start: 1296-03-26
+  End: 1328-05-01
+- Label: Hundred Years' War
+  Start: 1337-05-24
+  End: 1453-10-19
+  Params:
+    - label_position:below
+- Label: Second War of Scottish Independence
+  Start: 1332-08-11
+  End: 1357-10-03
+- Label: Hussite Wars
+  Start: 1419-07-30
+  End: 1434-05-30
+  Params:
+    - label_position:below
+- Label: Wars of the Roses
+  Start: 1455-05-22
+  End: 1487-06-16
+- Label: Italian Wars
+  Start: 1494-09-01
+  End: 1559-04-03
+  Params:
+    - label_position:below
+- Label: Reconquista
+  Start: 0718
+  End: 1492-01-02
+- Label: Norman Conquest of England
+  Start: 1066-09-28
+  End: 1071
+  Params:
+    - label_position:below

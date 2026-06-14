@@ -565,6 +565,43 @@ def test_event_label_not_smaller_than_bar_text():
     assert f'font-size:{timeline.LABEL_FONT_PX}px' in result
 
 
+def test_label_xml_special_chars_escaped():
+    """Labels with &, < or > are XML-escaped so the SVG stays well-formed."""
+
+    test_data = pd.DataFrame([{
+        'Label': 'Tonga & Samoa <West>',
+        'Keywords': ['Settlement'],
+        'Params': ['position:1'],
+        'start_x': 100,
+        'end_x': 200,
+        'y': 1
+    }])
+
+    result = timeline._generate_timeline_boxes(test_data, left_to_right=True)
+
+    assert 'Tonga &amp; Samoa &lt;West&gt;' in result
+    # The raw ampersand must not appear as a bare entity reference.
+    assert 'Tonga & Samoa' not in result
+
+
+def test_event_label_xml_special_chars_escaped():
+    """Event labels are XML-escaped just like period labels."""
+
+    test_data = pd.DataFrame([{
+        'Label': 'Smith & Co.',
+        'Keywords': ['Battle', 'Event'],
+        'Params': [],
+        'start_x': 100,
+        'end_x': 100,
+        'y': 1
+    }])
+
+    result = timeline._generate_timeline_boxes(test_data, left_to_right=True)
+
+    assert 'Smith &amp; Co.' in result
+    assert 'Smith & Co.' not in result
+
+
 def test_load_data_basic_global_entries():
     """Test load_data with basic global/entries YAML format."""
     yaml_content = {

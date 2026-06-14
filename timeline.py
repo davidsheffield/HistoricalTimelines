@@ -30,6 +30,7 @@ import os
 import pathlib
 import re
 from string import Template
+from xml.sax.saxutils import escape
 
 import pandas as pd
 import yaml
@@ -411,6 +412,23 @@ def _calculate_font_size(label: str,
     return font_size
 
 
+def _escape(text) -> str:
+    """
+    Escape text for safe inclusion as SVG/XML character data.
+
+    Replaces the XML-significant characters '&', '<' and '>' with their
+    entity references so that labels containing them (e.g. 'Tonga & Samoa')
+    produce well-formed SVG.
+
+    Args:
+        text: Value to escape; coerced to str first.
+
+    Returns:
+        str: XML-escaped text.
+    """
+    return escape(str(text))
+
+
 def _generate_timeline_boxes(sheet_boxes: pd.DataFrame, left_to_right: bool) -> str:
     """Generate timeline box elements for template substitution."""
     content = []
@@ -478,7 +496,7 @@ def _generate_timeline_boxes(sheet_boxes: pd.DataFrame, left_to_right: bool) -> 
             text_classes = classes + ' outside_label'
             content.append(
                 f'<text x="{event_x}" y="{text_y}"'
-                f' class="{text_classes}" style="font-size:{LABEL_FONT_PX}px">{label}</text>'
+                f' class="{text_classes}" style="font-size:{LABEL_FONT_PX}px">{_escape(label)}</text>'
             )
             continue
 
@@ -525,7 +543,7 @@ def _generate_timeline_boxes(sheet_boxes: pd.DataFrame, left_to_right: bool) -> 
         else:
             font_size = _calculate_font_size(label, width)
 
-        content.append(f'<text x="{middle_x}" y="{text_y}" class="{text_classes}" style="font-size:{font_size}px">{label}</text>')
+        content.append(f'<text x="{middle_x}" y="{text_y}" class="{text_classes}" style="font-size:{font_size}px">{_escape(label)}</text>')
 
     return '\n'.join(content)
 

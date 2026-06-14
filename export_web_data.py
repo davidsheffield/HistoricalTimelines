@@ -2,9 +2,9 @@
 Export timeline data to a JavaScript file for the interactive web viewer.
 
 Unlike ``timeline.py`` (which renders fixed printable SVG sheets), the web
-viewer in ``web/index.html`` lays everything out dynamically in the browser.
+viewer in ``docs/index.html`` lays everything out dynamically in the browser.
 This script reuses ``timeline.py``'s data pipeline to load every YAML file in
-``dates/``, then writes a single ``web/timeline_data.js`` that assigns the data
+``dates/``, then writes a single ``docs/timeline_data.js`` that assigns the data
 to ``window.TIMELINE_DATA``.
 
 A plain ``.js`` file (rather than JSON loaded with ``fetch``) is used so the
@@ -266,7 +266,7 @@ def main():
     # Stable ordering: theme, category, then chronological.
     records.sort(key=lambda r: (r['theme'], r['category'], r['start']))
 
-    out_dir = pathlib.Path(__file__).parent / 'web'
+    out_dir = pathlib.Path(__file__).parent / 'docs'
     out_dir.mkdir(exist_ok=True)
     out_path = out_dir / 'timeline_data.js'
 

@@ -52,15 +52,15 @@ Navigation:
 Interactive web viewer
 ----------------------
 
-`web/index.html` is a separate, screen-oriented viewer (not for printing).
+`docs/index.html` is a separate, screen-oriented viewer (not for printing).
 Instead of stitching pre-rendered sheets, it lays the data out dynamically in
 the browser on a single continuous time axis, so there are no sheets to
 navigate and you choose what to display.
 
 First export the data, then open the page:
 
-    python export_web_data.py        # writes web/timeline_data.js
-    open web/index.html              # works directly from disk (file://)
+    python export_web_data.py        # writes docs/timeline_data.js
+    open docs/index.html              # works directly from disk (file://)
 
 Re-run `export_web_data.py` whenever the YAML files in `dates/` change.
 
@@ -85,7 +85,7 @@ Navigation:
 
 - **Go to year** input — accepts `1776` or `44 BCE`
 - Click-drag, mouse wheel, or arrow / PageUp / PageDown keys — pan in time
-- Query string — open pre-centered, e.g. `web/index.html?year=1776`
+- Query string — open pre-centered, e.g. `docs/index.html?year=1776`
 
 Files
 -----
@@ -98,8 +98,8 @@ per year.
 sheets into a single continuous timeline with horizontal scrolling and
 year/sheet navigation.
 - **export_web_data.py**: Exports all `dates/` entries to
-`web/timeline_data.js` for the interactive web viewer, reusing `timeline.py`'s
+`docs/timeline_data.js` for the interactive web viewer, reusing `timeline.py`'s
 data pipeline and resolving bar colours from `template.svg`.
-- **web/index.html**: Interactive, screen-oriented timeline viewer with a
+- **docs/index.html**: Interactive, screen-oriented timeline viewer with a
 fixed time scale, a hierarchical category picker, and dynamic non-overlapping
-layout. Reads `web/timeline_data.js`.
+layout. Reads `docs/timeline_data.js`.

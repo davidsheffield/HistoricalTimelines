@@ -17,8 +17,8 @@ code in this repository.
 
 ### Interactive Web Viewer
 - Export data for the web viewer: `python export_web_data.py`
-  (writes `web/timeline_data.js`; re-run after changing `dates/`)
-- Then open `web/index.html` in a browser (works over `file://`)
+  (writes `docs/timeline_data.js`; re-run after changing `dates/`)
+- Then open `docs/index.html` in a browser (works over `file://`)
 
 ## Architecture
 
@@ -39,10 +39,10 @@ code in this repository.
   `assign_alternating_classes`) rather than re-parsing the YAML
 - Resolves each bar's color from `template.svg`'s stylesheet, falling back to a
   per-category hue; classifies categories (YAML file stems) into themes
-- Writes `web/timeline_data.js` (`window.TIMELINE_DATA`) as a `.js` file (not
+- Writes `docs/timeline_data.js` (`window.TIMELINE_DATA`) as a `.js` file (not
   JSON) so the viewer loads it over `file://`, where `fetch` is blocked
 
-**web/index.html** - Interactive, screen-oriented timeline viewer
+**docs/index.html** - Interactive, screen-oriented timeline viewer
 - Separate from the print pipeline (no sheets); lays entries out dynamically on
   a continuous time axis with a fixed scale (`PX_PER_YEAR`, a single constant so
   zoom can be added later)

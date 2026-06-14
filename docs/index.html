@@ -130,6 +130,12 @@
     }
     .band-sep { position: absolute; left: 0; right: 0; height: 1px;
                 background: var(--line); }
+    .band-label { cursor: grab; }
+    .band-label.dragging { cursor: grabbing; opacity: .5; }
+    /* drop indicator while reordering bands */
+    #drop-line { position: absolute; left: 0; right: 0; height: 2px;
+                 background: var(--accent); z-index: 13; display: none;
+                 pointer-events: none; box-shadow: 0 0 6px var(--accent); }
 
     /* bars */
     .bar {
@@ -189,6 +195,7 @@
         <div id='stage'>
             <div id='axis'></div>
             <div id='labels'></div>
+            <div id='drop-line'></div>
             <div id='viewport'><div id='content'></div></div>
             <div id='empty' style='display:none'>
                 No categories selected. Pick some from the panel on the left.
@@ -271,6 +278,11 @@ if (!visible.size) {         // fall back to first theme if names drift
     first.forEach(c => visible.add(c));
 }
 
+// Vertical stacking order of the bands. Starts grouped by theme; dragging a
+// band label up or down rewrites this list (see drag-to-reorder below).
+const order = [];
+for (const [, cats] of byTheme) for (const c of cats) order.push(c);
+
 // ---- contrast helper for bar text ----------------------------------------
 function textColorFor(hex) {
     const h = hex.replace('#', '');
@@ -318,28 +330,26 @@ function relayout() {
     bands = [];
     placed = [];
     let top = 0;
-    // Keep themes and categories in a stable, grouped order.
-    for (const [theme, cats] of byTheme) {
-        for (const category of cats) {
-            if (!visible.has(category)) continue;
-            const info = byCategory.get(category);
-            const { placed: laneItems, lanes } = packLanes(info.items);
-            const height = lanes * LANE_H + BAND_PAD * 2;
-            const band = { category, theme, color: info.color, top, height,
-                           lanes, items: [] };
-            for (const li of laneItems) {
-                const rec = li.rec;
-                const bx = xOf(rec.start);
-                const bw = rec.point ? 0 : Math.max(2, (rec.end - rec.start) * PX_PER_YEAR);
-                const by = top + BAND_PAD + li.lane * LANE_H;
-                const p = { rec, x: bx, w: bw, y: by, h: LANE_H - 3,
-                            band, el: null };
-                band.items.push(p);
-                placed.push(p);
-            }
-            bands.push(band);
-            top += height + BAND_GAP;
+    // Bands stack top-to-bottom in `order`, skipping hidden categories.
+    for (const category of order) {
+        if (!visible.has(category)) continue;
+        const info = byCategory.get(category);
+        const { placed: laneItems, lanes } = packLanes(info.items);
+        const height = lanes * LANE_H + BAND_PAD * 2;
+        const band = { category, theme: info.theme, color: info.color,
+                       top, height, lanes, items: [] };
+        for (const li of laneItems) {
+            const rec = li.rec;
+            const bx = xOf(rec.start);
+            const bw = rec.point ? 0 : Math.max(2, (rec.end - rec.start) * PX_PER_YEAR);
+            const by = top + BAND_PAD + li.lane * LANE_H;
+            const p = { rec, x: bx, w: bw, y: by, h: LANE_H - 3,
+                        band, el: null };
+            band.items.push(p);
+            placed.push(p);
         }
+        bands.push(band);
+        top += height + BAND_GAP;
     }
     totalHeight = Math.max(top, 1);
     const content = document.getElementById('content');
@@ -490,12 +500,81 @@ function renderLabels() {
         lab.style.top = (band.top - st + 2) + 'px';
         lab.style.borderLeftColor = band.color;
         lab.textContent = band.category;
-        lab.title = band.category + ' — click to hide';
-        lab.addEventListener('click', () => { toggleCategory(band.category, false); });
+        lab.title = band.category + ' — drag to reorder, click to hide';
+        lab.addEventListener('mousedown', e => startLabelDrag(e, band, lab));
         frag.appendChild(lab);
     }
     labels.appendChild(frag);
 }
+
+// ---- drag-to-reorder bands -----------------------------------------------
+// Band labels can be dragged vertically to change the stacking `order`. A
+// plain click (no movement) still hides the band, as before.
+const stage = document.getElementById('stage');
+const dropLine = document.getElementById('drop-line');
+let labelDrag = null;   // {category, startY, moved, el}
+
+function startLabelDrag(e, band, el) {
+    if (e.button !== 0) return;
+    e.preventDefault();
+    labelDrag = { category: band.category, startY: e.clientY,
+                  moved: false, el };
+}
+
+// Insertion index among the currently visible bands for a given screen Y.
+function dropIndexAtY(clientY) {
+    const stageRect = stage.getBoundingClientRect();
+    const contentY = clientY - stageRect.top - 26 + viewport.scrollTop;
+    for (let i = 0; i < bands.length; i++) {
+        if (contentY < bands[i].top + bands[i].height / 2) return i;
+    }
+    return bands.length;
+}
+
+function showDropLine(idx) {
+    const st = viewport.scrollTop;
+    let y;
+    if (idx < bands.length) {
+        y = bands[idx].top - st - BAND_GAP / 2;
+    } else if (bands.length) {
+        const last = bands[bands.length - 1];
+        y = last.top + last.height - st + BAND_GAP / 2;
+    } else {
+        y = 0;
+    }
+    dropLine.style.top = (26 + y) + 'px';
+    dropLine.style.display = 'block';
+}
+
+function moveCategory(category, visibleIdx) {
+    // Translate a position among visible bands into one in `order`.
+    const before = (visibleIdx < bands.length)
+        ? bands[visibleIdx].category : null;
+    if (before === category) return;        // dropped back onto itself
+    order.splice(order.indexOf(category), 1);
+    const at = (before == null) ? order.length : order.indexOf(before);
+    order.splice(at, 0, category);
+    relayout();
+}
+
+window.addEventListener('mousemove', e => {
+    if (!labelDrag) return;
+    if (Math.abs(e.clientY - labelDrag.startY) > 4) labelDrag.moved = true;
+    if (labelDrag.moved) {
+        labelDrag.el.classList.add('dragging');
+        showDropLine(dropIndexAtY(e.clientY));
+    }
+});
+
+window.addEventListener('mouseup', e => {
+    if (!labelDrag) return;
+    const drag = labelDrag;
+    labelDrag = null;
+    dropLine.style.display = 'none';
+    if (drag.el) drag.el.classList.remove('dragging');
+    if (drag.moved) moveCategory(drag.category, dropIndexAtY(e.clientY));
+    else toggleCategory(drag.category);     // plain click hides the band
+});
 
 // ---- tooltip + pinning ---------------------------------------------------
 function showTooltip(rec, e) {
@@ -726,7 +805,7 @@ buildTree();
 relayout();
 
 const params = new URLSearchParams(location.search);
-let startYear = 1700;
+let startYear = new Date().getFullYear() - 50;   // open on the present day
 if (params.has('year')) {
     const y = parseYearInput(params.get('year'));
     if (y != null) startYear = y;
